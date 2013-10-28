@@ -1,0 +1,4 @@
+﻿@if (Request.IsAuthenticated) {
+    <li>@Html.RouteLink("My Applications", "Default", new { action = "Index", controller = "LandApplication" })</li>
+    <li><a data-toggle="modal" href="#myModal">E-Archive</a></li>
+}

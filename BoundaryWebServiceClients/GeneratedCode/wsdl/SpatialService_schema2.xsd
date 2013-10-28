@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/spatial" xmlns:ns1="http://webservices.sola.org/faults/" xmlns:tns="http://webservices.sola.org/spatial" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="SpatialService_schema3.xsd"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="GetSpatialForNavigation" type="tns:GetSpatialForNavigation"/>
+
+  <xs:element name="GetSpatialForNavigationResponse" type="tns:GetSpatialForNavigationResponse"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns1:faultInfoBean"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns1:faultInfoBean"/>
+
+  <xs:complexType name="GetSpatialForNavigation">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:queryForNavigation" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryForNavigation">
+    <xs:complexContent>
+      <xs:extension base="tns:query">
+        <xs:sequence>
+          <xs:element name="east" type="xs:double"/>
+          <xs:element name="fidsPresent" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="north" type="xs:double"/>
+          <xs:element name="south" type="xs:double"/>
+          <xs:element name="west" type="xs:double"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="query">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="locale" type="xs:string" minOccurs="0"/>
+      <xs:element name="pixelResolution" type="xs:double"/>
+      <xs:element name="queryName" type="xs:string" minOccurs="0"/>
+      <xs:element name="srid" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSpatialForNavigationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:resultForNavigationInfo" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resultForNavigationInfo">
+    <xs:sequence>
+      <xs:element name="toAdd" type="tns:spatialResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="toRemove" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="spatialResult">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractReadOnlyEntity">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="label" type="xs:string" minOccurs="0"/>
+          <xs:element name="theGeom" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractReadOnlyEntity" abstract="true">
+    <xs:sequence>
+      <xs:element name="loaded" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

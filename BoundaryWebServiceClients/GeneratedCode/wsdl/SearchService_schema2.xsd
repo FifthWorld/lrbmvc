@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/search/" xmlns:ns2="http://webservices.sola.org/transferobjects/" xmlns:ns1="http://webservices.sola.org/transferobjects/casemanagement/" xmlns:ns4="http://webservices.sola.org/transferobjects/security/" xmlns:ns3="http://webservices.sola.org/transferobjects/cadastre/" xmlns:tns="http://webservices.sola.org/transferobjects/search/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/casemanagement/" schemaLocation="SearchService_schema3.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="SearchService_schema5.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/cadastre/" schemaLocation="SearchService_schema4.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/security/" schemaLocation="SearchService_schema1.xsd"/>
+
+  <xs:complexType name="applicationSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:applicationSummaryTO">
+        <xs:sequence>
+          <xs:element name="agent" type="xs:string" minOccurs="0"/>
+          <xs:element name="assigneeId" type="xs:string" minOccurs="0"/>
+          <xs:element name="assigneeName" type="xs:string" minOccurs="0"/>
+          <xs:element name="contactPerson" type="xs:string" minOccurs="0"/>
+          <xs:element name="serviceList" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="powerOfAttorneySearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="tns:sourceSearchParamsTO">
+        <xs:sequence>
+          <xs:element name="attorneyName" type="xs:string" minOccurs="0"/>
+          <xs:element name="personName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourceSearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromRecordationDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="fromSubmissionDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="laNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="locale" type="xs:string" minOccurs="0"/>
+          <xs:element name="ownerName" type="xs:string" minOccurs="0"/>
+          <xs:element name="refNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="toRecordationDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="toSubmissionDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="version" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="powerOfAttorneySearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="tns:sourceSearchResultTO">
+        <xs:sequence>
+          <xs:element name="attorneyName" type="xs:string" minOccurs="0"/>
+          <xs:element name="personName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourceSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:sourceSummaryTO">
+        <xs:sequence>
+          <xs:element name="statusDisplayValue" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeDisplayValue" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="spatialSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="label" type="xs:string" minOccurs="0"/>
+          <xs:element name="theGeom" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="spatialSearchOptionTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="code" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="minSearchStrLen" type="xs:int"/>
+          <xs:element name="queryName" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="zoomInBuffer" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="propertyVerifierTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="applicationsWhereFound" type="xs:string" minOccurs="0"/>
+          <xs:element name="hasLocation" type="xs:boolean"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitSearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="nameFirstPart" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameLastPart" type="xs:string" minOccurs="0"/>
+          <xs:element name="ownerName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameFirstPart" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameLastPart" type="xs:string" minOccurs="0"/>
+          <xs:element name="rightholders" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="applicationLogResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="actionType" type="xs:string" minOccurs="0"/>
+          <xs:element name="changeTime" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="notation" type="xs:string" minOccurs="0"/>
+          <xs:element name="number" type="xs:string" minOccurs="0"/>
+          <xs:element name="recordGroup" type="xs:string" minOccurs="0"/>
+          <xs:element name="recordId" type="xs:string" minOccurs="0"/>
+          <xs:element name="recordSequence" type="xs:int"/>
+          <xs:element name="recordType" type="xs:string" minOccurs="0"/>
+          <xs:element name="userFullname" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brSearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="technicalTypeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+          <xs:element name="feedback" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="technicalTypeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="applicationSearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="agent" type="xs:string" minOccurs="0"/>
+          <xs:element name="contactPerson" type="xs:string" minOccurs="0"/>
+          <xs:element name="documentNumber" type="xs:string" minOccurs="0"/>
+          <xs:element name="documentReference" type="xs:string" minOccurs="0"/>
+          <xs:element name="fromDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="locale" type="xs:string" minOccurs="0"/>
+          <xs:element name="nr" type="xs:string" minOccurs="0"/>
+          <xs:element name="toDate" type="xs:dateTime" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="partySearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="roleTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="partySearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns3:partySummaryTO">
+        <xs:sequence>
+          <xs:element name="rightHolder" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userSearchParamsTO">
+    <xs:complexContent>
+      <xs:extension base="ns2:abstractTO">
+        <xs:sequence>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userSearchAdvancedResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:userSummaryTO">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean"/>
+          <xs:element name="groupsList" type="xs:string" minOccurs="0"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userSearchResultTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:userSummaryTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

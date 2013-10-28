@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/casemanagement/" xmlns:ns2="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="AdministrativeService_schema5.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/digitalarchive/" schemaLocation="AdministrativeService_schema1.xsd"/>
+
+  <xs:complexType name="partySummaryTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="extId" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourceTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="acceptance" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="archiveDocument" type="ns2:documentTO" minOccurs="0"/>
+          <xs:element name="archiveDocumentId" type="xs:string" minOccurs="0"/>
+          <xs:element name="archiveId" type="xs:string" minOccurs="0"/>
+          <xs:element name="availabilityStatusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="content" type="xs:string" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="laNr" type="xs:string" minOccurs="0"/>
+          <xs:element name="locked" type="xs:boolean"/>
+          <xs:element name="mainType" type="xs:string" minOccurs="0"/>
+          <xs:element name="ownerName" type="xs:string" minOccurs="0"/>
+          <xs:element name="recordation" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="referenceNr" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="submission" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="version" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

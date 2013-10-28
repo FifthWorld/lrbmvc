@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/digitalarchive" xmlns:ns2="http://webservices.sola.org/faults/" xmlns:ns1="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:tns="http://webservices.sola.org/digitalarchive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/digitalarchive/" schemaLocation="DigitalarchiveService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="DigitalarchiveService_schema3.xsd"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="CreateDocument" type="tns:CreateDocument"/>
+
+  <xs:element name="CreateDocumentFromServer" type="tns:CreateDocumentFromServer"/>
+
+  <xs:element name="CreateDocumentFromServerResponse" type="tns:CreateDocumentFromServerResponse"/>
+
+  <xs:element name="CreateDocumentResponse" type="tns:CreateDocumentResponse"/>
+
+  <xs:element name="DeleteFile" type="tns:DeleteFile"/>
+
+  <xs:element name="DeleteFileResponse" type="tns:DeleteFileResponse"/>
+
+  <xs:element name="GetAllFiles" type="tns:GetAllFiles"/>
+
+  <xs:element name="GetAllFilesResponse" type="tns:GetAllFilesResponse"/>
+
+  <xs:element name="GetDocument" type="tns:GetDocument"/>
+
+  <xs:element name="GetDocumentResponse" type="tns:GetDocumentResponse"/>
+
+  <xs:element name="GetFileBinary" type="tns:GetFileBinary"/>
+
+  <xs:element name="GetFileBinaryResponse" type="tns:GetFileBinaryResponse"/>
+
+  <xs:element name="GetFileThumbnail" type="tns:GetFileThumbnail"/>
+
+  <xs:element name="GetFileThumbnailResponse" type="tns:GetFileThumbnailResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns2:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns2:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns2:faultInfoBean"/>
+
+  <xs:element name="SaveDocument" type="tns:SaveDocument"/>
+
+  <xs:element name="SaveDocumentResponse" type="tns:SaveDocumentResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns2:faultInfoBean"/>
+
+  <xs:complexType name="CreateDocument">
+    <xs:sequence>
+      <xs:element name="documentTO" type="ns1:documentBinaryTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:documentTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateDocumentFromServer">
+    <xs:sequence>
+      <xs:element name="documentTO" type="ns1:documentTO" minOccurs="0"/>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateDocumentFromServerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:documentTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeleteFile">
+    <xs:sequence>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeleteFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetFileBinary">
+    <xs:sequence>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetFileBinaryResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:fileInfoTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetFileThumbnail">
+    <xs:sequence>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetFileThumbnailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:fileBinaryTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAllFiles">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetAllFilesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:fileInfoTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocument">
+    <xs:sequence>
+      <xs:element name="documentId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:documentBinaryTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveDocument">
+    <xs:sequence>
+      <xs:element name="documentTO" type="ns1:documentTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:documentTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

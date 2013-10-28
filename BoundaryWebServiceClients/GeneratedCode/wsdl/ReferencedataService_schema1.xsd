@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/referencedata/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/transferobjects/referencedata/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="ReferencedataService_schema2.xsd"/>
+
+  <xs:complexType name="baUnitTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brSeverityTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="propertyTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="genderTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="stateTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="requestTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence>
+          <xs:element name="areaBaseFee" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="baseFee" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="notationTemplate" type="xs:string" minOccurs="0"/>
+          <xs:element name="nrDaysToComplete" type="xs:int"/>
+          <xs:element name="nrPropertiesRequired" type="xs:int"/>
+          <xs:element name="requestCategoryCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="rrrTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="sourceTypeCodes" type="tns:requestTypeSourceTypeTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="typeActionCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="valueBaseFee" type="xs:decimal" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="requestTypeSourceTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="requestTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="sourceTypeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brTechnicalTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="requestCategoryTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="applicationActionTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rrrGroupTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="capacityTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="lgaTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence>
+          <xs:element name="stateId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="mortgageTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="partyRoleTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceActionTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourceTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence>
+          <xs:element name="forRegistration" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="availabilityStatusTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="applicationStatusTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="occupationTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="communicationTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brValidationTargetTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="titleTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="idTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="registrationStatusTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="changeStatusTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreObjectTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="typeActionTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rrrTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence>
+          <xs:element name="partyRequired" type="xs:boolean"/>
+          <xs:element name="primary" type="xs:boolean"/>
+          <xs:element name="rrrGroupTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="shareCheck" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceStatusTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="presentationFormTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitRelTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="useTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="homeTownTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence>
+          <xs:element name="lgaId" type="xs:string" minOccurs="0"/>
+          <xs:element name="stateId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourceBaUnitRelationTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="partyTypeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

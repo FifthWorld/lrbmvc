@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/cadastre" xmlns:ns2="http://webservices.sola.org/transferobjects/transaction/" xmlns:ns1="http://webservices.sola.org/transferobjects/cadastre/" xmlns:ns4="http://webservices.sola.org/faults/" xmlns:ns3="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/cadastre" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/cadastre/" schemaLocation="CadastreService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/transaction/" schemaLocation="CadastreService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="CadastreService_schema3.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="CadastreService_schema4.xsd"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="GetCadastreChange" type="tns:GetCadastreChange"/>
+
+  <xs:element name="GetCadastreChangeResponse" type="tns:GetCadastreChangeResponse"/>
+
+  <xs:element name="GetCadastreObjectByAllParts" type="tns:GetCadastreObjectByAllParts"/>
+
+  <xs:element name="GetCadastreObjectByAllPartsResponse" type="tns:GetCadastreObjectByAllPartsResponse"/>
+
+  <xs:element name="GetCadastreObjectByParts" type="tns:GetCadastreObjectByParts"/>
+
+  <xs:element name="GetCadastreObjectByPartsResponse" type="tns:GetCadastreObjectByPartsResponse"/>
+
+  <xs:element name="GetCadastreObjectByPoint" type="tns:GetCadastreObjectByPoint"/>
+
+  <xs:element name="GetCadastreObjectByPointResponse" type="tns:GetCadastreObjectByPointResponse"/>
+
+  <xs:element name="GetCadastreObjectNode" type="tns:GetCadastreObjectNode"/>
+
+  <xs:element name="GetCadastreObjectNodePotential" type="tns:GetCadastreObjectNodePotential"/>
+
+  <xs:element name="GetCadastreObjectNodePotentialResponse" type="tns:GetCadastreObjectNodePotentialResponse"/>
+
+  <xs:element name="GetCadastreObjectNodeResponse" type="tns:GetCadastreObjectNodeResponse"/>
+
+  <xs:element name="GetCadastreObjects" type="tns:GetCadastreObjects"/>
+
+  <xs:element name="GetCadastreObjectsByBaUnit" type="tns:GetCadastreObjectsByBaUnit"/>
+
+  <xs:element name="GetCadastreObjectsByBaUnitResponse" type="tns:GetCadastreObjectsByBaUnitResponse"/>
+
+  <xs:element name="GetCadastreObjectsByService" type="tns:GetCadastreObjectsByService"/>
+
+  <xs:element name="GetCadastreObjectsByServiceResponse" type="tns:GetCadastreObjectsByServiceResponse"/>
+
+  <xs:element name="GetCadastreObjectsResponse" type="tns:GetCadastreObjectsResponse"/>
+
+  <xs:element name="GetCadastreRedefinition" type="tns:GetCadastreRedefinition"/>
+
+  <xs:element name="GetCadastreRedefinitionResponse" type="tns:GetCadastreRedefinitionResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAValidationFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SaveCadastreChange" type="tns:SaveCadastreChange"/>
+
+  <xs:element name="SaveCadastreChangeResponse" type="tns:SaveCadastreChangeResponse"/>
+
+  <xs:element name="SaveCadastreRedefinition" type="tns:SaveCadastreRedefinition"/>
+
+  <xs:element name="SaveCadastreRedefinitionResponse" type="tns:SaveCadastreRedefinitionResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:complexType name="SaveCadastreChange">
+    <xs:sequence>
+      <xs:element name="transactionCadastreChangeTO" type="ns2:transactionCadastreChangeTO" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveCadastreChangeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns3:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreRedefinition">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreRedefinitionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:transactionCadastreRedefinitionTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByAllParts">
+    <xs:sequence>
+      <xs:element name="searchString" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByAllPartsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjects">
+    <xs:sequence>
+      <xs:element name="ids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectNode">
+    <xs:sequence>
+      <xs:element name="xMin" type="xs:double"/>
+      <xs:element name="yMin" type="xs:double"/>
+      <xs:element name="xMax" type="xs:double"/>
+      <xs:element name="yMax" type="xs:double"/>
+      <xs:element name="srid" type="xs:int"/>
+      <xs:element name="cadastreObjectType" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectNodeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectNodeTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveCadastreRedefinition">
+    <xs:sequence>
+      <xs:element name="transactionCadastreRedefinitionTO" type="ns2:transactionCadastreRedefinitionTO" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveCadastreRedefinitionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns3:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectNodePotential">
+    <xs:sequence>
+      <xs:element name="xMin" type="xs:double"/>
+      <xs:element name="yMin" type="xs:double"/>
+      <xs:element name="xMax" type="xs:double"/>
+      <xs:element name="yMax" type="xs:double"/>
+      <xs:element name="srid" type="xs:int"/>
+      <xs:element name="cadastreObjectType" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectNodePotentialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectNodeTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByParts">
+    <xs:sequence>
+      <xs:element name="searchString" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByPartsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreChange">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreChangeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:transactionCadastreChangeTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByPoint">
+    <xs:sequence>
+      <xs:element name="x" type="xs:double"/>
+      <xs:element name="y" type="xs:double"/>
+      <xs:element name="srid" type="xs:int"/>
+      <xs:element name="cadastreObjectType" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectByPointResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectsByBaUnit">
+    <xs:sequence>
+      <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectsByBaUnitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectsByService">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectsByServiceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

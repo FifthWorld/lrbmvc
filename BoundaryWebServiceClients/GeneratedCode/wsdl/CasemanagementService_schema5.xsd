@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/casemanagement" xmlns:ns2="http://webservices.sola.org/transferobjects/casemanagement/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:ns4="http://webservices.sola.org/faults/" xmlns:ns3="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:tns="http://webservices.sola.org/casemanagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="CasemanagementService_schema3.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/casemanagement/" schemaLocation="CasemanagementService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/digitalarchive/" schemaLocation="CasemanagementService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="CasemanagementService_schema4.xsd"/>
+
+  <xs:element name="ApplicationActionApprove" type="tns:ApplicationActionApprove"/>
+
+  <xs:element name="ApplicationActionApproveResponse" type="tns:ApplicationActionApproveResponse"/>
+
+  <xs:element name="ApplicationActionArchive" type="tns:ApplicationActionArchive"/>
+
+  <xs:element name="ApplicationActionArchiveResponse" type="tns:ApplicationActionArchiveResponse"/>
+
+  <xs:element name="ApplicationActionAssign" type="tns:ApplicationActionAssign"/>
+
+  <xs:element name="ApplicationActionAssignResponse" type="tns:ApplicationActionAssignResponse"/>
+
+  <xs:element name="ApplicationActionCancel" type="tns:ApplicationActionCancel"/>
+
+  <xs:element name="ApplicationActionCancelResponse" type="tns:ApplicationActionCancelResponse"/>
+
+  <xs:element name="ApplicationActionDespatch" type="tns:ApplicationActionDespatch"/>
+
+  <xs:element name="ApplicationActionDespatchResponse" type="tns:ApplicationActionDespatchResponse"/>
+
+  <xs:element name="ApplicationActionLapse" type="tns:ApplicationActionLapse"/>
+
+  <xs:element name="ApplicationActionLapseResponse" type="tns:ApplicationActionLapseResponse"/>
+
+  <xs:element name="ApplicationActionRequisition" type="tns:ApplicationActionRequisition"/>
+
+  <xs:element name="ApplicationActionRequisitionResponse" type="tns:ApplicationActionRequisitionResponse"/>
+
+  <xs:element name="ApplicationActionResubmit" type="tns:ApplicationActionResubmit"/>
+
+  <xs:element name="ApplicationActionResubmitResponse" type="tns:ApplicationActionResubmitResponse"/>
+
+  <xs:element name="ApplicationActionUnassign" type="tns:ApplicationActionUnassign"/>
+
+  <xs:element name="ApplicationActionUnassignResponse" type="tns:ApplicationActionUnassignResponse"/>
+
+  <xs:element name="ApplicationActionValidate" type="tns:ApplicationActionValidate"/>
+
+  <xs:element name="ApplicationActionValidateResponse" type="tns:ApplicationActionValidateResponse"/>
+
+  <xs:element name="ApplicationActionWithdraw" type="tns:ApplicationActionWithdraw"/>
+
+  <xs:element name="ApplicationActionWithdrawResponse" type="tns:ApplicationActionWithdrawResponse"/>
+
+  <xs:element name="AttachSourceToTransaction" type="tns:AttachSourceToTransaction"/>
+
+  <xs:element name="AttachSourceToTransactionResponse" type="tns:AttachSourceToTransactionResponse"/>
+
+  <xs:element name="CalculateFee" type="tns:CalculateFee"/>
+
+  <xs:element name="CalculateFeeResponse" type="tns:CalculateFeeResponse"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="CreateApplication" type="tns:CreateApplication"/>
+
+  <xs:element name="CreateApplicationResponse" type="tns:CreateApplicationResponse"/>
+
+  <xs:element name="DettachSourceFromTransaction" type="tns:DettachSourceFromTransaction"/>
+
+  <xs:element name="DettachSourceFromTransactionResponse" type="tns:DettachSourceFromTransactionResponse"/>
+
+  <xs:element name="GetAddress" type="tns:GetAddress"/>
+
+  <xs:element name="GetAddressResponse" type="tns:GetAddressResponse"/>
+
+  <xs:element name="GetAgents" type="tns:GetAgents"/>
+
+  <xs:element name="GetAgentsResponse" type="tns:GetAgentsResponse"/>
+
+  <xs:element name="GetAllBrs" type="tns:GetAllBrs"/>
+
+  <xs:element name="GetAllBrsResponse" type="tns:GetAllBrsResponse"/>
+
+  <xs:element name="GetApplication" type="tns:GetApplication"/>
+
+  <xs:element name="GetApplicationResponse" type="tns:GetApplicationResponse"/>
+
+  <xs:element name="GetLodgementTiming" type="tns:GetLodgementTiming"/>
+
+  <xs:element name="GetLodgementTimingResponse" type="tns:GetLodgementTimingResponse"/>
+
+  <xs:element name="GetLodgementView" type="tns:GetLodgementView"/>
+
+  <xs:element name="GetLodgementViewResponse" type="tns:GetLodgementViewResponse"/>
+
+  <xs:element name="GetParty" type="tns:GetParty"/>
+
+  <xs:element name="GetPartyResponse" type="tns:GetPartyResponse"/>
+
+  <xs:element name="GetSourcesByIds" type="tns:GetSourcesByIds"/>
+
+  <xs:element name="GetSourcesByIdsResponse" type="tns:GetSourcesByIdsResponse"/>
+
+  <xs:element name="GetSourcesByServiceId" type="tns:GetSourcesByServiceId"/>
+
+  <xs:element name="GetSourcesByServiceIdResponse" type="tns:GetSourcesByServiceIdResponse"/>
+
+  <xs:element name="GetUserActions" type="tns:GetUserActions"/>
+
+  <xs:element name="GetUserActionsResponse" type="tns:GetUserActionsResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAValidationFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SaveApplication" type="tns:SaveApplication"/>
+
+  <xs:element name="SaveApplicationResponse" type="tns:SaveApplicationResponse"/>
+
+  <xs:element name="SaveInformationService" type="tns:SaveInformationService"/>
+
+  <xs:element name="SaveInformationServiceResponse" type="tns:SaveInformationServiceResponse"/>
+
+  <xs:element name="SaveParty" type="tns:SaveParty"/>
+
+  <xs:element name="SavePartyResponse" type="tns:SavePartyResponse"/>
+
+  <xs:element name="ServiceActionCancel" type="tns:ServiceActionCancel"/>
+
+  <xs:element name="ServiceActionCancelResponse" type="tns:ServiceActionCancelResponse"/>
+
+  <xs:element name="ServiceActionComplete" type="tns:ServiceActionComplete"/>
+
+  <xs:element name="ServiceActionCompleteResponse" type="tns:ServiceActionCompleteResponse"/>
+
+  <xs:element name="ServiceActionRevert" type="tns:ServiceActionRevert"/>
+
+  <xs:element name="ServiceActionRevertResponse" type="tns:ServiceActionRevertResponse"/>
+
+  <xs:element name="ServiceActionStart" type="tns:ServiceActionStart"/>
+
+  <xs:element name="ServiceActionStartResponse" type="tns:ServiceActionStartResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="attachPowerOfAttorneyToTransaction" type="tns:attachPowerOfAttorneyToTransaction"/>
+
+  <xs:element name="attachPowerOfAttorneyToTransactionResponse" type="tns:attachPowerOfAttorneyToTransactionResponse"/>
+
+  <xs:element name="getApplicationByTransactionId" type="tns:getApplicationByTransactionId"/>
+
+  <xs:element name="getApplicationByTransactionIdResponse" type="tns:getApplicationByTransactionIdResponse"/>
+
+  <xs:element name="getPowerOfAttorneyById" type="tns:getPowerOfAttorneyById"/>
+
+  <xs:element name="getPowerOfAttorneyByIdResponse" type="tns:getPowerOfAttorneyByIdResponse"/>
+
+  <xs:element name="getPowerOfAttorneyByServiceId" type="tns:getPowerOfAttorneyByServiceId"/>
+
+  <xs:element name="getPowerOfAttorneyByServiceIdResponse" type="tns:getPowerOfAttorneyByServiceIdResponse"/>
+
+  <xs:element name="getSourceById" type="tns:getSourceById"/>
+
+  <xs:element name="getSourceByIdResponse" type="tns:getSourceByIdResponse"/>
+
+  <xs:element name="saveSource" type="tns:saveSource"/>
+
+  <xs:element name="saveSourceResponse" type="tns:saveSourceResponse"/>
+
+  <xs:complexType name="ServiceActionCancel">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionCancelResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLodgementView">
+    <xs:sequence>
+      <xs:element name="LodgementViewParamsTO" type="ns2:lodgementViewParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLodgementViewResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:lodgementViewTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourcesByServiceId">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourcesByServiceIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AttachSourceToTransaction">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="sourceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AttachSourceToTransactionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionApprove">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionApproveResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionAssign">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="userId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionAssignResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionStart">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionStartResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveInformationService">
+    <xs:sequence>
+      <xs:element name="service" type="ns2:serviceTO" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveInformationServiceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:serviceTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAllBrs">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetAllBrsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:brReportTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateApplication">
+    <xs:sequence>
+      <xs:element name="application" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateApplicationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionValidate">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionValidateResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getApplicationByTransactionId">
+    <xs:sequence>
+      <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getApplicationByTransactionIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplication">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplicationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveApplication">
+    <xs:sequence>
+      <xs:element name="application" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveApplicationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLodgementTiming">
+    <xs:sequence>
+      <xs:element name="LodgementViewParamsTO" type="ns2:lodgementViewParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLodgementTimingResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:lodgementTimingTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionDespatch">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionDespatchResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionComplete">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionCompleteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionCancel">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionCancelResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DettachSourceFromTransaction">
+    <xs:sequence>
+      <xs:element name="sourceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DettachSourceFromTransactionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionRevert">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ServiceActionRevertResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAgents">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetAgentsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:partySummaryTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionRequisition">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionRequisitionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attachPowerOfAttorneyToTransaction">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="powerOfAttorney" type="ns2:powerOfAttorneyTO" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attachPowerOfAttorneyToTransactionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:powerOfAttorneyTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetParty">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPartyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:partyTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionResubmit">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionResubmitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserActions">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="from" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="to" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserActionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationLogTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionWithdraw">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionWithdrawResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAddress">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAddressResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:addressTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPowerOfAttorneyByServiceId">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPowerOfAttorneyByServiceIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:powerOfAttorneyTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveSource">
+    <xs:sequence>
+      <xs:element name="sourceTO" type="ns2:sourceTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveSourceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPowerOfAttorneyById">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPowerOfAttorneyByIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:powerOfAttorneyTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionUnassign">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionUnassignResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CalculateFee">
+    <xs:sequence>
+      <xs:element name="application" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CalculateFeeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveParty">
+    <xs:sequence>
+      <xs:element name="party" type="ns2:partyTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SavePartyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:partyTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionLapse">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionLapseResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionArchive">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="rowVersion" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ApplicationActionArchiveResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSourceById">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSourceByIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourcesByIds">
+    <xs:sequence>
+      <xs:element name="sourceIds" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourcesByIdsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

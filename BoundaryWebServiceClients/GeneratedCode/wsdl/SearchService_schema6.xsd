@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/search" xmlns:ns2="http://webservices.sola.org/transferobjects/search/" xmlns:ns1="http://jaxb.dev.java.net/array" xmlns:ns4="http://webservices.sola.org/faults/" xmlns:ns3="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://jaxb.dev.java.net/array" schemaLocation="SearchService_schema8.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/search/" schemaLocation="SearchService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="SearchService_schema5.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="SearchService_schema7.xsd"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="GetActiveUsers" type="tns:GetActiveUsers"/>
+
+  <xs:element name="GetActiveUsersResponse" type="tns:GetActiveUsersResponse"/>
+
+  <xs:element name="GetAssignedApplications" type="tns:GetAssignedApplications"/>
+
+  <xs:element name="GetAssignedApplicationsResponse" type="tns:GetAssignedApplicationsResponse"/>
+
+  <xs:element name="GetMapDefinition" type="tns:GetMapDefinition"/>
+
+  <xs:element name="GetMapDefinitionResponse" type="tns:GetMapDefinitionResponse"/>
+
+  <xs:element name="GetSpatialSearchOptions" type="tns:GetSpatialSearchOptions"/>
+
+  <xs:element name="GetSpatialSearchOptionsResponse" type="tns:GetSpatialSearchOptionsResponse"/>
+
+  <xs:element name="GetUnassignedApplications" type="tns:GetUnassignedApplications"/>
+
+  <xs:element name="GetUnassignedApplicationsResponse" type="tns:GetUnassignedApplicationsResponse"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SearchApplications" type="tns:SearchApplications"/>
+
+  <xs:element name="SearchApplicationsResponse" type="tns:SearchApplicationsResponse"/>
+
+  <xs:element name="SearchBr" type="tns:SearchBr"/>
+
+  <xs:element name="SearchBrResponse" type="tns:SearchBrResponse"/>
+
+  <xs:element name="SearchParties" type="tns:SearchParties"/>
+
+  <xs:element name="SearchPartiesResponse" type="tns:SearchPartiesResponse"/>
+
+  <xs:element name="SearchSources" type="tns:SearchSources"/>
+
+  <xs:element name="SearchSourcesResponse" type="tns:SearchSourcesResponse"/>
+
+  <xs:element name="SearchSpatialObjects" type="tns:SearchSpatialObjects"/>
+
+  <xs:element name="SearchSpatialObjectsResponse" type="tns:SearchSpatialObjectsResponse"/>
+
+  <xs:element name="Select" type="tns:Select"/>
+
+  <xs:element name="SelectResponse" type="tns:SelectResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="VerifyApplicationProperty" type="tns:VerifyApplicationProperty"/>
+
+  <xs:element name="VerifyApplicationPropertyResponse" type="tns:VerifyApplicationPropertyResponse"/>
+
+  <xs:element name="getApplicationLog" type="tns:getApplicationLog"/>
+
+  <xs:element name="getApplicationLogResponse" type="tns:getApplicationLogResponse"/>
+
+  <xs:element name="searchBaUnit" type="tns:searchBaUnit"/>
+
+  <xs:element name="searchBaUnitResponse" type="tns:searchBaUnitResponse"/>
+
+  <xs:element name="searchPowerOfAttorney" type="tns:searchPowerOfAttorney"/>
+
+  <xs:element name="searchPowerOfAttorneyResponse" type="tns:searchPowerOfAttorneyResponse"/>
+
+  <xs:element name="searchUsers" type="tns:searchUsers"/>
+
+  <xs:element name="searchUsersResponse" type="tns:searchUsersResponse"/>
+
+  <xs:complexType name="Select">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:queryForSelect" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryForSelect">
+    <xs:complexContent>
+      <xs:extension base="tns:query">
+        <xs:sequence>
+          <xs:element name="filteringGeometry" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="query">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="locale" type="xs:string" minOccurs="0"/>
+      <xs:element name="pixelResolution" type="xs:double"/>
+      <xs:element name="queryName" type="xs:string" minOccurs="0"/>
+      <xs:element name="srid" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SelectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:resultForSelectionInfo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resultForSelectionInfo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="result" type="tns:genericResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="genericResult">
+    <xs:sequence>
+      <xs:element name="fieldNames" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="values" type="ns1:stringArray" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAssignedApplications">
+    <xs:sequence>
+      <xs:element name="locale" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAssignedApplicationsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPowerOfAttorney">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:powerOfAttorneySearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchPowerOfAttorneyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:powerOfAttorneySearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchSpatialObjects">
+    <xs:sequence>
+      <xs:element name="queryName" type="xs:string" minOccurs="0"/>
+      <xs:element name="searchString" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchSpatialObjectsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:spatialSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSpatialSearchOptions">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSpatialSearchOptionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:spatialSearchOptionTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VerifyApplicationProperty">
+    <xs:sequence>
+      <xs:element name="applicationNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstPart" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastPart" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VerifyApplicationPropertyResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:propertyVerifierTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchBaUnit">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:baUnitSearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchBaUnitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:baUnitSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getApplicationLog">
+    <xs:sequence>
+      <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getApplicationLogResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationLogResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchBr">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:brSearchParamsTO" minOccurs="0"/>
+      <xs:element name="lang" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchBrResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:brSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetMapDefinition">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetMapDefinitionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:mapDefinitionTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mapDefinitionTO">
+    <xs:complexContent>
+      <xs:extension base="ns3:abstractTO">
+        <xs:sequence>
+          <xs:element name="east" type="xs:double"/>
+          <xs:element name="layers" type="tns:configMapLayerTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="north" type="xs:double"/>
+          <xs:element name="snapTolerance" type="xs:double"/>
+          <xs:element name="south" type="xs:double"/>
+          <xs:element name="srid" type="xs:int"/>
+          <xs:element name="surveyPointShiftRuralArea" type="xs:double"/>
+          <xs:element name="surveyPointShiftUrbanArea" type="xs:double"/>
+          <xs:element name="west" type="xs:double"/>
+          <xs:element name="wktOfCrs" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="configMapLayerTO">
+    <xs:complexContent>
+      <xs:extension base="ns3:abstractTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="pojoQueryName" type="xs:string" minOccurs="0"/>
+          <xs:element name="pojoQueryNameForSelect" type="xs:string" minOccurs="0"/>
+          <xs:element name="pojoStructure" type="xs:string" minOccurs="0"/>
+          <xs:element name="securityPassword" type="xs:string" minOccurs="0"/>
+          <xs:element name="securityUser" type="xs:string" minOccurs="0"/>
+          <xs:element name="shapeLocation" type="xs:string" minOccurs="0"/>
+          <xs:element name="style" type="xs:string" minOccurs="0"/>
+          <xs:element name="title" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="url" type="xs:string" minOccurs="0"/>
+          <xs:element name="visible" type="xs:boolean"/>
+          <xs:element name="wmsFormat" type="xs:string" minOccurs="0"/>
+          <xs:element name="wmsLayers" type="xs:string" minOccurs="0"/>
+          <xs:element name="wmsVersion" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SearchApplications">
+    <xs:sequence>
+      <xs:element name="ApplicationSearchParamsTO" type="ns2:applicationSearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchApplicationsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchParties">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:partySearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchPartiesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:partySearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUnassignedApplications">
+    <xs:sequence>
+      <xs:element name="locale" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUnassignedApplicationsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:applicationSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchUsers">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:userSearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchUsersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:userSearchAdvancedResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetActiveUsers">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetActiveUsersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:userSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchSources">
+    <xs:sequence>
+      <xs:element name="searchParams" type="ns2:sourceSearchParamsTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SearchSourcesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:sourceSearchResultTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

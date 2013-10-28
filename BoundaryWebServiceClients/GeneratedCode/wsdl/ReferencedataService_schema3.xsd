@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/referencedata" xmlns:ns2="http://webservices.sola.org/transferobjects/" xmlns:ns1="http://webservices.sola.org/transferobjects/referencedata/" xmlns:ns3="http://webservices.sola.org/faults/" xmlns:tns="http://webservices.sola.org/referencedata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/referencedata/" schemaLocation="ReferencedataService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="ReferencedataService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="ReferencedataService_schema4.xsd"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="GetApplicationActionTypes" type="tns:GetApplicationActionTypes"/>
+
+  <xs:element name="GetApplicationActionTypesResponse" type="tns:GetApplicationActionTypesResponse"/>
+
+  <xs:element name="GetApplicationStatusTypes" type="tns:GetApplicationStatusTypes"/>
+
+  <xs:element name="GetApplicationStatusTypesResponse" type="tns:GetApplicationStatusTypesResponse"/>
+
+  <xs:element name="GetAvailabilityStatusList" type="tns:GetAvailabilityStatusList"/>
+
+  <xs:element name="GetAvailabilityStatusListResponse" type="tns:GetAvailabilityStatusListResponse"/>
+
+  <xs:element name="GetBaUnitRelTypes" type="tns:GetBaUnitRelTypes"/>
+
+  <xs:element name="GetBaUnitRelTypesResponse" type="tns:GetBaUnitRelTypesResponse"/>
+
+  <xs:element name="GetBaUnitTypes" type="tns:GetBaUnitTypes"/>
+
+  <xs:element name="GetBaUnitTypesResponse" type="tns:GetBaUnitTypesResponse"/>
+
+  <xs:element name="GetBrSeverityTypes" type="tns:GetBrSeverityTypes"/>
+
+  <xs:element name="GetBrSeverityTypesResponse" type="tns:GetBrSeverityTypesResponse"/>
+
+  <xs:element name="GetBrTechnicalTypes" type="tns:GetBrTechnicalTypes"/>
+
+  <xs:element name="GetBrTechnicalTypesResponse" type="tns:GetBrTechnicalTypesResponse"/>
+
+  <xs:element name="GetBrValidationTargetTypes" type="tns:GetBrValidationTargetTypes"/>
+
+  <xs:element name="GetBrValidationTargetTypesResponse" type="tns:GetBrValidationTargetTypesResponse"/>
+
+  <xs:element name="GetCadastreObjectTypes" type="tns:GetCadastreObjectTypes"/>
+
+  <xs:element name="GetCadastreObjectTypesResponse" type="tns:GetCadastreObjectTypesResponse"/>
+
+  <xs:element name="GetCapacityTypes" type="tns:GetCapacityTypes"/>
+
+  <xs:element name="GetCapacityTypesResponse" type="tns:GetCapacityTypesResponse"/>
+
+  <xs:element name="GetChangeStatuTypes" type="tns:GetChangeStatuTypes"/>
+
+  <xs:element name="GetChangeStatuTypesResponse" type="tns:GetChangeStatuTypesResponse"/>
+
+  <xs:element name="GetCommunicationTypes" type="tns:GetCommunicationTypes"/>
+
+  <xs:element name="GetCommunicationTypesResponse" type="tns:GetCommunicationTypesResponse"/>
+
+  <xs:element name="GetGenderTypes" type="tns:GetGenderTypes"/>
+
+  <xs:element name="GetGenderTypesResponse" type="tns:GetGenderTypesResponse"/>
+
+  <xs:element name="GetHomeTownTypes" type="tns:GetHomeTownTypes"/>
+
+  <xs:element name="GetHomeTownTypesResponse" type="tns:GetHomeTownTypesResponse"/>
+
+  <xs:element name="GetIdTypes" type="tns:GetIdTypes"/>
+
+  <xs:element name="GetIdTypesResponse" type="tns:GetIdTypesResponse"/>
+
+  <xs:element name="GetLgaTypes" type="tns:GetLgaTypes"/>
+
+  <xs:element name="GetLgaTypesResponse" type="tns:GetLgaTypesResponse"/>
+
+  <xs:element name="GetMortgageTypes" type="tns:GetMortgageTypes"/>
+
+  <xs:element name="GetMortgageTypesResponse" type="tns:GetMortgageTypesResponse"/>
+
+  <xs:element name="GetOccupationTypes" type="tns:GetOccupationTypes"/>
+
+  <xs:element name="GetOccupationTypesResponse" type="tns:GetOccupationTypesResponse"/>
+
+  <xs:element name="GetPartyRoles" type="tns:GetPartyRoles"/>
+
+  <xs:element name="GetPartyRolesResponse" type="tns:GetPartyRolesResponse"/>
+
+  <xs:element name="GetPartyTypes" type="tns:GetPartyTypes"/>
+
+  <xs:element name="GetPartyTypesResponse" type="tns:GetPartyTypesResponse"/>
+
+  <xs:element name="GetPresentationFormTypes" type="tns:GetPresentationFormTypes"/>
+
+  <xs:element name="GetPresentationFormTypesResponse" type="tns:GetPresentationFormTypesResponse"/>
+
+  <xs:element name="GetPropertyTypes" type="tns:GetPropertyTypes"/>
+
+  <xs:element name="GetPropertyTypesResponse" type="tns:GetPropertyTypesResponse"/>
+
+  <xs:element name="GetRRRGroupTypes" type="tns:GetRRRGroupTypes"/>
+
+  <xs:element name="GetRRRGroupTypesResponse" type="tns:GetRRRGroupTypesResponse"/>
+
+  <xs:element name="GetRRRTypes" type="tns:GetRRRTypes"/>
+
+  <xs:element name="GetRRRTypesResponse" type="tns:GetRRRTypesResponse"/>
+
+  <xs:element name="GetRegistrationStatusTypes" type="tns:GetRegistrationStatusTypes"/>
+
+  <xs:element name="GetRegistrationStatusTypesResponse" type="tns:GetRegistrationStatusTypesResponse"/>
+
+  <xs:element name="GetRequestCategoryTypes" type="tns:GetRequestCategoryTypes"/>
+
+  <xs:element name="GetRequestCategoryTypesResponse" type="tns:GetRequestCategoryTypesResponse"/>
+
+  <xs:element name="GetRequestTypes" type="tns:GetRequestTypes"/>
+
+  <xs:element name="GetRequestTypesResponse" type="tns:GetRequestTypesResponse"/>
+
+  <xs:element name="GetServiceActionTypes" type="tns:GetServiceActionTypes"/>
+
+  <xs:element name="GetServiceActionTypesResponse" type="tns:GetServiceActionTypesResponse"/>
+
+  <xs:element name="GetServiceStatusTypes" type="tns:GetServiceStatusTypes"/>
+
+  <xs:element name="GetServiceStatusTypesResponse" type="tns:GetServiceStatusTypesResponse"/>
+
+  <xs:element name="GetSourceBaUnitRelationTypes" type="tns:GetSourceBaUnitRelationTypes"/>
+
+  <xs:element name="GetSourceBaUnitRelationTypesResponse" type="tns:GetSourceBaUnitRelationTypesResponse"/>
+
+  <xs:element name="GetSourceTypes" type="tns:GetSourceTypes"/>
+
+  <xs:element name="GetSourceTypesResponse" type="tns:GetSourceTypesResponse"/>
+
+  <xs:element name="GetStateTypes" type="tns:GetStateTypes"/>
+
+  <xs:element name="GetStateTypesResponse" type="tns:GetStateTypesResponse"/>
+
+  <xs:element name="GetTitleTypes" type="tns:GetTitleTypes"/>
+
+  <xs:element name="GetTitleTypesResponse" type="tns:GetTitleTypesResponse"/>
+
+  <xs:element name="GetTypeActions" type="tns:GetTypeActions"/>
+
+  <xs:element name="GetTypeActionsResponse" type="tns:GetTypeActionsResponse"/>
+
+  <xs:element name="GetUseTypes" type="tns:GetUseTypes"/>
+
+  <xs:element name="GetUseTypesResponse" type="tns:GetUseTypesResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="saveReferenceData" type="tns:saveReferenceData"/>
+
+  <xs:element name="saveReferenceDataResponse" type="tns:saveReferenceDataResponse"/>
+
+  <xs:complexType name="GetBaUnitTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrSeverityTypes">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrSeverityTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:brSeverityTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPropertyTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPropertyTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:propertyTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGenderTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGenderTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:genderTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetStateTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetStateTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:stateTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRequestTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRequestTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:requestTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrTechnicalTypes">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrTechnicalTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:brTechnicalTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRequestCategoryTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRequestCategoryTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:requestCategoryTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplicationActionTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplicationActionTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:applicationActionTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRRRGroupTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRRRGroupTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:rrrGroupTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCapacityTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCapacityTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:capacityTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLgaTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLgaTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:lgaTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetMortgageTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetMortgageTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:mortgageTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveReferenceData">
+    <xs:sequence>
+      <xs:element name="arg0" type="ns2:abstractCodeTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveReferenceDataResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:abstractCodeTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPartyRoles">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPartyRolesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:partyRoleTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetServiceActionTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetServiceActionTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:serviceActionTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourceTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourceTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:sourceTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAvailabilityStatusList">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAvailabilityStatusListResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:availabilityStatusTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplicationStatusTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetApplicationStatusTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:applicationStatusTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetOccupationTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetOccupationTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:occupationTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCommunicationTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCommunicationTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:communicationTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrValidationTargetTypes">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrValidationTargetTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:brValidationTargetTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetTitleTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetTitleTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:titleTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetIdTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetIdTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:idTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRegistrationStatusTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRegistrationStatusTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:registrationStatusTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetChangeStatuTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetChangeStatuTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:changeStatusTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCadastreObjectTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:cadastreObjectTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetTypeActions">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetTypeActionsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:typeActionTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRRRTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRRRTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:rrrTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetServiceStatusTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetServiceStatusTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:serviceStatusTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPresentationFormTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPresentationFormTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:presentationFormTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitRelTypes">
+    <xs:sequence>
+      <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitRelTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitRelTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUseTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUseTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:useTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetHomeTownTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetHomeTownTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:homeTownTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourceBaUnitRelationTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSourceBaUnitRelationTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:sourceBaUnitRelationTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPartyTypes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPartyTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:partyTypeTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

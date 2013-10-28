@@ -1,0 +1,34 @@
+﻿@model LRB.Lib.Domain.Application
+
+@{
+    ViewBag.Title = "Application for Certificate of Occupancy";
+}
+
+<h2>@ViewBag.Title</h2>
+        
+@using (Html.BeginForm()) {
+    
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <h4>Requirements for processing of Certificate of Ownership</h4>
+        <ul>
+            <li>Original Survey Plans</li>
+            <li>Evidence of Ownership</li>
+            <li>Recent Passport Photograph</li>
+            <li>Evidence of Payment of three Years Development Levy</li>
+            <li>Certificate of Incorporation (if Applicant is a Corporate Body or an organization)</li>
+            <li>Fire service report (if this application is for a filling station)</li>
+            <li>Police report (if Land is for a filling station)</li>
+            <li>Feasibility Report (if land is above 5,000 square meters and it is for residential, commercial or industrial purpose)</li>
+        </ul> 
+        <p>
+            <input type="submit" value="I have these requirements, Start Application" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

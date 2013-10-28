@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/administrative" xmlns:ns2="http://webservices.sola.org/transferobjects/cadastre/" xmlns:ns1="http://webservices.sola.org/transferobjects/administrative/" xmlns:ns4="http://webservices.sola.org/faults/" xmlns:ns3="http://webservices.sola.org/transferobjects/casemanagement/" xmlns:tns="http://webservices.sola.org/administrative" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/administrative/" schemaLocation="AdministrativeService_schema4.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/cadastre/" schemaLocation="AdministrativeService_schema3.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/casemanagement/" schemaLocation="AdministrativeService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="AdministrativeService_schema6.xsd"/>
+
+  <xs:element name="CancelBaUnitTermination" type="tns:CancelBaUnitTermination"/>
+
+  <xs:element name="CancelBaUnitTerminationResponse" type="tns:CancelBaUnitTerminationResponse"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="CreateBaUnit" type="tns:CreateBaUnit"/>
+
+  <xs:element name="CreateBaUnitArea" type="tns:CreateBaUnitArea"/>
+
+  <xs:element name="CreateBaUnitAreaResponse" type="tns:CreateBaUnitAreaResponse"/>
+
+  <xs:element name="CreateBaUnitResponse" type="tns:CreateBaUnitResponse"/>
+
+  <xs:element name="GetBaUnitAreas" type="tns:GetBaUnitAreas"/>
+
+  <xs:element name="GetBaUnitAreasResponse" type="tns:GetBaUnitAreasResponse"/>
+
+  <xs:element name="GetBaUnitByCode" type="tns:GetBaUnitByCode"/>
+
+  <xs:element name="GetBaUnitByCodeResponse" type="tns:GetBaUnitByCodeResponse"/>
+
+  <xs:element name="GetBaUnitById" type="tns:GetBaUnitById"/>
+
+  <xs:element name="GetBaUnitByIdResponse" type="tns:GetBaUnitByIdResponse"/>
+
+  <xs:element name="GetBaUnitWithCadObject" type="tns:GetBaUnitWithCadObject"/>
+
+  <xs:element name="GetBaUnitWithCadObjectResponse" type="tns:GetBaUnitWithCadObjectResponse"/>
+
+  <xs:element name="GetBaUnitsByServiceId" type="tns:GetBaUnitsByServiceId"/>
+
+  <xs:element name="GetBaUnitsByServiceIdResponse" type="tns:GetBaUnitsByServiceIdResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SOLAValidationFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:element name="SaveBaUnit" type="tns:SaveBaUnit"/>
+
+  <xs:element name="SaveBaUnitResponse" type="tns:SaveBaUnitResponse"/>
+
+  <xs:element name="TerminateBaUnit" type="tns:TerminateBaUnit"/>
+
+  <xs:element name="TerminateBaUnitResponse" type="tns:TerminateBaUnitResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns4:faultInfoBean"/>
+
+  <xs:complexType name="CreateBaUnit">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="baUnitTO" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateBaUnitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateBaUnitArea">
+    <xs:sequence>
+      <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+      <xs:element name="baUnitTO" type="ns1:baUnitAreaTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateBaUnitAreaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitAreaTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitAreas">
+    <xs:sequence>
+      <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitAreasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitAreaTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitWithCadObject">
+    <xs:sequence>
+      <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+      <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+      <xs:element name="colist" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitWithCadObjectResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitByCode">
+    <xs:sequence>
+      <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+      <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitByCodeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitById">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitByIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelBaUnitTermination">
+    <xs:sequence>
+      <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelBaUnitTerminationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitsByServiceId">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBaUnitsByServiceIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TerminateBaUnit">
+    <xs:sequence>
+      <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TerminateBaUnitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveBaUnit">
+    <xs:sequence>
+      <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+      <xs:element name="baUnitTO" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveBaUnitResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns1:baUnitTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

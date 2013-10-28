@@ -1,0 +1,11 @@
+﻿@model LRB.Lib.Domain.Party
+@section Styles{
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css" />
+}
+@{
+    ViewBag.Title = "ContactInformation";
+}
+
+<h2>ContactInformation</h2>
+@Html.Partial("partials/_PartyPartial", Model)

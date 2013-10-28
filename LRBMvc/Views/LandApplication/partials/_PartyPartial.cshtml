@@ -1,0 +1,155 @@
+﻿@model LRB.Lib.Domain.Party
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="col-md-6">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Surname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Surname)
+            @Html.ValidationMessageFor(model => model.Surname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Firstname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Firstname)
+            @Html.ValidationMessageFor(model => model.Firstname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Middlename)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Middlename)
+            @Html.ValidationMessageFor(model => model.Middlename)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gender)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gender)
+            @Html.ValidationMessageFor(model => model.Gender)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOB)
+            @Html.ValidationMessageFor(model => model.DOB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StateofOrigin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StateofOrigin)
+            @Html.ValidationMessageFor(model => model.StateofOrigin)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeTown)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeTown)
+            @Html.ValidationMessageFor(model => model.HomeTown)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LGA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LGA)
+            @Html.ValidationMessageFor(model => model.LGA)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OfficeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OfficeNo)
+            @Html.ValidationMessageFor(model => model.OfficeNo)
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MobileNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MobileNo)
+            @Html.ValidationMessageFor(model => model.MobileNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeNo)
+            @Html.ValidationMessageFor(model => model.HomeNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fax)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fax)
+            @Html.ValidationMessageFor(model => model.Fax)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OrganizationName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OrganizationName)
+            @Html.ValidationMessageFor(model => model.OrganizationName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Occupation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Occupation)
+            @Html.ValidationMessageFor(model => model.Occupation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmployerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmployerName)
+            @Html.ValidationMessageFor(model => model.EmployerName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmployerAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmployerAddress)
+            @Html.ValidationMessageFor(model => model.EmployerAddress)
+        </div>               
+    </div>
+    <div class="editor-field clear">
+        <label for="submit"></label>
+        <input type="submit" name="submit" value="Proceed to Next Step" class="" />
+    </div> 
+}
+
+<div>
+</div>

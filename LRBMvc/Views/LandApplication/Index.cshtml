@@ -1,0 +1,99 @@
+﻿@model IEnumerable<LRB.Lib.Domain.Application>
+@section styles{
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css" />
+}
+@{
+    ViewBag.Title = "Index";
+}
+<h2>@WebSecurity.CurrentUserName's Applications | @Html.ActionLink("Create New", "Create")</h2>
+
+<p>
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmissionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmissionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            @if (item.Status == null)
+            {
+                <td>
+                    @Html.ActionLink("Continue", "Continue", new { id = item.Id }) |            
+                    @Html.ActionLink("Cancel", "Delete", new { id = item.Id })
+                </td>
+            }
+            else
+            {
+                <td>@Html.ActionLink("View Status", "View", new { id = item.Id })</td>
+            }
+        </tr>
+    }
+
+</table>
+
+@*<table class="table table-bordered">
+    <caption>
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Add Document</a>
+    </caption>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+    </thead>
+    <tbody data-bind="foreach: documents">
+        <tr>
+            <td data-bind="text: Description"></td>
+            <td data-bind="text: FileName"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Upload new Document</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" data-bind="input: description" placeholder="Document Description" />
+                <input type="file" data-bind="fileupload: file" ></input>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bind="click: upload()">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/knockout-2.2.0.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Scripts/Documents.js"></script>
+}*@

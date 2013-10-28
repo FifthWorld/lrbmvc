@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/faults/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="SearchService_schema5.xsd"/>
+
+  <xs:complexType name="faultInfoBean">
+    <xs:sequence>
+      <xs:element name="faultId" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="messageParameters" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="validationResultList" type="ns1:validationResult" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

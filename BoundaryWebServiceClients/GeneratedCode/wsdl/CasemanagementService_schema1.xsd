@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="CasemanagementService_schema3.xsd"/>
+
+  <xs:complexType name="documentTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="extension" type="xs:string" minOccurs="0"/>
+          <xs:element name="nr" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

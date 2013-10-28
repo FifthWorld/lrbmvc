@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/transferobjects/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="validationResult">
+    <xs:sequence>
+      <xs:element name="feedback" type="xs:string" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="severity" type="xs:string" minOccurs="0"/>
+      <xs:element name="successful" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="abstractBasicIdTO" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractTO" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="abstractIdTO">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractVersionedTO" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractReadWriteTO">
+        <xs:sequence>
+          <xs:element name="rowId" type="xs:string" minOccurs="0"/>
+          <xs:element name="rowVersion" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractReadWriteTO" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractTO">
+        <xs:sequence>
+          <xs:element name="entityAction" type="tns:entityAction" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="entityAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DELETE"/>
+      <xs:enumeration value="DISASSOCIATE"/>
+      <xs:enumeration value="INSERT"/>
+      <xs:enumeration value="UPDATE"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

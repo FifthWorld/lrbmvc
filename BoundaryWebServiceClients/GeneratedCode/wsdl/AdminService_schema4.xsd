@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/admin" xmlns:ns2="http://webservices.sola.org/transferobjects/security/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:ns3="http://webservices.sola.org/faults/" xmlns:tns="http://webservices.sola.org/admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="AdminService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/security/" schemaLocation="AdminService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/faults/" schemaLocation="AdminService_schema3.xsd"/>
+
+  <xs:element name="ChangePassword" type="tns:ChangePassword"/>
+
+  <xs:element name="ChangePasswordResponse" type="tns:ChangePasswordResponse"/>
+
+  <xs:element name="CheckConnection" type="tns:CheckConnection"/>
+
+  <xs:element name="CheckConnectionResponse" type="tns:CheckConnectionResponse"/>
+
+  <xs:element name="GetAllSettings" type="tns:GetAllSettings"/>
+
+  <xs:element name="GetAllSettingsResponse" type="tns:GetAllSettingsResponse"/>
+
+  <xs:element name="GetBr" type="tns:GetBr"/>
+
+  <xs:element name="GetBrResponse" type="tns:GetBrResponse"/>
+
+  <xs:element name="GetCurrentUser" type="tns:GetCurrentUser"/>
+
+  <xs:element name="GetCurrentUserResponse" type="tns:GetCurrentUserResponse"/>
+
+  <xs:element name="GetCurrentUserRoles" type="tns:GetCurrentUserRoles"/>
+
+  <xs:element name="GetCurrentUserRolesResponse" type="tns:GetCurrentUserRolesResponse"/>
+
+  <xs:element name="GetGroup" type="tns:GetGroup"/>
+
+  <xs:element name="GetGroupResponse" type="tns:GetGroupResponse"/>
+
+  <xs:element name="GetGroups" type="tns:GetGroups"/>
+
+  <xs:element name="GetGroupsResponse" type="tns:GetGroupsResponse"/>
+
+  <xs:element name="GetGroupsSummary" type="tns:GetGroupsSummary"/>
+
+  <xs:element name="GetGroupsSummaryResponse" type="tns:GetGroupsSummaryResponse"/>
+
+  <xs:element name="GetLanguages" type="tns:GetLanguages"/>
+
+  <xs:element name="GetLanguagesResponse" type="tns:GetLanguagesResponse"/>
+
+  <xs:element name="GetRoles" type="tns:GetRoles"/>
+
+  <xs:element name="GetRolesResponse" type="tns:GetRolesResponse"/>
+
+  <xs:element name="GetSetting" type="tns:GetSetting"/>
+
+  <xs:element name="GetSettingResponse" type="tns:GetSettingResponse"/>
+
+  <xs:element name="GetUser" type="tns:GetUser"/>
+
+  <xs:element name="GetUserResponse" type="tns:GetUserResponse"/>
+
+  <xs:element name="IsUserAdmin" type="tns:IsUserAdmin"/>
+
+  <xs:element name="IsUserAdminResponse" type="tns:IsUserAdminResponse"/>
+
+  <xs:element name="OptimisticLockingFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SOLAAccessFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SOLAFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SOLAValidationFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:element name="SaveBr" type="tns:SaveBr"/>
+
+  <xs:element name="SaveBrResponse" type="tns:SaveBrResponse"/>
+
+  <xs:element name="SaveGroup" type="tns:SaveGroup"/>
+
+  <xs:element name="SaveGroupResponse" type="tns:SaveGroupResponse"/>
+
+  <xs:element name="SaveRole" type="tns:SaveRole"/>
+
+  <xs:element name="SaveRoleResponse" type="tns:SaveRoleResponse"/>
+
+  <xs:element name="SaveUser" type="tns:SaveUser"/>
+
+  <xs:element name="SaveUserResponse" type="tns:SaveUserResponse"/>
+
+  <xs:element name="UnhandledFault" nillable="true" type="ns3:faultInfoBean"/>
+
+  <xs:complexType name="GetAllSettings">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetAllSettingsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:settingTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="settingTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractTO">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="value" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnection">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckConnectionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroups">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroupsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:groupTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRoles">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetRolesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:roleTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLanguages">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetLanguagesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:languageTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="languageTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractTO">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean"/>
+          <xs:element name="code" type="xs:string" minOccurs="0"/>
+          <xs:element name="displayValue" type="xs:string" minOccurs="0"/>
+          <xs:element name="isDefault" type="xs:boolean"/>
+          <xs:element name="itemOrder" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SaveBr">
+    <xs:sequence>
+      <xs:element name="br" type="tns:brTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="brTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractReadWriteTO">
+        <xs:sequence>
+          <xs:element name="brDefinitionList" type="tns:brDefinitionTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="brValidationList" type="tns:brValidationTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="displayName" type="xs:string" minOccurs="0"/>
+          <xs:element name="feedback" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="technicalDescription" type="xs:string" minOccurs="0"/>
+          <xs:element name="technicalTypeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brDefinitionTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractReadWriteTO">
+        <xs:sequence>
+          <xs:element name="activeFrom" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="activeUntil" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="body" type="xs:string" minOccurs="0"/>
+          <xs:element name="brId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="brValidationTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractReadWriteTO">
+        <xs:sequence>
+          <xs:element name="brId" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="orderOfExecution" type="xs:int"/>
+          <xs:element name="severityCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetApplicationMoment" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetRegMoment" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetRequestTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetRrrTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="targetServiceMoment" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SaveBrResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:brTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroup">
+    <xs:sequence>
+      <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:groupTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveUser">
+    <xs:sequence>
+      <xs:element name="userTO" type="ns2:userTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:userTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSetting">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="defaultValue" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetSettingResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCurrentUserRoles">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetCurrentUserRolesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:roleTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCurrentUser">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetCurrentUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:userTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroupsSummary">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="GetGroupsSummaryResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:groupSummaryTO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBr">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="lang" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetBrResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:brTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveGroup">
+    <xs:sequence>
+      <xs:element name="groupTO" type="ns2:groupTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:groupTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRole">
+    <xs:sequence>
+      <xs:element name="roleTO" type="ns2:roleTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:roleTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IsUserAdmin">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="IsUserAdminResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ChangePassword">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="password" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ChangePasswordResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUser">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="ns2:userTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

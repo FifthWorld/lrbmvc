@@ -1,0 +1,44 @@
+﻿@model PagedList.IPagedList<LRBMvc.Areas.earchive.SearchItem>
+@using PagedList.Mvc; 
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "searchbyLocation";
+}
+
+<h2>Showing location based results from our E-Archives</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Primary Key
+        </th>
+        <th>
+            Land Owners
+        </th>
+        <th>
+            Property Address
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.prkNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new {  prkNo=item.prkNo  })
+        </td>
+    </tr>
+}
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter }) )

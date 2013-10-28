@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p style="color: white">
+                Welcome to the official website of the Ondo State Land Records Bureau. 
+                The Bureau was commissioned on July 10, 2012 with mandate to enhance the value of land assets of about 15,500 sq km, 
+                by providing a transparent, secure, affordable and customer-friendly land management services for both the public and the private sector in the state.
+            </p>
+        </div>
+    </section>
+}
+<h3>You can do any of the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>To apply for Certificate of Occupancy (C of O). @Html.ActionLink("Click here", "Create", "LandApplication","", new { @class = "btn btn-default" })</h5>
+        <br />
+    </li>
+
+    <li class="two">
+        <h5>To check your application status. @Html.ActionLink("Click here", "Index", "LandApplication","", new { @class = "btn btn-default" })</h5>        
+        <br />
+        
+    </li>
+
+    <li class="three">
+        <h5>To search for Certificate of Occupancy issued in the past 10 years. <a href="#myModal" class="btn btn-default">Click here</a></h5>
+        <br />
+    </li>
+</ol>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LandTitlesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="LandTitlesModelStoreContainer">
+          <EntitySet Name="LandOwners" EntityType="LandTitlesModel.Store.LandOwners" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Properties" EntityType="LandTitlesModel.Store.Properties" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Transactions" EntityType="LandTitlesModel.Store.Transactions" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_PropertyLandOwner" Association="LandTitlesModel.Store.FK_PropertyLandOwner">
+            <End Role="Properties" EntitySet="Properties" />
+            <End Role="LandOwners" EntitySet="LandOwners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyTransaction" Association="LandTitlesModel.Store.FK_PropertyTransaction">
+            <End Role="Properties" EntitySet="Properties" />
+            <End Role="Transactions" EntitySet="Transactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LandOwners">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="typeofownership" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="middlename" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="surname" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="title" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="sex" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="industryname" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="Property_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Properties">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fileno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="doe" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="owner_type" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="blockno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="plotno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="houseno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="location" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="town" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="lga" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="industryname" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="typeofuse" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="lud" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="effdate" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="rvalue" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="revp" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="premium" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="rent" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="areasize" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="areaunit" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="sda" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="spn" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="prkno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="dod" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drv" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drn" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drp" Type="varchar" Nullable="false" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="Transactions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="prkno" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="prkstatus" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="typeofownership" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="dot" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="partyone" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="partytwo" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drv" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drn" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="drp" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="tt" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="party_typeone" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="party_typetwo" Type="varchar" Nullable="false" MaxLength="400" />
+          <Property Name="Property_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PropertyLandOwner">
+          <End Role="Properties" Type="LandTitlesModel.Store.Properties" Multiplicity="1" />
+          <End Role="LandOwners" Type="LandTitlesModel.Store.LandOwners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Properties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandOwners">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyTransaction">
+          <End Role="Properties" Type="LandTitlesModel.Store.Properties" Multiplicity="1" />
+          <End Role="Transactions" Type="LandTitlesModel.Store.Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Properties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Transactions">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LandTitlesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LandTitles" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="LandOwners" EntityType="LandTitlesModel.LandOwner" />
+          <EntitySet Name="Properties" EntityType="LandTitlesModel.Property" />
+          <EntitySet Name="Transactions" EntityType="LandTitlesModel.Transaction" />
+          <AssociationSet Name="FK_PropertyLandOwner" Association="LandTitlesModel.FK_PropertyLandOwner">
+            <End Role="Properties" EntitySet="Properties" />
+            <End Role="LandOwners" EntitySet="LandOwners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PropertyTransaction" Association="LandTitlesModel.FK_PropertyTransaction">
+            <End Role="Properties" EntitySet="Properties" />
+            <End Role="Transactions" EntitySet="Transactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LandOwner">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="typeofownership" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="firstname" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="middlename" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="surname" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="sex" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="industryname" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="Property_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Property" Relationship="LandTitlesModel.FK_PropertyLandOwner" FromRole="LandOwners" ToRole="Properties" />
+        </EntityType>
+        <EntityType Name="Property">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="fileno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="doe" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="owner_type" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="blockno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="plotno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="houseno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="town" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="lga" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="industryname" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="typeofuse" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="lud" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="effdate" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="rvalue" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="revp" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="premium" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="rent" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="areasize" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="areaunit" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="sda" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="spn" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="prkno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="dod" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drv" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drn" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drp" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="LandOwners" Relationship="LandTitlesModel.FK_PropertyLandOwner" FromRole="Properties" ToRole="LandOwners" />
+          <NavigationProperty Name="Transactions" Relationship="LandTitlesModel.FK_PropertyTransaction" FromRole="Properties" ToRole="Transactions" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="prkno" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="prkstatus" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="typeofownership" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="dot" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="partyone" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="partytwo" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drv" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drn" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="drp" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="tt" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="party_typeone" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="party_typetwo" Type="String" Nullable="false" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="Property_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Property" Relationship="LandTitlesModel.FK_PropertyTransaction" FromRole="Transactions" ToRole="Properties" />
+        </EntityType>
+        <Association Name="FK_PropertyLandOwner">
+          <End Role="Properties" Type="LandTitlesModel.Property" Multiplicity="1" />
+          <End Role="LandOwners" Type="LandTitlesModel.LandOwner" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Properties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandOwners">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PropertyTransaction">
+          <End Role="Properties" Type="LandTitlesModel.Property" Multiplicity="1" />
+          <End Role="Transactions" Type="LandTitlesModel.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Properties">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Transactions">
+              <PropertyRef Name="Property_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LandTitlesModelStoreContainer" CdmEntityContainer="LandTitles">
+          <EntitySetMapping Name="LandOwners">
+            <EntityTypeMapping TypeName="LandTitlesModel.LandOwner">
+              <MappingFragment StoreEntitySet="LandOwners">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="typeofownership" ColumnName="typeofownership" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="middlename" ColumnName="middlename" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="industryname" ColumnName="industryname" />
+                <ScalarProperty Name="Property_Id" ColumnName="Property_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Properties">
+            <EntityTypeMapping TypeName="LandTitlesModel.Property">
+              <MappingFragment StoreEntitySet="Properties">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="fileno" ColumnName="fileno" />
+                <ScalarProperty Name="doe" ColumnName="doe" />
+                <ScalarProperty Name="owner_type" ColumnName="owner_type" />
+                <ScalarProperty Name="blockno" ColumnName="blockno" />
+                <ScalarProperty Name="plotno" ColumnName="plotno" />
+                <ScalarProperty Name="houseno" ColumnName="houseno" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="town" ColumnName="town" />
+                <ScalarProperty Name="lga" ColumnName="lga" />
+                <ScalarProperty Name="industryname" ColumnName="industryname" />
+                <ScalarProperty Name="typeofuse" ColumnName="typeofuse" />
+                <ScalarProperty Name="lud" ColumnName="lud" />
+                <ScalarProperty Name="effdate" ColumnName="effdate" />
+                <ScalarProperty Name="rvalue" ColumnName="rvalue" />
+                <ScalarProperty Name="revp" ColumnName="revp" />
+                <ScalarProperty Name="premium" ColumnName="premium" />
+                <ScalarProperty Name="rent" ColumnName="rent" />
+                <ScalarProperty Name="areasize" ColumnName="areasize" />
+                <ScalarProperty Name="areaunit" ColumnName="areaunit" />
+                <ScalarProperty Name="sda" ColumnName="sda" />
+                <ScalarProperty Name="spn" ColumnName="spn" />
+                <ScalarProperty Name="prkno" ColumnName="prkno" />
+                <ScalarProperty Name="dod" ColumnName="dod" />
+                <ScalarProperty Name="drv" ColumnName="drv" />
+                <ScalarProperty Name="drn" ColumnName="drn" />
+                <ScalarProperty Name="drp" ColumnName="drp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="LandTitlesModel.Transaction">
+              <MappingFragment StoreEntitySet="Transactions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="prkno" ColumnName="prkno" />
+                <ScalarProperty Name="prkstatus" ColumnName="prkstatus" />
+                <ScalarProperty Name="typeofownership" ColumnName="typeofownership" />
+                <ScalarProperty Name="dot" ColumnName="dot" />
+                <ScalarProperty Name="partyone" ColumnName="partyone" />
+                <ScalarProperty Name="partytwo" ColumnName="partytwo" />
+                <ScalarProperty Name="drv" ColumnName="drv" />
+                <ScalarProperty Name="drn" ColumnName="drn" />
+                <ScalarProperty Name="drp" ColumnName="drp" />
+                <ScalarProperty Name="tt" ColumnName="tt" />
+                <ScalarProperty Name="party_typeone" ColumnName="party_typeone" />
+                <ScalarProperty Name="party_typetwo" ColumnName="party_typetwo" />
+                <ScalarProperty Name="Property_Id" ColumnName="Property_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

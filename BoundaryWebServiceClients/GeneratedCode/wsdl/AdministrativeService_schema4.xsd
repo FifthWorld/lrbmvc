@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/administrative/" xmlns:ns2="http://webservices.sola.org/transferobjects/casemanagement/" xmlns:ns1="http://webservices.sola.org/transferobjects/cadastre/" xmlns:ns4="http://webservices.sola.org/transferobjects/" xmlns:ns3="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:tns="http://webservices.sola.org/transferobjects/administrative/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/cadastre/" schemaLocation="AdministrativeService_schema3.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/casemanagement/" schemaLocation="AdministrativeService_schema2.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/digitalarchive/" schemaLocation="AdministrativeService_schema1.xsd"/>
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="AdministrativeService_schema5.xsd"/>
+
+  <xs:complexType name="baUnitTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="baUnitNotationList" type="tns:baUnitNotationTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="cadastreObjectList" type="ns1:cadastreObjectTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="calculatedAreaSize" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="childBaUnits" type="tns:relatedBaUnitInfoTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="locked" type="xs:boolean"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="parentBaUnits" type="tns:relatedBaUnitInfoTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="pendingActionCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="rrrList" type="tns:rrrTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="sourceList" type="ns2:sourceTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitNotationTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+          <xs:element name="changeTime" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="locked" type="xs:boolean"/>
+          <xs:element name="notationText" type="xs:string" minOccurs="0"/>
+          <xs:element name="referenceNr" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="relatedBaUnitInfoTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+          <xs:element name="relatedBaUnit" type="tns:baUnitBasicTO" minOccurs="0"/>
+          <xs:element name="relatedBaUnitId" type="xs:string" minOccurs="0"/>
+          <xs:element name="relationCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitBasicTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractTO">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rrrTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="concatenatedName" type="xs:string" minOccurs="0"/>
+          <xs:element name="expirationDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="locked" type="xs:boolean"/>
+          <xs:element name="mortgageAmount" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="mortgageInterestRate" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="mortgageRanking" type="xs:int" minOccurs="0"/>
+          <xs:element name="mortgageTypeCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="notation" type="tns:baUnitNotationTO" minOccurs="0"/>
+          <xs:element name="nr" type="xs:string" minOccurs="0"/>
+          <xs:element name="primary" type="xs:boolean"/>
+          <xs:element name="registrationDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="rightHolderList" type="ns2:partySummaryTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="rrrShareList" type="tns:rrrShareTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="share" type="xs:double" minOccurs="0"/>
+          <xs:element name="sourceList" type="ns2:sourceTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="rrrShareTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="denominator" type="xs:short" minOccurs="0"/>
+          <xs:element name="nominator" type="xs:short" minOccurs="0"/>
+          <xs:element name="rightHolderList" type="ns2:partySummaryTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="rrrId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baUnitAreaTO">
+    <xs:complexContent>
+      <xs:extension base="ns4:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+          <xs:element name="calculatedAreaSize" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="size" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

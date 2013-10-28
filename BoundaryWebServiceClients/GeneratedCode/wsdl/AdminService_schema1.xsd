@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/security/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/transferobjects/security/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="AdminService_schema2.xsd"/>
+
+  <xs:complexType name="groupTO">
+    <xs:complexContent>
+      <xs:extension base="tns:groupSummaryTO">
+        <xs:sequence>
+          <xs:element name="groupRoles" type="tns:groupRoleTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groupSummaryTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groupRoleTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractReadWriteTO">
+        <xs:sequence>
+          <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="roleCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="roleTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractCodeTO">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userTO">
+    <xs:complexContent>
+      <xs:extension base="tns:userSummaryTO">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean"/>
+          <xs:element name="password" type="xs:string" minOccurs="0"/>
+          <xs:element name="pasword" type="xs:string" minOccurs="0"/>
+          <xs:element name="userGroups" type="tns:userGroupTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userSummaryTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userGroupTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+          <xs:element name="userId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

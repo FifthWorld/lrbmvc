@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/cadastre/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/transferobjects/cadastre/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="CadastreService_schema3.xsd"/>
+
+  <xs:complexType name="cadastreObjectTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="approvalDatetime" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="geomPolygon" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="historicDatetime" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+          <xs:element name="sourceReference" type="xs:string" minOccurs="0"/>
+          <xs:element name="spatialValueAreaList" type="tns:spatialValueAreaTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="spatialValueAreaTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="size" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="spatialUnitId" type="xs:string" minOccurs="0"/>
+          <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreObjectTargetTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="cadastreObjectId" type="xs:string" minOccurs="0"/>
+          <xs:element name="geomPolygonCurrent" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="surveyPointTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="boundary" type="xs:boolean"/>
+          <xs:element name="geom" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+          <xs:element name="linked" type="xs:boolean"/>
+          <xs:element name="originalGeom" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreObjectNodeTargetTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractVersionedTO">
+        <xs:sequence>
+          <xs:element name="geom" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="nodeId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreObjectTargetRedefinitionTO">
+    <xs:complexContent>
+      <xs:extension base="tns:cadastreObjectTargetTO">
+        <xs:sequence>
+          <xs:element name="geomPolygon" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="cadastreObjectNodeTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractTO">
+        <xs:sequence>
+          <xs:element name="cadastreObjectList" type="tns:cadastreObjectTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="geom" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="id" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:ns1="http://webservices.sola.org/transferobjects/" xmlns:tns="http://webservices.sola.org/transferobjects/digitalarchive/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://webservices.sola.org/transferobjects/" schemaLocation="DigitalarchiveService_schema2.xsd"/>
+
+  <xs:complexType name="documentBinaryTO">
+    <xs:complexContent>
+      <xs:extension base="tns:documentTO">
+        <xs:sequence>
+          <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="documentTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractIdTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="extension" type="xs:string" minOccurs="0"/>
+          <xs:element name="nr" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fileInfoTO">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractTO">
+        <xs:sequence>
+          <xs:element name="fileSize" type="xs:long"/>
+          <xs:element name="modificationDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fileBinaryTO">
+    <xs:complexContent>
+      <xs:extension base="tns:fileInfoTO">
+        <xs:sequence>
+          <xs:element name="content" type="xs:base64Binary" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

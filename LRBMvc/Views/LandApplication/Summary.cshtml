@@ -1,0 +1,44 @@
+﻿@model LRB.Lib.Domain.Application
+
+@{
+    ViewBag.Title = "Summary";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css" />
+    
+}
+<h2>Summary of Application</h2>
+
+<fieldset>
+    <legend>Applicant Information</legend>
+
+    <div class="form-group">
+        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.UserId)</span>
+        <div class="col-lg-10">
+            <span class="form-control">@Html.DisplayFor(model => model.UserId)</span>
+        </div>        
+    </div>
+
+</fieldset>
+
+<fieldset>
+    <legend>Personal Information Segment</legend>
+    @Html.Partial("partials/_ViewPartyPartial", Model.ContactPerson)
+</fieldset>
+
+<fieldset>
+    <legend>Personal Information Segment</legend>
+    @Html.Partial("partials/_ViewPropertyPartial", Model.PrimaryProperty)
+</fieldset>
+
+<div class="form-group">
+    <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.OtherRelevantInfo)</span>
+    <div class="col-lg-10">
+        <span class="form-control">@Html.DisplayFor(model => model.OtherRelevantInfo)</span>
+    </div>        
+</div>
+<p>
+    @Html.ActionLink("Complete Application", "Complete") |
+    @Html.ActionLink("Back to Beginning", "Create")
+</p>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Land Records Bureau</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @RenderSection("styles", required: false)
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    </head>
+    <body>
+        <div>
+
+        </div>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.RouteLink("Land Records Bureau", "Default", new { action = "Index", controller = "Home" })</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.RouteLink("Home", "Default", new { action = "Index", controller = "Home" })</li>
+                            @Html.Partial("_ApplicationsPartial")
+                            <li>@Html.RouteLink("About", "Default", new { action = "About", controller = "Home" })</li>
+                            <li>@Html.RouteLink("Contact", "Default", new { action = "Contact", controller = "Home" })</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Ondo State Land Records Bureau</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        @Html.Partial("_TitleSearch")
+    </body>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/titlesearch.js"></script>
+</html>
