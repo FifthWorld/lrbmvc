@@ -64,6 +64,9 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\packages\Mvc4Futures.4.0.20710.0\lib\net40\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="MvcFlash.Core">
       <HintPath>..\packages\MvcFlash.Core.2.0.1\lib\net40\MvcFlash.Core.dll</HintPath>
     </Reference>
@@ -259,20 +262,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-image-gallery.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\demo-ie8.css" />
-    <Content Include="Content\demo.css" />
-    <Content Include="Content\fuelux-responsive.min.css" />
-    <Content Include="Content\fuelux.min.css" />
-    <Content Include="Content\jquery.fileupload-noscript.css" />
-    <Content Include="Content\jquery.fileupload-ui-noscript.css" />
-    <Content Include="Content\jquery.fileupload-ui.css" />
-    <Content Include="Content\jquery.fileupload.css" />
+    <Content Include="Content\buttons.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\home\bootstrap.css" />
+    <Content Include="Content\home\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\tables.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -356,50 +357,51 @@
       <DependentUpon>TitlesModel.edmx</DependentUpon>
       <LastGenOutput>TitlesModel.cs</LastGenOutput>
     </Content>
+    <Content Include="fonts\Candara.ttf" />
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\Thumbs.db" />
     <None Include="Properties\PublishProfiles\LRBMvc.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Images\custom\akurebg.PNG" />
+    <Content Include="img\analysis.png" />
+    <Content Include="img\application-form.png" />
+    <Content Include="img\gov.gif" />
+    <Content Include="img\lrb-background.jpg" />
+    <Content Include="img\lrb-banner.jpg" />
+    <Content Include="img\Ondo-logo.jpg" />
+    <Content Include="img\sign-up.png" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\bootstrap-image-gallery.min.js" />
-    <Content Include="Scripts\canvas-to-blob.min.js" />
-    <Content Include="Scripts\docs.js" />
-    <Content Include="Scripts\Documents.js" />
-    <Content Include="Scripts\fuelux.js" />
-    <Content Include="Scripts\fuelux.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\home\bootstrap.js" />
+    <Content Include="Scripts\home\bootstrap.min.js" />
+    <Content Include="Scripts\home\tab.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
-    <Content Include="Scripts\jquery.fileupload-angular.js" />
-    <Content Include="Scripts\jquery.fileupload-audio.js" />
-    <Content Include="Scripts\jquery.fileupload-image.js" />
-    <Content Include="Scripts\jquery.fileupload-jquery-ui.js" />
-    <Content Include="Scripts\jquery.fileupload-process.js" />
-    <Content Include="Scripts\jquery.fileupload-ui.js" />
-    <Content Include="Scripts\jquery.fileupload-validate.js" />
-    <Content Include="Scripts\jquery.fileupload-video.js" />
-    <Content Include="Scripts\jquery.fileupload.js" />
-    <Content Include="Scripts\jquery.iframe-transport.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.ui.widget.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive-custom-for-bootstrap.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\load-image.min.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\MvcWizard.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\titlesearch.js" />
+    <None Include="Views\Home\Faq.cshtml" />
+    <None Include="Views\Home\Services.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -452,7 +454,6 @@
     <Content Include="Views\LandApplication\Create.cshtml" />
     <Content Include="Views\LandApplication\partials\_PropertyPartial.cshtml" />
     <Content Include="Views\LandApplication\partials\_PartyPartial.cshtml" />
-    <Content Include="Views\LandApplication\View.cshtml" />
     <Content Include="Views\Shared\app_Layout.cshtml" />
     <Content Include="Views\LandApplication\ContactInformation.cshtml" />
     <Content Include="Views\LandApplication\PropertyInformation.cshtml" />
@@ -465,13 +466,13 @@
     <Content Include="Views\Shared\DisplayTemplates\MessageBase.cshtml" />
     <Content Include="Views\LandApplication\Delete.cshtml" />
     <Content Include="Views\Shared\_TitleSearch.cshtml" />
-    <Content Include="Views\Shared\_uploader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\earchive\Models\" />
     <Folder Include="Areas\earchive\Views\Shared\" />
     <Folder Include="Filters\" />
+    <Folder Include="Views\LandApplication\steps\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,36 +1,98 @@
 ﻿@{
-    ViewBag.Title = "Welcome";
+    ViewBag.Title = "Home";
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p style="color: white">
-                Welcome to the official website of the Ondo State Land Records Bureau. 
-                The Bureau was commissioned on July 10, 2012 with mandate to enhance the value of land assets of about 15,500 sq km, 
-                by providing a transparent, secure, affordable and customer-friendly land management services for both the public and the private sector in the state.
+<div class="top_box">
+    <div class="action_box_third">
+        <a href="/LandApplication">
+            <h2>Create an Account</h2>
+            <p>
+                Sign up to become a registerd user. Only registered members will have 
+									access to application forms.
+							
             </p>
-        </div>
-    </section>
-}
-<h3>You can do any of the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>To apply for Certificate of Occupancy (C of O). @Html.ActionLink("Click here", "Create", "LandApplication","", new { @class = "btn btn-default" })</h5>
-        <br />
-    </li>
-
-    <li class="two">
-        <h5>To check your application status. @Html.ActionLink("Click here", "Index", "LandApplication","", new { @class = "btn btn-default" })</h5>        
-        <br />
-        
-    </li>
-
-    <li class="three">
-        <h5>To search for Certificate of Occupancy issued in the past 10 years. <a href="#myModal" class="btn btn-default">Click here</a></h5>
-        <br />
-    </li>
-</ol>
+            Sign Up
+							
+            <img class="icon" src="img/sign-up.png" />
+        </a>
+    </div>
+    <!--action_box_third-->
+    <div class="action_box_third">
+        <a href="#titlesearch" data-toggle="modal" data-target="#titlesearch">
+            <h2>Title Search</h2>
+            <p>
+                Search for registered Land and Cadastral<br />
+                with the ODSG by Titles,<br />
+                Name or Location.
+							
+            </p>
+            Search Now
+							
+            <img class="icon" src="img/analysis.png" />
+        </a>
+    </div>
+    <!--action_box_third-->
+    <div class="action_box_third">
+        <a href="/LandApplication">
+            <h2>Application Forms</h2>
+            <p>
+                You can apply for allocation of land, track<br />
+                your application and get<br />
+                your C of O here.
+							
+            </p>
+            Apply Now
+							
+            <img class="icon" src="img/application-form.png" />
+        </a>
+    </div>
+    <!--action_box_third-->
+</div>
+<!--top_box-->
+<div class="bottom_box">
+    <div class="main_box">
+        <h2>Welcome to Land Records Bureau</h2>
+        <img src="img/gov.gif" style="float: left;" />
+        <p style="text-align: justify">
+            <strong>Welcome</strong>
+            to the official website of the Ondo State Land Recods Bureau. 
+                            	The Bureau was commissioned on July 10, 2012 with a simple mandate: to enhance 
+                            	the value of our land assets, about 15,500 sq km, by providing a transparent, 
+                            	secure, affordable and customer-friendly land management services for both the 
+                            	public and the private sector. To this end, we are building a trustworthy platform, 
+                            	for both land owners and buyers, which enhances title credibility by ensuring that all 
+                            	land related transactions could be conducted securely and in a fraud-free environement. 
+ 						
+        </p>
+    </div>
+    <!--main_box-->
+    <div class="side_box">
+        <h2>Important Announcements!</h2>
+        <ul>
+            <li><a href="#">Any important land issue can be transfixed here. This box could be useful for letting the public know of new policy developments and etcetera.</a></li>
+            <li><a href="#">Lorem Ipsum is latin. Whoever decides to use Latin as a placeholder is a nerd of epic proportions.</a></li>
+            <li><a href="#">Lorem Ipsum is latin. Whoever decides to use Latin as a placeholder is a nerd of epic proportions.</a></li>
+            <li><a href="#">Lorem Ipsum is latin. Whoever decides to use Latin as a placeholder is a nerd of epic proportions.</a></li>
+            <li><a href="#">Lorem Ipsum is latin. Whoever decides to use Latin as a placeholder is a nerd of epic proportions.</a></li>
+        </ul>
+    </div>
+    <!--side_box-->
+    <ul class="feature">
+        <li>
+            <a>
+                <img src="">
+            </a>
+        </li>
+        <li>
+            <a>
+                <img src="">
+            </a>
+        </li>
+        <li>
+            <a>
+                <img src="">
+            </a>
+        </li>
+    </ul>
+    <!--feature-->
+</div>
+<!--bottom_box-->

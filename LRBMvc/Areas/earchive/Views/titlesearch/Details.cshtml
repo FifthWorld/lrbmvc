@@ -4,37 +4,39 @@
     ViewBag.Title = "Property Details";
 }
 
-
-<table class="table table-bordered">
-    <caption>
-        <h2>Property Information</h2>
-    </caption>
-    <tbody>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.fileno)</td>
-            <td>@Html.DisplayFor(model => model.fileno)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.doe)</td>
-            <td>@Html.DisplayFor(model => model.doe)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.owner_type)</td>
-            <td>@Html.DisplayFor(model => model.owner_type)</td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td>@Html.DisplayFor(model => model.location)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(model => model.status)</td>
-            @if (Model.status == "FREE AND CLEAR")
+<div class="">
+    <table class="table table-bordered">
+        <caption>
+            <h2>Property Information</h2>
+        </caption>
+        <tbody>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.fileno)</td>
+                <td>@Html.DisplayFor(model => model.fileno)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.doe)</td>
+                <td>@Html.DisplayFor(model => model.doe)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.owner_type)</td>
+                <td>@Html.DisplayFor(model => model.owner_type)</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@Html.DisplayFor(model => model.location)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.status)</td>
+                @if (Model.status == "FREE AND CLEAR")
                 {
                     <td style="background: green; color: white">@Html.DisplayFor(model => model.status)</td>                    
                 }
-                else{
+                else
+                {
                     <td style="background: red; color: white">@Html.DisplayFor(model => model.status)</td> 
                 }
-        </tr>
-    </tbody>
-</table>
+            </tr>
+        </tbody>
+    </table>
+</div>

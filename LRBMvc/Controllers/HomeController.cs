@@ -30,6 +30,17 @@ namespace LRBMvc.Controllers
             return View();
         }
 
+        public ActionResult Faq()
+        {
+
+            return View();
+        }
+
+        public ActionResult Services()
+        {
+            return View();
+        }
+
         public ActionResult Requirements()
         {
             ViewBag.Message = "Requirements for Certificate of Occupancy processing.";

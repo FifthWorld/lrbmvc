@@ -1,22 +1,29 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<div class="container">
-    <p class="lead">You can reach us in our various area offices</p>
-    <div class="col-md-6">
-        <h3 class="page-header">Main Office</h3>
-        <h5>Land Records Bureau</h5>
-        <p>Land Records Bureau, <br />
-            Governor’s office, Alagbaka Akure<br />
-            <a href="akureareaoffice@lrb.on.gov">Email: akureareaoffice@lrb.on.gov</a>
-        </p>
-    </div>
-    <div class="col-md-6">
-        <h3 class="page-header">Anexxe Office</h3>
-        <h5>Lands and Housing Ministry</h5>
-        <p>Land Records Bureau, <br />
-            MInistry of Lands and Housing<br />
-            <a href="akureareaoffice@lrb.on.gov">Email: akureareaoffice@lrb.on.gov</a>
-        </p>
-    </div>
+<div class="top_box">
 </div>
+<!--top_box-->
+<div class="form_box">
+    <h2 class="heading">Contact Form</h2>
+    <p>
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text" class="contact_form" title="Enter your full name">
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text" class="contact_form" title="Enter your email address">
+    </p>
+    <p>
+        <label for="web">Website</label>
+        <input name="web" id="web" type="text" class="contact_form" title="Enter your website">
+    </p>
+    <p>
+        <label for="comments">Message</label>
+        <textarea name="comments" id="comments" rows="5" cols="20" class="contact_form" title="Enter your comments"></textarea>
+    </p>
+    <p>
+        <input type="button" value="Send" name="submit" id="submit">
+        <span id="error" class="warning" style="display: none;">Message</span></p>
+</div>
+<!--form_box-->

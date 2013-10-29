@@ -23,7 +23,7 @@
             @Html.LabelFor(model => model.CapacityofOwnership)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.CapacityofOwnership)
+            @Html.DropDownListFor(model => model.CapacityofOwnership, new SelectList(new String[] { "Inheritance", "Purchase" }), new { @class =""})
             @Html.ValidationMessageFor(model => model.CapacityofOwnership)
         </div>
 
@@ -31,7 +31,8 @@
             @Html.LabelFor(model => model.LandUse)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.LandUse)
+            @Html.DropDownListFor(model => model.LandUse, 
+            new SelectList(new String[] { "Residential", "Commercial", "Agricultural", "Industrial" }), new { @class =""})
             @Html.ValidationMessageFor(model => model.LandUse)
         </div>
 

@@ -1,57 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - Land Records Bureau</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        @RenderSection("styles", required: false)
-        <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
-    </head>
-    <body>
-        <div>
+<head>
+    <meta charset="utf-8" />
 
-        </div>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.RouteLink("Land Records Bureau", "Default", new { action = "Index", controller = "Home" })</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>@ViewBag.Title - Ondo LRB</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Tobi Olagunju" />
+
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet" href="~/Content/home.css" />
+    <link rel="stylesheet" href="~/Content/home/bootstrap.css"
+
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-bg">
+            <div class="banner"></div>
+            <!--banner-->
+            <div class="container">
+                <div class="content">
+                    <ul class="nav2">
+                        <li class="active2">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
+                        <li>@Html.RouteLink("ABOUT US", "Default", new { action = "About", controller = "Home" })</li>
+                        <li>@Html.RouteLink("SERVICES", "Default", new { action = "Services", controller = "Home" })
+                            <ul>
+                                <li><a href="#">Apply for Certificate of Occupancy</a></li>
+                                <li><a href="#">Check your Application Status</a></li>
+                                <li><a href="#">Search for Certificate of Occupancy</a></li>
+                            </ul>
+                        </li>
+                        <li>@Html.RouteLink("CONTACT US", "Default", new { action = "Contact", controller = "Home" })</li>
+                        <li>@Html.RouteLink("FAQ", "Default", new { action = "Faq", controller = "Home" })</li>
                         @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.RouteLink("Home", "Default", new { action = "Index", controller = "Home" })</li>
-                            @Html.Partial("_ApplicationsPartial")
-                            <li>@Html.RouteLink("About", "Default", new { action = "About", controller = "Home" })</li>
-                            <li>@Html.RouteLink("Contact", "Default", new { action = "Contact", controller = "Home" })</li>
-                        </ul>
-                    </nav>
+                    </ul>
+                    
+                    <!--nav-->
+                    <div class="clear"></div>
+                    @RenderBody()
                 </div>
+                <!--content-->
+                <div id="bottom">
+                    &copy; 2013 Fifth World Inc.  
+                </div>
+                <!--bottom-->
             </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <!--container-->
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Ondo State Land Records Bureau</p>
-                </div>
-            </div>
-        </footer>
-
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        @Html.Partial("_TitleSearch")
-    </body>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+        <!--container-bg-->
+    </div>
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/home/bootstrap.js"></script>    
+    @Html.Partial("_TitleSearch")
+    @RenderSection("scripts", required: false)
     <script src="~/Scripts/titlesearch.js"></script>
+</body>
 </html>

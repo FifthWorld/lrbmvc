@@ -40,6 +40,7 @@ using System.ComponentModel.DataAnnotations;
         public string Gender { get; set; }
 
         [DisplayName("Date of Birth")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> DOB { get; set; }
 
         [DisplayName("State of Origin")]
@@ -48,7 +49,7 @@ using System.ComponentModel.DataAnnotations;
         [DisplayName("Home town")]
         public string HomeTown { get; set; }
 
-        [DisplayName("Local Government Address of Applicant")]
+        [DisplayName("Local Government Area of Applicant")]
         public string LGA { get; set; }
 
         [DisplayName("Office Number(If Registering for an organization)")]
@@ -66,6 +67,7 @@ using System.ComponentModel.DataAnnotations;
         public string Fax { get; set; }
 
         [DisplayName("Email Address")]
+        [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Email Address is required")]
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }

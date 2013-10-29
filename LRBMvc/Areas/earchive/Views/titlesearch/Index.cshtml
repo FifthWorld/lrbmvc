@@ -1,14 +1,17 @@
 ﻿@model PagedList.IPagedList<LRBMvc.Areas.earchive.SearchItem>
 @using PagedList.Mvc; 
+
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "searchbyLocation";
 }
-
+<br />
 <h2>Showing location based results from our E-Archives</h2>
-
 <table class="table table-bordered">
+     <thead>
+        <caption></caption>
+    </thead>
     <tr>
         <th>
             PRK No
@@ -37,7 +40,7 @@
             @Html.DisplayFor(modelItem => item.owner)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new {  prkNo = item.prkNo  })
+            @Html.ActionLink("Details", "Details", new {  prkNo = item.prkNo  }, new {@class="btn btn-warning"})
         </td>
     </tr>
 }

@@ -21,8 +21,11 @@ namespace LRBMvc
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/fuelux").Include(
-                        "~/Scripts/fuelux.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/form").Include(
+                "~/Scripts/jquery-1.9.1.js",
+                "~/Scripts/bootstrap.js"
+                ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -30,8 +33,11 @@ namespace LRBMvc
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
-            bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.min.css", "~/Content/bootstrap-theme.min.css"));
-            bundles.Add(new StyleBundle("~/Content/fuelux").Include("~/Content/fuelux.min.css"));
+            bundles.Add(new StyleBundle("~/Content/form").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/forms.css", 
+                "~/Content/bootstrap-theme.css"));
+
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

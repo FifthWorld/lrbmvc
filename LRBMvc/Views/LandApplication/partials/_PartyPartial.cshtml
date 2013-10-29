@@ -3,8 +3,11 @@
 <script src="~/Scripts/jquery-1.8.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link rel="stylesheet" href="~/Content/datepicker.css" />
 
-@using (Html.BeginForm()) {
+
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -13,7 +16,7 @@
             @Html.LabelFor(model => model.Surname)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Surname)
+            @Html.TextBoxFor(model => model.Surname, new { @class= "form-control"})
             @Html.ValidationMessageFor(model => model.Surname)
         </div>
 
@@ -37,7 +40,7 @@
             @Html.LabelFor(model => model.Gender)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Gender)
+            @Html.DropDownListFor(model => model.Gender, new SelectList(new String[] { "male", "female" }), new { @class =""})
             @Html.ValidationMessageFor(model => model.Gender)
         </div>
 
@@ -45,7 +48,10 @@
             @Html.LabelFor(model => model.DOB)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DOB)
+            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                @Html.EditorFor(model => model.DOB, new { @class = "date-picker" })
+                <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
             @Html.ValidationMessageFor(model => model.DOB)
         </div>
 
@@ -53,7 +59,7 @@
             @Html.LabelFor(model => model.StateofOrigin)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.StateofOrigin)
+            @Html.DropDownListFor(model => model.StateofOrigin, new SelectList(new String[] { "Ondo State", "Ogun State" }), new { @class =""})
             @Html.ValidationMessageFor(model => model.StateofOrigin)
         </div>
 
@@ -112,7 +118,7 @@
             @Html.EditorFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
         </div>
-        
+
         <div class="editor-label">
             @Html.LabelFor(model => model.OrganizationName)
         </div>
@@ -143,13 +149,10 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.EmployerAddress)
             @Html.ValidationMessageFor(model => model.EmployerAddress)
-        </div>               
+        </div>
     </div>
     <div class="editor-field clear">
         <label for="submit"></label>
         <input type="submit" name="submit" value="Proceed to Next Step" class="" />
     </div> 
 }
-
-<div>
-</div>
