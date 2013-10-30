@@ -259,3 +259,14 @@ font-size: 0.9em;
 overflow: auto;
 padding-bottom: 10px;
 }
+
+.faq h2 {
+    text-align: left;
+}
+
+.nav-profile {
+    border-left:2px solid white;
+}
+.nav-profile li a{
+    margin:0px 2px;
+}

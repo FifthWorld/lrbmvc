@@ -466,6 +466,7 @@
     <Content Include="Views\Shared\DisplayTemplates\MessageBase.cshtml" />
     <Content Include="Views\LandApplication\Delete.cshtml" />
     <Content Include="Views\Shared\_TitleSearch.cshtml" />
+    <Content Include="Views\LandApplication\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,7 +13,7 @@
 
     <meta name="viewport" content="width=device-width; initial-scale=1.0" />
     <link rel="stylesheet" href="~/Content/home.css" />
-    <link rel="stylesheet" href="~/Content/home/bootstrap.css"
+    <link rel="stylesheet" href="~/Content/bootstrap.css"
 
     <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -30,11 +30,11 @@
                     <ul class="nav2">
                         <li class="active2">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
                         <li>@Html.RouteLink("ABOUT US", "Default", new { action = "About", controller = "Home" })</li>
-                        <li>@Html.RouteLink("SERVICES", "Default", new { action = "Services", controller = "Home" })
+                        <li><a href="#">SERVICES</a>
                             <ul>
-                                <li><a href="#">Apply for Certificate of Occupancy</a></li>
-                                <li><a href="#">Check your Application Status</a></li>
-                                <li><a href="#">Search for Certificate of Occupancy</a></li>
+                                <li>@Html.RouteLink("Apply for Certificate of Occupancy", "Default", new { action = "Create", controller = "LandApplication" })</li>
+                                <li>@Html.RouteLink("Check your Application Status", "Default", new { action = "Index", controller = "LandApplication" })</li>
+                                <li><a href="#titlesearch" data-toggle="modal" data-target="#titlesearch">Search for Certificate of Occupancy</a></li>
                             </ul>
                         </li>
                         <li>@Html.RouteLink("CONTACT US", "Default", new { action = "Contact", controller = "Home" })</li>
