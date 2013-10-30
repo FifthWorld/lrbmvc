@@ -24,25 +24,29 @@ using System.ComponentModel.DataAnnotations;
         [ScaffoldColumn(false)]
         public int Id { get; set; }
 
-        [DisplayName("Is the Property Developed")]
+        [DisplayName("Is the Property Developed?")]
         [Required(ErrorMessage="Please State whether the Property is Developed or Not")]
         public Nullable<bool> Developed { get; set; }
 
-        [DisplayName("In what capacity do you own the property")]
-        [Required(ErrorMessage = "Please State what capacity you own the Property")]
-        public string CapacityofOwnership { get; set; }
+        [DisplayName("Please select the development stage of the property")]
+        public Nullable<bool> development_stage { get; set; }
 
-        [DisplayName("What is this use of this property")]
-        [Required(ErrorMessage = "Please State what the land is to be used for")]
-        public string LandUse { get; set; }
 
-        [DisplayName("How long has this property been in your possession")]
-        [Required(ErrorMessage = "Please State how long this property has been in your possession")]
-        public string PeriodofPossession { get; set; }
+        [DisplayName("In what capacity do you own the property?")]
+        [Required(ErrorMessage = "Please State in what capacity you own the Property")]
+        public string capacity_of_ownership { get; set; }
 
-        [DisplayName("What is the Approximate area of the Property")]
+        [DisplayName("What is this use of this property?")]
+        [Required(ErrorMessage = "Please State what the land will be used for")]
+        public string land_use { get; set; }
+
+        [DisplayName("How long has this property been in your possession?")]
+        [Required(ErrorMessage = "Please State for how long this property has been in your possession")]
+        public string duration_of_possession { get; set; }
+
+        [DisplayName("What is the approximate area of the Property?")]
         [Required(ErrorMessage = "Please State the approximate area of the property in question")]
-        public Nullable<decimal> ApproximateArea { get; set; }
+        public Nullable<decimal> size_of_property { get; set; }
     
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual Application Application { get; set; }
