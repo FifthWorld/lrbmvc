@@ -272,6 +272,7 @@
     <Content Include="Content\home\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\modern-business.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\tables.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -371,6 +372,7 @@
     <Content Include="img\Ondo-logo.jpg" />
     <Content Include="img\sign-up.png" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\home\bootstrap.js" />
@@ -397,11 +399,14 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\load-image.min.js" />
     <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modern-business.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\titlesearch.js" />
     <None Include="Views\Home\Faq.cshtml" />
     <None Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\LandApplication\_ViewStart.cshtml" />
+    <None Include="Views\Shared\_app_Layout.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -453,8 +458,6 @@
     <Content Include="Views\Account\EditProfile.cshtml" />
     <Content Include="Views\LandApplication\Create.cshtml" />
     <Content Include="Views\LandApplication\partials\_PropertyPartial.cshtml" />
-    <Content Include="Views\LandApplication\partials\_PartyPartial.cshtml" />
-    <Content Include="Views\Shared\app_Layout.cshtml" />
     <Content Include="Views\LandApplication\ContactInformation.cshtml" />
     <Content Include="Views\LandApplication\PropertyInformation.cshtml" />
     <Content Include="Views\Home\Requirements.cshtml" />
@@ -467,6 +470,8 @@
     <Content Include="Views\LandApplication\Delete.cshtml" />
     <Content Include="Views\Shared\_TitleSearch.cshtml" />
     <Content Include="Views\LandApplication\View.cshtml" />
+    <Content Include="Views\LandApplication\partials\_IndividualPartial.cshtml" />
+    <Content Include="Views\LandApplication\partials\_CorporatePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

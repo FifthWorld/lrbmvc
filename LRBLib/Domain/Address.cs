@@ -13,7 +13,7 @@ namespace LRB.Lib.Domain
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-    
+
     public partial class Address
     {
         [ScaffoldColumn(false)]
@@ -26,7 +26,13 @@ namespace LRB.Lib.Domain
         public string State { get; set; }
         [DisplayName("PMB Number")]
         public string PMBNo { get; set; }
-    
+        [DisplayName("Town")]
+        public string Town { get; set; }
+        [DisplayName("LGA")]
+        public string LGA { get; set; }
+
+        public string AddressType { get; set; }
+
         public virtual Citizen Citizen { get; set; }
         public virtual Property Property { get; set; }
         public virtual Party Party { get; set; }
@@ -36,6 +42,6 @@ namespace LRB.Lib.Domain
     {
         [DisplayName("Phone Number")]
         [DataType(DataType.PhoneNumber)]
-        public string number;
+        public string number { get; set; }
     }
 }

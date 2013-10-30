@@ -21,6 +21,7 @@ namespace LRB.Lib.Domain
         {
             this.Gender = "Female";
             this.Addresses = new HashSet<Address>();
+            this.phoneNumbers = new HashSet<PhoneNumber>();
         }
 
         [ScaffoldColumn(false)]
@@ -56,6 +57,22 @@ namespace LRB.Lib.Domain
         [DisplayName("Office Number(If Registering for an organization)")]
         public string OfficeNo { get; set; }
 
+        public Address ContactAddress
+        {
+            get
+            {
+                var add = this.Addresses.Where(p => p.AddressType == "Contact Address").FirstOrDefault();
+                if (null == add)
+                {
+                    add= new Address(){
+                     AddressType= "Contact Address"
+                    };
+                    this.Addresses.Add(add);
+                }
+                return add;
+            }
+        }
+
 
         [DisplayName("Mobile / GSM Number")]
         [Required(ErrorMessage = "Phone Number is required")]
@@ -78,7 +95,7 @@ namespace LRB.Lib.Domain
         {
             get
             {                
-                if (null != this.phoneNumbers.Count>1)
+                if (this.phoneNumbers.Count>1)
                 {
                     this.phoneNumbers.Add(new PhoneNumber());
                 }
@@ -92,7 +109,7 @@ namespace LRB.Lib.Domain
         {
             get
             {
-                if (null != this.phoneNumbers.Count > 2)
+                if (this.phoneNumbers.Count > 2)
                 {
                     this.phoneNumbers.Add(new PhoneNumber());
                 }

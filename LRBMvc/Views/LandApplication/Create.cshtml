@@ -1,4 +1,4 @@
-﻿@model LRB.Lib.Domain.Application
+﻿@model LRBMvc.Models.Requirement
 
 @{
     ViewBag.Title = "Application for Certificate of Occupancy";
@@ -12,42 +12,40 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                I am applying as an individual
-            </label>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(model => model.applicationType, new {@display="Individual", @value="Individual" })
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            I am applying as an individual
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            I am applying as an organization
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">State the use of this land</label>
+        <div class="col-sm-10">
+            @Html.DropDownListFor(model => model.landUse,
+            new SelectList(new String[] { "Residential", "Commercial", "Industrial", "Recreational", "Religious", "Educational", "Other" }),
+            new { @class = "form-control" })
         </div>
-        <div class="radio">
-            <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                I am applying as an organization
-            </label>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">State the Size of this Land</label>
+        <div class="input-group">
+            @Html.TextBoxFor(model => model.landSize, new { @class = "form-control", @type = "" })
+
         </div>
-    </fieldset>
-    <fieldset>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">State the use of this land</label>
-            <div class="col-sm-10">
-                <select class="form-control">
-                    <option>Residential</option>
-                    <option>Commercial</option>
-                    <option>Industrial</option>
-                    <option>Agricultural</option>
-                    <option>Religious</option>
-                </select>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">State the Unit of the Area</label>
+        <div class="input-group">
+            @Html.DropDownListFor(model => model.landSizeUnit, new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control" })
         </div>
-    </fieldset>
-    <fieldset>
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">State the use of this land</label>
-            <div class="col-sm-10">
-                <input type="text" />
-            </div>
-        </div>
-    </fieldset>
+    </div>    
     <ul>
         <li>Original Survey Plans</li>
         <li>Evidence of Ownership</li>

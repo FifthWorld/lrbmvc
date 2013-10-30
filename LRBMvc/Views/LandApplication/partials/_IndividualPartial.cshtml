@@ -1,0 +1,145 @@
+﻿@model LRB.Lib.Domain.Party
+<div class="col-md-3 col-sm-4 sidebar">
+    <ul class="nav nav-stacked nav-pills">
+        <li><a href="index.html">Personal Details</a></li>
+        <li><a href="about.html">Property Information</a></li>
+        <li><a href="services.html">Documents</a></li>
+        <li><a href="contact.php">Confirmation Page</a></li>
+    </ul>
+</div>
+
+<div class="col-md-9 col-sm-8" id="personal_details">
+    <fieldset>
+            <legend>Contact Information</legend>
+
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Surname, new { @class = "" })
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Surname })
+                    @Html.ValidationMessageFor(model => model.Surname)
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" placeholder="Your first name" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Firstname, new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.Firstname, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Firstname)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Middlename, new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.Middlename, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Middlename)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DOB, new { @class = "col-sm-2 control-label" });
+                <div class="col-sm-10">
+                    @Html.EditorFor(model => model.DOB, new { @class = "form-control", @type = "date" })
+                    @Html.ValidationMessageFor(model => model.DOB)
+                </div>
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Gender)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Gender)
+                @Html.ValidationMessageFor(model => model.Gender)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.DOB)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DOB)
+                @Html.ValidationMessageFor(model => model.DOB)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.StateofOrigin)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.StateofOrigin)
+                @Html.ValidationMessageFor(model => model.StateofOrigin)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.HomeTown)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.HomeTown)
+                @Html.ValidationMessageFor(model => model.HomeTown)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LGA)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LGA)
+                @Html.ValidationMessageFor(model => model.LGA)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MobileNo.number)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MobileNo.number)
+                @Html.ValidationMessageFor(model => model.MobileNo.number)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.OrganizationName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.OrganizationName)
+                @Html.ValidationMessageFor(model => model.OrganizationName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Occupation)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Occupation)
+                @Html.ValidationMessageFor(model => model.Occupation)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.EmployerName)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.EmployerName)
+                @Html.ValidationMessageFor(model => model.EmployerName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.EmployerAddress)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.EmployerAddress)
+                @Html.ValidationMessageFor(model => model.EmployerAddress)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+</div>
+

@@ -40,12 +40,12 @@ namespace LRB.Lib
             app.ContactPerson.Email = contactPerson.Email;
             app.ContactPerson.EmployerAddress = contactPerson.EmployerAddress;
             app.ContactPerson.EmployerName = contactPerson.EmployerName;
-            app.ContactPerson.HomeNo = contactPerson.HomeNo;
+            //app.ContactPerson.HomeNo = contactPerson.HomeNo;
             app.ContactPerson.HomeTown = contactPerson.HomeTown;
             app.ContactPerson.LGA = contactPerson.LGA;
             app.ContactPerson.Firstname = contactPerson.Firstname;
             app.ContactPerson.Middlename = contactPerson.Middlename;
-            app.ContactPerson.MobileNo = contactPerson.MobileNo;
+            //app.ContactPerson.MobileNo = contactPerson.MobileNo;
             app.ContactPerson.Occupation = contactPerson.Occupation;
             app.ContactPerson.OfficeNo = contactPerson.OfficeNo;
             app.ContactPerson.OrganizationName = contactPerson.OrganizationName;

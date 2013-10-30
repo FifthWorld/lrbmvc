@@ -1,0 +1,5 @@
+/**
+ * @author adekola
+ */
+
+(function($)){}(jQuery);

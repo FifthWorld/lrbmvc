@@ -45,11 +45,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ApproximateArea)
+            @Html.LabelFor(model => model.LandSize)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ApproximateArea)
-            @Html.ValidationMessageFor(model => model.ApproximateArea)
+            @Html.EditorFor(model => model.LandSize)
+            @Html.ValidationMessageFor(model => model.LandSize)
         </div>
 
         <p>
@@ -57,7 +57,3 @@
         </p>
     </fieldset>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

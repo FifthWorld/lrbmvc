@@ -32,6 +32,7 @@ namespace LRB.Lib.Domain
             this.Properties = new HashSet<Property>();
             this.Parties = new HashSet<Party>();
             this.Documents = new HashSet<Document>();
+            this.Citizens = new HashSet<Citizen>();
         }
 
         [ScaffoldColumn(false)]
@@ -69,17 +70,25 @@ namespace LRB.Lib.Domain
                 {
                     return party;
                 }
-                var user = WebSecurity.GetCurrentUser();
                 party = new Party() { 
-                    PartyType = "ContactPerson"
-                    //Surname= user.SurName,
-                    //Firstname = user.FirstName,
-                    //Middlename = user.Email,
-                    //Email = user.Email,
-                    //MobileNo =user.PhoneNumber
+                    PartyType = "ContactPerson"                    
                 };
                 this.Parties.Add(party);
                 return party;
+            }
+        }
+
+        public Citizen InterimApplicant
+        {
+            get
+            {
+                var interim = this.Citizens.FirstOrDefault();
+                if (null == interim)
+                {
+                    interim = new Citizen();
+                    this.Citizens.Add(interim);
+                }
+                return interim;
             }
         }
 
@@ -106,5 +115,6 @@ namespace LRB.Lib.Domain
         public virtual ICollection<Property> Properties { get; set; }
         public virtual ICollection<Party> Parties { get; set; }
         public virtual ICollection<Document> Documents { get; set; }
+        public virtual ICollection<Citizen> Citizens { get; set; }
     }
 }

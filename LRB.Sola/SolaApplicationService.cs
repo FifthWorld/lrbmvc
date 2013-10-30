@@ -107,7 +107,7 @@ namespace ApplicationLibrary
             //lgaTypeCode = app.Party.lgaTypeCode,
             //stateTypeCode = app.Party.stateCode,
             //titleTypeCode = app.Party.titleCode,
-            person.mobile = app.ContactPerson.MobileNo;
+            person.mobile = app.ContactPerson.MobileNo.number;
             // person.occupationTypeCode = app.ContactPerson.Occupation;
             // person.rightHolder = true;
 

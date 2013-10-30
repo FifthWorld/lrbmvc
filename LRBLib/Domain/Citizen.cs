@@ -10,6 +10,7 @@
 namespace LRB.Lib.Domain
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
     
     public partial class Citizen
@@ -25,7 +26,8 @@ namespace LRB.Lib.Domain
         public string Lastname { get; set; }
         public string Middlename { get; set; }
         public string PostHeld { get; set; }
-    
+
+        public String ContactAddress { get; set; }
         public virtual ICollection<Address> Addresses { get; set; }
     }
 }
