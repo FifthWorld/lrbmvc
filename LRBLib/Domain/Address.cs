@@ -31,4 +31,11 @@ namespace LRB.Lib.Domain
         public virtual Property Property { get; set; }
         public virtual Party Party { get; set; }
     }
+
+    public partial class PhoneNumber
+    {
+        [DisplayName("Phone Number")]
+        [DataType(DataType.PhoneNumber)]
+        public string number;
+    }
 }

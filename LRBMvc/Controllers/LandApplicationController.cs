@@ -2,6 +2,7 @@
 using LRB;
 using LRB.Lib;
 using LRB.Lib.Domain;
+using LRBMvc.Models;
 using SimpleSecurity;
 using System;
 using System.Linq;
@@ -23,24 +24,23 @@ namespace LRBMvc.Controllers
 
         public ActionResult Create()
         {
-            Application model;
-            var appId = Session["appId"];
-            if (null == appId)
-            {
-                model = LandRecords.NewApplication();
-                Session["appId"] = model.Id;
-            }
-            else
-            {
-                model = LandRecords.GetApplication(int.Parse(appId.ToString()));
-            }
-
+            Requirement model = new Requirement();
+            
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Create(Application model)
+        public ActionResult Create(Requirement model)
         {
+            Application app = LandRecords.NewApplication();
+            app.ApplicationType = model.applicationType;
+            app.ContactPerson.PartyType = model.applicationType;
+            app.PrimaryProperty.LandUse = model.landUse;
+            app.PrimaryProperty.LandSizeUnit = model.landSizeUnit;
+            app.PrimaryProperty.LandSize = model.landSize;
+
+            LandRecords.SaveApplication(app);
+            Session["appId"] = app.Id;
             return RedirectToAction("ContactInformation");
         }
 

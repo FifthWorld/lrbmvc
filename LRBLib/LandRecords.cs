@@ -64,7 +64,8 @@ namespace LRB.Lib
             UnitOfWork uow = new UnitOfWork();
             var app = uow.LandApplicationRepository.GetByID(appId);
 
-            app.PrimaryProperty.ApproximateArea = primaryProperty.ApproximateArea;
+            app.PrimaryProperty.LandSize = primaryProperty.LandSize;
+            app.PrimaryProperty.LandSizeUnit = primaryProperty.LandSizeUnit;
             app.PrimaryProperty.CapacityofOwnership = primaryProperty.CapacityofOwnership;
             app.PrimaryProperty.Developed = primaryProperty.Developed;
             app.PrimaryProperty.LandUse = primaryProperty.LandUse;

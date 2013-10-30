@@ -11,10 +11,10 @@ using System.Web;
 namespace LRBMvc.Models
 {
     public class Requirement
-    {        
-        public string applicationType;
-        public string landUse;
-        public int landSize;
-        public string landSizeUnit;
+    {
+        public string applicationType { get; set; }
+        public string landUse { get; set; }
+        public int landSize { get; set; }
+        public string landSizeUnit { get; set; }
     }
 }

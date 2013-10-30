@@ -10,10 +10,11 @@
 namespace LRB.Lib.Domain
 {
     using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-    
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Party
     {
         public Party()
@@ -55,16 +56,50 @@ using System.ComponentModel.DataAnnotations;
         [DisplayName("Office Number(If Registering for an organization)")]
         public string OfficeNo { get; set; }
 
+
         [DisplayName("Mobile / GSM Number")]
         [Required(ErrorMessage = "Phone Number is required")]
-        public string MobileNo { get; set; }
+        public PhoneNumber MobileNo
+        {
+            get
+            {
+                PhoneNumber phone = this.phoneNumbers.FirstOrDefault();
+                if (null != phone)
+                {
+                    return phone;
+                }
+                this.phoneNumbers.Add(new PhoneNumber());
+                return phone;
+            }
+        }
 
-        [DisplayName("Home / Land Line Number")]
-        public string HomeNo { get; set; }
+        [DisplayName("Phone 2")]
+        public PhoneNumber Phone2
+        {
+            get
+            {                
+                if (null != this.phoneNumbers.Count>1)
+                {
+                    this.phoneNumbers.Add(new PhoneNumber());
+                }
+                var phone = this.phoneNumbers.ElementAt(1);
+                return phone;
+            }
+        }
 
-        [DisplayName("Fax")]
-        [ScaffoldColumn(false)]
-        public string Fax { get; set; }
+        [DisplayName("Phone 3")]
+        public PhoneNumber Phone3
+        {
+            get
+            {
+                if (null != this.phoneNumbers.Count > 2)
+                {
+                    this.phoneNumbers.Add(new PhoneNumber());
+                }
+                var phone = this.phoneNumbers.ElementAt(2);
+                return phone;
+            }
+        }
 
         [DisplayName("Email Address")]
         [DataType(DataType.EmailAddress)]
@@ -86,7 +121,7 @@ using System.ComponentModel.DataAnnotations;
 
         [DisplayName("Address of The Employer Named Above")]
         public string EmployerAddress { get; set; }
-    
+
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual Application Application { get; set; }
 
@@ -98,5 +133,7 @@ using System.ComponentModel.DataAnnotations;
                 return Firstname + ", " + Surname;
             }
         }
+
+        ICollection<PhoneNumber> phoneNumbers;
     }
 }

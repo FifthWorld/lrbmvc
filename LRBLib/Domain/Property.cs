@@ -40,9 +40,13 @@ using System.ComponentModel.DataAnnotations;
         [Required(ErrorMessage = "Please State how long this property has been in your possession")]
         public string PeriodofPossession { get; set; }
 
-        [DisplayName("What is the Approximate area of the Property")]
+        [DisplayName("What is the approximate area of the property")]
         [Required(ErrorMessage = "Please State the approximate area of the property in question")]
-        public Nullable<decimal> ApproximateArea { get; set; }
+        public Nullable<decimal> LandSize { get; set; }
+
+        [DisplayName("unit")]
+        [Required(ErrorMessage = "PleaseSpecify Land Unit")]
+        public string LandSizeUnit { get; set; }
     
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual Application Application { get; set; }
