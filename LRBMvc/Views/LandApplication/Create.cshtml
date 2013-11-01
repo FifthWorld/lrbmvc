@@ -1,4 +1,4 @@
-﻿@model LRBMvc.Models.Requirement
+﻿@model LRB.Lib.Domain.Requirement
 
 @{
     ViewBag.Title = "Application for Certificate of Occupancy";
@@ -6,46 +6,58 @@
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create", "LandApplication",
+            new { ReturnUrl = ViewBag.ReturnUrl },
+            FormMethod.Post, new { @class = "form col-md-6 offset3", @role = "form" }))
 {
-    
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
-    <div class="radio">
-        <label>
-            @Html.RadioButtonFor(model => model.applicationType, new {@display="Individual", @value="Individual" })
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-            I am applying as an individual
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            I am applying as an organization
-        </label>
-    </div>
     <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">State the use of this land</label>
-        <div class="col-sm-10">
+        <div class="radio">
+            <label>
+                @Html.RadioButtonFor(model => model.applicationType, new { @display = "Individual", @value = "Individual" })
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                I am applying as an individual
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                I am applying as an organization
+            </label>
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        <label for="inputEmail3" class="control-label">State the use of this land</label>
+        <div class="">
             @Html.DropDownListFor(model => model.landUse,
             new SelectList(new String[] { "Residential", "Commercial", "Industrial", "Recreational", "Religious", "Educational", "Other" }),
             new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">State the Size of this Land</label>
-        <div class="input-group">
+        <label for="inputEmail3" class="control-label">State the Size of this Land</label>
+        <div class="">
             @Html.TextBoxFor(model => model.landSize, new { @class = "form-control", @type = "" })
 
         </div>
     </div>
     <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">State the Unit of the Area</label>
+        <label for="inputEmail3" class="control-label">State the Unit of the Area</label>
         <div class="input-group">
-            @Html.DropDownListFor(model => model.landSizeUnit, new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control" })
+            @Html.DropDownListFor(model => model.landSizeUnit, 
+            new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control" })
         </div>
     </div>    
+    <p>
+        <input type="submit" class="btn btn-default btn-success" value="I have these requirements, Start Application" />
+    </p>
+    
+}
+<div class="col-md-5 well">
+    <h3>Requirements for processing this application</h3>
     <ul>
         <li>Original Survey Plans</li>
         <li>Evidence of Ownership</li>
@@ -56,8 +68,4 @@
         <li>Police report (if Land is for a filling station)</li>
         <li>Feasibility Report (if land is above 5,000 square meters and it is for residential, commercial or industrial purpose)</li>
     </ul>
-    <p>
-        <input type="submit" value="I have these requirements, Start Application" />
-    </p>
-    
-}
+</div>

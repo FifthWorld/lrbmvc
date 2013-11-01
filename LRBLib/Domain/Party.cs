@@ -14,14 +14,18 @@ namespace LRB.Lib.Domain
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class Party
     {
         public Party()
         {
             this.Gender = "Female";
-            this.Addresses = new HashSet<Address>();
-            this.phoneNumbers = new HashSet<PhoneNumber>();
+            this.Addresses = new List<Address>();
+            this.Addresses.Add(new Address()
+            {
+                AddressType = "ContactAddress"
+            });
         }
 
         [ScaffoldColumn(false)]
@@ -61,62 +65,20 @@ namespace LRB.Lib.Domain
         {
             get
             {
-                var add = this.Addresses.Where(p => p.AddressType == "Contact Address").FirstOrDefault();
-                if (null == add)
-                {
-                    add= new Address(){
-                     AddressType= "Contact Address"
-                    };
-                    this.Addresses.Add(add);
-                }
-                return add;
+                return this.Addresses.Where(p => p.AddressType == "ContactAddress").FirstOrDefault();                
             }
         }
 
 
         [DisplayName("Mobile / GSM Number")]
         [Required(ErrorMessage = "Phone Number is required")]
-        public PhoneNumber MobileNo
-        {
-            get
-            {
-                PhoneNumber phone = this.phoneNumbers.FirstOrDefault();
-                if (null != phone)
-                {
-                    return phone;
-                }
-                this.phoneNumbers.Add(new PhoneNumber());
-                return phone;
-            }
-        }
+        public String MobileNo { get; set; }
 
         [DisplayName("Phone 2")]
-        public PhoneNumber Phone2
-        {
-            get
-            {                
-                if (this.phoneNumbers.Count>1)
-                {
-                    this.phoneNumbers.Add(new PhoneNumber());
-                }
-                var phone = this.phoneNumbers.ElementAt(1);
-                return phone;
-            }
-        }
+        public String Phone2 { get; set; }
 
         [DisplayName("Phone 3")]
-        public PhoneNumber Phone3
-        {
-            get
-            {
-                if (this.phoneNumbers.Count > 2)
-                {
-                    this.phoneNumbers.Add(new PhoneNumber());
-                }
-                var phone = this.phoneNumbers.ElementAt(2);
-                return phone;
-            }
-        }
+        public String Phone3 { get; set; }
 
         [DisplayName("Email Address")]
         [DataType(DataType.EmailAddress)]
@@ -139,8 +101,21 @@ namespace LRB.Lib.Domain
         [DisplayName("Address of The Employer Named Above")]
         public string EmployerAddress { get; set; }
 
-        public virtual ICollection<Address> Addresses { get; set; }
-        public virtual Application Application { get; set; }
+        public virtual List<Address> Addresses { get; set; }
+
+        //[ForeignKey("Application")]
+
+
+        [DisplayName("Street Name")]
+        public string Street { get; set; }
+        [DisplayName("State")]
+        public string IState { get; set; }
+        [DisplayName("Town")]
+        public string Town { get; set; }
+        [DisplayName("LGA")]
+        public string ILGA { get; set; }
+
+        public Application Application { get; set; }
 
 
         public string FullName
@@ -151,6 +126,5 @@ namespace LRB.Lib.Domain
             }
         }
 
-        ICollection<PhoneNumber> phoneNumbers;
     }
 }

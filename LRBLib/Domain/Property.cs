@@ -10,23 +10,26 @@
 namespace LRB.Lib.Domain
 {
     using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-    
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Property
     {
         public Property()
         {
-            this.Addresses = new HashSet<Address>();
+            this.Addresses = new List<Address>();
+            this.Addresses.Add(new Address() { AddressType = "PropertyLocation" });
         }
-    
+
         [ScaffoldColumn(false)]
         public int Id { get; set; }
 
-        [DisplayName("Is the Property Developed")]
-        [Required(ErrorMessage="Please State whether the Property is Developed or Not")]
-        public Nullable<bool> Developed { get; set; }
+        [DisplayName("Development on land")]
+        [Required(ErrorMessage = "Please State pogress of development on the land")]
+        public String Development { get; set; }
 
         [DisplayName("In what capacity do you own the property")]
         [Required(ErrorMessage = "Please State what capacity you own the Property")]
@@ -40,15 +43,32 @@ using System.ComponentModel.DataAnnotations;
         [Required(ErrorMessage = "Please State how long this property has been in your possession")]
         public string PeriodofPossession { get; set; }
 
-        [DisplayName("What is the approximate area of the property")]
+        [DisplayName("Approximate size of property")]
         [Required(ErrorMessage = "Please State the approximate area of the property in question")]
         public Nullable<decimal> LandSize { get; set; }
 
         [DisplayName("unit")]
         [Required(ErrorMessage = "PleaseSpecify Land Unit")]
         public string LandSizeUnit { get; set; }
-    
-        public virtual ICollection<Address> Addresses { get; set; }
-        public virtual Application Application { get; set; }
+
+        [DisplayName("Street Name")]
+        public string Street { get; set; }
+        [DisplayName("State")]
+        public string State { get; set; }
+        [DisplayName("Town")]
+        public string Town { get; set; }
+        [DisplayName("LGA")]
+        public string LGA { get; set; }
+
+        [NotMapped]
+        public Address PropertyAddress { get; set; }
+
+        public Address getPropertyAddress()
+        {
+            return this.Addresses.Where(p => p.AddressType == "PropertyLocation").FirstOrDefault();
+        }
+
+        public List<Address> Addresses { get; set; }
+        public Application Application { get; set; }
     }
 }

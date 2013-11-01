@@ -1,59 +1,96 @@
 ﻿@model LRB.Lib.Domain.Property
+<div class="col-md-3 col-sm-4 sidebar">
+    <ul class="nav nav-stacked nav-pills">
+        <li><a href="#" class="active">Personal Details</a></li>
+        <li><a href="about.html">Property Information</a></li>
+        <li><a href="services.html">Documents</a></li>
+        <li><a href="contact.php">Confirmation Page</a></li>
+    </ul>
+</div>
 
-<script src="~/Scripts/jquery-1.8.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<div class="col-md-9 col-sm-8" id="personal_details">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Property location information</legend>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Street)
+                @Html.TextBoxFor(model => model.Street, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Street)</span>
+            </div>
 
-    <fieldset>
-        <legend>Property</legend>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Town)
+                @Html.TextBoxFor(model => model.Town, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Town)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.State)
+                @Html.DropDownListFor(model => model.State, new SelectList(new String[] { "Ondo", "Ogun", "Other" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.State)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.LGA)
+                @Html.DropDownListFor(model => model.LGA, new SelectList(new String[] { "Akure South", "Akure North", "Ore" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.LGA)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.LandSize)
+                @Html.TextBoxFor(model => model.LandSize, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.LandSize)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.LandSizeUnit)
+                @Html.DropDownListFor(model => model.LandSizeUnit,
+            new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.LandSizeUnit)</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Other property information</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Developed)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Developed)
-            @Html.ValidationMessageFor(model => model.Developed)
-        </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Development)
+                @Html.DropDownListFor(model => model.Development
+                , new SelectList(new String[] { "Undeveloped", "Fenced only", "Foundation level", "Lintel level", "Roof only", "Completed" })
+                , new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Development)</span>
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CapacityofOwnership)
-        </div>
-        <div class="editor-field">
-            @Html.DropDownListFor(model => model.CapacityofOwnership, new SelectList(new String[] { "Inheritance", "Purchase" }), new { @class =""})
-            @Html.ValidationMessageFor(model => model.CapacityofOwnership)
-        </div>
+            <div class="form-group col-lg-8">
+                @Html.LabelFor(model => model.CapacityofOwnership)
+                @Html.DropDownListFor(model => model.CapacityofOwnership, new SelectList(new String[] { "By inheritance", "By purchase", "As a gift" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.CapacityofOwnership)</span>
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LandUse)
-        </div>
-        <div class="editor-field">
-            @Html.DropDownListFor(model => model.LandUse, 
-            new SelectList(new String[] { "Residential", "Commercial", "Agricultural", "Industrial" }), new { @class =""})
-            @Html.ValidationMessageFor(model => model.LandUse)
-        </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.LandUse)
+                @Html.DropDownListFor(model => model.LandUse,
+            new SelectList(new String[] { "Residential", "Commercial", "Agricultural", "Industrial" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.LandUse)</span>
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PeriodofPossession)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PeriodofPossession)
-            @Html.ValidationMessageFor(model => model.PeriodofPossession)
-        </div>
+            <div class="form-group col-lg-8">
+                @Html.LabelFor(model => model.PeriodofPossession)
+                @Html.TextBoxFor(model => model.PeriodofPossession, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.PeriodofPossession)</span>
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LandSize)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LandSize)
-            @Html.ValidationMessageFor(model => model.LandSize)
-        </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+            <div class="row">
+                <div class="form-group pull-right col-lg-4">
+                    @*<button class="btn btn-primary col-lg-offset-1">Previous</button>*@
+                    <button type="submit" class="btn btn-primary col-lg-offset-1">Next</button>
+                    <button class="btn btn-success">Save</button>
+                    <button type="reset" class="btn btn-info">Clear Form</button>
+                </div>
+            </div>
+
+        </fieldset>
+    }
+</div>
+
+

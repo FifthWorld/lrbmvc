@@ -12,12 +12,13 @@ namespace LRB.Lib.Domain
     using System;
     using System.Linq;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
     
     public partial class Citizen
     {
         public Citizen()
         {
-            this.Addresses = new HashSet<Address>();
+            this.Addresses = new List<Address>();
         }
     
         public int Id { get; set; }
@@ -28,6 +29,10 @@ namespace LRB.Lib.Domain
         public string PostHeld { get; set; }
 
         public String ContactAddress { get; set; }
-        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual List<Address> Addresses { get; set; }
+
+        [ForeignKey("Application")]
+        public int ApplicationId { get; set; }
+        public Application Application { get; set; }
     }
 }

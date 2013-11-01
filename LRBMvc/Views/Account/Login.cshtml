@@ -9,28 +9,29 @@
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true)
-        <div class="form_box">
-            <p>@Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        <div class="form_box pull-left">
+            <p>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @style= "width: 350px;" })
                 @Html.ValidationMessageFor(m => m.UserName)
             </p>
-            <p>
+          <p>
                 @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style= "width: 350px;" })
                 @Html.ValidationMessageFor(m => m.Password)
-            </p>
+          </p>
             <div class="checkbox">
                 @Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
             </div>
             <p>
                 <input type="submit" class="btn btn-default btn-lg" value="Log in" />
-                <div class="form-group">
-                    @Html.ActionLink("Register", "Register") if you don't have an account.
-                </div>
+                
             </p>
         </div>
-        
+        <div class ="form_box_right">
+            @Html.ActionLink(" If you don't have an account, please Click here to register.", "Register", new { @class = "link_button" } )
+        </div>
     }
 </section>
 

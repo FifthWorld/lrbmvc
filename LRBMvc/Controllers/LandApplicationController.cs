@@ -25,21 +25,14 @@ namespace LRBMvc.Controllers
         public ActionResult Create()
         {
             Requirement model = new Requirement();
-            
+
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Create(Requirement model)
         {
-            Application app = LandRecords.NewApplication();
-            app.ApplicationType = model.applicationType;
-            app.ContactPerson.PartyType = model.applicationType;
-            app.PrimaryProperty.LandUse = model.landUse;
-            app.PrimaryProperty.LandSizeUnit = model.landSizeUnit;
-            app.PrimaryProperty.LandSize = model.landSize;
-
-            LandRecords.SaveApplication(app);
+            var app = LandRecords.CreateApplication(model);
             Session["appId"] = app.Id;
             return RedirectToAction("ContactInformation");
         }
@@ -47,18 +40,23 @@ namespace LRBMvc.Controllers
         public ActionResult ContactInformation()
         {
             var appId = Session["appId"];
+
             if (null == appId)
             {
-                //Flash.Instance.Notice("Your Session Has Expired, Please select incomplete application");
                 return RedirectToAction("Index");
             }
-            var model = LandRecords.GetApplication(int.Parse(appId.ToString()));
-            if (null == model)
+            var app = LandRecords.GetApplication(int.Parse(appId.ToString()));
+            if (null == app)
             {
-                //Flash.Instance.Error("Application with that Id does not exist");
                 return RedirectToAction("Index");
             }
-            return View(model.ContactPerson);
+
+            Party model = app.ContactPerson;
+            if (model ==null)
+            {
+                model = new Party();
+            }
+            return View(model);
         }
 
         public ActionResult Continue(int id)
@@ -87,18 +85,19 @@ namespace LRBMvc.Controllers
         public ActionResult PropertyInformation()
         {
             var appId = Session["appId"];
+
             if (null == appId)
             {
-                //Flash.Instance.Notice("Your Session Has Expired, Please select incomplete application");
                 return RedirectToAction("Index");
             }
-            var model = LandRecords.GetApplication(int.Parse(appId.ToString()));
-            if (null == model)
+            var app = LandRecords.GetApplication(int.Parse(appId.ToString()));
+            if (null == app)
             {
-                //Flash.Instance.Error("Application with that Id does not exist");
                 return RedirectToAction("Index");
             }
-            return View(model.PrimaryProperty);
+
+            Property model = app.Properties.FirstOrDefault();
+            return View(model);
         }
 
         [HttpPost]
@@ -115,7 +114,7 @@ namespace LRBMvc.Controllers
                 LandRecords.SaveApplication(int.Parse(appId.ToString()), model);
             }
 
-            return RedirectToAction("Summary");
+            return RedirectToAction("RequiredDocuments");
         }
 
         public ActionResult RequiredDocuments()
@@ -144,6 +143,8 @@ namespace LRBMvc.Controllers
                 return RedirectToAction("Index");
             }
             var model = LandRecords.GetApplication(int.Parse(appId.ToString()));
+            var c = model.ContactPerson;
+            var p = model.PrimaryProperty;
             if (null == model)
             {
                 //Flash.Instance.Error("Application with that Id does not exist");

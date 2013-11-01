@@ -23,6 +23,7 @@ namespace LRB.Lib.Repositories
 
         public int Save()
          {
+             var errors = _context.GetValidationErrors();
             return _context.SaveChanges();
          }
 

@@ -10,11 +10,5 @@ using System.Web;
 
 namespace LRBMvc.Models
 {
-    public class Requirement
-    {
-        public string applicationType { get; set; }
-        public string landUse { get; set; }
-        public int landSize { get; set; }
-        public string landSizeUnit { get; set; }
-    }
+    
 }

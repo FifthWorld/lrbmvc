@@ -14,6 +14,8 @@
     <!-- Add custom CSS here -->
 
     <link href="~/Content/modern-business.css" rel="stylesheet">
+    <script type="text/javascript" src="~/Scripts/state_lga/chainedselects.js"></script>
+    <script type="text/javascript" src="~/Scripts/state_lga/exampleconfig.js"></script>
     @RenderSection("styles", required: false)
 
 </head>
@@ -30,18 +32,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="index.html">ODSG Land Records Bureau</a>
+                @Html.RouteLink("ODSG Land Records Bureau", "Default", new { action = "Index", controller = "Home" }, new { @class="navbar-brand" })
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Logout</a></li>
-                            <li class="active"><a href="#">Edit Profile</a></li>
-                        </ul>
+                        @Html.Partial("_app_Loginpartial")
                     </li>
                 </ul>
             </div>
@@ -86,6 +84,37 @@
     <script src="~/Scripts/modern-business.js"></script>
     @Html.Partial("_TitleSearch")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+
+        $('span.field-validation-valid, span.field-validation-error').each(function () {
+            $(this).addClass('help-inline');
+        });
+        $('form').submit(function () {
+            if ($(this).valid()) {
+                $(this).find('div.control-group').each(function () {
+                    if ($(this).find('span.field-validation-error').length == 0) {
+                        $(this).removeClass('error');
+                    }
+                });
+            }
+            else {
+                $(this).find('div.control-group').each(function () {
+                    if ($(this).find('span.field-validation-error').length > 0) {
+                        $(this).addClass('error');
+                    }
+                });
+            }
+        });
+        $('form').each(function () {
+            $(this).find('div.control-group').each(function () {
+                if ($(this).find('span.field-validation-error').length > 0) {
+                    $(this).addClass('error');
+                }
+            });
+        });
+        initListGroup('country', document.forms[0]["State"], document.forms[0]["LGA"], document.forms[0].model)
+        initListGroup('country', document.forms[0]["IState"], document.forms[0]["ILGA"], document.forms[0].model)
+    </script>
 
 </body>
 </html>

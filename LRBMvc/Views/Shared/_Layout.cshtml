@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="content">
                     <ul class="nav2">
-                        <li class="active2">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
+                        <li class="">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
                         <li>@Html.RouteLink("ABOUT US", "Default", new { action = "About", controller = "Home" })</li>
                         <li><a href="#">SERVICES</a>
                             <ul>
@@ -39,7 +39,7 @@
                         </li>
                         <li>@Html.RouteLink("CONTACT US", "Default", new { action = "Contact", controller = "Home" })</li>
                         <li>@Html.RouteLink("FAQ", "Default", new { action = "Faq", controller = "Home" })</li>
-                        @Html.Partial("_LoginPartial")
+                        @*@Html.Partial("_LoginPartial")*@
                     </ul>
                     
                     <!--nav-->

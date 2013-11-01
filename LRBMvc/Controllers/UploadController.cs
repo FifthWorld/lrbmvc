@@ -1,4 +1,7 @@
-﻿using System.Diagnostics;
+﻿using LRB.Lib;
+using LRB.Lib.Domain;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,44 +12,37 @@ namespace LRBMvc.Controllers
 {
     public class UploadController : ApiController
     {
-        public async Task<HttpResponseMessage> PostFormData()
-        {
-            // Check if the request contains multipart/form-data.
-            if (!Request.Content.IsMimeMultipartContent())
-            {
-                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
-            }
+        //public async Task<HttpResponseMessage> PostFormData()
+        //{
+        //    // Check if the request contains multipart/form-data.
+        //    if (!Request.Content.IsMimeMultipartContent())
+        //    {
+        //        throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+        //    }
 
-            string root = HttpContext.Current.Server.MapPath("~/App_Data");
-            var provider = new MultipartFormDataStreamProvider(root);
-
-            try
-            {
-                // Read the form data.
-                await Request.Content.ReadAsMultipartAsync(provider);
-
-                // This illustrates how to get the file names.
-                foreach (MultipartFileData file in provider.FileData)
-                {
-                    Trace.WriteLine(file.Headers.ContentDisposition.FileName);
-                    Trace.WriteLine("Server file path: " + file.LocalFileName);
-                }
-
-                foreach (var key in provider.FormData.AllKeys)
-                {
-                    foreach (var val in provider.FormData.GetValues(key))
-                    {
-                        Trace.WriteLine(string.Format("{0}: {1}", key, val));
-                    }
-                }
-
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
-            catch (System.Exception e)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
-            }
-        }
+        //    string root = HttpContext.Current.Server.MapPath("~/App_Data");
+        //    var provider = new MultipartFormDataStreamProvider(root);
+        //    var streamProvider = new MultipartMemoryStreamProvider();
+        //    Document doc = new Document();
+        //    try
+        //    {
+        //        // Read the form data.
+        //        var result = await Request.Content.ReadAsMultipartAsync(provider);
+        //        var task = Request.Content.ReadAsMultipartAsync(streamProvider).ContinueWith(t => 
+        //        {
+        //            doc.FileName = provider.FormData["appId"];
+        //            doc.Content = streamProvider.Contents[0].ReadAsByteArrayAsync().Result;
+        //        });
+                
+                
+        //        LandRecords.SaveApplication(appId, doc);
+        //        return Request.CreateResponse(HttpStatusCode.OK);
+        //    }
+        //    catch (System.Exception e)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
+        //    }
+        //}
 
     }
 }

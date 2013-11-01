@@ -4,26 +4,36 @@
 <div class="top_box">
 </div>
 <!--top_box-->
-<div class="form_box">
-    <h2 class="heading">Contact Form</h2>
-    <p>
-        <label for="name">Name</label>
-        <input name="name" id="name" type="text" class="contact_form" title="Enter your full name">
-    </p>
-    <p>
-        <label for="email">Email</label>
-        <input name="email" id="email" type="text" class="contact_form" title="Enter your email address">
-    </p>
-    <p>
-        <label for="web">Phone</label>
-        <input name="web" id="web" type="tel" class="contact_form" title="Enter your website">
-    </p>
-    <p>
-        <label for="comments">Message</label>
-        <textarea name="comments" id="comments" rows="5" cols="20" class="contact_form" title="Enter your comments"></textarea>
-    </p>
-    <p>
-        <input type="button" value="Send" name="submit" id="submit">
-        <span id="error" class="warning" style="display: none;">Message</span></p>
+<div class="">
+    <form>
+        <h2 class="heading">Contact Form</h2>
+        <p>
+            <label for="name">Name</label>
+            <br />
+            <input name="name" id="name" type="text" class="contact_form" style="width: 42%;" title="Enter your full name">
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <br />
+            <input name="email" id="email" type="text" class="contact_form" style="width: 42%;" title="Enter your email address">
+        </p>
+        <p>
+            <label for="web">Phone</label>
+            <br />
+            <input name="web" id="web" type="tel" class="contact_form" title="Enter your website" style="width: 42%;">
+        </p>
+        <p>
+            <label for="comments">Message</label>
+            <br />
+            <textarea name="comments" id="comments" rows="5" cols="20" class="contact_form" title="Enter your comments" style="width: 42%;"></textarea>
+        </p>
+        <br />
+        <p>
+            <input type="button" value="Send" name="submit" id="submit" class="btn btn-default pull-left">
+            <input type="reset" value="Clear Form" name="submit" id="reset" class="btn btn-default pull-left" style="margin-left: 5px;">
+            <span id="error" class="warning" style="display: none;">Message</span>
+        </p>
+    </form>
 </div>
+
 <!--form_box-->

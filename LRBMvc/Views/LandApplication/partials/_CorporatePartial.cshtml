@@ -8,112 +8,125 @@
     </ul>
 </div>
 
-<div class="col-md-9 col-sm-8" id="personal_details">
-    @using (Html.BeginForm("ContactInformation", "LandApplication",
-            new { ReturnUrl = ViewBag.ReturnUrl },
-            FormMethod.Post, new { @class = "form", @role = "form" }))
+<div class="col-md-9 col-sm-8 form" role="form" id="personal_details">
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         @Html.ValidationSummary(true)
-        <h1 class="page-header">Application for C of O <small>Personal Details</small></h1>
-        <p class="alert alert-info">Please fill in your personal details in the form below</p>
-        
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.Surname)
-            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Surname })
-            @Html.ValidationMessageFor(model => model.Surname)
-        </div>
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.Firstname)
-            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Firstname })
-            @Html.ValidationMessageFor(model => model.Firstname)
-        </div>
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.Middlename)
-            @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Middlename })
-            @Html.ValidationMessageFor(model => model.Middlename)
-        </div>
-        
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.DOB)
-            @Html.TextBoxFor(model => model.DOB, new { @class = "form-control", @type = "date" })
-            @Html.ValidationMessageFor(model => model.DOB)
-        </div>
-        
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.Occupation)
-            @Html.TextBoxFor(model => model.Occupation, new { @class = "form-control", @type = "text" })
-            @Html.ValidationMessageFor(model => model.Occupation)
-        </div>
-        
-        <div class="form-group col-lg-4">
-            @Html.LabelFor(model => model.Gender)
-            @Html.DropDownListFor(model => model.Gender, new SelectList(new String[] { "Female", "Male", "Other" }), new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Gender)
-        </div>
-        
-        <fieldset class="well">
-            <legend>Contact Address</legend>
+        <fieldset>
+            <h1 class="page-header">Corporate application for C of O <small>Personal Details</small></h1>
+            <p class="alert alert-info">Please fill in your personal details in the form below</p>
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.ContactAddress.Street)
-                @Html.TextBoxFor(model => model.ContactAddress.Street, new { @class = "form-control", @type = "text" })
-                @Html.ValidationMessageFor(model => model.ContactAddress.Street)
+                @Html.LabelFor(model => model.Surname)
+                @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Surname })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Surname)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Firstname)
+                @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control", @placeholder = Model.Firstname })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Firstname)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Middlename)
+                @Html.TextBoxFor(model => model.Middlename, new { @class = "form-control", @placeholder = Model.Middlename })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Middlename)</span>
             </div>
 
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.ContactAddress.Town)
-                @Html.TextBoxFor(model => model.ContactAddress.Town, new { @class = "form-control", @type = "text" })
-                @Html.ValidationMessageFor(model => model.ContactAddress.Town)
+                @Html.LabelFor(model => model.DOB)
+                @Html.TextBoxFor(model => model.DOB, new { @class = "form-control", @type = "date" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.DOB)</span>
             </div>
+
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.ContactAddress.State)
-                @Html.DropDownListFor(model => model.ContactAddress.State, new SelectList(new String[] { "Ondo", "Ogun", "Other" }), new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ContactAddress.State)
+                @Html.LabelFor(model => model.Occupation)
+                @Html.TextBoxFor(model => model.Occupation, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Occupation)</span>
             </div>
+
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.ContactAddress.LGA)
-                @Html.DropDownListFor(model => model.ContactAddress.LGA, new SelectList(new String[] { "Akure South", "Akure North", "Ore" }), new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ContactAddress.LGA)
+                @Html.LabelFor(model => model.Gender)
+                @Html.DropDownListFor(model => model.Gender, new SelectList(new String[] { "Female", "Male", "Other" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Gender)</span>
+            </div>
+
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Email)</span>
+            </div>
+
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.MobileNo)
+                @Html.TextBoxFor(model => model.MobileNo, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.MobileNo)</span>
+            </div>
+
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Phone2)
+                @Html.TextBoxFor(model => model.Phone2, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Phone2)</span>
             </div>
         </fieldset>
         
-        <fieldset class="info">
-            <legend>Applicant Information</legend>
+        <fieldset>
+            <legend>Contact Address</legend>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Street)
+                @Html.TextBoxFor(model => model.Street, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Street)</span>
+            </div>
+
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Town)
+                @Html.TextBoxFor(model => model.Town, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Town)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.IState)
+                @Html.DropDownListFor(model => model.IState, new SelectList(new String[] { "Ondo", "Ogun", "Other" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.IState)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.ILGA)
+                @Html.DropDownListFor(model => model.ILGA, new SelectList(new String[] { "Akure South", "Akure North", "Ore" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.ILGA)</span>
+            </div>
+        </fieldset>
+        <fieldset class="well">
             <p class="warning">Please fill in this information i registering on behalf of someone else</p>
-            <div class="row">
-                <div class="form-group col-lg-4">
-                    @Html.LabelFor(model => model.Application.InterimApplicant.Lastname)
-                    @Html.TextBoxFor(model => model.Application.InterimApplicant.Lastname, new { @class = "form-control"  })
-                    @Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)
-                </div>
-                <div class="form-group col-lg-4">
-                    @Html.LabelFor(model => model.Application.InterimApplicant.Firstname)
-                    @Html.TextBoxFor(model => model.Application.InterimApplicant.Firstname, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)
-                </div>
-                <div class="form-group col-lg-4">
-                    @Html.LabelFor(model => model.Application.InterimApplicant.Middlename)
-                    @Html.TextBoxFor(model => model.Application.InterimApplicant.Middlename, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(model => model.Application.InterimApplicant.Middlename)
-                </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Application.InterimApplicant.Lastname)
+                @Html.TextBoxFor(model => model.Application.InterimApplicant.Lastname, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)</span>
             </div>
-            <div class="row">
-                <h2>Your Address </h2>
-                <div class="form-group col-lg-4">
-                    @Html.LabelFor(model => model.Application.InterimApplicant.ContactAddress)
-                    @Html.TextBoxFor(model => model.Application.InterimApplicant.ContactAddress, new { @class = "form-control"  })
-                    @Html.ValidationMessageFor(model => model.Application.InterimApplicant.ContactAddress)
-                </div>
-                </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Application.InterimApplicant.Firstname)
+                @Html.TextBoxFor(model => model.Application.InterimApplicant.Firstname, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)</span>
             </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.Application.InterimApplicant.Middlename)
+                @Html.TextBoxFor(model => model.Application.InterimApplicant.Middlename, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Middlename)</span>
+            </div>
+
+            <div class="form-group col-lg-8">
+                @Html.LabelFor(model => model.Application.InterimApplicant.ContactAddress)
+                @Html.TextBoxFor(model => model.Application.InterimApplicant.ContactAddress, new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.ContactAddress)</span>
+            </div>
+
+
         </fieldset>
-        
-        <div class="form-group pull-right col-lg-4">
-            @*<button class="btn btn-primary col-lg-offset-1">Previous</button>*@
-            <button type="submit" class="btn btn-primary col-lg-offset-1">Next</button>
-            <button class="btn btn-success">Save</button>
-            <button type="reset" class="btn btn-info">Clear Form</button>
+            
+        <div class="row">
+            <div class="form-group pull-right col-lg-4">
+                @*<button class="btn btn-primary col-lg-offset-1">Previous</button>*@
+                <button type="submit" class="btn btn-primary col-lg-offset-1">Next</button>
+                <button class="btn btn-success">Save</button>
+                <button type="reset" class="btn btn-info">Clear Form</button>
+            </div>
         </div>
-        
     }
 </div>

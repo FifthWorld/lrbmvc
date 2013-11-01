@@ -15,7 +15,8 @@ namespace LRB.Lib.Domain
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel;
     using SimpleSecurity;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public class ApplicationType
     {
         [ScaffoldColumn(false)]
@@ -24,15 +25,49 @@ namespace LRB.Lib.Domain
         public string Value { get; set; }
         public virtual ICollection<Application> Applications { get; set; }
     }
-    
+    public class Requirement
+    {
+        public string applicationType { get; set; }
+        public string landUse { get; set; }
+        public int landSize { get; set; }
+        public string landSizeUnit { get; set; }
+    }
     public partial class Application
     {
         public Application()
         {
-            this.Properties = new HashSet<Property>();
-            this.Parties = new HashSet<Party>();
-            this.Documents = new HashSet<Document>();
-            this.Citizens = new HashSet<Citizen>();
+            var user = WebSecurity.GetCurrentUser();
+            UserId = user.UserName;
+            //UserId = "Skims";
+            StartDate = DateTime.Now;            
+            ApplicationType = "Individual";
+            Status = "Incomplete";
+            Parties = new List<Party>();
+            Properties = new List<Property>();
+            //var priprop = new Property()
+            //{
+            //    Development = "Undeveloped",
+            //    CapacityofOwnership = "Inheritance",
+            //    LandSize = 100,
+            //    LandSizeUnit = "hectares",
+            //    LandUse = "Residential",
+            //    PeriodofPossession = "3 years"
+            //};
+            
+            //var tparty = new Party()
+            //{
+            //    Surname = "Land",
+            //    Firstname = "Land",
+            //    Middlename = "Land",
+            //    Email = "land@gmail.com",
+            //    MobileNo = "land01",
+            //    PartyType = "ContactPerson"
+            //};
+            //this.Parties.Add(tparty);
+            //this.Properties.Add(priprop);
+            Citizens = new List<Citizen>(){
+                new Citizen(){}
+            };
         }
 
         [ScaffoldColumn(false)]
@@ -42,79 +77,56 @@ namespace LRB.Lib.Domain
         public string UserId { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Submission by applicant")]
         public Nullable<bool> SubmittedbyApplicant { get; set; }
 
         public string OtherRelevantInfo { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Submission date")]
         public Nullable<System.DateTime> SubmissionDate { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Start date")]
         public System.DateTime StartDate { get; set; }
 
         [ScaffoldColumn(false)]
         public String Status { get; set; }
 
-        [DisplayName("Please select the Type of Application")]
+        [DisplayName("Type of Application")]
         public string ApplicationType { get; set; }
 
         [ScaffoldColumn(false)]
         public String SolaId { get; set; }
-        
-        public Party ContactPerson
-        {
-            get
-            {
-                Party party = this.Parties.Where(p=>p.PartyType=="ContactPerson").FirstOrDefault();
-                if (null != party)
-                {
-                    return party;
-                }
-                party = new Party() { 
-                    PartyType = "ContactPerson"                    
-                };
-                this.Parties.Add(party);
-                return party;
-            }
-        }
 
         public Citizen InterimApplicant
         {
             get
             {
-                var interim = this.Citizens.FirstOrDefault();
-                if (null == interim)
-                {
-                    interim = new Citizen();
-                    this.Citizens.Add(interim);
-                }
-                return interim;
+                return this.Citizens.FirstOrDefault();
             }
         }
 
-        public Property PrimaryProperty
-        {
+        [NotMapped]
+        public Party ContactPerson {
             get
             {
-                Property property = this.Properties.FirstOrDefault();
-                if (null != property)
-                {
-                    return property;
-                }
-                property = new Property() { 
-                    //Developed=false,
-                    //LandUse="Building",
-                    //PeriodofPossession="10 years",
-                    //ApproximateArea =5000
-                };
-                this.Properties.Add(property);
-                return property;
+                return this.Parties.Where(p => p.PartyType == "ContactPerson").FirstOrDefault();
             }
         }
-    
-        public virtual ICollection<Property> Properties { get; set; }
-        public virtual ICollection<Party> Parties { get; set; }
-        public virtual ICollection<Document> Documents { get; set; }
-        public virtual ICollection<Citizen> Citizens { get; set; }
+
+        [NotMapped]
+        public Property PrimaryProperty { get { return this.Properties.FirstOrDefault(); } }
+
+        public Property getPrimaryProperty()
+        {
+            return this.Properties.FirstOrDefault();
+        }
+
+
+        public List<Party> Parties { get; set; }
+        public List<Property> Properties { get; set; }
+        public virtual List<Document> Documents { get; set; }
+        public virtual List<Citizen> Citizens { get; set; }
     }
 }

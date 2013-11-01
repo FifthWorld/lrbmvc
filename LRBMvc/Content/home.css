@@ -35,6 +35,20 @@ a{
 	text-decoration:none;
 	color: inherit;
 }
+
+.link_button
+{
+/*  margin-top: 3px; 
+    color: white;
+    border: solid 1px #f29b12;
+    background-color: orange;
+    width: 100px;
+    height: 20px;
+    border-radius: 7px;
+    padding: 5px */
+    color: rgb(35,83,138);
+    font-weight: bold;
+}
 img{
 	max-width: 100%;
 	height:auto;
@@ -54,26 +68,27 @@ src: url(../fonts/Candara.ttf);
 	text-shadow:0px 1px 0 #ffffff;
 	margin:10px 0px;
 }
-input[type="text"]{
+
+
+
+input[type="text"], input[type="tel"]{
 	margin:10px 0px;
-	padding:10px 15px;
 	color:#484848;
 	border:1px solid #ccc;
 	line-height:1.5em;
 	font-size:14px;
-	width:95%;
+	width:42%;
+    border-radius: 3px;
 }
-input {
-	background-color:white;
-	
-}
+
 textarea{
 	width:100%;
 	border:1px solid #ccc;
 	margin:10px 0px;
-	padding:10px 15px;
 	line-height:1.5em;
+    border-radius: 3px;
 }
+
 
 /*Styles*/
 body{
@@ -193,9 +208,9 @@ position: relative;
 }
 .icon{
 	position:absolute;
-	left: 163px;
-	top: 69px;
-	width: 96px;
+	left: 200px;
+	top: 85px;
+	width: 65px;
 	z-index: 10;
 }
 .top_box{
@@ -218,7 +233,7 @@ position: relative;
 .main_box h2{
 	font-size: 1.4em;
 	text-align: center;
-	margin:10px;
+	margin:10px 10px 10px 0px;
 }
 .side_box{
 background: white;
@@ -270,3 +285,4 @@ padding-bottom: 10px;
 .nav-profile li a{
     margin:0px 2px;
 }
+
