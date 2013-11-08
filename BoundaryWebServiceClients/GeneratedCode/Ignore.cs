@@ -221,6 +221,39 @@ namespace org.sola.webservices.digitalarchive
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         org.sola.webservices.digitalarchive.CreateDocumentResponse CreateDocument(org.sola.webservices.digitalarchive.CreateDocumentRequest request);
         
+        // CODEGEN: Generating message contract since message part namespace (http://webservices.sola.org/bulkoperations) does not match the default value (http://webservices.sola.org/digitalarchive)
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/CheckConnectionResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.digitalarchive.CheckConnectionResponse CheckConnection(org.sola.webservices.digitalarchive.CheckConnectionRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnailRequest" +
+            "", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnailRespons" +
+            "e")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
+            "SOLAFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
+            "UnhandledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
+            "SOLAAccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.digitalarchive.GetFileThumbnailResponse GetFileThumbnail(org.sola.webservices.digitalarchive.GetFileThumbnailRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinaryRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinaryResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/SOL" +
+            "AFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/Unh" +
+            "andledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/SOL" +
+            "AAccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.digitalarchive.GetFileBinaryResponse GetFileBinary(org.sola.webservices.digitalarchive.GetFileBinaryRequest request);
+        
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/CreateDocumentFromServe" +
             "rRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/CreateDocumentFromServe" +
@@ -238,49 +271,16 @@ namespace org.sola.webservices.digitalarchive
         org.sola.webservices.digitalarchive.CreateDocumentFromServerResponse CreateDocumentFromServer(org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinaryRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinaryResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/SOL" +
-            "AFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/Unh" +
-            "andledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileBinary/Fault/SOL" +
-            "AAccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.digitalarchive.GetFileBinaryResponse GetFileBinary(org.sola.webservices.digitalarchive.GetFileBinaryRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnailRequest" +
-            "", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnailRespons" +
-            "e")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
-            "SOLAFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
-            "UnhandledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetFileThumbnail/Fault/" +
-            "SOLAAccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.digitalarchive.GetFileThumbnailResponse GetFileThumbnail(org.sola.webservices.digitalarchive.GetFileThumbnailRequest request);
-        
-        // CODEGEN: Generating message contract since message part namespace (http://webservices.sola.org/bulkoperations) does not match the default value (http://webservices.sola.org/digitalarchive)
-        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/CheckConnectionResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.digitalarchive.CheckConnectionResponse CheckConnection(org.sola.webservices.digitalarchive.CheckConnectionRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFilesRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFilesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/SOLAF" +
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocumentRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocumentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/SOLAF" +
             "ault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/Unhan" +
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/Unhan" +
             "dledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/SOLAA" +
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/SOLAA" +
             "ccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.digitalarchive.GetAllFilesResponse GetAllFiles(org.sola.webservices.digitalarchive.GetAllFilesRequest request);
+        org.sola.webservices.digitalarchive.GetDocumentResponse GetDocument(org.sola.webservices.digitalarchive.GetDocumentRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/SaveDocumentRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/SaveDocumentResponse")]
@@ -297,16 +297,16 @@ namespace org.sola.webservices.digitalarchive
         org.sola.webservices.digitalarchive.SaveDocumentResponse SaveDocument(org.sola.webservices.digitalarchive.SaveDocumentRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocumentRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocumentResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/SOLAF" +
+        [System.ServiceModel.OperationContractAttribute(ProtectionLevel=System.Net.Security.ProtectionLevel.EncryptAndSign, Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFilesRequest", ReplyAction="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFilesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/SOLAF" +
             "ault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/Unhan" +
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/Unhan" +
             "dledFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetDocument/Fault/SOLAA" +
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.digitalarchive.faultInfoBean), Action="http://webservices.sola.org/digitalarchive/DigitalArchive/GetAllFiles/Fault/SOLAA" +
             "ccessFault", ProtectionLevel=System.Net.Security.ProtectionLevel.None, Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.digitalarchive.GetDocumentResponse GetDocument(org.sola.webservices.digitalarchive.GetDocumentRequest request);
+        org.sola.webservices.digitalarchive.GetAllFilesResponse GetAllFiles(org.sola.webservices.digitalarchive.GetAllFilesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -758,84 +758,30 @@ namespace org.sola.webservices.digitalarchive
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDocumentFromServer", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class CreateDocumentFromServerRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnection", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class CheckConnectionRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.digitalarchive.documentTO documentTO;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fileName;
-        
-        public CreateDocumentFromServerRequest()
+        public CheckConnectionRequest()
         {
-        }
-        
-        public CreateDocumentFromServerRequest(org.sola.webservices.digitalarchive.documentTO documentTO, string fileName)
-        {
-            this.documentTO = documentTO;
-            this.fileName = fileName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDocumentFromServerResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class CreateDocumentFromServerResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnectionResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class CheckConnectionResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/bulkoperations", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.digitalarchive.documentTO @return;
+        public bool @return;
         
-        public CreateDocumentFromServerResponse()
+        public CheckConnectionResponse()
         {
         }
         
-        public CreateDocumentFromServerResponse(org.sola.webservices.digitalarchive.documentTO @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFileBinary", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetFileBinaryRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fileName;
-        
-        public GetFileBinaryRequest()
-        {
-        }
-        
-        public GetFileBinaryRequest(string fileName)
-        {
-            this.fileName = fileName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFileBinaryResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetFileBinaryResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.digitalarchive.fileInfoTO @return;
-        
-        public GetFileBinaryResponse()
-        {
-        }
-        
-        public GetFileBinaryResponse(org.sola.webservices.digitalarchive.fileInfoTO @return)
+        public CheckConnectionResponse(bool @return)
         {
             this.@return = @return;
         }
@@ -883,30 +829,39 @@ namespace org.sola.webservices.digitalarchive
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnection", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class CheckConnectionRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFileBinary", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetFileBinaryRequest
     {
         
-        public CheckConnectionRequest()
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fileName;
+        
+        public GetFileBinaryRequest()
         {
+        }
+        
+        public GetFileBinaryRequest(string fileName)
+        {
+            this.fileName = fileName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnectionResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class CheckConnectionResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetFileBinaryResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetFileBinaryResponse
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/bulkoperations", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        public org.sola.webservices.digitalarchive.fileInfoTO @return;
         
-        public CheckConnectionResponse()
+        public GetFileBinaryResponse()
         {
         }
         
-        public CheckConnectionResponse(bool @return)
+        public GetFileBinaryResponse(org.sola.webservices.digitalarchive.fileInfoTO @return)
         {
             this.@return = @return;
         }
@@ -914,30 +869,84 @@ namespace org.sola.webservices.digitalarchive
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFiles", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetAllFilesRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDocumentFromServer", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class CreateDocumentFromServerRequest
     {
         
-        public GetAllFilesRequest()
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.digitalarchive.documentTO documentTO;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fileName;
+        
+        public CreateDocumentFromServerRequest()
         {
+        }
+        
+        public CreateDocumentFromServerRequest(org.sola.webservices.digitalarchive.documentTO documentTO, string fileName)
+        {
+            this.documentTO = documentTO;
+            this.fileName = fileName;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFilesResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetAllFilesResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateDocumentFromServerResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class CreateDocumentFromServerResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public fileInfoTO[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.digitalarchive.documentTO @return;
         
-        public GetAllFilesResponse()
+        public CreateDocumentFromServerResponse()
         {
         }
         
-        public GetAllFilesResponse(fileInfoTO[] @return)
+        public CreateDocumentFromServerResponse(org.sola.webservices.digitalarchive.documentTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDocument", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetDocumentRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string documentId;
+        
+        public GetDocumentRequest()
+        {
+        }
+        
+        public GetDocumentRequest(string documentId)
+        {
+            this.documentId = documentId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDocumentResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetDocumentResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.digitalarchive.documentBinaryTO @return;
+        
+        public GetDocumentResponse()
+        {
+        }
+        
+        public GetDocumentResponse(org.sola.webservices.digitalarchive.documentBinaryTO @return)
         {
             this.@return = @return;
         }
@@ -985,39 +994,30 @@ namespace org.sola.webservices.digitalarchive
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDocument", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetDocumentRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFiles", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetAllFilesRequest
     {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string documentId;
-        
-        public GetDocumentRequest()
+        public GetAllFilesRequest()
         {
-        }
-        
-        public GetDocumentRequest(string documentId)
-        {
-            this.documentId = documentId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetDocumentResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
-    public partial class GetDocumentResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFilesResponse", WrapperNamespace="http://webservices.sola.org/digitalarchive", IsWrapped=true)]
+    public partial class GetAllFilesResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/digitalarchive", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.digitalarchive.documentBinaryTO @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public fileInfoTO[] @return;
         
-        public GetDocumentResponse()
+        public GetAllFilesResponse()
         {
         }
         
-        public GetDocumentResponse(org.sola.webservices.digitalarchive.documentBinaryTO @return)
+        public GetAllFilesResponse(fileInfoTO[] @return)
         {
             this.@return = @return;
         }
@@ -1086,31 +1086,15 @@ namespace org.sola.webservices.digitalarchive
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.digitalarchive.CreateDocumentFromServerResponse org.sola.webservices.digitalarchive.DigitalArchive.CreateDocumentFromServer(org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest request)
+        org.sola.webservices.digitalarchive.CheckConnectionResponse org.sola.webservices.digitalarchive.DigitalArchive.CheckConnection(org.sola.webservices.digitalarchive.CheckConnectionRequest request)
         {
-            return base.Channel.CreateDocumentFromServer(request);
+            return base.Channel.CheckConnection(request);
         }
         
-        public org.sola.webservices.digitalarchive.documentTO CreateDocumentFromServer(org.sola.webservices.digitalarchive.documentTO documentTO, string fileName)
+        public bool CheckConnection()
         {
-            org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest inValue = new org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest();
-            inValue.documentTO = documentTO;
-            inValue.fileName = fileName;
-            org.sola.webservices.digitalarchive.CreateDocumentFromServerResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).CreateDocumentFromServer(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.digitalarchive.GetFileBinaryResponse org.sola.webservices.digitalarchive.DigitalArchive.GetFileBinary(org.sola.webservices.digitalarchive.GetFileBinaryRequest request)
-        {
-            return base.Channel.GetFileBinary(request);
-        }
-        
-        public org.sola.webservices.digitalarchive.fileInfoTO GetFileBinary(string fileName)
-        {
-            org.sola.webservices.digitalarchive.GetFileBinaryRequest inValue = new org.sola.webservices.digitalarchive.GetFileBinaryRequest();
-            inValue.fileName = fileName;
-            org.sola.webservices.digitalarchive.GetFileBinaryResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetFileBinary(inValue);
+            org.sola.webservices.digitalarchive.CheckConnectionRequest inValue = new org.sola.webservices.digitalarchive.CheckConnectionRequest();
+            org.sola.webservices.digitalarchive.CheckConnectionResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).CheckConnection(inValue);
             return retVal.@return;
         }
         
@@ -1129,28 +1113,45 @@ namespace org.sola.webservices.digitalarchive
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.digitalarchive.CheckConnectionResponse org.sola.webservices.digitalarchive.DigitalArchive.CheckConnection(org.sola.webservices.digitalarchive.CheckConnectionRequest request)
+        org.sola.webservices.digitalarchive.GetFileBinaryResponse org.sola.webservices.digitalarchive.DigitalArchive.GetFileBinary(org.sola.webservices.digitalarchive.GetFileBinaryRequest request)
         {
-            return base.Channel.CheckConnection(request);
+            return base.Channel.GetFileBinary(request);
         }
         
-        public bool CheckConnection()
+        public org.sola.webservices.digitalarchive.fileInfoTO GetFileBinary(string fileName)
         {
-            org.sola.webservices.digitalarchive.CheckConnectionRequest inValue = new org.sola.webservices.digitalarchive.CheckConnectionRequest();
-            org.sola.webservices.digitalarchive.CheckConnectionResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).CheckConnection(inValue);
+            org.sola.webservices.digitalarchive.GetFileBinaryRequest inValue = new org.sola.webservices.digitalarchive.GetFileBinaryRequest();
+            inValue.fileName = fileName;
+            org.sola.webservices.digitalarchive.GetFileBinaryResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetFileBinary(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.digitalarchive.GetAllFilesResponse org.sola.webservices.digitalarchive.DigitalArchive.GetAllFiles(org.sola.webservices.digitalarchive.GetAllFilesRequest request)
+        org.sola.webservices.digitalarchive.CreateDocumentFromServerResponse org.sola.webservices.digitalarchive.DigitalArchive.CreateDocumentFromServer(org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest request)
         {
-            return base.Channel.GetAllFiles(request);
+            return base.Channel.CreateDocumentFromServer(request);
         }
         
-        public fileInfoTO[] GetAllFiles()
+        public org.sola.webservices.digitalarchive.documentTO CreateDocumentFromServer(org.sola.webservices.digitalarchive.documentTO documentTO, string fileName)
         {
-            org.sola.webservices.digitalarchive.GetAllFilesRequest inValue = new org.sola.webservices.digitalarchive.GetAllFilesRequest();
-            org.sola.webservices.digitalarchive.GetAllFilesResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetAllFiles(inValue);
+            org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest inValue = new org.sola.webservices.digitalarchive.CreateDocumentFromServerRequest();
+            inValue.documentTO = documentTO;
+            inValue.fileName = fileName;
+            org.sola.webservices.digitalarchive.CreateDocumentFromServerResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).CreateDocumentFromServer(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.digitalarchive.GetDocumentResponse org.sola.webservices.digitalarchive.DigitalArchive.GetDocument(org.sola.webservices.digitalarchive.GetDocumentRequest request)
+        {
+            return base.Channel.GetDocument(request);
+        }
+        
+        public org.sola.webservices.digitalarchive.documentBinaryTO GetDocument(string documentId)
+        {
+            org.sola.webservices.digitalarchive.GetDocumentRequest inValue = new org.sola.webservices.digitalarchive.GetDocumentRequest();
+            inValue.documentId = documentId;
+            org.sola.webservices.digitalarchive.GetDocumentResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetDocument(inValue);
             return retVal.@return;
         }
         
@@ -1169,16 +1170,15 @@ namespace org.sola.webservices.digitalarchive
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.digitalarchive.GetDocumentResponse org.sola.webservices.digitalarchive.DigitalArchive.GetDocument(org.sola.webservices.digitalarchive.GetDocumentRequest request)
+        org.sola.webservices.digitalarchive.GetAllFilesResponse org.sola.webservices.digitalarchive.DigitalArchive.GetAllFiles(org.sola.webservices.digitalarchive.GetAllFilesRequest request)
         {
-            return base.Channel.GetDocument(request);
+            return base.Channel.GetAllFiles(request);
         }
         
-        public org.sola.webservices.digitalarchive.documentBinaryTO GetDocument(string documentId)
+        public fileInfoTO[] GetAllFiles()
         {
-            org.sola.webservices.digitalarchive.GetDocumentRequest inValue = new org.sola.webservices.digitalarchive.GetDocumentRequest();
-            inValue.documentId = documentId;
-            org.sola.webservices.digitalarchive.GetDocumentResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetDocument(inValue);
+            org.sola.webservices.digitalarchive.GetAllFilesRequest inValue = new org.sola.webservices.digitalarchive.GetAllFilesRequest();
+            org.sola.webservices.digitalarchive.GetAllFilesResponse retVal = ((org.sola.webservices.digitalarchive.DigitalArchive)(this)).GetAllFiles(inValue);
             return retVal.@return;
         }
     }

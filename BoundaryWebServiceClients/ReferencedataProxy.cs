@@ -8,7 +8,7 @@ using org.sola.webservices.referencedata.extra;
 
 namespace org.sola.services.boundary.wsclients
 {
-    public class ReferenceDataServiceProxy: IReferencedataService
+    public class ReferenceDataServiceProxy : IReferencedataService
     {
         private static readonly ReferenceDataServiceProxy _instance = new ReferenceDataServiceProxy();
         private String pWord; // Might what to store this in SecureString class
@@ -67,16 +67,16 @@ namespace org.sola.services.boundary.wsclients
             client.ClientCredentials.UserName.Password = pWord;
         }
 
-        applicationActionTypeTO[] IReferencedataService.GetApplicationStatusTypes()
+        applicationStatusTypeTO[] IReferencedataService.GetApplicationStatusTypes()
         {
-            applicationActionTypeTO[] result = null;
+            applicationStatusTypeTO[] result = null;
             using (ReferenceDataClient client = new ReferenceDataClient())
             {
                 ConfigureClient(client);
                 try
                 {
                     client.Open();
-                    result = client.GetApplicationActionTypes(en);
+                    result = client.GetApplicationStatusTypes(en);
                     client.Close();
                 }
                 catch (Exception ex)
@@ -235,172 +235,174 @@ namespace org.sola.services.boundary.wsclients
             }
         }
 
-        capacityTypeTO[] IReferencedataService.GetCapacityTypes()
-        {
-            capacityTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetCapacityTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    capacityTypeTO[] IReferencedataService.GetCapacityTypes()
+        //    {
+        //        capacityTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetCapacityTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        homeTownTypeTO[] IReferencedataService.GetHomeTownTypes()
-        {
-            homeTownTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetHomeTownTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    homeTownTypeTO[] IReferencedataService.GetHomeTownTypes()
+        //    {
+        //        homeTownTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetHomeTownTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        lgaTypeTO[] IReferencedataService.GetLgaTypes()
-        {
-            lgaTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetLgaTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    lgaTypeTO[] IReferencedataService.GetLgaTypes()
+        //    {
+        //        lgaTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetLgaTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        occupationTypeTO[] IReferencedataService.GetOccupationTypes()
-        {
-            occupationTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetOccupationTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    occupationTypeTO[] IReferencedataService.GetOccupationTypes()
+        //    {
+        //        occupationTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetOccupationTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        propertyTypeTO[] IReferencedataService.GetPropertyTypes()
-        {
-            propertyTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetPropertyTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    propertyTypeTO[] IReferencedataService.GetPropertyTypes()
+        //    {
+        //        propertyTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetPropertyTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        stateTypeTO[] IReferencedataService.GetStateTypes()
-        {
-            stateTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetStateTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    stateTypeTO[] IReferencedataService.GetStateTypes()
+        //    {
+        //        stateTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetStateTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        titleTypeTO[] IReferencedataService.GetTitleTypes()
-        {
-            titleTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetTitleTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    titleTypeTO[] IReferencedataService.GetTitleTypes()
+        //    {
+        //        titleTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetTitleTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
 
-        useTypeTO[] IReferencedataService.GetUseTypes()
-        {
-            useTypeTO[] result = null;
-            using (ReferenceDataClient client = new ReferenceDataClient())
-            {
-                ConfigureClient(client);
-                try
-                {
-                    client.Open();
-                    result = client.GetUseTypes(en);
-                    client.Close();
-                }
-                catch (Exception ex)
-                {
-                    client.Abort();
-                    throw ex;
-                }
-                return result;
-            }
-        }
+        //    useTypeTO[] IReferencedataService.GetUseTypes()
+        //    {
+        //        useTypeTO[] result = null;
+        //        using (ReferenceDataClient client = new ReferenceDataClient())
+        //        {
+        //            ConfigureClient(client);
+        //            try
+        //            {
+        //                client.Open();
+        //                result = client.GetUseTypes(en);
+        //                client.Close();
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                client.Abort();
+        //                throw ex;
+        //            }
+        //            return result;
+        //        }
+        //    }
+        //}
+
     }
 }

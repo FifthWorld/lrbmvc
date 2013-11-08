@@ -15,7 +15,8 @@ namespace LRB.Lib.Domain
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel;
     using SimpleSecurity;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public class ApplicationType
     {
         [ScaffoldColumn(false)]
@@ -24,14 +25,47 @@ namespace LRB.Lib.Domain
         public string Value { get; set; }
         public virtual ICollection<Application> Applications { get; set; }
     }
-    
+    public class Requirement
+    {
+        public string applicationType { get; set; }
+        public string landUse { get; set; }
+        public int landSize { get; set; }
+        public string landSizeUnit { get; set; }
+    }
     public partial class Application
     {
         public Application()
         {
-            this.Properties = new HashSet<Property>();
-            this.Parties = new HashSet<Party>();
-            this.Documents = new HashSet<Document>();
+            var user = WebSecurity.GetCurrentUser();
+            UserId = user.UserName;
+            //UserId = "Skims";
+            StartDate = DateTime.Now;
+            ApplicationType = "Individual";
+            Status = "Incomplete";
+            Parties = new List<Party>();
+            Properties = new List<Property>();
+            this.requirementDocuments = new List<Domain.DocumentManager>();
+            Optionals = new List<Optional>();
+            Citizens = new List<Citizen>(){
+                new Citizen(){}
+            };
+        }
+
+
+        public Application(string username)
+        {
+            UserId = username;
+            //UserId = "Skims";
+            StartDate = DateTime.Now;
+            ApplicationType = "Individual";
+            Status = "Incomplete";
+            Parties = new List<Party>();
+            Properties = new List<Property>();
+            this.requirementDocuments = new List<Domain.DocumentManager>();
+            Optionals = new List<Optional>();
+            Citizens = new List<Citizen>(){
+                new Citizen(){}
+            };
         }
 
         [ScaffoldColumn(false)]
@@ -41,62 +75,67 @@ namespace LRB.Lib.Domain
         public string UserId { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Submission by applicant")]
         public Nullable<bool> SubmittedbyApplicant { get; set; }
 
         public string OtherRelevantInfo { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Submission date")]
         public Nullable<System.DateTime> SubmissionDate { get; set; }
 
         [ScaffoldColumn(false)]
+        [DisplayName("Start date")]
         public System.DateTime StartDate { get; set; }
 
         [ScaffoldColumn(false)]
         public String Status { get; set; }
 
-        [DisplayName("Please select the Type of Application")]
+        [DisplayName("Type of Application")]
         public string ApplicationType { get; set; }
 
         [ScaffoldColumn(false)]
         public String SolaId { get; set; }
-        
+
+        [ScaffoldColumn(false)]
+        public String SolaNR { get; set; }
+
+        public Citizen InterimApplicant
+        {
+            get
+            {
+                return this.Citizens.FirstOrDefault();
+            }
+        }
+
+        [NotMapped]
         public Party ContactPerson
         {
             get
             {
-                Party party = this.Parties.Where(p=>p.PartyType=="ContactPerson").FirstOrDefault();
-                if (null != party)
-                {
-                    return party;
-                }
-                var user = WebSecurity.GetCurrentUser();
-                party = new Party() { 
-
-                };
-                this.Parties.Add(party);
-                return party;
+                return this.Parties.Where(p => p.PartyType == "ContactPerson").FirstOrDefault();
             }
         }
 
-        public Property PrimaryProperty
+        [NotMapped]
+        public Property PrimaryProperty { get { return this.Properties.FirstOrDefault(); } }
+
+        public Property getPrimaryProperty()
         {
-            get
-            {
-                Property property = this.Properties.FirstOrDefault();
-                if (null != property)
-                {
-                    return property;
-                }
-                property = new Property() { 
-
-                };
-                this.Properties.Add(property);
-                return property;
-            }
+            return this.Properties.FirstOrDefault();
         }
-    
-        public virtual ICollection<Property> Properties { get; set; }
-        public virtual ICollection<Party> Parties { get; set; }
-        public virtual ICollection<Document> Documents { get; set; }
+
+        [NotMapped]
+        public DocumentManager DocumentManager { get { return this.requirementDocuments.FirstOrDefault(); } }
+
+        [NotMapped]
+        public Optional OptionalRequirement { get { return this.Optionals.FirstOrDefault(); } }
+
+        public List<DocumentManager> requirementDocuments { get; set; }
+        public List<Party> Parties { get; set; }
+        public List<Property> Properties { get; set; }
+        public virtual List<Document> Documents { get; set; }
+        public virtual List<Optional> Optionals { get; set; }
+        public virtual List<Citizen> Citizens { get; set; }
     }
 }

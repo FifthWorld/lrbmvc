@@ -1,9 +1,15 @@
 ﻿@model LRB.Lib.Domain.Party
-
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 @{
     ViewBag.Title = "ContactInformation";
-    //Layout = "~/Views/Shared/_AppLayout.cshtml";
 }
 
-<h2>ContactInformation</h2>
-@Html.Partial("partials/_PartyPartial", Model)
+@if (ViewBag.ApplicationType == "Individual")
+{
+    @Html.Partial("partials/_IndividualPartial", Model)
+}
+else{
+    @Html.Partial("partials/_CorporatePartial", Model)
+}

@@ -54,8 +54,8 @@ namespace LRBMvc.Areas.earchive
         public override string ToString()
         {
             return this.blockno + " "
-            + this.plotno + " "
-            + this.houseno + " "
+            //+ this.plotno + " "
+            //+ this.houseno + " "
             + this.location + " "
             + this.lga + " "
             + this.town + " ";

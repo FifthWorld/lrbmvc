@@ -4,42 +4,50 @@
 }
 
 <hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
+    
+    <!-- <h1>@ViewBag.Title.</h1> -->
+
+     
 </hgroup>
 
+<br />
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+    @Html.ValidationSummary("", new  { @class="alert alert-danger" })
 
     <fieldset>
-        <legend>Registration Form</legend>
+        <legend style="color: #3a87ad; background-color: #d9edf7; border-color: #bce8f1; padding: 5px; border-radius:5px;">Registration Form</legend>
         <ol>
             <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
+                <label>Username</label>
+                @Html.TextBoxFor(m => m.UserName, new { @class="form-control", @style="width: 42%; height: 5%;" })
             </li>
             <li>
                 @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class="form-control", @style="width: 42%; height: 5%;" })
             </li>
             <li>
                 @Html.LabelFor(m => m.PhoneNumber)
-                @Html.TextBoxFor(m => m.PhoneNumber)
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class="form-control", @style="width: 42%; height: 5%;" })
             </li>
             <li>
                 @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class="form-control", @style="width: 42%; height: 5%;" })
             </li>
             <li>
                 @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class="form-control", @style="width: 42%; height: 5%;" })
             </li>
         </ol>
-        <input type="submit" value="Register" />
+        <br/>
+        <p>
+           <input type="submit" value="Register" name="submit" id="submit" class="btn btn-default pull-left">
+           <input type="reset" value="Clear Form" name="submit" id="reset" class="btn btn-default pull-left" style="margin-left: 5px;">  
+        </p>
+           
     </fieldset>
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }

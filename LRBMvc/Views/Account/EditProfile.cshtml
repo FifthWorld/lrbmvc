@@ -4,17 +4,15 @@
     ViewBag.Title = "EditProfile";
 }
 
-<h2>EditProfile</h2>
-
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>UserProfile</legend>
+        <legend>Complete your profile details</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.FirstName)
+            <label>First Name</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.FirstName)
@@ -22,7 +20,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.MiddleName)
+            <label>Middle Name</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.MiddleName)
@@ -30,7 +28,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.SurName)
+            <label>Surname</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.SurName)
@@ -38,7 +36,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ContactAddress)
+            <label>Contact Address</label>
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ContactAddress)
@@ -52,5 +50,5 @@
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }

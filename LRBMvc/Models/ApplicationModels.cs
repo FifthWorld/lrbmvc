@@ -10,11 +10,20 @@ using System.Web;
 
 namespace LRBMvc.Models
 {
-    public class Requirement
-    {        
-        public string applicationType;
-        public string landUse;
-        public int landSize;
-        public string landSizeUnit;
+    class SurveyPlan
+    {
+        public string SurveyPlan_Number { get; set; }
+        public DateTime? SurveyPlan_ApprovalDate { get; set; }
+    }
+
+    class DevelopmentLevy
+    {
+        public string RecieptNumber { get; set; }
+    }
+
+    class EvidenceOfOwnership
+    {
+        public String EvidenceType { get; set; }
+        public string EvidenceNumber { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace org.sola.services.boundary.wsclients
         void SetCredentials(string userName, string password);
         bool CheckConnection();
         applicationTO GetApplication(string id);
+        applicationTO GetApplicationViaTransactionId(string id);
         partyTO SaveParty(partyTO party);
         sourceTO SaveSource(sourceTO source);
         applicationTO SaveApplication(applicationTO application);

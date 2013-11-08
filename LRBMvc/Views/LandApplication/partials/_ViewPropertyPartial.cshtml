@@ -4,9 +4,9 @@
     <h3>Property</h3>
 
     <div class="form-group">
-        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.Developed)</span>
+        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.Development)</span>
         <div class="col-lg-10">
-            <span class="form-control">@Html.DisplayFor(model => model.Developed)</span>
+            <span class="form-control">@Html.DisplayFor(model => model.Development)</span>
         </div>        
     </div>
 
@@ -25,16 +25,20 @@
     </div>
 
     <div class="form-group">
-        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.PeriodofPossession)</span>
+        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.PeriodofPossession_years)</span>
         <div class="col-lg-10">
-            <span class="form-control">@Html.DisplayFor(model => model.PeriodofPossession)</span>
+            @{
+                string peridofownership = Model.PeriodofPossession_years + "years and " + Model.PeriodofPossession_months+ "months";
+            }
+            <span class="form-control">@peridofownership</span>
         </div>        
     </div>
 
     <div class="form-group">
-        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.ApproximateArea)</span>
+        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.LandSize)</span>
         <div class="col-lg-10">
-            <span class="form-control">@Html.DisplayFor(model => model.ApproximateArea)</span>
+            <span class="form-control">@Html.DisplayFor(model => model.LandSize)</span>
         </div>        
     </div>
+    
 </div>

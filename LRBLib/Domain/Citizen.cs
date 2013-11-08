@@ -10,22 +10,35 @@
 namespace LRB.Lib.Domain
 {
     using System;
+    using System.Linq;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.ComponentModel;
     
     public partial class Citizen
     {
         public Citizen()
         {
-            this.Addresses = new HashSet<Address>();
+            this.Addresses = new List<Address>();
         }
     
         public int Id { get; set; }
+        [DisplayName("Relationship to applicant")]
         public string RelationshiptoApplicant { get; set; }
+        [DisplayName("First name")]
         public string Firstname { get; set; }
+        [DisplayName("Last name")]
         public string Lastname { get; set; }
+        [DisplayName("Middle name")]
         public string Middlename { get; set; }
+        [DisplayName("Position held")]
         public string PostHeld { get; set; }
-    
-        public virtual ICollection<Address> Addresses { get; set; }
+        [DisplayName("Contact address")]
+        public String ContactAddress { get; set; }
+        public virtual List<Address> Addresses { get; set; }
+
+        [ForeignKey("Application")]
+        public int ApplicationId { get; set; }
+        public Application Application { get; set; }
     }
 }

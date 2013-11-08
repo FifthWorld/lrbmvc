@@ -27,26 +27,35 @@ namespace ApplicationLibrary
         {
             Application app = LandRecords.GetApplication(AppId);
 
-            if (isComplete())
+            // initialize the case management service
+            ICaseManagementService caseManagementService = CasemanagementProxy.Instance;
+            caseManagementService.SetCredentials(username, password);
+
+            var appTO = new applicationTO();
+
+            appTO.contactPerson = getContactPerson();
+            appTO.propertyList = getPropertyList();
+            appTO.serviceList = getServiceList();
+            appTO.sourceList = getSourceList();
+            var solaAppTO = caseManagementService.SaveApplication(appTO);
+
+
+            app.SolaId = solaAppTO.id;
+            app.Status = solaAppTO.statusCode;
+            return solaAppTO;
+        }
+
+        public string GetSolaStatus()
+        {
+            ICaseManagementService caseMgmt = CasemanagementProxy.Instance;
+            caseMgmt.SetCredentials(username, password);
+            var app = LandRecords.GetApplication(AppId);
+            var solaApp = caseMgmt.GetApplication(app.SolaId);
+            if (app.SolaId != null)
             {
-                // initialize the case manegement service
-                ICaseManagementService caseManagementService = CasemanagementProxy.Instance;
-                caseManagementService.SetCredentials(username, password);
-
-                var appTO = new applicationTO();
-
-                appTO.contactPerson = getContactPerson();
-                appTO.propertyList = getPropertyList();
-                appTO.serviceList = getServiceList();
-                appTO.sourceList = getSourceList();
-
-                var solaAppTO = caseManagementService.SaveApplication(appTO);
-                app.SolaId = solaAppTO.nr;
-                app.Status = solaAppTO.statusCode;
-                
-                return solaAppTO;
+                solaApp = caseMgmt.GetApplication(app.SolaId);
+                return solaApp.nr;
             }
-
             return null;
         }
 
@@ -81,7 +90,7 @@ namespace ApplicationLibrary
                 new serviceTO(){
                     requestTypeCode="newCofO",
                     actionCode="lodge",
-                    statusCode="lodged",                    
+                    statusCode="lodged", 
                 }
             };
         }
@@ -95,33 +104,42 @@ namespace ApplicationLibrary
         {
             var app = LandRecords.GetApplication(AppId);
             var person = new partyTO();
-            person.fathersName = app.ContactPerson.Firstname;
-            person.lastName = app.ContactPerson.Surname;
-            person.email = app.ContactPerson.Email;
-            person.corporateName = app.ContactPerson.OrganizationName;
-            person.alias = app.ContactPerson.Firstname;
-            person.dateOfBirth = app.ContactPerson.DOB.GetValueOrDefault();
-            //person.genderCode = app.ContactPerson.Gender;
-            person.typeCode = app.ContactPerson.OrganizationName != null ? "nonNaturalPerson" : "naturalPerson";
-            //homeTownTypeCode = app.Party.homeTownTypeCode,                
-            //lgaTypeCode = app.Party.lgaTypeCode,
-            //stateTypeCode = app.Party.stateCode,
-            //titleTypeCode = app.Party.titleCode,
-            person.mobile = app.ContactPerson.MobileNo;
-            // person.occupationTypeCode = app.ContactPerson.Occupation;
-            // person.rightHolder = true;
-
-
-            person.address = new addressTO()
+            var party = app.ContactPerson;
+            if (party !=null)
             {
-                description = "tomcat avenue, smoky way, wandechris, Nigeria"
-                // description = app.ContactPerson.Addresses[0],
-            };
-            // person.preferredCommunicationCode = "phone";
-            person.employerAddress = app.ContactPerson.EmployerAddress;
-            person.employerName = app.ContactPerson.EmployerName;
+                person.name = party.Firstname;
+                person.lastName = party.Surname;
+                person.email = party.Email;
+                person.alias = party.Firstname;
+                person.dateOfBirth = party.DOB.GetValueOrDefault();
 
-            return person;
+                person.typeCode = party.OrganizationName != null ? "nonNaturalPerson" : "naturalPerson";
+
+                person.mobile = app.ContactPerson.MobileNo;
+                person.preferredCommunicationCode = "phone";
+
+                if (app.ContactPerson.ContactAddress != null)
+                {
+                    person.address = new addressTO()
+                    {
+                        description = party.ContactAddress.ToString()
+                    };
+                }
+
+                //homeTownTypeCode = app.Party.homeTownTypeCode,
+                //lgaTypeCode = app.Party.lgaTypeCode,
+                //stateTypeCode = app.Party.stateCode,
+                //titleTypeCode = app.Party.titleCode,
+                //person.genderCode = app.ContactPerson.Gender;
+                // person.occupationTypeCode = app.ContactPerson.Occupation;
+                //person.rightHolder = true;
+                //person.employerAddress = app.ContactPerson.EmployerAddress;
+                //person.employerName = app.ContactPerson.EmployerName;
+
+                return person;
+            }
+            return null;
+            
         }
     }
 }

@@ -3,13 +3,14 @@
     ViewBag.Title = "Index";
     
 }
-<h2>@WebSecurity.CurrentUserName's Applications | @Html.ActionLink("Create New", "Create")</h2>
-
 <p>
 </p>
 <table class="table table-bordered">
-   
+
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.SubmissionDate)
         </th>
@@ -26,15 +27,25 @@
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.SubmissionDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ApplicationType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
+                @if (item.Status == null)
+                {
+                    <span>Submitted</span>
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Status)
+                }                
             </td>
-            @if (item.Status == null)
+            @if (item.Status == "Incomplete")
             {
                 <td>
                     @Html.ActionLink("Continue", "Continue", new { id = item.Id }) |            
@@ -49,3 +60,4 @@
     }
 
 </table>
+@Html.ActionLink("Create New Application", "Create", "", new { @class = "btn btn-md btn-default " })

@@ -10,16 +10,22 @@
 namespace LRB.Lib.Domain
 {
     using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-    
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Party
     {
         public Party()
         {
-            this.gender = "Female";
-            this.Addresses = new HashSet<Address>();
+            this.Gender = "Female";
+            this.Addresses = new List<Address>();
+            this.Addresses.Add(new Address()
+            {
+                AddressType = "ContactAddress"
+            });
         }
 
         [ScaffoldColumn(false)]
@@ -27,73 +33,97 @@ using System.ComponentModel.DataAnnotations;
 
         [DisplayName("Surname")]
         [Required(ErrorMessage = "Surname is required")]
-        public string surname { get; set; }
+        public string Surname { get; set; }
 
         [DisplayName("First name")]
         [Required(ErrorMessage = "First name is required")]
-        public string first_name { get; set; }
+        public string Firstname { get; set; }
 
         [DisplayName("Middle name")]
-        public string middle_name { get; set; }
+        public string Middlename { get; set; }
 
         [DisplayName("Gender")]
-        [Required(ErrorMessage="Gender is Required")]
-        public string gender { get; set; }
+        public string Gender { get; set; }
 
         [DisplayName("Date of Birth")]
-        [Required(ErrorMessage="Date of Birth is required")]
-        public Nullable<System.DateTime> dob { get; set; }
+        [DataType(DataType.Date)]
+        public Nullable<System.DateTime> DOB { get; set; }
 
-        [DisplayName("State of Origin")]
-        [Required(ErrorMessage="Please choose a state of origin")]
-        public string state_of_origin { get; set; }
+        
 
-        [DisplayName("Home Town")]
-        public string home_town { get; set; }
+        [DisplayName("Home town")]
+        public string HomeTown { get; set; }
 
-        [DisplayName("Local Government Area")]
-        public string lga { get; set; }
+        [DisplayName("Local Government Area of Applicant")]
+        public string LGA { get; set; }
 
-        [DisplayName("Corporate Name(If Registering for an organization)")]
+        [DisplayName("Office Number(If Registering for an organization)")]
         public string OfficeNo { get; set; }
 
-        [DisplayName("Mobile Phone Number")]
-        [Required(ErrorMessage = "Phone Number is required")]
-        public string MobileNo { get; set; }
+        public Address ContactAddress
+        {
+            get
+            {
+                return this.Addresses.Where(p => p.AddressType == "ContactAddress").FirstOrDefault();                
+            }
+        }
 
-        [DisplayName("Home Telephone")]
-        public string telephone { get; set; }
+
+        [DisplayName("Mobile / GSM Number")]
+        [Required(ErrorMessage = "Phone Number is required")]
+        public String MobileNo { get; set; }
+
+        [DisplayName("Phone 2")]
+        public String Phone2 { get; set; }
+
+        [DisplayName("Phone 3")]
+        public String Phone3 { get; set; }
 
         [DisplayName("Email Address")]
-        [Required(ErrorMessage = "Please enter a valid email address")]
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Email Address is required")]
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail is not valid")]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         [ScaffoldColumn(false)]
         public string PartyType { get; set; }
 
         [DisplayName("Organization Name")]
-        public string corporate_name { get; set; }
+        public string OrganizationName { get; set; }
 
-        [DisplayName("Occupation")]
-        public string occupation { get; set; }
+        [DisplayName("Occupation of Applicant")]
+        public string Occupation { get; set; }
 
         [DisplayName("Name of Previous or Current Employer")]
-        public string employer_name { get; set; }
+        public string EmployerName { get; set; }
 
         [DisplayName("Address of The Employer Named Above")]
-        public string employer_address { get; set; }
-    
-        public virtual ICollection<Address> Addresses { get; set; }
-        public virtual Application Application { get; set; }
+        public string EmployerAddress { get; set; }
+
+        public virtual List<Address> Addresses { get; set; }
+
+        //[ForeignKey("Application")]
+
+
+        [DisplayName("Street Name")]
+        public string Street { get; set; }
+        [DisplayName("State")]
+        public string IState { get; set; }
+        [DisplayName("Town")]
+        public string Town { get; set; }
+        [DisplayName("LGA")]
+        public string ILGA { get; set; }
+
+        public Application Application { get; set; }
 
 
         public string FullName
         {
             get
             {
-                return first_name + ", " + surname;
+                return Firstname + ", " + Surname;
             }
         }
+
     }
 }

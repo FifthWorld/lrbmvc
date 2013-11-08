@@ -3,8 +3,9 @@
 @{
     ViewBag.Title = "View";
 } 
+<br />
 <table class="table table-bordered">
-    <caption><h3>Application for Certificate of Ownership</h3></caption>
+    <caption><h3>Application for Certificate of Ownership</h3><br /></caption>
     <tbody>
         <tr>
             <td>Username</td>
@@ -24,8 +25,11 @@
         </tr>
         <tr>
             <td>Application Number</td>
-            <td>@Html.DisplayFor(model => model.SolaId)</td>            
+            <td>@Html.DisplayFor(model => model.SolaNR)</td>            
         </tr>
     </tbody>
+    
 </table>
+<a href="/LandApplication" class="btn btn-default btn-warning ">Go Back</a>
+<a href="javascript:window.print()" class="btn btn-default btn-info">Print</a>
 

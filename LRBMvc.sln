@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6DA39F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LRB.Legacy", "LRB.Legacy\LRB.Legacy.csproj", "{348181B5-D4BF-48BC-9361-49B78512AB3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LRB.Lib.Console", "LRB.Lib.Console\LRB.Lib.Console.csproj", "{A666BFBB-5E53-48C8-B456-5044363C5EDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{348181B5-D4BF-48BC-9361-49B78512AB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{348181B5-D4BF-48BC-9361-49B78512AB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{348181B5-D4BF-48BC-9361-49B78512AB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A666BFBB-5E53-48C8-B456-5044363C5EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A666BFBB-5E53-48C8-B456-5044363C5EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A666BFBB-5E53-48C8-B456-5044363C5EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A666BFBB-5E53-48C8-B456-5044363C5EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

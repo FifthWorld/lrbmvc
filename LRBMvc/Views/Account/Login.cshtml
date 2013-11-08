@@ -5,35 +5,40 @@
 }
 
 <section id="loginForm">
+    
     @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+   
     {
         @Html.AntiForgeryToken()
+        <div  style="border:1px solid #ffd800; height:40px; background-color:#ffc; color:#c00; padding-left:10px; margin-top:10px;line-height:40px;">
         @Html.ValidationSummary(true)
-        <div class="form_box">
-            <p>@Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.UserName)
-            </p>
-            <p>
+        </div>
+        <div class="form_box pull-left" style="border-right:1px dashed #808080; margin-top:40px">
+            
+                <label>Username</label>
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @style= "width: 350px;" })
+                <div style="color:#c00; font-weight:bold">@Html.ValidationMessageFor(m => m.UserName)</div>
+            
+          <p>
                 @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                @Html.ValidationMessageFor(m => m.Password)
-            </p>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style= "width: 350px;" })
+                <div style="color:#c00; font-weight:bold">@Html.ValidationMessageFor(m => m.Password)</div>
+          </p>
             <div class="checkbox">
                 @Html.CheckBoxFor(m => m.RememberMe)
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
             </div>
             <p>
                 <input type="submit" class="btn btn-default btn-lg" value="Log in" />
-                <div class="form-group">
-                    @Html.ActionLink("Register", "Register") if you don't have an account.
-                </div>
+                
             </p>
         </div>
-        
+        <div style="margin-top:80px; border:solid 1px #333; width:350px; float:right; padding:30px; font-size:20px; background-color:#ffC">
+            @Html.ActionLink(" If you don't have an account, please Click here to register.", "Register", new { @class = "link_button" } )
+        </div>
     }
 </section>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }

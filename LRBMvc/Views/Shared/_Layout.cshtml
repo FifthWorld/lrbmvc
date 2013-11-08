@@ -11,9 +11,9 @@
     <meta name="description" content="" />
     <meta name="author" content="Tobi Olagunju" />
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/Content/home.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap.css"
+    <link rel="stylesheet" href="~/Content/Home/bootstrap.css" />
 
     <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="content">
                     <ul class="nav2">
-                        <li class="active2">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
+                        <li class="">@Html.RouteLink("HOME", "Default", new { action = "Index", controller = "Home" })</li>
                         <li>@Html.RouteLink("ABOUT US", "Default", new { action = "About", controller = "Home" })</li>
                         <li><a href="#">SERVICES</a>
                             <ul>
@@ -37,9 +37,9 @@
                                 <li><a href="#titlesearch" data-toggle="modal" data-target="#titlesearch">Search for Certificate of Occupancy</a></li>
                             </ul>
                         </li>
-                        <li>@Html.RouteLink("CONTACT US", "Default", new { action = "Contact", controller = "Home" })</li>
                         <li>@Html.RouteLink("FAQ", "Default", new { action = "Faq", controller = "Home" })</li>
-                        @Html.Partial("_LoginPartial")
+                        <li>@Html.RouteLink("CONTACT US", "Default", new { action = "Contact", controller = "Home" })</li>
+                        @*@Html.Partial("_LoginPartial")*@
                     </ul>
                     
                     <!--nav-->
@@ -48,7 +48,7 @@
                 </div>
                 <!--content-->
                 <div id="bottom">
-                    &copy; 2013 Fifth World Inc.  
+                    Copyright © ODSG Land Records Bureau 2013.  
                 </div>
                 <!--bottom-->
             </div>
@@ -56,7 +56,7 @@
         </div>
         <!--container-bg-->
     </div>
-    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="~/Scripts/home/bootstrap.js"></script>    
     @Html.Partial("_TitleSearch")
     @RenderSection("scripts", required: false)

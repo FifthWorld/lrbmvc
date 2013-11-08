@@ -45,6 +45,7 @@
     </tr>
 }
 </table>
+<a href="#titlesearch" data-toggle="modal" class="btn btn-default btn-info pull-right" data-target="#titlesearch">New Search</a>
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
 @Html.PagedListPager( Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter=ViewBag.CurrentFilter }) )
