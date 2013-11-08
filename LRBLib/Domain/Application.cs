@@ -71,12 +71,7 @@ namespace LRB.Lib.Domain
                 }
                 var user = WebSecurity.GetCurrentUser();
                 party = new Party() { 
-                    PartyType = "ContactPerson"
-                    //Surname= user.SurName,
-                    //Firstname = user.FirstName,
-                    //Middlename = user.Email,
-                    //Email = user.Email,
-                    //MobileNo =user.PhoneNumber
+
                 };
                 this.Parties.Add(party);
                 return party;
@@ -93,10 +88,7 @@ namespace LRB.Lib.Domain
                     return property;
                 }
                 property = new Property() { 
-                    //Developed=false,
-                    //LandUse="Building",
-                    //PeriodofPossession="10 years",
-                    //ApproximateArea =5000
+
                 };
                 this.Properties.Add(property);
                 return property;

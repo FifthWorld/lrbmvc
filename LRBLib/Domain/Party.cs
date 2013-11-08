@@ -18,7 +18,7 @@ using System.ComponentModel.DataAnnotations;
     {
         public Party()
         {
-            this.Gender = "Female";
+            this.gender = "Female";
             this.Addresses = new HashSet<Address>();
         }
 
@@ -27,65 +27,62 @@ using System.ComponentModel.DataAnnotations;
 
         [DisplayName("Surname")]
         [Required(ErrorMessage = "Surname is required")]
-        public string Surname { get; set; }
+        public string surname { get; set; }
 
         [DisplayName("First name")]
         [Required(ErrorMessage = "First name is required")]
-        public string Firstname { get; set; }
+        public string first_name { get; set; }
 
         [DisplayName("Middle name")]
-        public string Middlename { get; set; }
+        public string middle_name { get; set; }
 
         [DisplayName("Gender")]
-        public string Gender { get; set; }
+        [Required(ErrorMessage="Gender is Required")]
+        public string gender { get; set; }
 
         [DisplayName("Date of Birth")]
-        [DataType(DataType.Date)]
-        public Nullable<System.DateTime> DOB { get; set; }
+        [Required(ErrorMessage="Date of Birth is required")]
+        public Nullable<System.DateTime> dob { get; set; }
 
         [DisplayName("State of Origin")]
-        public string StateofOrigin { get; set; }
+        [Required(ErrorMessage="Please choose a state of origin")]
+        public string state_of_origin { get; set; }
 
-        [DisplayName("Home town")]
-        public string HomeTown { get; set; }
+        [DisplayName("Home Town")]
+        public string home_town { get; set; }
 
-        [DisplayName("Local Government Area of Applicant")]
-        public string LGA { get; set; }
+        [DisplayName("Local Government Area")]
+        public string lga { get; set; }
 
-        [DisplayName("Office Number(If Registering for an organization)")]
+        [DisplayName("Corporate Name(If Registering for an organization)")]
         public string OfficeNo { get; set; }
 
-        [DisplayName("Mobile / GSM Number")]
+        [DisplayName("Mobile Phone Number")]
         [Required(ErrorMessage = "Phone Number is required")]
         public string MobileNo { get; set; }
 
-        [DisplayName("Home / Land Line Number")]
-        public string HomeNo { get; set; }
-
-        [DisplayName("Fax")]
-        [ScaffoldColumn(false)]
-        public string Fax { get; set; }
+        [DisplayName("Home Telephone")]
+        public string telephone { get; set; }
 
         [DisplayName("Email Address")]
-        [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Email Address is required")]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "E-mail is not valid")]
-        public string Email { get; set; }
+        public string email { get; set; }
 
         [ScaffoldColumn(false)]
         public string PartyType { get; set; }
 
         [DisplayName("Organization Name")]
-        public string OrganizationName { get; set; }
+        public string corporate_name { get; set; }
 
-        [DisplayName("Occupation of Applicant")]
-        public string Occupation { get; set; }
+        [DisplayName("Occupation")]
+        public string occupation { get; set; }
 
         [DisplayName("Name of Previous or Current Employer")]
-        public string EmployerName { get; set; }
+        public string employer_name { get; set; }
 
         [DisplayName("Address of The Employer Named Above")]
-        public string EmployerAddress { get; set; }
+        public string employer_address { get; set; }
     
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual Application Application { get; set; }
@@ -95,7 +92,7 @@ using System.ComponentModel.DataAnnotations;
         {
             get
             {
-                return Firstname + ", " + Surname;
+                return first_name + ", " + surname;
             }
         }
     }

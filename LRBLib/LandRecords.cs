@@ -36,21 +36,21 @@ namespace LRB.Lib
             UnitOfWork uow = new UnitOfWork();
             var app = uow.LandApplicationRepository.GetByID(appId);
 
-            app.ContactPerson.DOB = contactPerson.DOB;
-            app.ContactPerson.Email = contactPerson.Email;
-            app.ContactPerson.EmployerAddress = contactPerson.EmployerAddress;
-            app.ContactPerson.EmployerName = contactPerson.EmployerName;
-            app.ContactPerson.HomeNo = contactPerson.HomeNo;
-            app.ContactPerson.HomeTown = contactPerson.HomeTown;
-            app.ContactPerson.LGA = contactPerson.LGA;
-            app.ContactPerson.Firstname = contactPerson.Firstname;
-            app.ContactPerson.Middlename = contactPerson.Middlename;
+            app.ContactPerson.dob = contactPerson.dob;
+            app.ContactPerson.email = contactPerson.email;
+            app.ContactPerson.employer_address = contactPerson.employer_address;
+            app.ContactPerson.employer_name = contactPerson.employer_name;
+            app.ContactPerson.telephone = contactPerson.telephone;
+            app.ContactPerson.home_town = contactPerson.home_town;
+            app.ContactPerson.lga = contactPerson.lga;
+            app.ContactPerson.first_name = contactPerson.first_name;
+            app.ContactPerson.middle_name = contactPerson.middle_name;
             app.ContactPerson.MobileNo = contactPerson.MobileNo;
-            app.ContactPerson.Occupation = contactPerson.Occupation;
+            app.ContactPerson.occupation = contactPerson.occupation;
             app.ContactPerson.OfficeNo = contactPerson.OfficeNo;
-            app.ContactPerson.OrganizationName = contactPerson.OrganizationName;
-            app.ContactPerson.StateofOrigin = contactPerson.StateofOrigin;
-            app.ContactPerson.Surname = contactPerson.Surname;
+            app.ContactPerson.corporate_name = contactPerson.corporate_name;
+            app.ContactPerson.state_of_origin = contactPerson.state_of_origin;
+            app.ContactPerson.surname = contactPerson.surname;
             
             
             uow.LandApplicationRepository.Update(app);
@@ -64,11 +64,11 @@ namespace LRB.Lib
             UnitOfWork uow = new UnitOfWork();
             var app = uow.LandApplicationRepository.GetByID(appId);
 
-            app.PrimaryProperty.ApproximateArea = primaryProperty.ApproximateArea;
-            app.PrimaryProperty.CapacityofOwnership = primaryProperty.CapacityofOwnership;
+            app.PrimaryProperty.size_of_property = primaryProperty.size_of_property;
+            app.PrimaryProperty.capacity_of_ownership = primaryProperty.capacity_of_ownership;
             app.PrimaryProperty.Developed = primaryProperty.Developed;
-            app.PrimaryProperty.LandUse = primaryProperty.LandUse;
-            app.PrimaryProperty.PeriodofPossession = primaryProperty.PeriodofPossession;
+            app.PrimaryProperty.land_use = primaryProperty.land_use;
+            app.PrimaryProperty.duration_of_possession = primaryProperty.duration_of_possession;
 
             uow.LandApplicationRepository.Update(app);
             uow.Save();
