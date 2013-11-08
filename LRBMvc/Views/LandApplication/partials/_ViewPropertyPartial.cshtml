@@ -25,9 +25,12 @@
     </div>
 
     <div class="form-group">
-        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.PeriodofPossession)</span>
+        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.PeriodofPossession_years)</span>
         <div class="col-lg-10">
-            <span class="form-control">@Html.DisplayFor(model => model.PeriodofPossession)</span>
+            @{
+                string peridofownership = Model.PeriodofPossession_years + "years and " + Model.PeriodofPossession_months+ "months";
+            }
+            <span class="form-control">@peridofownership</span>
         </div>        
     </div>
 
@@ -37,6 +40,5 @@
             <span class="form-control">@Html.DisplayFor(model => model.LandSize)</span>
         </div>        
     </div>
-    <p class="alert alert-info">Property Location Information</p>
     
 </div>

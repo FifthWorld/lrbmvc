@@ -6,7 +6,7 @@
     ViewBag.Title = "ContactInformation";
 }
 
-@if (Model.PartyType == "Individual")
+@if (ViewBag.ApplicationType == "Individual")
 {
     @Html.Partial("partials/_IndividualPartial", Model)
 }

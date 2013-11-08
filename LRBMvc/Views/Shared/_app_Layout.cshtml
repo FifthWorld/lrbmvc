@@ -12,10 +12,11 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-
-    <link href="~/Content/modern-business.css" rel="stylesheet">
     <script type="text/javascript" src="~/Scripts/state_lga/chainedselects.js"></script>
     <script type="text/javascript" src="~/Scripts/state_lga/exampleconfig.js"></script>
+    <script type="text/javascript" src="~/Scripts/state_lga/exampleconfig_property.js"></script>
+    <link href="~/Content/modern-business.css" rel="stylesheet">
+    
     @RenderSection("styles", required: false)
 
 </head>
@@ -32,7 +33,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                @Html.RouteLink("ODSG Land Records Bureau", "Default", new { action = "Index", controller = "Home" }, new { @class="navbar-brand" })
+                <a href="#HomeButton" class="navbar-brand" data-toggle="modal" data-target="#HomeButton">ODSG Land Records Bureau</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,13 +80,20 @@
 
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/jquery-2.0.3.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
     <script src="~/Scripts/modern-business.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
     @Html.Partial("_TitleSearch")
+    @Html.Partial("_HomeButton")
     @RenderSection("scripts", required: false)
+    
     <script type="text/javascript">
-
+        $('document').ready(function () {
+            initListGroup('country2', document.forms[1]["State"], document.forms[1]["LGA"], document.forms[1].model)
+            initListGroup('country', document.forms[1]["IState"], document.forms[1]["ILGA"], document.forms[1].model);
+            initListGroup('country', document.forms[1]["StateofOrigin"], document.forms[1]["HomeTown"], document.forms[1].model);
+        });
         $('span.field-validation-valid, span.field-validation-error').each(function () {
             $(this).addClass('help-inline');
         });
@@ -112,9 +120,8 @@
                 }
             });
         });
-        initListGroup('country', document.forms[0]["State"], document.forms[0]["LGA"], document.forms[0].model)
-        initListGroup('country', document.forms[0]["IState"], document.forms[0]["ILGA"], document.forms[0].model)
+        
     </script>
-
+    
 </body>
 </html>

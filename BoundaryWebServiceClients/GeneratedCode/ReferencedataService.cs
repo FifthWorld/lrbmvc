@@ -198,39 +198,33 @@ namespace org.sola.webservices.referencedata.extra
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractCodeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceBaUnitRelationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(homeTownTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitRelTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(presentationFormTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(useTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(typeActionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(changeStatusTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(idTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(titleTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brValidationTargetTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(communicationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(occupationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(landUseTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(availabilityStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyRoleTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mortgageTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(lgaTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(capacityTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrGroupTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestCategoryTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brTechnicalTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stateTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(genderTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(propertyTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -257,39 +251,33 @@ namespace org.sola.webservices.referencedata.extra
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractCodeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceBaUnitRelationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(homeTownTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitRelTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(presentationFormTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(useTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(typeActionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(changeStatusTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(idTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(titleTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brValidationTargetTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(communicationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(occupationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(landUseTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(availabilityStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyRoleTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mortgageTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(lgaTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(capacityTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrGroupTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestCategoryTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brTechnicalTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stateTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(genderTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(propertyTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -445,39 +433,33 @@ namespace org.sola.webservices.referencedata.extra
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceBaUnitRelationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(homeTownTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitRelTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(presentationFormTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(useTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(typeActionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(changeStatusTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(idTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(titleTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(registrationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brValidationTargetTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(communicationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(occupationTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(landUseTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(availabilityStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationStatusTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(serviceActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partyRoleTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(mortgageTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(lgaTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(capacityTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrGroupTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(applicationActionTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestCategoryTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(brTechnicalTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(requestTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(stateTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(genderTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(propertyTypeTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTypeTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(brSeverityTypeTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -581,50 +563,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class homeTownTypeTO : abstractCodeTO
-    {
-        
-        private string lgaIdField;
-        
-        private string stateIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string lgaId
-        {
-            get
-            {
-                return this.lgaIdField;
-            }
-            set
-            {
-                this.lgaIdField = value;
-                this.RaisePropertyChanged("lgaId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string stateId
-        {
-            get
-            {
-                return this.stateIdField;
-            }
-            set
-            {
-                this.stateIdField = value;
-                this.RaisePropertyChanged("stateId");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class baUnitRelTypeTO : abstractCodeTO
     {
     }
@@ -636,16 +574,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class presentationFormTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class useTypeTO : abstractCodeTO
     {
     }
     
@@ -773,16 +701,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class registrationStatusTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class idTypeTO : abstractCodeTO
     {
     }
@@ -793,7 +711,7 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class titleTypeTO : abstractCodeTO
+    public partial class registrationStatusTypeTO : abstractCodeTO
     {
     }
     
@@ -823,17 +741,7 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class occupationTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class applicationStatusTypeTO : abstractCodeTO
+    public partial class landUseTypeTO : abstractCodeTO
     {
     }
     
@@ -844,6 +752,16 @@ namespace org.sola.webservices.referencedata.extra
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class availabilityStatusTO : abstractCodeTO
+    {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
+    public partial class applicationStatusTypeTO : abstractCodeTO
     {
     }
     
@@ -872,6 +790,16 @@ namespace org.sola.webservices.referencedata.extra
                 this.RaisePropertyChanged("forRegistration");
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
+    public partial class leaseConditionTO : abstractCodeTO
+    {
     }
     
     /// <remarks/>
@@ -910,34 +838,7 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class lgaTypeTO : abstractCodeTO
-    {
-        
-        private string stateIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string stateId
-        {
-            get
-            {
-                return this.stateIdField;
-            }
-            set
-            {
-                this.stateIdField = value;
-                this.RaisePropertyChanged("stateId");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class capacityTypeTO : abstractCodeTO
+    public partial class rrrGroupTypeTO : abstractCodeTO
     {
     }
     
@@ -948,16 +849,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class applicationActionTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class rrrGroupTypeTO : abstractCodeTO
     {
     }
     
@@ -1218,16 +1109,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class stateTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class genderTypeTO : abstractCodeTO
     {
     }
@@ -1238,7 +1119,7 @@ namespace org.sola.webservices.referencedata.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class propertyTypeTO : abstractCodeTO
+    public partial class baUnitTypeTO : abstractCodeTO
     {
     }
     
@@ -1249,16 +1130,6 @@ namespace org.sola.webservices.referencedata.extra
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
     public partial class brSeverityTypeTO : abstractCodeTO
-    {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/referencedata/")]
-    public partial class baUnitTypeTO : abstractCodeTO
     {
     }
 }
@@ -1272,284 +1143,37 @@ namespace org.sola.webservices.referencedata
     {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/SOLAF" +
-            "ault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/Unhan" +
-            "dledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/SOLAA" +
-            "ccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/CheckConnectionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetPartyTypesResponse GetPartyTypes(org.sola.webservices.referencedata.GetPartyTypesRequest request);
+        org.sola.webservices.referencedata.CheckConnectionResponse CheckConnection(org.sola.webservices.referencedata.CheckConnectionRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRolesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRolesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/SOLAF" +
-            "ault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/Unhan" +
-            "dledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/SOLAA" +
-            "ccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/SOLAFau" +
+            "lt", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/Unhandl" +
+            "edFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/SOLAAcc" +
+            "essFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetPartyRolesResponse GetPartyRoles(org.sola.webservices.referencedata.GetPartyRolesRequest request);
+        org.sola.webservices.referencedata.GetRRRTypesResponse GetRRRTypes(org.sola.webservices.referencedata.GetRRRTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/SOLA" +
-            "Fault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/Unha" +
-            "ndledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/SOLA" +
-            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/SOLAFaul" +
+            "t", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/Unhandle" +
+            "dFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/SOLAAcce" +
+            "ssFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetBaUnitTypesResponse GetBaUnitTypes(org.sola.webservices.referencedata.GetBaUnitTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypesRequ" +
-            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypesResp" +
-            "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
-            "lt/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
-            "lt/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
-            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetServiceActionTypesResponse GetServiceActionTypes(org.sola.webservices.referencedata.GetServiceActionTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/SOLA" +
-            "Fault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/Unha" +
-            "ndledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/SOLA" +
-            "AccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetSourceTypesResponse GetSourceTypes(org.sola.webservices.referencedata.GetSourceTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
-            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
-            "Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
-            "/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
-            "/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
-            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetApplicationStatusTypesResponse GetApplicationStatusTypes(org.sola.webservices.referencedata.GetApplicationStatusTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypesRequ" +
-            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypesResp" +
-            "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
-            "lt/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
-            "lt/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
-            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetServiceStatusTypesResponse GetServiceStatusTypes(org.sola.webservices.referencedata.GetServiceStatusTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
-            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
-            "Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
-            "/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
-            "/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
-            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetApplicationActionTypesResponse GetApplicationActionTypes(org.sola.webservices.referencedata.GetApplicationActionTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypesReques" +
-            "t", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypesRespon" +
-            "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
-            "/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
-            "/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
-            "/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetChangeStatuTypesResponse GetChangeStatuTypes(org.sola.webservices.referencedata.GetChangeStatuTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/SO" +
-            "LAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetMortgageTypesResponse GetMortgageTypes(org.sola.webservices.referencedata.GetMortgageTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/SO" +
-            "LAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetRRRGroupTypesResponse GetRRRGroupTypes(org.sola.webservices.referencedata.GetRRRGroupTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
-            "pesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
-            "pesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
-            "pes/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
-            "pes/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
-            "pes/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse GetSourceBaUnitRelationTypes(org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
-            "sRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
-            "sResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
-            "s/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
-            "s/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
-            "s/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse GetRegistrationStatusTypes(org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypesReq" +
-            "uest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypesRes" +
-            "ponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
-            "ult/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
-            "ult/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
-            "ult/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetCadastreObjectTypesResponse GetCadastreObjectTypes(org.sola.webservices.referencedata.GetCadastreObjectTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActionsRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActionsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/SOLA" +
-            "Fault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/Unha" +
-            "ndledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/SOLA" +
-            "AccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetTypeActionsResponse GetTypeActions(org.sola.webservices.referencedata.GetTypeActionsRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetHomeTownTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetHomeTownTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetHomeTownTypes/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetHomeTownTypes/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetHomeTownTypes/Fault/SO" +
-            "LAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetHomeTownTypesResponse GetHomeTownTypes(org.sola.webservices.referencedata.GetHomeTownTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetStateTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetStateTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetStateTypes/Fault/SOLAF" +
-            "ault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetStateTypes/Fault/Unhan" +
-            "dledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetStateTypes/Fault/SOLAA" +
-            "ccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetStateTypesResponse GetStateTypes(org.sola.webservices.referencedata.GetStateTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetTitleTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetTitleTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTitleTypes/Fault/SOLAF" +
-            "ault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTitleTypes/Fault/Unhan" +
-            "dledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTitleTypes/Fault/SOLAA" +
-            "ccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetTitleTypesResponse GetTitleTypes(org.sola.webservices.referencedata.GetTitleTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetOccupationTypesRequest" +
-            "", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetOccupationTypesRespons" +
-            "e")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetOccupationTypes/Fault/" +
-            "SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetOccupationTypes/Fault/" +
-            "UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetOccupationTypes/Fault/" +
-            "SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetOccupationTypesResponse GetOccupationTypes(org.sola.webservices.referencedata.GetOccupationTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypesReques" +
-            "t", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypesRespon" +
-            "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
-            "/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
-            "/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
-            "/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetBrTechnicalTypesResponse GetBrTechnicalTypes(org.sola.webservices.referencedata.GetBrTechnicalTypesRequest request);
+        org.sola.webservices.referencedata.GetIdTypesResponse GetIdTypes(org.sola.webservices.referencedata.GetIdTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrValidationTargetType" +
@@ -1567,6 +1191,92 @@ namespace org.sola.webservices.referencedata
         org.sola.webservices.referencedata.GetBrValidationTargetTypesResponse GetBrValidationTargetTypes(org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypesReques" +
+            "t", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypesRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
+            "/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
+            "/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetChangeStatuTypes/Fault" +
+            "/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetChangeStatuTypesResponse GetChangeStatuTypes(org.sola.webservices.referencedata.GetChangeStatuTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRolesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRolesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/SOLAF" +
+            "ault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/Unhan" +
+            "dledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyRoles/Fault/SOLAA" +
+            "ccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetPartyRolesResponse GetPartyRoles(org.sola.webservices.referencedata.GetPartyRolesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypesReq" +
+            "uest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypesRes" +
+            "ponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
+            "ult/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
+            "ult/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCadastreObjectTypes/Fa" +
+            "ult/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetCadastreObjectTypesResponse GetCadastreObjectTypes(org.sola.webservices.referencedata.GetCadastreObjectTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/SOL" +
+            "AFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/Unh" +
+            "andledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/SOL" +
+            "AAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetRequestTypesResponse GetRequestTypes(org.sola.webservices.referencedata.GetRequestTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
+            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
+            "/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
+            "/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationStatusTypes" +
+            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetApplicationStatusTypesResponse GetApplicationStatusTypes(org.sola.webservices.referencedata.GetApplicationStatusTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
+            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
+            "/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
+            "/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetApplicationActionTypes" +
+            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetApplicationActionTypesResponse GetApplicationActionTypes(org.sola.webservices.referencedata.GetApplicationActionTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrSeverityTypesRequest" +
             "", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBrSeverityTypesRespons" +
             "e")]
@@ -1582,18 +1292,172 @@ namespace org.sola.webservices.referencedata
         org.sola.webservices.referencedata.GetBrSeverityTypesResponse GetBrSeverityTypes(org.sola.webservices.referencedata.GetBrSeverityTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypesResponse" +
-            "")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/S" +
-            "OLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/U" +
-            "nhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/S" +
-            "OLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypesRequ" +
+            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypesResp" +
+            "onse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
+            "lt/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
+            "lt/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceStatusTypes/Fau" +
+            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetBaUnitRelTypesResponse GetBaUnitRelTypes(org.sola.webservices.referencedata.GetBaUnitRelTypesRequest request);
+        org.sola.webservices.referencedata.GetServiceStatusTypesResponse GetServiceStatusTypes(org.sola.webservices.referencedata.GetServiceStatusTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypesRequ" +
+            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypesResp" +
+            "onse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
+            "lt/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
+            "lt/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetServiceActionTypes/Fau" +
+            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetServiceActionTypesResponse GetServiceActionTypes(org.sola.webservices.referencedata.GetServiceActionTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/SO" +
+            "LAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/Un" +
+            "handledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetMortgageTypes/Fault/SO" +
+            "LAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetMortgageTypesResponse GetMortgageTypes(org.sola.webservices.referencedata.GetMortgageTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/SOLA" +
+            "Fault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/Unha" +
+            "ndledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/SOLA" +
+            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetGenderTypesResponse GetGenderTypes(org.sola.webservices.referencedata.GetGenderTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/SO" +
+            "LAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/Un" +
+            "handledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRGroupTypes/Fault/SO" +
+            "LAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetRRRGroupTypesResponse GetRRRGroupTypes(org.sola.webservices.referencedata.GetRRRGroupTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypesRequ" +
+            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypesResp" +
+            "onse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
+            "lt/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
+            "lt/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
+            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetCommunicationTypesResponse GetCommunicationTypes(org.sola.webservices.referencedata.GetCommunicationTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetLandUseTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetLandUseTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLandUseTypes/Fault/SOL" +
+            "AFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLandUseTypes/Fault/Unh" +
+            "andledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLandUseTypes/Fault/SOL" +
+            "AAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetLandUseTypesResponse GetLandUseTypes(org.sola.webservices.referencedata.GetLandUseTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActionsRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActionsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/SOLA" +
+            "Fault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/Unha" +
+            "ndledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetTypeActions/Fault/SOLA" +
+            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetTypeActionsResponse GetTypeActions(org.sola.webservices.referencedata.GetTypeActionsRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypesReques" +
+            "t", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypesRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
+            "/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
+            "/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBrTechnicalTypes/Fault" +
+            "/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetBrTechnicalTypesResponse GetBrTechnicalTypes(org.sola.webservices.referencedata.GetBrTechnicalTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
+            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
+            "/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
+            "/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
+            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetAvailabilityStatusListResponse GetAvailabilityStatusList(org.sola.webservices.referencedata.GetAvailabilityStatusListRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/SOLA" +
+            "Fault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/Unha" +
+            "ndledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitTypes/Fault/SOLA" +
+            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetBaUnitTypesResponse GetBaUnitTypes(org.sola.webservices.referencedata.GetBaUnitTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
+            "pesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
+            "pesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
+            "pes/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
+            "pes/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceBaUnitRelationTy" +
+            "pes/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse GetSourceBaUnitRelationTypes(org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/saveReferenceDataRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/saveReferenceDataResponse" +
@@ -1627,17 +1491,31 @@ namespace org.sola.webservices.referencedata
         org.sola.webservices.referencedata.GetRequestCategoryTypesResponse GetRequestCategoryTypes(org.sola.webservices.referencedata.GetRequestCategoryTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/SOL" +
-            "AFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/Unh" +
-            "andledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRequestTypes/Fault/SOL" +
-            "AAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypesResponse" +
+            "")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/S" +
+            "OLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/U" +
+            "nhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetBaUnitRelTypes/Fault/S" +
+            "OLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetRequestTypesResponse GetRequestTypes(org.sola.webservices.referencedata.GetRequestTypesRequest request);
+        org.sola.webservices.referencedata.GetBaUnitRelTypesResponse GetBaUnitRelTypes(org.sola.webservices.referencedata.GetBaUnitRelTypesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/SOLA" +
+            "Fault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/Unha" +
+            "ndledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetSourceTypes/Fault/SOLA" +
+            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.referencedata.GetSourceTypesResponse GetSourceTypes(org.sola.webservices.referencedata.GetSourceTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPresentationFormTypesR" +
@@ -1655,1412 +1533,47 @@ namespace org.sola.webservices.referencedata
         org.sola.webservices.referencedata.GetPresentationFormTypesResponse GetPresentationFormTypes(org.sola.webservices.referencedata.GetPresentationFormTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
-            "Request", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
-            "Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
-            "/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
-            "/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetAvailabilityStatusList" +
-            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypesResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/SOLAF" +
+            "ault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/Unhan" +
+            "dledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPartyTypes/Fault/SOLAA" +
+            "ccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetAvailabilityStatusListResponse GetAvailabilityStatusList(org.sola.webservices.referencedata.GetAvailabilityStatusListRequest request);
+        org.sola.webservices.referencedata.GetPartyTypesResponse GetPartyTypes(org.sola.webservices.referencedata.GetPartyTypesRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/SOLA" +
-            "Fault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/Unha" +
-            "ndledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetGenderTypes/Fault/SOLA" +
-            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/getLeaseConditionsRequest" +
+            "", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/getLeaseConditionsRespons" +
+            "e")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/getLeaseConditions/Fault/" +
+            "SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/getLeaseConditions/Fault/" +
+            "UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/getLeaseConditions/Fault/" +
+            "SOLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetGenderTypesResponse GetGenderTypes(org.sola.webservices.referencedata.GetGenderTypesRequest request);
+        org.sola.webservices.referencedata.getLeaseConditionsResponse getLeaseConditions(org.sola.webservices.referencedata.getLeaseConditionsRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetPropertyTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetPropertyTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPropertyTypes/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPropertyTypes/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetPropertyTypes/Fault/SO" +
-            "LAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
+            "sRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
+            "sResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
+            "s/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
+            "s/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRegistrationStatusType" +
+            "s/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetPropertyTypesResponse GetPropertyTypes(org.sola.webservices.referencedata.GetPropertyTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetCapacityTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetCapacityTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCapacityTypes/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCapacityTypes/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCapacityTypes/Fault/SO" +
-            "LAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetCapacityTypesResponse GetCapacityTypes(org.sola.webservices.referencedata.GetCapacityTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypesRequ" +
-            "est", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypesResp" +
-            "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
-            "lt/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
-            "lt/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetCommunicationTypes/Fau" +
-            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetCommunicationTypesResponse GetCommunicationTypes(org.sola.webservices.referencedata.GetCommunicationTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/CheckConnectionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.CheckConnectionResponse CheckConnection(org.sola.webservices.referencedata.CheckConnectionRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetLgaTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetLgaTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLgaTypes/Fault/SOLAFau" +
-            "lt", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLgaTypes/Fault/Unhandl" +
-            "edFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetLgaTypes/Fault/SOLAAcc" +
-            "essFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetLgaTypesResponse GetLgaTypes(org.sola.webservices.referencedata.GetLgaTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/SOLAFau" +
-            "lt", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/Unhandl" +
-            "edFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetRRRTypes/Fault/SOLAAcc" +
-            "essFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetRRRTypesResponse GetRRRTypes(org.sola.webservices.referencedata.GetRRRTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/SOLAFaul" +
-            "t", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/Unhandle" +
-            "dFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetIdTypes/Fault/SOLAAcce" +
-            "ssFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetIdTypesResponse GetIdTypes(org.sola.webservices.referencedata.GetIdTypesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/referencedata/ReferenceData/GetUseTypesRequest", ReplyAction="http://webservices.sola.org/referencedata/ReferenceData/GetUseTypesResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetUseTypes/Fault/SOLAFau" +
-            "lt", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetUseTypes/Fault/Unhandl" +
-            "edFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.referencedata.extra.faultInfoBean), Action="http://webservices.sola.org/referencedata/ReferenceData/GetUseTypes/Fault/SOLAAcc" +
-            "essFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.referencedata.GetUseTypesResponse GetUseTypes(org.sola.webservices.referencedata.GetUseTypesRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPartyTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetPartyTypesRequest()
-        {
-        }
-        
-        public GetPartyTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPartyTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public partyTypeTO[] @return;
-        
-        public GetPartyTypesResponse()
-        {
-        }
-        
-        public GetPartyTypesResponse(partyTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyRoles", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPartyRolesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetPartyRolesRequest()
-        {
-        }
-        
-        public GetPartyRolesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyRolesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPartyRolesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public partyRoleTypeTO[] @return;
-        
-        public GetPartyRolesResponse()
-        {
-        }
-        
-        public GetPartyRolesResponse(partyRoleTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBaUnitTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetBaUnitTypesRequest()
-        {
-        }
-        
-        public GetBaUnitTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBaUnitTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public baUnitTypeTO[] @return;
-        
-        public GetBaUnitTypesResponse()
-        {
-        }
-        
-        public GetBaUnitTypesResponse(baUnitTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceActionTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetServiceActionTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetServiceActionTypesRequest()
-        {
-        }
-        
-        public GetServiceActionTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceActionTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetServiceActionTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public serviceActionTypeTO[] @return;
-        
-        public GetServiceActionTypesResponse()
-        {
-        }
-        
-        public GetServiceActionTypesResponse(serviceActionTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetSourceTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetSourceTypesRequest()
-        {
-        }
-        
-        public GetSourceTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetSourceTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public sourceTypeTO[] @return;
-        
-        public GetSourceTypesResponse()
-        {
-        }
-        
-        public GetSourceTypesResponse(sourceTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetApplicationStatusTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetApplicationStatusTypesRequest()
-        {
-        }
-        
-        public GetApplicationStatusTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetApplicationStatusTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public applicationStatusTypeTO[] @return;
-        
-        public GetApplicationStatusTypesResponse()
-        {
-        }
-        
-        public GetApplicationStatusTypesResponse(applicationStatusTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetServiceStatusTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetServiceStatusTypesRequest()
-        {
-        }
-        
-        public GetServiceStatusTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetServiceStatusTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public serviceStatusTypeTO[] @return;
-        
-        public GetServiceStatusTypesResponse()
-        {
-        }
-        
-        public GetServiceStatusTypesResponse(serviceStatusTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationActionTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetApplicationActionTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetApplicationActionTypesRequest()
-        {
-        }
-        
-        public GetApplicationActionTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationActionTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetApplicationActionTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public applicationActionTypeTO[] @return;
-        
-        public GetApplicationActionTypesResponse()
-        {
-        }
-        
-        public GetApplicationActionTypesResponse(applicationActionTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetChangeStatuTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetChangeStatuTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetChangeStatuTypesRequest()
-        {
-        }
-        
-        public GetChangeStatuTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetChangeStatuTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetChangeStatuTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public changeStatusTypeTO[] @return;
-        
-        public GetChangeStatuTypesResponse()
-        {
-        }
-        
-        public GetChangeStatuTypesResponse(changeStatusTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMortgageTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetMortgageTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetMortgageTypesRequest()
-        {
-        }
-        
-        public GetMortgageTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMortgageTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetMortgageTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public mortgageTypeTO[] @return;
-        
-        public GetMortgageTypesResponse()
-        {
-        }
-        
-        public GetMortgageTypesResponse(mortgageTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRRRGroupTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRRRGroupTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetRRRGroupTypesRequest()
-        {
-        }
-        
-        public GetRRRGroupTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRRRGroupTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRRRGroupTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public rrrGroupTypeTO[] @return;
-        
-        public GetRRRGroupTypesResponse()
-        {
-        }
-        
-        public GetRRRGroupTypesResponse(rrrGroupTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceBaUnitRelationTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetSourceBaUnitRelationTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetSourceBaUnitRelationTypesRequest()
-        {
-        }
-        
-        public GetSourceBaUnitRelationTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceBaUnitRelationTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetSourceBaUnitRelationTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public sourceBaUnitRelationTypeTO[] @return;
-        
-        public GetSourceBaUnitRelationTypesResponse()
-        {
-        }
-        
-        public GetSourceBaUnitRelationTypesResponse(sourceBaUnitRelationTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegistrationStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRegistrationStatusTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetRegistrationStatusTypesRequest()
-        {
-        }
-        
-        public GetRegistrationStatusTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegistrationStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRegistrationStatusTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public registrationStatusTypeTO[] @return;
-        
-        public GetRegistrationStatusTypesResponse()
-        {
-        }
-        
-        public GetRegistrationStatusTypesResponse(registrationStatusTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCadastreObjectTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCadastreObjectTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetCadastreObjectTypesRequest()
-        {
-        }
-        
-        public GetCadastreObjectTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCadastreObjectTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCadastreObjectTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public cadastreObjectTypeTO[] @return;
-        
-        public GetCadastreObjectTypesResponse()
-        {
-        }
-        
-        public GetCadastreObjectTypesResponse(cadastreObjectTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeActions", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetTypeActionsRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetTypeActionsRequest()
-        {
-        }
-        
-        public GetTypeActionsRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeActionsResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetTypeActionsResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public typeActionTO[] @return;
-        
-        public GetTypeActionsResponse()
-        {
-        }
-        
-        public GetTypeActionsResponse(typeActionTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetHomeTownTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetHomeTownTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetHomeTownTypesRequest()
-        {
-        }
-        
-        public GetHomeTownTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetHomeTownTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetHomeTownTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public homeTownTypeTO[] @return;
-        
-        public GetHomeTownTypesResponse()
-        {
-        }
-        
-        public GetHomeTownTypesResponse(homeTownTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStateTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetStateTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetStateTypesRequest()
-        {
-        }
-        
-        public GetStateTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetStateTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetStateTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public stateTypeTO[] @return;
-        
-        public GetStateTypesResponse()
-        {
-        }
-        
-        public GetStateTypesResponse(stateTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTitleTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetTitleTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetTitleTypesRequest()
-        {
-        }
-        
-        public GetTitleTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTitleTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetTitleTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public titleTypeTO[] @return;
-        
-        public GetTitleTypesResponse()
-        {
-        }
-        
-        public GetTitleTypesResponse(titleTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOccupationTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetOccupationTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetOccupationTypesRequest()
-        {
-        }
-        
-        public GetOccupationTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetOccupationTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetOccupationTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public occupationTypeTO[] @return;
-        
-        public GetOccupationTypesResponse()
-        {
-        }
-        
-        public GetOccupationTypesResponse(occupationTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrTechnicalTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrTechnicalTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string languageCode;
-        
-        public GetBrTechnicalTypesRequest()
-        {
-        }
-        
-        public GetBrTechnicalTypesRequest(string languageCode)
-        {
-            this.languageCode = languageCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrTechnicalTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrTechnicalTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public brTechnicalTypeTO[] @return;
-        
-        public GetBrTechnicalTypesResponse()
-        {
-        }
-        
-        public GetBrTechnicalTypesResponse(brTechnicalTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrValidationTargetTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrValidationTargetTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string languageCode;
-        
-        public GetBrValidationTargetTypesRequest()
-        {
-        }
-        
-        public GetBrValidationTargetTypesRequest(string languageCode)
-        {
-            this.languageCode = languageCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrValidationTargetTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrValidationTargetTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public brValidationTargetTypeTO[] @return;
-        
-        public GetBrValidationTargetTypesResponse()
-        {
-        }
-        
-        public GetBrValidationTargetTypesResponse(brValidationTargetTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrSeverityTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrSeverityTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string languageCode;
-        
-        public GetBrSeverityTypesRequest()
-        {
-        }
-        
-        public GetBrSeverityTypesRequest(string languageCode)
-        {
-            this.languageCode = languageCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrSeverityTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBrSeverityTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public brSeverityTypeTO[] @return;
-        
-        public GetBrSeverityTypesResponse()
-        {
-        }
-        
-        public GetBrSeverityTypesResponse(brSeverityTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitRelTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBaUnitRelTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string languageCode;
-        
-        public GetBaUnitRelTypesRequest()
-        {
-        }
-        
-        public GetBaUnitRelTypesRequest(string languageCode)
-        {
-            this.languageCode = languageCode;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitRelTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetBaUnitRelTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public baUnitRelTypeTO[] @return;
-        
-        public GetBaUnitRelTypesResponse()
-        {
-        }
-        
-        public GetBaUnitRelTypesResponse(baUnitRelTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveReferenceData", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class saveReferenceDataRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.referencedata.extra.abstractCodeTO arg0;
-        
-        public saveReferenceDataRequest()
-        {
-        }
-        
-        public saveReferenceDataRequest(org.sola.webservices.referencedata.extra.abstractCodeTO arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveReferenceDataResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class saveReferenceDataResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.referencedata.extra.abstractCodeTO @return;
-        
-        public saveReferenceDataResponse()
-        {
-        }
-        
-        public saveReferenceDataResponse(org.sola.webservices.referencedata.extra.abstractCodeTO @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestCategoryTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRequestCategoryTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetRequestCategoryTypesRequest()
-        {
-        }
-        
-        public GetRequestCategoryTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestCategoryTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRequestCategoryTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public requestCategoryTypeTO[] @return;
-        
-        public GetRequestCategoryTypesResponse()
-        {
-        }
-        
-        public GetRequestCategoryTypesResponse(requestCategoryTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRequestTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetRequestTypesRequest()
-        {
-        }
-        
-        public GetRequestTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetRequestTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public requestTypeTO[] @return;
-        
-        public GetRequestTypesResponse()
-        {
-        }
-        
-        public GetRequestTypesResponse(requestTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPresentationFormTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPresentationFormTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetPresentationFormTypesRequest()
-        {
-        }
-        
-        public GetPresentationFormTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPresentationFormTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPresentationFormTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public presentationFormTypeTO[] @return;
-        
-        public GetPresentationFormTypesResponse()
-        {
-        }
-        
-        public GetPresentationFormTypesResponse(presentationFormTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAvailabilityStatusList", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetAvailabilityStatusListRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetAvailabilityStatusListRequest()
-        {
-        }
-        
-        public GetAvailabilityStatusListRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAvailabilityStatusListResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetAvailabilityStatusListResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public availabilityStatusTO[] @return;
-        
-        public GetAvailabilityStatusListResponse()
-        {
-        }
-        
-        public GetAvailabilityStatusListResponse(availabilityStatusTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetGenderTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetGenderTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetGenderTypesRequest()
-        {
-        }
-        
-        public GetGenderTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetGenderTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetGenderTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public genderTypeTO[] @return;
-        
-        public GetGenderTypesResponse()
-        {
-        }
-        
-        public GetGenderTypesResponse(genderTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPropertyTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPropertyTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetPropertyTypesRequest()
-        {
-        }
-        
-        public GetPropertyTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPropertyTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetPropertyTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public propertyTypeTO[] @return;
-        
-        public GetPropertyTypesResponse()
-        {
-        }
-        
-        public GetPropertyTypesResponse(propertyTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCapacityTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCapacityTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetCapacityTypesRequest()
-        {
-        }
-        
-        public GetCapacityTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCapacityTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCapacityTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public capacityTypeTO[] @return;
-        
-        public GetCapacityTypesResponse()
-        {
-        }
-        
-        public GetCapacityTypesResponse(capacityTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCommunicationTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCommunicationTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetCommunicationTypesRequest()
-        {
-        }
-        
-        public GetCommunicationTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCommunicationTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetCommunicationTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public communicationTypeTO[] @return;
-        
-        public GetCommunicationTypesResponse()
-        {
-        }
-        
-        public GetCommunicationTypesResponse(communicationTypeTO[] @return)
-        {
-            this.@return = @return;
-        }
+        org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse GetRegistrationStatusTypes(org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3089,46 +1602,6 @@ namespace org.sola.webservices.referencedata
         }
         
         public CheckConnectionResponse(bool @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLgaTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetLgaTypesRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public GetLgaTypesRequest()
-        {
-        }
-        
-        public GetLgaTypesRequest(string arg0)
-        {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLgaTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetLgaTypesResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public lgaTypeTO[] @return;
-        
-        public GetLgaTypesResponse()
-        {
-        }
-        
-        public GetLgaTypesResponse(lgaTypeTO[] @return)
         {
             this.@return = @return;
         }
@@ -3216,19 +1689,59 @@ namespace org.sola.webservices.referencedata
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUseTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetUseTypesRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrValidationTargetTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrValidationTargetTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetBrValidationTargetTypesRequest()
+        {
+        }
+        
+        public GetBrValidationTargetTypesRequest(string languageCode)
+        {
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrValidationTargetTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrValidationTargetTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public brValidationTargetTypeTO[] @return;
+        
+        public GetBrValidationTargetTypesResponse()
+        {
+        }
+        
+        public GetBrValidationTargetTypesResponse(brValidationTargetTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetChangeStatuTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetChangeStatuTypesRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg0;
         
-        public GetUseTypesRequest()
+        public GetChangeStatuTypesRequest()
         {
         }
         
-        public GetUseTypesRequest(string arg0)
+        public GetChangeStatuTypesRequest(string arg0)
         {
             this.arg0 = arg0;
         }
@@ -3236,19 +1749,1059 @@ namespace org.sola.webservices.referencedata
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetUseTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
-    public partial class GetUseTypesResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetChangeStatuTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetChangeStatuTypesResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public useTypeTO[] @return;
+        public changeStatusTypeTO[] @return;
         
-        public GetUseTypesResponse()
+        public GetChangeStatuTypesResponse()
         {
         }
         
-        public GetUseTypesResponse(useTypeTO[] @return)
+        public GetChangeStatuTypesResponse(changeStatusTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyRoles", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPartyRolesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetPartyRolesRequest()
+        {
+        }
+        
+        public GetPartyRolesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyRolesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPartyRolesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public partyRoleTypeTO[] @return;
+        
+        public GetPartyRolesResponse()
+        {
+        }
+        
+        public GetPartyRolesResponse(partyRoleTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCadastreObjectTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetCadastreObjectTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetCadastreObjectTypesRequest()
+        {
+        }
+        
+        public GetCadastreObjectTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCadastreObjectTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetCadastreObjectTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public cadastreObjectTypeTO[] @return;
+        
+        public GetCadastreObjectTypesResponse()
+        {
+        }
+        
+        public GetCadastreObjectTypesResponse(cadastreObjectTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRequestTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetRequestTypesRequest()
+        {
+        }
+        
+        public GetRequestTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRequestTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public requestTypeTO[] @return;
+        
+        public GetRequestTypesResponse()
+        {
+        }
+        
+        public GetRequestTypesResponse(requestTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetApplicationStatusTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetApplicationStatusTypesRequest()
+        {
+        }
+        
+        public GetApplicationStatusTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetApplicationStatusTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public applicationStatusTypeTO[] @return;
+        
+        public GetApplicationStatusTypesResponse()
+        {
+        }
+        
+        public GetApplicationStatusTypesResponse(applicationStatusTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationActionTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetApplicationActionTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetApplicationActionTypesRequest()
+        {
+        }
+        
+        public GetApplicationActionTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetApplicationActionTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetApplicationActionTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public applicationActionTypeTO[] @return;
+        
+        public GetApplicationActionTypesResponse()
+        {
+        }
+        
+        public GetApplicationActionTypesResponse(applicationActionTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrSeverityTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrSeverityTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetBrSeverityTypesRequest()
+        {
+        }
+        
+        public GetBrSeverityTypesRequest(string languageCode)
+        {
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrSeverityTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrSeverityTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public brSeverityTypeTO[] @return;
+        
+        public GetBrSeverityTypesResponse()
+        {
+        }
+        
+        public GetBrSeverityTypesResponse(brSeverityTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetServiceStatusTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetServiceStatusTypesRequest()
+        {
+        }
+        
+        public GetServiceStatusTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetServiceStatusTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public serviceStatusTypeTO[] @return;
+        
+        public GetServiceStatusTypesResponse()
+        {
+        }
+        
+        public GetServiceStatusTypesResponse(serviceStatusTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceActionTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetServiceActionTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetServiceActionTypesRequest()
+        {
+        }
+        
+        public GetServiceActionTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetServiceActionTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetServiceActionTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public serviceActionTypeTO[] @return;
+        
+        public GetServiceActionTypesResponse()
+        {
+        }
+        
+        public GetServiceActionTypesResponse(serviceActionTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMortgageTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetMortgageTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetMortgageTypesRequest()
+        {
+        }
+        
+        public GetMortgageTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetMortgageTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetMortgageTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public mortgageTypeTO[] @return;
+        
+        public GetMortgageTypesResponse()
+        {
+        }
+        
+        public GetMortgageTypesResponse(mortgageTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetGenderTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetGenderTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetGenderTypesRequest()
+        {
+        }
+        
+        public GetGenderTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetGenderTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetGenderTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public genderTypeTO[] @return;
+        
+        public GetGenderTypesResponse()
+        {
+        }
+        
+        public GetGenderTypesResponse(genderTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRRRGroupTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRRRGroupTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetRRRGroupTypesRequest()
+        {
+        }
+        
+        public GetRRRGroupTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRRRGroupTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRRRGroupTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public rrrGroupTypeTO[] @return;
+        
+        public GetRRRGroupTypesResponse()
+        {
+        }
+        
+        public GetRRRGroupTypesResponse(rrrGroupTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCommunicationTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetCommunicationTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetCommunicationTypesRequest()
+        {
+        }
+        
+        public GetCommunicationTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCommunicationTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetCommunicationTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public communicationTypeTO[] @return;
+        
+        public GetCommunicationTypesResponse()
+        {
+        }
+        
+        public GetCommunicationTypesResponse(communicationTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLandUseTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetLandUseTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetLandUseTypesRequest()
+        {
+        }
+        
+        public GetLandUseTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetLandUseTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetLandUseTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public landUseTypeTO[] @return;
+        
+        public GetLandUseTypesResponse()
+        {
+        }
+        
+        public GetLandUseTypesResponse(landUseTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeActions", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetTypeActionsRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetTypeActionsRequest()
+        {
+        }
+        
+        public GetTypeActionsRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeActionsResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetTypeActionsResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public typeActionTO[] @return;
+        
+        public GetTypeActionsResponse()
+        {
+        }
+        
+        public GetTypeActionsResponse(typeActionTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrTechnicalTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrTechnicalTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetBrTechnicalTypesRequest()
+        {
+        }
+        
+        public GetBrTechnicalTypesRequest(string languageCode)
+        {
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBrTechnicalTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBrTechnicalTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public brTechnicalTypeTO[] @return;
+        
+        public GetBrTechnicalTypesResponse()
+        {
+        }
+        
+        public GetBrTechnicalTypesResponse(brTechnicalTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAvailabilityStatusList", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetAvailabilityStatusListRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetAvailabilityStatusListRequest()
+        {
+        }
+        
+        public GetAvailabilityStatusListRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAvailabilityStatusListResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetAvailabilityStatusListResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public availabilityStatusTO[] @return;
+        
+        public GetAvailabilityStatusListResponse()
+        {
+        }
+        
+        public GetAvailabilityStatusListResponse(availabilityStatusTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBaUnitTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetBaUnitTypesRequest()
+        {
+        }
+        
+        public GetBaUnitTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBaUnitTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public baUnitTypeTO[] @return;
+        
+        public GetBaUnitTypesResponse()
+        {
+        }
+        
+        public GetBaUnitTypesResponse(baUnitTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceBaUnitRelationTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetSourceBaUnitRelationTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetSourceBaUnitRelationTypesRequest()
+        {
+        }
+        
+        public GetSourceBaUnitRelationTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceBaUnitRelationTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetSourceBaUnitRelationTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sourceBaUnitRelationTypeTO[] @return;
+        
+        public GetSourceBaUnitRelationTypesResponse()
+        {
+        }
+        
+        public GetSourceBaUnitRelationTypesResponse(sourceBaUnitRelationTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveReferenceData", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class saveReferenceDataRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.referencedata.extra.abstractCodeTO arg0;
+        
+        public saveReferenceDataRequest()
+        {
+        }
+        
+        public saveReferenceDataRequest(org.sola.webservices.referencedata.extra.abstractCodeTO arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveReferenceDataResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class saveReferenceDataResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.referencedata.extra.abstractCodeTO @return;
+        
+        public saveReferenceDataResponse()
+        {
+        }
+        
+        public saveReferenceDataResponse(org.sola.webservices.referencedata.extra.abstractCodeTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestCategoryTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRequestCategoryTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetRequestCategoryTypesRequest()
+        {
+        }
+        
+        public GetRequestCategoryTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRequestCategoryTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRequestCategoryTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public requestCategoryTypeTO[] @return;
+        
+        public GetRequestCategoryTypesResponse()
+        {
+        }
+        
+        public GetRequestCategoryTypesResponse(requestCategoryTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitRelTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBaUnitRelTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetBaUnitRelTypesRequest()
+        {
+        }
+        
+        public GetBaUnitRelTypesRequest(string languageCode)
+        {
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitRelTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetBaUnitRelTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public baUnitRelTypeTO[] @return;
+        
+        public GetBaUnitRelTypesResponse()
+        {
+        }
+        
+        public GetBaUnitRelTypesResponse(baUnitRelTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetSourceTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetSourceTypesRequest()
+        {
+        }
+        
+        public GetSourceTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSourceTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetSourceTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sourceTypeTO[] @return;
+        
+        public GetSourceTypesResponse()
+        {
+        }
+        
+        public GetSourceTypesResponse(sourceTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPresentationFormTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPresentationFormTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetPresentationFormTypesRequest()
+        {
+        }
+        
+        public GetPresentationFormTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPresentationFormTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPresentationFormTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public presentationFormTypeTO[] @return;
+        
+        public GetPresentationFormTypesResponse()
+        {
+        }
+        
+        public GetPresentationFormTypesResponse(presentationFormTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPartyTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetPartyTypesRequest()
+        {
+        }
+        
+        public GetPartyTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPartyTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetPartyTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public partyTypeTO[] @return;
+        
+        public GetPartyTypesResponse()
+        {
+        }
+        
+        public GetPartyTypesResponse(partyTypeTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLeaseConditions", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class getLeaseConditionsRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getLeaseConditionsRequest()
+        {
+        }
+        
+        public getLeaseConditionsRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLeaseConditionsResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class getLeaseConditionsResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public leaseConditionTO[] @return;
+        
+        public getLeaseConditionsResponse()
+        {
+        }
+        
+        public getLeaseConditionsResponse(leaseConditionTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegistrationStatusTypes", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRegistrationStatusTypesRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public GetRegistrationStatusTypesRequest()
+        {
+        }
+        
+        public GetRegistrationStatusTypesRequest(string arg0)
+        {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetRegistrationStatusTypesResponse", WrapperNamespace="http://webservices.sola.org/referencedata", IsWrapped=true)]
+    public partial class GetRegistrationStatusTypesResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/referencedata", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public registrationStatusTypeTO[] @return;
+        
+        public GetRegistrationStatusTypesResponse()
+        {
+        }
+        
+        public GetRegistrationStatusTypesResponse(registrationStatusTypeTO[] @return)
         {
             this.@return = @return;
         }
@@ -3289,454 +2842,6 @@ namespace org.sola.webservices.referencedata
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetPartyTypesResponse org.sola.webservices.referencedata.ReferenceData.GetPartyTypes(org.sola.webservices.referencedata.GetPartyTypesRequest request)
-        {
-            return base.Channel.GetPartyTypes(request);
-        }
-        
-        public partyTypeTO[] GetPartyTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetPartyTypesRequest inValue = new org.sola.webservices.referencedata.GetPartyTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetPartyTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPartyTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetPartyRolesResponse org.sola.webservices.referencedata.ReferenceData.GetPartyRoles(org.sola.webservices.referencedata.GetPartyRolesRequest request)
-        {
-            return base.Channel.GetPartyRoles(request);
-        }
-        
-        public partyRoleTypeTO[] GetPartyRoles(string arg0)
-        {
-            org.sola.webservices.referencedata.GetPartyRolesRequest inValue = new org.sola.webservices.referencedata.GetPartyRolesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetPartyRolesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPartyRoles(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetBaUnitTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBaUnitTypes(org.sola.webservices.referencedata.GetBaUnitTypesRequest request)
-        {
-            return base.Channel.GetBaUnitTypes(request);
-        }
-        
-        public baUnitTypeTO[] GetBaUnitTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetBaUnitTypesRequest inValue = new org.sola.webservices.referencedata.GetBaUnitTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetBaUnitTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBaUnitTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetServiceActionTypesResponse org.sola.webservices.referencedata.ReferenceData.GetServiceActionTypes(org.sola.webservices.referencedata.GetServiceActionTypesRequest request)
-        {
-            return base.Channel.GetServiceActionTypes(request);
-        }
-        
-        public serviceActionTypeTO[] GetServiceActionTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetServiceActionTypesRequest inValue = new org.sola.webservices.referencedata.GetServiceActionTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetServiceActionTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetServiceActionTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetSourceTypesResponse org.sola.webservices.referencedata.ReferenceData.GetSourceTypes(org.sola.webservices.referencedata.GetSourceTypesRequest request)
-        {
-            return base.Channel.GetSourceTypes(request);
-        }
-        
-        public sourceTypeTO[] GetSourceTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetSourceTypesRequest inValue = new org.sola.webservices.referencedata.GetSourceTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetSourceTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetSourceTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetApplicationStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetApplicationStatusTypes(org.sola.webservices.referencedata.GetApplicationStatusTypesRequest request)
-        {
-            return base.Channel.GetApplicationStatusTypes(request);
-        }
-        
-        public applicationStatusTypeTO[] GetApplicationStatusTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetApplicationStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetApplicationStatusTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetApplicationStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetApplicationStatusTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetServiceStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetServiceStatusTypes(org.sola.webservices.referencedata.GetServiceStatusTypesRequest request)
-        {
-            return base.Channel.GetServiceStatusTypes(request);
-        }
-        
-        public serviceStatusTypeTO[] GetServiceStatusTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetServiceStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetServiceStatusTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetServiceStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetServiceStatusTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetApplicationActionTypesResponse org.sola.webservices.referencedata.ReferenceData.GetApplicationActionTypes(org.sola.webservices.referencedata.GetApplicationActionTypesRequest request)
-        {
-            return base.Channel.GetApplicationActionTypes(request);
-        }
-        
-        public applicationActionTypeTO[] GetApplicationActionTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetApplicationActionTypesRequest inValue = new org.sola.webservices.referencedata.GetApplicationActionTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetApplicationActionTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetApplicationActionTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetChangeStatuTypesResponse org.sola.webservices.referencedata.ReferenceData.GetChangeStatuTypes(org.sola.webservices.referencedata.GetChangeStatuTypesRequest request)
-        {
-            return base.Channel.GetChangeStatuTypes(request);
-        }
-        
-        public changeStatusTypeTO[] GetChangeStatuTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetChangeStatuTypesRequest inValue = new org.sola.webservices.referencedata.GetChangeStatuTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetChangeStatuTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetChangeStatuTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetMortgageTypesResponse org.sola.webservices.referencedata.ReferenceData.GetMortgageTypes(org.sola.webservices.referencedata.GetMortgageTypesRequest request)
-        {
-            return base.Channel.GetMortgageTypes(request);
-        }
-        
-        public mortgageTypeTO[] GetMortgageTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetMortgageTypesRequest inValue = new org.sola.webservices.referencedata.GetMortgageTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetMortgageTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetMortgageTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetRRRGroupTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRRRGroupTypes(org.sola.webservices.referencedata.GetRRRGroupTypesRequest request)
-        {
-            return base.Channel.GetRRRGroupTypes(request);
-        }
-        
-        public rrrGroupTypeTO[] GetRRRGroupTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetRRRGroupTypesRequest inValue = new org.sola.webservices.referencedata.GetRRRGroupTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetRRRGroupTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRRRGroupTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse org.sola.webservices.referencedata.ReferenceData.GetSourceBaUnitRelationTypes(org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest request)
-        {
-            return base.Channel.GetSourceBaUnitRelationTypes(request);
-        }
-        
-        public sourceBaUnitRelationTypeTO[] GetSourceBaUnitRelationTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest inValue = new org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetSourceBaUnitRelationTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRegistrationStatusTypes(org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest request)
-        {
-            return base.Channel.GetRegistrationStatusTypes(request);
-        }
-        
-        public registrationStatusTypeTO[] GetRegistrationStatusTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRegistrationStatusTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetCadastreObjectTypesResponse org.sola.webservices.referencedata.ReferenceData.GetCadastreObjectTypes(org.sola.webservices.referencedata.GetCadastreObjectTypesRequest request)
-        {
-            return base.Channel.GetCadastreObjectTypes(request);
-        }
-        
-        public cadastreObjectTypeTO[] GetCadastreObjectTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetCadastreObjectTypesRequest inValue = new org.sola.webservices.referencedata.GetCadastreObjectTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetCadastreObjectTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetCadastreObjectTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetTypeActionsResponse org.sola.webservices.referencedata.ReferenceData.GetTypeActions(org.sola.webservices.referencedata.GetTypeActionsRequest request)
-        {
-            return base.Channel.GetTypeActions(request);
-        }
-        
-        public typeActionTO[] GetTypeActions(string arg0)
-        {
-            org.sola.webservices.referencedata.GetTypeActionsRequest inValue = new org.sola.webservices.referencedata.GetTypeActionsRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetTypeActionsResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetTypeActions(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetHomeTownTypesResponse org.sola.webservices.referencedata.ReferenceData.GetHomeTownTypes(org.sola.webservices.referencedata.GetHomeTownTypesRequest request)
-        {
-            return base.Channel.GetHomeTownTypes(request);
-        }
-        
-        public homeTownTypeTO[] GetHomeTownTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetHomeTownTypesRequest inValue = new org.sola.webservices.referencedata.GetHomeTownTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetHomeTownTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetHomeTownTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetStateTypesResponse org.sola.webservices.referencedata.ReferenceData.GetStateTypes(org.sola.webservices.referencedata.GetStateTypesRequest request)
-        {
-            return base.Channel.GetStateTypes(request);
-        }
-        
-        public stateTypeTO[] GetStateTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetStateTypesRequest inValue = new org.sola.webservices.referencedata.GetStateTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetStateTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetStateTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetTitleTypesResponse org.sola.webservices.referencedata.ReferenceData.GetTitleTypes(org.sola.webservices.referencedata.GetTitleTypesRequest request)
-        {
-            return base.Channel.GetTitleTypes(request);
-        }
-        
-        public titleTypeTO[] GetTitleTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetTitleTypesRequest inValue = new org.sola.webservices.referencedata.GetTitleTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetTitleTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetTitleTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetOccupationTypesResponse org.sola.webservices.referencedata.ReferenceData.GetOccupationTypes(org.sola.webservices.referencedata.GetOccupationTypesRequest request)
-        {
-            return base.Channel.GetOccupationTypes(request);
-        }
-        
-        public occupationTypeTO[] GetOccupationTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetOccupationTypesRequest inValue = new org.sola.webservices.referencedata.GetOccupationTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetOccupationTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetOccupationTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetBrTechnicalTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrTechnicalTypes(org.sola.webservices.referencedata.GetBrTechnicalTypesRequest request)
-        {
-            return base.Channel.GetBrTechnicalTypes(request);
-        }
-        
-        public brTechnicalTypeTO[] GetBrTechnicalTypes(string languageCode)
-        {
-            org.sola.webservices.referencedata.GetBrTechnicalTypesRequest inValue = new org.sola.webservices.referencedata.GetBrTechnicalTypesRequest();
-            inValue.languageCode = languageCode;
-            org.sola.webservices.referencedata.GetBrTechnicalTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrTechnicalTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetBrValidationTargetTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrValidationTargetTypes(org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest request)
-        {
-            return base.Channel.GetBrValidationTargetTypes(request);
-        }
-        
-        public brValidationTargetTypeTO[] GetBrValidationTargetTypes(string languageCode)
-        {
-            org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest inValue = new org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest();
-            inValue.languageCode = languageCode;
-            org.sola.webservices.referencedata.GetBrValidationTargetTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrValidationTargetTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetBrSeverityTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrSeverityTypes(org.sola.webservices.referencedata.GetBrSeverityTypesRequest request)
-        {
-            return base.Channel.GetBrSeverityTypes(request);
-        }
-        
-        public brSeverityTypeTO[] GetBrSeverityTypes(string languageCode)
-        {
-            org.sola.webservices.referencedata.GetBrSeverityTypesRequest inValue = new org.sola.webservices.referencedata.GetBrSeverityTypesRequest();
-            inValue.languageCode = languageCode;
-            org.sola.webservices.referencedata.GetBrSeverityTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrSeverityTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetBaUnitRelTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBaUnitRelTypes(org.sola.webservices.referencedata.GetBaUnitRelTypesRequest request)
-        {
-            return base.Channel.GetBaUnitRelTypes(request);
-        }
-        
-        public baUnitRelTypeTO[] GetBaUnitRelTypes(string languageCode)
-        {
-            org.sola.webservices.referencedata.GetBaUnitRelTypesRequest inValue = new org.sola.webservices.referencedata.GetBaUnitRelTypesRequest();
-            inValue.languageCode = languageCode;
-            org.sola.webservices.referencedata.GetBaUnitRelTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBaUnitRelTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.saveReferenceDataResponse org.sola.webservices.referencedata.ReferenceData.saveReferenceData(org.sola.webservices.referencedata.saveReferenceDataRequest request)
-        {
-            return base.Channel.saveReferenceData(request);
-        }
-        
-        public org.sola.webservices.referencedata.extra.abstractCodeTO saveReferenceData(org.sola.webservices.referencedata.extra.abstractCodeTO arg0)
-        {
-            org.sola.webservices.referencedata.saveReferenceDataRequest inValue = new org.sola.webservices.referencedata.saveReferenceDataRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.saveReferenceDataResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).saveReferenceData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetRequestCategoryTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRequestCategoryTypes(org.sola.webservices.referencedata.GetRequestCategoryTypesRequest request)
-        {
-            return base.Channel.GetRequestCategoryTypes(request);
-        }
-        
-        public requestCategoryTypeTO[] GetRequestCategoryTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetRequestCategoryTypesRequest inValue = new org.sola.webservices.referencedata.GetRequestCategoryTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetRequestCategoryTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRequestCategoryTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetRequestTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRequestTypes(org.sola.webservices.referencedata.GetRequestTypesRequest request)
-        {
-            return base.Channel.GetRequestTypes(request);
-        }
-        
-        public requestTypeTO[] GetRequestTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetRequestTypesRequest inValue = new org.sola.webservices.referencedata.GetRequestTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetRequestTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRequestTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetPresentationFormTypesResponse org.sola.webservices.referencedata.ReferenceData.GetPresentationFormTypes(org.sola.webservices.referencedata.GetPresentationFormTypesRequest request)
-        {
-            return base.Channel.GetPresentationFormTypes(request);
-        }
-        
-        public presentationFormTypeTO[] GetPresentationFormTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetPresentationFormTypesRequest inValue = new org.sola.webservices.referencedata.GetPresentationFormTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetPresentationFormTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPresentationFormTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetAvailabilityStatusListResponse org.sola.webservices.referencedata.ReferenceData.GetAvailabilityStatusList(org.sola.webservices.referencedata.GetAvailabilityStatusListRequest request)
-        {
-            return base.Channel.GetAvailabilityStatusList(request);
-        }
-        
-        public availabilityStatusTO[] GetAvailabilityStatusList(string arg0)
-        {
-            org.sola.webservices.referencedata.GetAvailabilityStatusListRequest inValue = new org.sola.webservices.referencedata.GetAvailabilityStatusListRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetAvailabilityStatusListResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetAvailabilityStatusList(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetGenderTypesResponse org.sola.webservices.referencedata.ReferenceData.GetGenderTypes(org.sola.webservices.referencedata.GetGenderTypesRequest request)
-        {
-            return base.Channel.GetGenderTypes(request);
-        }
-        
-        public genderTypeTO[] GetGenderTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetGenderTypesRequest inValue = new org.sola.webservices.referencedata.GetGenderTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetGenderTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetGenderTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetPropertyTypesResponse org.sola.webservices.referencedata.ReferenceData.GetPropertyTypes(org.sola.webservices.referencedata.GetPropertyTypesRequest request)
-        {
-            return base.Channel.GetPropertyTypes(request);
-        }
-        
-        public propertyTypeTO[] GetPropertyTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetPropertyTypesRequest inValue = new org.sola.webservices.referencedata.GetPropertyTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetPropertyTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPropertyTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetCapacityTypesResponse org.sola.webservices.referencedata.ReferenceData.GetCapacityTypes(org.sola.webservices.referencedata.GetCapacityTypesRequest request)
-        {
-            return base.Channel.GetCapacityTypes(request);
-        }
-        
-        public capacityTypeTO[] GetCapacityTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetCapacityTypesRequest inValue = new org.sola.webservices.referencedata.GetCapacityTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetCapacityTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetCapacityTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetCommunicationTypesResponse org.sola.webservices.referencedata.ReferenceData.GetCommunicationTypes(org.sola.webservices.referencedata.GetCommunicationTypesRequest request)
-        {
-            return base.Channel.GetCommunicationTypes(request);
-        }
-        
-        public communicationTypeTO[] GetCommunicationTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetCommunicationTypesRequest inValue = new org.sola.webservices.referencedata.GetCommunicationTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetCommunicationTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetCommunicationTypes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         org.sola.webservices.referencedata.CheckConnectionResponse org.sola.webservices.referencedata.ReferenceData.CheckConnection(org.sola.webservices.referencedata.CheckConnectionRequest request)
         {
             return base.Channel.CheckConnection(request);
@@ -3746,20 +2851,6 @@ namespace org.sola.webservices.referencedata
         {
             org.sola.webservices.referencedata.CheckConnectionRequest inValue = new org.sola.webservices.referencedata.CheckConnectionRequest();
             org.sola.webservices.referencedata.CheckConnectionResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).CheckConnection(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetLgaTypesResponse org.sola.webservices.referencedata.ReferenceData.GetLgaTypes(org.sola.webservices.referencedata.GetLgaTypesRequest request)
-        {
-            return base.Channel.GetLgaTypes(request);
-        }
-        
-        public lgaTypeTO[] GetLgaTypes(string arg0)
-        {
-            org.sola.webservices.referencedata.GetLgaTypesRequest inValue = new org.sola.webservices.referencedata.GetLgaTypesRequest();
-            inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetLgaTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetLgaTypes(inValue);
             return retVal.@return;
         }
         
@@ -3792,16 +2883,394 @@ namespace org.sola.webservices.referencedata
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.referencedata.GetUseTypesResponse org.sola.webservices.referencedata.ReferenceData.GetUseTypes(org.sola.webservices.referencedata.GetUseTypesRequest request)
+        org.sola.webservices.referencedata.GetBrValidationTargetTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrValidationTargetTypes(org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest request)
         {
-            return base.Channel.GetUseTypes(request);
+            return base.Channel.GetBrValidationTargetTypes(request);
         }
         
-        public useTypeTO[] GetUseTypes(string arg0)
+        public brValidationTargetTypeTO[] GetBrValidationTargetTypes(string languageCode)
         {
-            org.sola.webservices.referencedata.GetUseTypesRequest inValue = new org.sola.webservices.referencedata.GetUseTypesRequest();
+            org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest inValue = new org.sola.webservices.referencedata.GetBrValidationTargetTypesRequest();
+            inValue.languageCode = languageCode;
+            org.sola.webservices.referencedata.GetBrValidationTargetTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrValidationTargetTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetChangeStatuTypesResponse org.sola.webservices.referencedata.ReferenceData.GetChangeStatuTypes(org.sola.webservices.referencedata.GetChangeStatuTypesRequest request)
+        {
+            return base.Channel.GetChangeStatuTypes(request);
+        }
+        
+        public changeStatusTypeTO[] GetChangeStatuTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetChangeStatuTypesRequest inValue = new org.sola.webservices.referencedata.GetChangeStatuTypesRequest();
             inValue.arg0 = arg0;
-            org.sola.webservices.referencedata.GetUseTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetUseTypes(inValue);
+            org.sola.webservices.referencedata.GetChangeStatuTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetChangeStatuTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetPartyRolesResponse org.sola.webservices.referencedata.ReferenceData.GetPartyRoles(org.sola.webservices.referencedata.GetPartyRolesRequest request)
+        {
+            return base.Channel.GetPartyRoles(request);
+        }
+        
+        public partyRoleTypeTO[] GetPartyRoles(string arg0)
+        {
+            org.sola.webservices.referencedata.GetPartyRolesRequest inValue = new org.sola.webservices.referencedata.GetPartyRolesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetPartyRolesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPartyRoles(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetCadastreObjectTypesResponse org.sola.webservices.referencedata.ReferenceData.GetCadastreObjectTypes(org.sola.webservices.referencedata.GetCadastreObjectTypesRequest request)
+        {
+            return base.Channel.GetCadastreObjectTypes(request);
+        }
+        
+        public cadastreObjectTypeTO[] GetCadastreObjectTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetCadastreObjectTypesRequest inValue = new org.sola.webservices.referencedata.GetCadastreObjectTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetCadastreObjectTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetCadastreObjectTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetRequestTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRequestTypes(org.sola.webservices.referencedata.GetRequestTypesRequest request)
+        {
+            return base.Channel.GetRequestTypes(request);
+        }
+        
+        public requestTypeTO[] GetRequestTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetRequestTypesRequest inValue = new org.sola.webservices.referencedata.GetRequestTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetRequestTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRequestTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetApplicationStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetApplicationStatusTypes(org.sola.webservices.referencedata.GetApplicationStatusTypesRequest request)
+        {
+            return base.Channel.GetApplicationStatusTypes(request);
+        }
+        
+        public applicationStatusTypeTO[] GetApplicationStatusTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetApplicationStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetApplicationStatusTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetApplicationStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetApplicationStatusTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetApplicationActionTypesResponse org.sola.webservices.referencedata.ReferenceData.GetApplicationActionTypes(org.sola.webservices.referencedata.GetApplicationActionTypesRequest request)
+        {
+            return base.Channel.GetApplicationActionTypes(request);
+        }
+        
+        public applicationActionTypeTO[] GetApplicationActionTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetApplicationActionTypesRequest inValue = new org.sola.webservices.referencedata.GetApplicationActionTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetApplicationActionTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetApplicationActionTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetBrSeverityTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrSeverityTypes(org.sola.webservices.referencedata.GetBrSeverityTypesRequest request)
+        {
+            return base.Channel.GetBrSeverityTypes(request);
+        }
+        
+        public brSeverityTypeTO[] GetBrSeverityTypes(string languageCode)
+        {
+            org.sola.webservices.referencedata.GetBrSeverityTypesRequest inValue = new org.sola.webservices.referencedata.GetBrSeverityTypesRequest();
+            inValue.languageCode = languageCode;
+            org.sola.webservices.referencedata.GetBrSeverityTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrSeverityTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetServiceStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetServiceStatusTypes(org.sola.webservices.referencedata.GetServiceStatusTypesRequest request)
+        {
+            return base.Channel.GetServiceStatusTypes(request);
+        }
+        
+        public serviceStatusTypeTO[] GetServiceStatusTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetServiceStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetServiceStatusTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetServiceStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetServiceStatusTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetServiceActionTypesResponse org.sola.webservices.referencedata.ReferenceData.GetServiceActionTypes(org.sola.webservices.referencedata.GetServiceActionTypesRequest request)
+        {
+            return base.Channel.GetServiceActionTypes(request);
+        }
+        
+        public serviceActionTypeTO[] GetServiceActionTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetServiceActionTypesRequest inValue = new org.sola.webservices.referencedata.GetServiceActionTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetServiceActionTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetServiceActionTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetMortgageTypesResponse org.sola.webservices.referencedata.ReferenceData.GetMortgageTypes(org.sola.webservices.referencedata.GetMortgageTypesRequest request)
+        {
+            return base.Channel.GetMortgageTypes(request);
+        }
+        
+        public mortgageTypeTO[] GetMortgageTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetMortgageTypesRequest inValue = new org.sola.webservices.referencedata.GetMortgageTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetMortgageTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetMortgageTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetGenderTypesResponse org.sola.webservices.referencedata.ReferenceData.GetGenderTypes(org.sola.webservices.referencedata.GetGenderTypesRequest request)
+        {
+            return base.Channel.GetGenderTypes(request);
+        }
+        
+        public genderTypeTO[] GetGenderTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetGenderTypesRequest inValue = new org.sola.webservices.referencedata.GetGenderTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetGenderTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetGenderTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetRRRGroupTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRRRGroupTypes(org.sola.webservices.referencedata.GetRRRGroupTypesRequest request)
+        {
+            return base.Channel.GetRRRGroupTypes(request);
+        }
+        
+        public rrrGroupTypeTO[] GetRRRGroupTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetRRRGroupTypesRequest inValue = new org.sola.webservices.referencedata.GetRRRGroupTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetRRRGroupTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRRRGroupTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetCommunicationTypesResponse org.sola.webservices.referencedata.ReferenceData.GetCommunicationTypes(org.sola.webservices.referencedata.GetCommunicationTypesRequest request)
+        {
+            return base.Channel.GetCommunicationTypes(request);
+        }
+        
+        public communicationTypeTO[] GetCommunicationTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetCommunicationTypesRequest inValue = new org.sola.webservices.referencedata.GetCommunicationTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetCommunicationTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetCommunicationTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetLandUseTypesResponse org.sola.webservices.referencedata.ReferenceData.GetLandUseTypes(org.sola.webservices.referencedata.GetLandUseTypesRequest request)
+        {
+            return base.Channel.GetLandUseTypes(request);
+        }
+        
+        public landUseTypeTO[] GetLandUseTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetLandUseTypesRequest inValue = new org.sola.webservices.referencedata.GetLandUseTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetLandUseTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetLandUseTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetTypeActionsResponse org.sola.webservices.referencedata.ReferenceData.GetTypeActions(org.sola.webservices.referencedata.GetTypeActionsRequest request)
+        {
+            return base.Channel.GetTypeActions(request);
+        }
+        
+        public typeActionTO[] GetTypeActions(string arg0)
+        {
+            org.sola.webservices.referencedata.GetTypeActionsRequest inValue = new org.sola.webservices.referencedata.GetTypeActionsRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetTypeActionsResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetTypeActions(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetBrTechnicalTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBrTechnicalTypes(org.sola.webservices.referencedata.GetBrTechnicalTypesRequest request)
+        {
+            return base.Channel.GetBrTechnicalTypes(request);
+        }
+        
+        public brTechnicalTypeTO[] GetBrTechnicalTypes(string languageCode)
+        {
+            org.sola.webservices.referencedata.GetBrTechnicalTypesRequest inValue = new org.sola.webservices.referencedata.GetBrTechnicalTypesRequest();
+            inValue.languageCode = languageCode;
+            org.sola.webservices.referencedata.GetBrTechnicalTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBrTechnicalTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetAvailabilityStatusListResponse org.sola.webservices.referencedata.ReferenceData.GetAvailabilityStatusList(org.sola.webservices.referencedata.GetAvailabilityStatusListRequest request)
+        {
+            return base.Channel.GetAvailabilityStatusList(request);
+        }
+        
+        public availabilityStatusTO[] GetAvailabilityStatusList(string arg0)
+        {
+            org.sola.webservices.referencedata.GetAvailabilityStatusListRequest inValue = new org.sola.webservices.referencedata.GetAvailabilityStatusListRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetAvailabilityStatusListResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetAvailabilityStatusList(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetBaUnitTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBaUnitTypes(org.sola.webservices.referencedata.GetBaUnitTypesRequest request)
+        {
+            return base.Channel.GetBaUnitTypes(request);
+        }
+        
+        public baUnitTypeTO[] GetBaUnitTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetBaUnitTypesRequest inValue = new org.sola.webservices.referencedata.GetBaUnitTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetBaUnitTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBaUnitTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse org.sola.webservices.referencedata.ReferenceData.GetSourceBaUnitRelationTypes(org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest request)
+        {
+            return base.Channel.GetSourceBaUnitRelationTypes(request);
+        }
+        
+        public sourceBaUnitRelationTypeTO[] GetSourceBaUnitRelationTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest inValue = new org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetSourceBaUnitRelationTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetSourceBaUnitRelationTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.saveReferenceDataResponse org.sola.webservices.referencedata.ReferenceData.saveReferenceData(org.sola.webservices.referencedata.saveReferenceDataRequest request)
+        {
+            return base.Channel.saveReferenceData(request);
+        }
+        
+        public org.sola.webservices.referencedata.extra.abstractCodeTO saveReferenceData(org.sola.webservices.referencedata.extra.abstractCodeTO arg0)
+        {
+            org.sola.webservices.referencedata.saveReferenceDataRequest inValue = new org.sola.webservices.referencedata.saveReferenceDataRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.saveReferenceDataResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).saveReferenceData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetRequestCategoryTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRequestCategoryTypes(org.sola.webservices.referencedata.GetRequestCategoryTypesRequest request)
+        {
+            return base.Channel.GetRequestCategoryTypes(request);
+        }
+        
+        public requestCategoryTypeTO[] GetRequestCategoryTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetRequestCategoryTypesRequest inValue = new org.sola.webservices.referencedata.GetRequestCategoryTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetRequestCategoryTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRequestCategoryTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetBaUnitRelTypesResponse org.sola.webservices.referencedata.ReferenceData.GetBaUnitRelTypes(org.sola.webservices.referencedata.GetBaUnitRelTypesRequest request)
+        {
+            return base.Channel.GetBaUnitRelTypes(request);
+        }
+        
+        public baUnitRelTypeTO[] GetBaUnitRelTypes(string languageCode)
+        {
+            org.sola.webservices.referencedata.GetBaUnitRelTypesRequest inValue = new org.sola.webservices.referencedata.GetBaUnitRelTypesRequest();
+            inValue.languageCode = languageCode;
+            org.sola.webservices.referencedata.GetBaUnitRelTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetBaUnitRelTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetSourceTypesResponse org.sola.webservices.referencedata.ReferenceData.GetSourceTypes(org.sola.webservices.referencedata.GetSourceTypesRequest request)
+        {
+            return base.Channel.GetSourceTypes(request);
+        }
+        
+        public sourceTypeTO[] GetSourceTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetSourceTypesRequest inValue = new org.sola.webservices.referencedata.GetSourceTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetSourceTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetSourceTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetPresentationFormTypesResponse org.sola.webservices.referencedata.ReferenceData.GetPresentationFormTypes(org.sola.webservices.referencedata.GetPresentationFormTypesRequest request)
+        {
+            return base.Channel.GetPresentationFormTypes(request);
+        }
+        
+        public presentationFormTypeTO[] GetPresentationFormTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetPresentationFormTypesRequest inValue = new org.sola.webservices.referencedata.GetPresentationFormTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetPresentationFormTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPresentationFormTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetPartyTypesResponse org.sola.webservices.referencedata.ReferenceData.GetPartyTypes(org.sola.webservices.referencedata.GetPartyTypesRequest request)
+        {
+            return base.Channel.GetPartyTypes(request);
+        }
+        
+        public partyTypeTO[] GetPartyTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetPartyTypesRequest inValue = new org.sola.webservices.referencedata.GetPartyTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetPartyTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetPartyTypes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.getLeaseConditionsResponse org.sola.webservices.referencedata.ReferenceData.getLeaseConditions(org.sola.webservices.referencedata.getLeaseConditionsRequest request)
+        {
+            return base.Channel.getLeaseConditions(request);
+        }
+        
+        public leaseConditionTO[] getLeaseConditions(string arg0)
+        {
+            org.sola.webservices.referencedata.getLeaseConditionsRequest inValue = new org.sola.webservices.referencedata.getLeaseConditionsRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.getLeaseConditionsResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).getLeaseConditions(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse org.sola.webservices.referencedata.ReferenceData.GetRegistrationStatusTypes(org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest request)
+        {
+            return base.Channel.GetRegistrationStatusTypes(request);
+        }
+        
+        public registrationStatusTypeTO[] GetRegistrationStatusTypes(string arg0)
+        {
+            org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest inValue = new org.sola.webservices.referencedata.GetRegistrationStatusTypesRequest();
+            inValue.arg0 = arg0;
+            org.sola.webservices.referencedata.GetRegistrationStatusTypesResponse retVal = ((org.sola.webservices.referencedata.ReferenceData)(this)).GetRegistrationStatusTypes(inValue);
             return retVal.@return;
         }
     }

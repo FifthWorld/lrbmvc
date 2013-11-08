@@ -40,7 +40,7 @@ namespace LRB.Lib
         public static Property GetPrimaryProperty(int propertyId)
         {
             UnitOfWork uow = new UnitOfWork();
-            return uow.Context.Properties.Where(p => p.Id==propertyId).FirstOrDefault();
+            return uow.Context.Properties.Where(p => p.Id == propertyId).FirstOrDefault();
         }
 
         public static void SaveApplication(int appId, Party contactPerson)
@@ -66,7 +66,7 @@ namespace LRB.Lib
             party.Occupation = contactPerson.Occupation;
             party.OfficeNo = contactPerson.OfficeNo;
             party.OrganizationName = contactPerson.OrganizationName;
-            party.StateofOrigin = contactPerson.StateofOrigin;
+            //party.StateofOrigin = contactPerson.StateofOrigin;
             party.Surname = contactPerson.Surname;
 
             party.LGA = contactPerson.ILGA;
@@ -88,16 +88,33 @@ namespace LRB.Lib
             property.CapacityofOwnership = primaryProperty.CapacityofOwnership;
             property.Development = primaryProperty.Development;
             property.LandUse = primaryProperty.LandUse;
-            property.PeriodofPossession = primaryProperty.PeriodofPossession;          
+            property.PeriodofPossession_months = primaryProperty.PeriodofPossession_months;
+            property.PeriodofPossession_years = primaryProperty.PeriodofPossession_years;
 
             property.LGA = primaryProperty.LGA;
             property.Town = primaryProperty.Town;
             property.State = primaryProperty.State;
             property.Street = primaryProperty.Street;
-            
+
             uow.Context.SaveChanges();
         }
 
+        public static void SaveApplication(int appId, DocumentManager docManager)
+        {
+            UnitOfWork uow = new UnitOfWork();
+
+            var dm = uow.Context.DocumentManagers.Where(p => p.Application.Id == appId).FirstOrDefault();
+            dm.DevelopmentLevy = docManager.DevelopmentLevy;
+            dm.DevelopmentLevy_RecieptNumber = docManager.DevelopmentLevy_RecieptNumber;
+            dm.EvidenceOfOwnership = docManager.EvidenceOfOwnership;
+            dm.EvidenceType = docManager.EvidenceType;
+            dm.Passport = docManager.Passport;
+            dm.SurveyPlan = docManager.SurveyPlan;
+            dm.SurveyPlan_ApprovalDate = docManager.SurveyPlan_ApprovalDate;
+            dm.SurveyPlan_Number = docManager.SurveyPlan_Number;
+
+            uow.Context.SaveChanges();
+        }
         public static void SaveApplication(int appId, Document document)
         {
             UnitOfWork uow = new UnitOfWork();
@@ -108,13 +125,45 @@ namespace LRB.Lib
             uow.Save();
         }
 
+        public static void SaveApplication(int appId, Optional document)
+        {
+            UnitOfWork uow = new UnitOfWork();
+            var app = uow.LandApplicationRepository.GetByID(appId);
+            if (app.OptionalRequirement == null)
+            {
+                app.Optionals.Add(new Optional());
+            }
+            app.OptionalRequirement.EmployerName = document.EmployerName;
+            app.OptionalRequirement.HomeTown = document.HomeTown;
+            app.OptionalRequirement.LGA = document.LGA;
+            app.OptionalRequirement.Occupation = document.Occupation;
+            app.OptionalRequirement.State = document.State;
+            app.OptionalRequirement.Street = document.Street;
+            app.OptionalRequirement.StateofOrigin = document.StateofOrigin;
+            app.OptionalRequirement.Town = document.Town;
+
+            uow.LandApplicationRepository.Update(app);
+            uow.Save();
+        }
+
         public static void SubmitApplication(int appId)
         {
             UnitOfWork uow = new UnitOfWork();
             var app = uow.LandApplicationRepository.GetByID(appId);
-            app.Status = "Lodged";
-            app.SubmissionDate = DateTime.Today;
+            app.SubmissionDate = DateTime.Now;
             app.SubmittedbyApplicant = true;
+            uow.LandApplicationRepository.Update(app);
+            uow.Save();
+        }
+
+        public static void UpdateStatus(int appId, string solaStatus, string solaId, String solaNR)
+        {
+            UnitOfWork uow = new UnitOfWork();
+            var app = uow.LandApplicationRepository.GetByID(appId);
+            app.Status = solaStatus;
+            app.SolaId = solaId;
+            app.SolaNR = solaNR;
+
             uow.LandApplicationRepository.Update(app);
             uow.Save();
         }
@@ -151,7 +200,8 @@ namespace LRB.Lib
                 LandUse = requirement.landUse,
                 Development = "Undeveloped",
                 CapacityofOwnership = "Inheritance",
-                PeriodofPossession = "3 years",
+                PeriodofPossession_months="0",
+                PeriodofPossession_years="0",
 
                 Addresses = new List<Address>()
                 {
@@ -161,32 +211,90 @@ namespace LRB.Lib
                 }
             };
 
+            DocumentManager docManager = new DocumentManager();
+            app.requirementDocuments.Add(docManager);
             app.Properties.Add(prop);
             uow.Context.Applications.Add(app);
+            
+
+
+            app.Optionals.Add(new Optional() { });
+
             uow.Context.SaveChanges();
             uow.Save();
 
             return app;
         }
 
+        public static Application CreateApplication(Requirement requirement, string username)
+        {
+            UnitOfWork uow = new UnitOfWork();
+            var app = new Application(username);
+            app.ApplicationType = requirement.applicationType == null ? "Individual" : requirement.applicationType;
+
+
+            Property prop = new Property()
+            {
+                LandSize = requirement.landSize,
+                LandSizeUnit = requirement.landSizeUnit,
+                LandUse = requirement.landUse,
+                Development = "Undeveloped",
+                CapacityofOwnership = "Inheritance",
+                PeriodofPossession_months = "0",
+                PeriodofPossession_years = "0",
+
+                Addresses = new List<Address>()
+                {
+                    new Address(){
+                        AddressType="PropertyLocation"
+                    }
+                }
+            };
+
+            DocumentManager docManager = new DocumentManager();
+            app.requirementDocuments.Add(docManager);
+            app.Properties.Add(prop);
+            uow.Context.Applications.Add(app);
+
+
+
+            app.Optionals.Add(new Optional() { });
+
+            uow.Context.SaveChanges();
+            uow.Save();
+
+            return app;
+        }
+
+
         public static IEnumerable<Document> GetDocuments(int appId)
         {
             UnitOfWork uow = new UnitOfWork();
             var app = uow.LandApplicationRepository.GetByID(appId);
-            return app.Documents;
+            var documents = from doc in app.Documents select new { Title = doc.FileName, Type = doc.DocumentType };
+            return documents as IEnumerable<Document>;
         }
-
-        public static String SaveDocument(Document doc)
+        public static DocumentManager GetDocumentManager(int appId)
         {
             UnitOfWork uow = new UnitOfWork();
-            var res = uow.LandApplicationRepository.context.Documents.Add(doc);
+            var dm = uow.Context.DocumentManagers.Where(p => p.Application.Id == appId).FirstOrDefault();
+            return dm;
+        }
+
+        public static String SaveDocument(int appId, Document doc)
+        {
+            UnitOfWork uow = new UnitOfWork();
+            var app = uow.LandApplicationRepository.GetByID(appId);
+            app.Documents.Add(doc);
+            uow.LandApplicationRepository.Update(app);
             uow.Save();
-            return res.Id.ToString();
+            return doc.Id.ToString();
         }
 
         public static void Remove(int appId)
         {
             UnitOfWork uow = new UnitOfWork();
+            
         }
     }
 }

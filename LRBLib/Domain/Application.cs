@@ -39,32 +39,30 @@ namespace LRB.Lib.Domain
             var user = WebSecurity.GetCurrentUser();
             UserId = user.UserName;
             //UserId = "Skims";
-            StartDate = DateTime.Now;            
+            StartDate = DateTime.Now;
             ApplicationType = "Individual";
             Status = "Incomplete";
             Parties = new List<Party>();
             Properties = new List<Property>();
-            //var priprop = new Property()
-            //{
-            //    Development = "Undeveloped",
-            //    CapacityofOwnership = "Inheritance",
-            //    LandSize = 100,
-            //    LandSizeUnit = "hectares",
-            //    LandUse = "Residential",
-            //    PeriodofPossession = "3 years"
-            //};
-            
-            //var tparty = new Party()
-            //{
-            //    Surname = "Land",
-            //    Firstname = "Land",
-            //    Middlename = "Land",
-            //    Email = "land@gmail.com",
-            //    MobileNo = "land01",
-            //    PartyType = "ContactPerson"
-            //};
-            //this.Parties.Add(tparty);
-            //this.Properties.Add(priprop);
+            this.requirementDocuments = new List<Domain.DocumentManager>();
+            Optionals = new List<Optional>();
+            Citizens = new List<Citizen>(){
+                new Citizen(){}
+            };
+        }
+
+
+        public Application(string username)
+        {
+            UserId = username;
+            //UserId = "Skims";
+            StartDate = DateTime.Now;
+            ApplicationType = "Individual";
+            Status = "Incomplete";
+            Parties = new List<Party>();
+            Properties = new List<Property>();
+            this.requirementDocuments = new List<Domain.DocumentManager>();
+            Optionals = new List<Optional>();
             Citizens = new List<Citizen>(){
                 new Citizen(){}
             };
@@ -99,6 +97,9 @@ namespace LRB.Lib.Domain
         [ScaffoldColumn(false)]
         public String SolaId { get; set; }
 
+        [ScaffoldColumn(false)]
+        public String SolaNR { get; set; }
+
         public Citizen InterimApplicant
         {
             get
@@ -108,7 +109,8 @@ namespace LRB.Lib.Domain
         }
 
         [NotMapped]
-        public Party ContactPerson {
+        public Party ContactPerson
+        {
             get
             {
                 return this.Parties.Where(p => p.PartyType == "ContactPerson").FirstOrDefault();
@@ -123,10 +125,17 @@ namespace LRB.Lib.Domain
             return this.Properties.FirstOrDefault();
         }
 
+        [NotMapped]
+        public DocumentManager DocumentManager { get { return this.requirementDocuments.FirstOrDefault(); } }
 
+        [NotMapped]
+        public Optional OptionalRequirement { get { return this.Optionals.FirstOrDefault(); } }
+
+        public List<DocumentManager> requirementDocuments { get; set; }
         public List<Party> Parties { get; set; }
         public List<Property> Properties { get; set; }
         public virtual List<Document> Documents { get; set; }
+        public virtual List<Optional> Optionals { get; set; }
         public virtual List<Citizen> Citizens { get; set; }
     }
 }

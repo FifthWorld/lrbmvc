@@ -111,12 +111,14 @@
               <xs:element name="availabilityStatusCode" type="xs:string" minOccurs="0"/>
               <xs:element name="content" type="xs:string" minOccurs="0"/>
               <xs:element name="description" type="xs:string" minOccurs="0"/>
+              <xs:element name="expirationDate" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="laNr" type="xs:string" minOccurs="0"/>
               <xs:element name="locked" type="xs:boolean"/>
               <xs:element name="mainType" type="xs:string" minOccurs="0"/>
               <xs:element name="ownerName" type="xs:string" minOccurs="0"/>
               <xs:element name="recordation" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="referenceNr" type="xs:string" minOccurs="0"/>
+              <xs:element name="signingDate" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
               <xs:element name="submission" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="transactionId" type="xs:string" minOccurs="0"/>
@@ -146,42 +148,16 @@
         </xs:complexContent>
       </xs:complexType>
 
-      <xs:complexType name="serviceTO">
-        <xs:complexContent>
-          <xs:extension base="ns1:abstractIdTO">
-            <xs:sequence>
-              <xs:element name="actionCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="actionNotes" type="xs:string" minOccurs="0"/>
-              <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
-              <xs:element name="areaFee" type="xs:decimal" minOccurs="0"/>
-              <xs:element name="baseFee" type="xs:decimal" minOccurs="0"/>
-              <xs:element name="concatenatedName" type="xs:string" minOccurs="0"/>
-              <xs:element name="expectedCompletionDate" type="xs:dateTime" minOccurs="0"/>
-              <xs:element name="lodgingDatetime" type="xs:dateTime" minOccurs="0"/>
-              <xs:element name="requestTypeCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="serviceOrder" type="xs:int"/>
-              <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="valueFee" type="xs:decimal" minOccurs="0"/>
-            </xs:sequence>
-          </xs:extension>
-        </xs:complexContent>
-      </xs:complexType>
-
       <xs:complexType name="applicationTO">
         <xs:complexContent>
-          <xs:extension base="ns1:abstractIdTO">
+          <xs:extension base="tns:applicationSummaryTO">
             <xs:sequence>
               <xs:element name="actionCode" type="xs:string" minOccurs="0"/>
               <xs:element name="actionNotes" type="xs:string" minOccurs="0"/>
               <xs:element name="agent" type="tns:partySummaryTO" minOccurs="0"/>
-              <xs:element name="assignedDatetime" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="assigneeId" type="xs:string" minOccurs="0"/>
               <xs:element name="contactPerson" type="tns:partyTO" minOccurs="0"/>
-              <xs:element name="expectedCompletionDate" type="xs:dateTime" minOccurs="0"/>
-              <xs:element name="feePaid" type="xs:boolean"/>
               <xs:element name="location" type="xs:base64Binary" minOccurs="0"/>
-              <xs:element name="lodgingDatetime" type="xs:dateTime" minOccurs="0"/>
-              <xs:element name="nr" type="xs:string" minOccurs="0"/>
               <xs:element name="propertyList" type="tns:applicationPropertyTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
               <xs:element name="receiptRef" type="xs:string" minOccurs="0"/>
               <xs:element name="serviceList" type="tns:serviceTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
@@ -191,6 +167,22 @@
               <xs:element name="tax" type="xs:decimal" minOccurs="0"/>
               <xs:element name="totalAmountPaid" type="xs:decimal" minOccurs="0"/>
               <xs:element name="totalFee" type="xs:decimal" minOccurs="0"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+
+      <xs:complexType name="applicationSummaryTO">
+        <xs:complexContent>
+          <xs:extension base="ns1:abstractIdTO">
+            <xs:sequence>
+              <xs:element name="agentId" type="xs:string" minOccurs="0"/>
+              <xs:element name="assignedDatetime" type="xs:dateTime" minOccurs="0"/>
+              <xs:element name="contactPersonId" type="xs:string" minOccurs="0"/>
+              <xs:element name="expectedCompletionDate" type="xs:dateTime" minOccurs="0"/>
+              <xs:element name="feePaid" type="xs:boolean"/>
+              <xs:element name="lodgingDatetime" type="xs:dateTime" minOccurs="0"/>
+              <xs:element name="nr" type="xs:string" minOccurs="0"/>
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -214,32 +206,23 @@
           <xs:extension base="ns1:abstractIdTO">
             <xs:sequence>
               <xs:element name="address" type="tns:addressTO" minOccurs="0"/>
-              <xs:element name="age" type="xs:int"/>
               <xs:element name="alias" type="xs:string" minOccurs="0"/>
-              <xs:element name="corporateName" type="xs:string" minOccurs="0"/>
               <xs:element name="dateOfBirth" type="xs:dateTime" minOccurs="0"/>
               <xs:element name="email" type="xs:string" minOccurs="0"/>
-              <xs:element name="employerAddress" type="xs:string" minOccurs="0"/>
-              <xs:element name="employerName" type="xs:string" minOccurs="0"/>
               <xs:element name="extId" type="xs:string" minOccurs="0"/>
               <xs:element name="fathersLastName" type="xs:string" minOccurs="0"/>
               <xs:element name="fathersName" type="xs:string" minOccurs="0"/>
               <xs:element name="fax" type="xs:string" minOccurs="0"/>
               <xs:element name="genderCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="homeTownTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="idNumber" type="xs:string" minOccurs="0"/>
               <xs:element name="idTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="lastName" type="xs:string" minOccurs="0"/>
-              <xs:element name="lgaTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="mobile" type="xs:string" minOccurs="0"/>
               <xs:element name="name" type="xs:string" minOccurs="0"/>
-              <xs:element name="occupationTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="phone" type="xs:string" minOccurs="0"/>
               <xs:element name="preferredCommunicationCode" type="xs:string" minOccurs="0"/>
               <xs:element name="rightHolder" type="xs:boolean"/>
               <xs:element name="roleList" type="tns:partyRoleTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-              <xs:element name="stateTypeCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="titleTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="typeCode" type="xs:string" minOccurs="0"/>
             </xs:sequence>
           </xs:extension>
@@ -274,20 +257,34 @@
               <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
               <xs:element name="area" type="xs:decimal" minOccurs="0"/>
               <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
-              <xs:element name="capacityTypeCode" type="xs:string" minOccurs="0"/>
-              <xs:element name="howMuch" type="xs:string" minOccurs="0"/>
-              <xs:element name="howSoon" type="xs:string" minOccurs="0"/>
+              <xs:element name="landUseCode" type="xs:string" minOccurs="0"/>
               <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
               <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
-              <xs:element name="possesion" type="xs:string" minOccurs="0"/>
-              <xs:element name="propertyLoc" type="xs:string" minOccurs="0"/>
-              <xs:element name="propertyTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="totalValue" type="xs:decimal" minOccurs="0"/>
-              <xs:element name="undevelopedSize" type="xs:string" minOccurs="0"/>
-              <xs:element name="useTypeCode" type="xs:string" minOccurs="0"/>
               <xs:element name="verifiedExists" type="xs:boolean"/>
               <xs:element name="verifiedHasOwners" type="xs:boolean"/>
               <xs:element name="verifiedLocation" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+
+      <xs:complexType name="serviceTO">
+        <xs:complexContent>
+          <xs:extension base="ns1:abstractIdTO">
+            <xs:sequence>
+              <xs:element name="actionCode" type="xs:string" minOccurs="0"/>
+              <xs:element name="actionNotes" type="xs:string" minOccurs="0"/>
+              <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
+              <xs:element name="areaFee" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="baseFee" type="xs:decimal" minOccurs="0"/>
+              <xs:element name="concatenatedName" type="xs:string" minOccurs="0"/>
+              <xs:element name="expectedCompletionDate" type="xs:dateTime" minOccurs="0"/>
+              <xs:element name="lodgingDatetime" type="xs:dateTime" minOccurs="0"/>
+              <xs:element name="requestTypeCode" type="xs:string" minOccurs="0"/>
+              <xs:element name="serviceOrder" type="xs:int"/>
+              <xs:element name="statusCode" type="xs:string" minOccurs="0"/>
+              <xs:element name="valueFee" type="xs:decimal" minOccurs="0"/>
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -300,6 +297,20 @@
               <xs:element name="resultCode" type="xs:string" minOccurs="0"/>
               <xs:element name="resultDailyAvg" type="xs:double"/>
               <xs:element name="resultTotal" type="xs:int"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+
+      <xs:complexType name="sysRegCertificatesTO">
+        <xs:complexContent>
+          <xs:extension base="ns1:abstractIdTO">
+            <xs:sequence>
+              <xs:element name="baUnitId" type="xs:string" minOccurs="0"/>
+              <xs:element name="name" type="xs:string" minOccurs="0"/>
+              <xs:element name="nameFirstpart" type="xs:string" minOccurs="0"/>
+              <xs:element name="nameLastpart" type="xs:string" minOccurs="0"/>
+              <xs:element name="nr" type="xs:string" minOccurs="0"/>
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -456,6 +467,14 @@
 
       <xs:element name="GetSourcesByServiceIdResponse" type="tns:GetSourcesByServiceIdResponse"/>
 
+      <xs:element name="GetSysRegCertificatesByApplication" type="tns:GetSysRegCertificatesByApplication"/>
+
+      <xs:element name="GetSysRegCertificatesByApplicationResponse" type="tns:GetSysRegCertificatesByApplicationResponse"/>
+
+      <xs:element name="GetSysRegCertificatesByLocation" type="tns:GetSysRegCertificatesByLocation"/>
+
+      <xs:element name="GetSysRegCertificatesByLocationResponse" type="tns:GetSysRegCertificatesByLocationResponse"/>
+
       <xs:element name="GetUserActions" type="tns:GetUserActions"/>
 
       <xs:element name="GetUserActionsResponse" type="tns:GetUserActionsResponse"/>
@@ -558,18 +577,6 @@
         </xs:sequence>
       </xs:complexType>
 
-      <xs:complexType name="GetSourcesByServiceId">
-        <xs:sequence>
-          <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
-        </xs:sequence>
-      </xs:complexType>
-
-      <xs:complexType name="GetSourcesByServiceIdResponse">
-        <xs:sequence>
-          <xs:element name="return" type="ns5:sourceTO" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:complexType>
-
       <xs:complexType name="AttachSourceToTransaction">
         <xs:sequence>
           <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
@@ -581,6 +588,18 @@
       <xs:complexType name="AttachSourceToTransactionResponse">
         <xs:sequence>
           <xs:element name="return" type="ns5:sourceTO" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="GetSourcesByServiceId">
+        <xs:sequence>
+          <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="GetSourcesByServiceIdResponse">
+        <xs:sequence>
+          <xs:element name="return" type="ns5:sourceTO" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:complexType>
 
@@ -637,6 +656,18 @@
         </xs:sequence>
       </xs:complexType>
 
+      <xs:complexType name="CreateApplication">
+        <xs:sequence>
+          <xs:element name="application" type="ns5:applicationTO" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="CreateApplicationResponse">
+        <xs:sequence>
+          <xs:element name="return" type="ns5:applicationTO" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
       <xs:complexType name="SaveInformationService">
         <xs:sequence>
           <xs:element name="service" type="ns5:serviceTO" minOccurs="0"/>
@@ -647,18 +678,6 @@
       <xs:complexType name="SaveInformationServiceResponse">
         <xs:sequence>
           <xs:element name="return" type="ns5:serviceTO" minOccurs="0"/>
-        </xs:sequence>
-      </xs:complexType>
-
-      <xs:complexType name="CreateApplication">
-        <xs:sequence>
-          <xs:element name="application" type="ns5:applicationTO" minOccurs="0"/>
-        </xs:sequence>
-      </xs:complexType>
-
-      <xs:complexType name="CreateApplicationResponse">
-        <xs:sequence>
-          <xs:element name="return" type="ns5:applicationTO" minOccurs="0"/>
         </xs:sequence>
       </xs:complexType>
 
@@ -738,20 +757,6 @@
         </xs:sequence>
       </xs:complexType>
 
-      <xs:complexType name="ServiceActionComplete">
-        <xs:sequence>
-          <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
-          <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
-          <xs:element name="rowVersion" type="xs:int"/>
-        </xs:sequence>
-      </xs:complexType>
-
-      <xs:complexType name="ServiceActionCompleteResponse">
-        <xs:sequence>
-          <xs:element name="return" type="ns4:validationResult" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-      </xs:complexType>
-
       <xs:complexType name="ApplicationActionCancel">
         <xs:sequence>
           <xs:element name="applicationId" type="xs:string" minOccurs="0"/>
@@ -761,6 +766,20 @@
       </xs:complexType>
 
       <xs:complexType name="ApplicationActionCancelResponse">
+        <xs:sequence>
+          <xs:element name="return" type="ns4:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="ServiceActionComplete">
+        <xs:sequence>
+          <xs:element name="serviceId" type="xs:string" minOccurs="0"/>
+          <xs:element name="languageCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="rowVersion" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="ServiceActionCompleteResponse">
         <xs:sequence>
           <xs:element name="return" type="ns4:validationResult" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -792,6 +811,19 @@
         </xs:sequence>
       </xs:complexType>
 
+      <xs:complexType name="GetSysRegCertificatesByApplication">
+        <xs:sequence>
+          <xs:element name="searchString" type="xs:string" minOccurs="0"/>
+          <xs:element name="nr" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="GetSysRegCertificatesByApplicationResponse">
+        <xs:sequence>
+          <xs:element name="return" type="ns5:sysRegCertificatesTO" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+
       <xs:complexType name="GetAgents">
         <xs:sequence/>
       </xs:complexType>
@@ -813,6 +845,18 @@
       <xs:complexType name="ApplicationActionRequisitionResponse">
         <xs:sequence>
           <xs:element name="return" type="ns4:validationResult" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="GetSysRegCertificatesByLocation">
+        <xs:sequence>
+          <xs:element name="searchString" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="GetSysRegCertificatesByLocationResponse">
+        <xs:sequence>
+          <xs:element name="return" type="ns5:sysRegCertificatesTO" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:complexType>
 
@@ -1039,11 +1083,17 @@
       </xs:complexType>
 </xs:schema>
   </types>
-  <message name="getApplicationByTransactionId">
-    <part name="parameters" element="tns:getApplicationByTransactionId"/>
+  <message name="CheckConnection">
+    <part name="parameters" element="tns:CheckConnection"/>
   </message>
-  <message name="getApplicationByTransactionIdResponse">
-    <part name="parameters" element="tns:getApplicationByTransactionIdResponse"/>
+  <message name="CheckConnectionResponse">
+    <part name="parameters" element="tns:CheckConnectionResponse"/>
+  </message>
+  <message name="GetSysRegCertificatesByApplication">
+    <part name="parameters" element="tns:GetSysRegCertificatesByApplication"/>
+  </message>
+  <message name="GetSysRegCertificatesByApplicationResponse">
+    <part name="parameters" element="tns:GetSysRegCertificatesByApplicationResponse"/>
   </message>
   <message name="SOLAFault">
     <part name="fault" element="tns:SOLAFault"/>
@@ -1054,119 +1104,35 @@
   <message name="SOLAAccessFault">
     <part name="fault" element="tns:SOLAAccessFault"/>
   </message>
-  <message name="CheckConnection">
-    <part name="parameters" element="tns:CheckConnection"/>
+  <message name="getApplicationByTransactionId">
+    <part name="parameters" element="tns:getApplicationByTransactionId"/>
   </message>
-  <message name="CheckConnectionResponse">
-    <part name="parameters" element="tns:CheckConnectionResponse"/>
+  <message name="getApplicationByTransactionIdResponse">
+    <part name="parameters" element="tns:getApplicationByTransactionIdResponse"/>
   </message>
-  <message name="GetLodgementView">
-    <part name="parameters" element="tns:GetLodgementView"/>
+  <message name="GetSysRegCertificatesByLocation">
+    <part name="parameters" element="tns:GetSysRegCertificatesByLocation"/>
   </message>
-  <message name="GetLodgementViewResponse">
-    <part name="parameters" element="tns:GetLodgementViewResponse"/>
+  <message name="GetSysRegCertificatesByLocationResponse">
+    <part name="parameters" element="tns:GetSysRegCertificatesByLocationResponse"/>
   </message>
-  <message name="SaveApplication">
-    <part name="parameters" element="tns:SaveApplication"/>
+  <message name="getPowerOfAttorneyByServiceId">
+    <part name="parameters" element="tns:getPowerOfAttorneyByServiceId"/>
   </message>
-  <message name="SaveApplicationResponse">
-    <part name="parameters" element="tns:SaveApplicationResponse"/>
+  <message name="getPowerOfAttorneyByServiceIdResponse">
+    <part name="parameters" element="tns:getPowerOfAttorneyByServiceIdResponse"/>
   </message>
-  <message name="OptimisticLockingFault">
-    <part name="fault" element="tns:OptimisticLockingFault"/>
+  <message name="attachPowerOfAttorneyToTransaction">
+    <part name="parameters" element="tns:attachPowerOfAttorneyToTransaction"/>
+  </message>
+  <message name="attachPowerOfAttorneyToTransactionResponse">
+    <part name="parameters" element="tns:attachPowerOfAttorneyToTransactionResponse"/>
   </message>
   <message name="SOLAValidationFault">
     <part name="fault" element="tns:SOLAValidationFault"/>
   </message>
-  <message name="GetApplication">
-    <part name="parameters" element="tns:GetApplication"/>
-  </message>
-  <message name="GetApplicationResponse">
-    <part name="parameters" element="tns:GetApplicationResponse"/>
-  </message>
-  <message name="CreateApplication">
-    <part name="parameters" element="tns:CreateApplication"/>
-  </message>
-  <message name="CreateApplicationResponse">
-    <part name="parameters" element="tns:CreateApplicationResponse"/>
-  </message>
-  <message name="GetUserActions">
-    <part name="parameters" element="tns:GetUserActions"/>
-  </message>
-  <message name="GetUserActionsResponse">
-    <part name="parameters" element="tns:GetUserActionsResponse"/>
-  </message>
-  <message name="GetLodgementTiming">
-    <part name="parameters" element="tns:GetLodgementTiming"/>
-  </message>
-  <message name="GetLodgementTimingResponse">
-    <part name="parameters" element="tns:GetLodgementTimingResponse"/>
-  </message>
-  <message name="AttachSourceToTransaction">
-    <part name="parameters" element="tns:AttachSourceToTransaction"/>
-  </message>
-  <message name="AttachSourceToTransactionResponse">
-    <part name="parameters" element="tns:AttachSourceToTransactionResponse"/>
-  </message>
-  <message name="DettachSourceFromTransaction">
-    <part name="parameters" element="tns:DettachSourceFromTransaction"/>
-  </message>
-  <message name="DettachSourceFromTransactionResponse">
-    <part name="parameters" element="tns:DettachSourceFromTransactionResponse"/>
-  </message>
-  <message name="GetSourcesByServiceId">
-    <part name="parameters" element="tns:GetSourcesByServiceId"/>
-  </message>
-  <message name="GetSourcesByServiceIdResponse">
-    <part name="parameters" element="tns:GetSourcesByServiceIdResponse"/>
-  </message>
-  <message name="GetSourcesByIds">
-    <part name="parameters" element="tns:GetSourcesByIds"/>
-  </message>
-  <message name="GetSourcesByIdsResponse">
-    <part name="parameters" element="tns:GetSourcesByIdsResponse"/>
-  </message>
-  <message name="getSourceById">
-    <part name="parameters" element="tns:getSourceById"/>
-  </message>
-  <message name="getSourceByIdResponse">
-    <part name="parameters" element="tns:getSourceByIdResponse"/>
-  </message>
-  <message name="getPowerOfAttorneyById">
-    <part name="parameters" element="tns:getPowerOfAttorneyById"/>
-  </message>
-  <message name="getPowerOfAttorneyByIdResponse">
-    <part name="parameters" element="tns:getPowerOfAttorneyByIdResponse"/>
-  </message>
-  <message name="ServiceActionComplete">
-    <part name="parameters" element="tns:ServiceActionComplete"/>
-  </message>
-  <message name="ServiceActionCompleteResponse">
-    <part name="parameters" element="tns:ServiceActionCompleteResponse"/>
-  </message>
-  <message name="ServiceActionCancel">
-    <part name="parameters" element="tns:ServiceActionCancel"/>
-  </message>
-  <message name="ServiceActionCancelResponse">
-    <part name="parameters" element="tns:ServiceActionCancelResponse"/>
-  </message>
-  <message name="ServiceActionRevert">
-    <part name="parameters" element="tns:ServiceActionRevert"/>
-  </message>
-  <message name="ServiceActionRevertResponse">
-    <part name="parameters" element="tns:ServiceActionRevertResponse"/>
-  </message>
-  <message name="ServiceActionStart">
-    <part name="parameters" element="tns:ServiceActionStart"/>
-  </message>
-  <message name="ServiceActionStartResponse">
-    <part name="parameters" element="tns:ServiceActionStartResponse"/>
-  </message>
-  <message name="ApplicationActionWithdraw">
-    <part name="parameters" element="tns:ApplicationActionWithdraw"/>
-  </message>
-  <message name="ApplicationActionWithdrawResponse">
-    <part name="parameters" element="tns:ApplicationActionWithdrawResponse"/>
+  <message name="OptimisticLockingFault">
+    <part name="fault" element="tns:OptimisticLockingFault"/>
   </message>
   <message name="ApplicationActionCancel">
     <part name="parameters" element="tns:ApplicationActionCancel"/>
@@ -1174,11 +1140,137 @@
   <message name="ApplicationActionCancelResponse">
     <part name="parameters" element="tns:ApplicationActionCancelResponse"/>
   </message>
+  <message name="ApplicationActionLapse">
+    <part name="parameters" element="tns:ApplicationActionLapse"/>
+  </message>
+  <message name="ApplicationActionLapseResponse">
+    <part name="parameters" element="tns:ApplicationActionLapseResponse"/>
+  </message>
+  <message name="GetApplication">
+    <part name="parameters" element="tns:GetApplication"/>
+  </message>
+  <message name="GetApplicationResponse">
+    <part name="parameters" element="tns:GetApplicationResponse"/>
+  </message>
+  <message name="SaveInformationService">
+    <part name="parameters" element="tns:SaveInformationService"/>
+  </message>
+  <message name="SaveInformationServiceResponse">
+    <part name="parameters" element="tns:SaveInformationServiceResponse"/>
+  </message>
+  <message name="DettachSourceFromTransaction">
+    <part name="parameters" element="tns:DettachSourceFromTransaction"/>
+  </message>
+  <message name="DettachSourceFromTransactionResponse">
+    <part name="parameters" element="tns:DettachSourceFromTransactionResponse"/>
+  </message>
+  <message name="GetUserActions">
+    <part name="parameters" element="tns:GetUserActions"/>
+  </message>
+  <message name="GetUserActionsResponse">
+    <part name="parameters" element="tns:GetUserActionsResponse"/>
+  </message>
   <message name="ApplicationActionRequisition">
     <part name="parameters" element="tns:ApplicationActionRequisition"/>
   </message>
   <message name="ApplicationActionRequisitionResponse">
     <part name="parameters" element="tns:ApplicationActionRequisitionResponse"/>
+  </message>
+  <message name="GetLodgementTiming">
+    <part name="parameters" element="tns:GetLodgementTiming"/>
+  </message>
+  <message name="GetLodgementTimingResponse">
+    <part name="parameters" element="tns:GetLodgementTimingResponse"/>
+  </message>
+  <message name="ApplicationActionAssign">
+    <part name="parameters" element="tns:ApplicationActionAssign"/>
+  </message>
+  <message name="ApplicationActionAssignResponse">
+    <part name="parameters" element="tns:ApplicationActionAssignResponse"/>
+  </message>
+  <message name="ServiceActionComplete">
+    <part name="parameters" element="tns:ServiceActionComplete"/>
+  </message>
+  <message name="ServiceActionCompleteResponse">
+    <part name="parameters" element="tns:ServiceActionCompleteResponse"/>
+  </message>
+  <message name="GetLodgementView">
+    <part name="parameters" element="tns:GetLodgementView"/>
+  </message>
+  <message name="GetLodgementViewResponse">
+    <part name="parameters" element="tns:GetLodgementViewResponse"/>
+  </message>
+  <message name="AttachSourceToTransaction">
+    <part name="parameters" element="tns:AttachSourceToTransaction"/>
+  </message>
+  <message name="AttachSourceToTransactionResponse">
+    <part name="parameters" element="tns:AttachSourceToTransactionResponse"/>
+  </message>
+  <message name="GetSourcesByServiceId">
+    <part name="parameters" element="tns:GetSourcesByServiceId"/>
+  </message>
+  <message name="GetSourcesByServiceIdResponse">
+    <part name="parameters" element="tns:GetSourcesByServiceIdResponse"/>
+  </message>
+  <message name="ServiceActionRevert">
+    <part name="parameters" element="tns:ServiceActionRevert"/>
+  </message>
+  <message name="ServiceActionRevertResponse">
+    <part name="parameters" element="tns:ServiceActionRevertResponse"/>
+  </message>
+  <message name="GetSourcesByIds">
+    <part name="parameters" element="tns:GetSourcesByIds"/>
+  </message>
+  <message name="GetSourcesByIdsResponse">
+    <part name="parameters" element="tns:GetSourcesByIdsResponse"/>
+  </message>
+  <message name="ApplicationActionArchive">
+    <part name="parameters" element="tns:ApplicationActionArchive"/>
+  </message>
+  <message name="ApplicationActionArchiveResponse">
+    <part name="parameters" element="tns:ApplicationActionArchiveResponse"/>
+  </message>
+  <message name="ApplicationActionUnassign">
+    <part name="parameters" element="tns:ApplicationActionUnassign"/>
+  </message>
+  <message name="ApplicationActionUnassignResponse">
+    <part name="parameters" element="tns:ApplicationActionUnassignResponse"/>
+  </message>
+  <message name="SaveApplication">
+    <part name="parameters" element="tns:SaveApplication"/>
+  </message>
+  <message name="SaveApplicationResponse">
+    <part name="parameters" element="tns:SaveApplicationResponse"/>
+  </message>
+  <message name="ApplicationActionResubmit">
+    <part name="parameters" element="tns:ApplicationActionResubmit"/>
+  </message>
+  <message name="ApplicationActionResubmitResponse">
+    <part name="parameters" element="tns:ApplicationActionResubmitResponse"/>
+  </message>
+  <message name="ServiceActionCancel">
+    <part name="parameters" element="tns:ServiceActionCancel"/>
+  </message>
+  <message name="ServiceActionCancelResponse">
+    <part name="parameters" element="tns:ServiceActionCancelResponse"/>
+  </message>
+  <message name="ApplicationActionDespatch">
+    <part name="parameters" element="tns:ApplicationActionDespatch"/>
+  </message>
+  <message name="ApplicationActionDespatchResponse">
+    <part name="parameters" element="tns:ApplicationActionDespatchResponse"/>
+  </message>
+  <message name="getPowerOfAttorneyById">
+    <part name="parameters" element="tns:getPowerOfAttorneyById"/>
+  </message>
+  <message name="getPowerOfAttorneyByIdResponse">
+    <part name="parameters" element="tns:getPowerOfAttorneyByIdResponse"/>
+  </message>
+  <message name="ApplicationActionWithdraw">
+    <part name="parameters" element="tns:ApplicationActionWithdraw"/>
+  </message>
+  <message name="ApplicationActionWithdrawResponse">
+    <part name="parameters" element="tns:ApplicationActionWithdrawResponse"/>
   </message>
   <message name="ApplicationActionValidate">
     <part name="parameters" element="tns:ApplicationActionValidate"/>
@@ -1192,65 +1284,41 @@
   <message name="ApplicationActionApproveResponse">
     <part name="parameters" element="tns:ApplicationActionApproveResponse"/>
   </message>
-  <message name="ApplicationActionArchive">
-    <part name="parameters" element="tns:ApplicationActionArchive"/>
+  <message name="CreateApplication">
+    <part name="parameters" element="tns:CreateApplication"/>
   </message>
-  <message name="ApplicationActionArchiveResponse">
-    <part name="parameters" element="tns:ApplicationActionArchiveResponse"/>
+  <message name="CreateApplicationResponse">
+    <part name="parameters" element="tns:CreateApplicationResponse"/>
   </message>
-  <message name="ApplicationActionDespatch">
-    <part name="parameters" element="tns:ApplicationActionDespatch"/>
+  <message name="ServiceActionStart">
+    <part name="parameters" element="tns:ServiceActionStart"/>
   </message>
-  <message name="ApplicationActionDespatchResponse">
-    <part name="parameters" element="tns:ApplicationActionDespatchResponse"/>
+  <message name="ServiceActionStartResponse">
+    <part name="parameters" element="tns:ServiceActionStartResponse"/>
   </message>
-  <message name="ApplicationActionLapse">
-    <part name="parameters" element="tns:ApplicationActionLapse"/>
+  <message name="getSourceById">
+    <part name="parameters" element="tns:getSourceById"/>
   </message>
-  <message name="ApplicationActionLapseResponse">
-    <part name="parameters" element="tns:ApplicationActionLapseResponse"/>
+  <message name="getSourceByIdResponse">
+    <part name="parameters" element="tns:getSourceByIdResponse"/>
   </message>
-  <message name="ApplicationActionUnassign">
-    <part name="parameters" element="tns:ApplicationActionUnassign"/>
+  <message name="GetAgents">
+    <part name="parameters" element="tns:GetAgents"/>
   </message>
-  <message name="ApplicationActionUnassignResponse">
-    <part name="parameters" element="tns:ApplicationActionUnassignResponse"/>
+  <message name="GetAgentsResponse">
+    <part name="parameters" element="tns:GetAgentsResponse"/>
   </message>
-  <message name="ApplicationActionAssign">
-    <part name="parameters" element="tns:ApplicationActionAssign"/>
+  <message name="GetAddress">
+    <part name="parameters" element="tns:GetAddress"/>
   </message>
-  <message name="ApplicationActionAssignResponse">
-    <part name="parameters" element="tns:ApplicationActionAssignResponse"/>
+  <message name="GetAddressResponse">
+    <part name="parameters" element="tns:GetAddressResponse"/>
   </message>
-  <message name="ApplicationActionResubmit">
-    <part name="parameters" element="tns:ApplicationActionResubmit"/>
+  <message name="SaveParty">
+    <part name="parameters" element="tns:SaveParty"/>
   </message>
-  <message name="ApplicationActionResubmitResponse">
-    <part name="parameters" element="tns:ApplicationActionResubmitResponse"/>
-  </message>
-  <message name="SaveInformationService">
-    <part name="parameters" element="tns:SaveInformationService"/>
-  </message>
-  <message name="SaveInformationServiceResponse">
-    <part name="parameters" element="tns:SaveInformationServiceResponse"/>
-  </message>
-  <message name="attachPowerOfAttorneyToTransaction">
-    <part name="parameters" element="tns:attachPowerOfAttorneyToTransaction"/>
-  </message>
-  <message name="attachPowerOfAttorneyToTransactionResponse">
-    <part name="parameters" element="tns:attachPowerOfAttorneyToTransactionResponse"/>
-  </message>
-  <message name="getPowerOfAttorneyByServiceId">
-    <part name="parameters" element="tns:getPowerOfAttorneyByServiceId"/>
-  </message>
-  <message name="getPowerOfAttorneyByServiceIdResponse">
-    <part name="parameters" element="tns:getPowerOfAttorneyByServiceIdResponse"/>
-  </message>
-  <message name="CalculateFee">
-    <part name="parameters" element="tns:CalculateFee"/>
-  </message>
-  <message name="CalculateFeeResponse">
-    <part name="parameters" element="tns:CalculateFeeResponse"/>
+  <message name="SavePartyResponse">
+    <part name="parameters" element="tns:SavePartyResponse"/>
   </message>
   <message name="saveSource">
     <part name="parameters" element="tns:saveSource"/>
@@ -1270,25 +1338,24 @@
   <message name="GetAllBrsResponse">
     <part name="parameters" element="tns:GetAllBrsResponse"/>
   </message>
-  <message name="SaveParty">
-    <part name="parameters" element="tns:SaveParty"/>
+  <message name="CalculateFee">
+    <part name="parameters" element="tns:CalculateFee"/>
   </message>
-  <message name="SavePartyResponse">
-    <part name="parameters" element="tns:SavePartyResponse"/>
-  </message>
-  <message name="GetAgents">
-    <part name="parameters" element="tns:GetAgents"/>
-  </message>
-  <message name="GetAgentsResponse">
-    <part name="parameters" element="tns:GetAgentsResponse"/>
-  </message>
-  <message name="GetAddress">
-    <part name="parameters" element="tns:GetAddress"/>
-  </message>
-  <message name="GetAddressResponse">
-    <part name="parameters" element="tns:GetAddressResponse"/>
+  <message name="CalculateFeeResponse">
+    <part name="parameters" element="tns:CalculateFeeResponse"/>
   </message>
   <portType name="CaseManagement">
+    <operation name="CheckConnection">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CheckConnectionRequest" message="tns:CheckConnection"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CheckConnectionResponse" message="tns:CheckConnectionResponse"/>
+    </operation>
+    <operation name="GetSysRegCertificatesByApplication">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByApplicationRequest" message="tns:GetSysRegCertificatesByApplication"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByApplicationResponse" message="tns:GetSysRegCertificatesByApplicationResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByApplication/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByApplication/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByApplication/Fault/SOLAAccessFault"/>
+    </operation>
     <operation name="getApplicationByTransactionId">
       <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getApplicationByTransactionIdRequest" message="tns:getApplicationByTransactionId"/>
       <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getApplicationByTransactionIdResponse" message="tns:getApplicationByTransactionIdResponse"/>
@@ -1296,146 +1363,28 @@
       <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getApplicationByTransactionId/Fault/UnhandledFault"/>
       <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getApplicationByTransactionId/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="CheckConnection">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CheckConnectionRequest" message="tns:CheckConnection"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CheckConnectionResponse" message="tns:CheckConnectionResponse"/>
+    <operation name="GetSysRegCertificatesByLocation">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByLocationRequest" message="tns:GetSysRegCertificatesByLocation"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByLocationResponse" message="tns:GetSysRegCertificatesByLocationResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByLocation/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByLocation/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSysRegCertificatesByLocation/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="GetLodgementView">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementViewRequest" message="tns:GetLodgementView"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementViewResponse" message="tns:GetLodgementViewResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/SOLAAccessFault"/>
+    <operation name="getPowerOfAttorneyByServiceId">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceIdRequest" message="tns:getPowerOfAttorneyByServiceId"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceIdResponse" message="tns:getPowerOfAttorneyByServiceIdResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="SaveApplication">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplicationRequest" message="tns:SaveApplication"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplicationResponse" message="tns:SaveApplicationResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/UnhandledFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAValidationFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="GetApplication">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplicationRequest" message="tns:GetApplication"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplicationResponse" message="tns:GetApplicationResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="CreateApplication">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplicationRequest" message="tns:CreateApplication"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplicationResponse" message="tns:CreateApplicationResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="GetUserActions">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActionsRequest" message="tns:GetUserActions"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActionsResponse" message="tns:GetUserActionsResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="GetLodgementTiming">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTimingRequest" message="tns:GetLodgementTiming"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTimingResponse" message="tns:GetLodgementTimingResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="AttachSourceToTransaction">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransactionRequest" message="tns:AttachSourceToTransaction"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransactionResponse" message="tns:AttachSourceToTransactionResponse"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAValidationFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="DettachSourceFromTransaction">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransactionRequest" message="tns:DettachSourceFromTransaction"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransactionResponse" message="tns:DettachSourceFromTransactionResponse"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAValidationFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="GetSourcesByServiceId">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceIdRequest" message="tns:GetSourcesByServiceId"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceIdResponse" message="tns:GetSourcesByServiceIdResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="GetSourcesByIds">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIdsRequest" message="tns:GetSourcesByIds"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIdsResponse" message="tns:GetSourcesByIdsResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="getSourceById">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceByIdRequest" message="tns:getSourceById"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceByIdResponse" message="tns:getSourceByIdResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="getPowerOfAttorneyById">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByIdRequest" message="tns:getPowerOfAttorneyById"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByIdResponse" message="tns:getPowerOfAttorneyByIdResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="ServiceActionComplete">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCompleteRequest" message="tns:ServiceActionComplete"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCompleteResponse" message="tns:ServiceActionCompleteResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="ServiceActionCancel">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancelRequest" message="tns:ServiceActionCancel"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancelResponse" message="tns:ServiceActionCancelResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="ServiceActionRevert">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevertRequest" message="tns:ServiceActionRevert"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevertResponse" message="tns:ServiceActionRevertResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="ServiceActionStart">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStartRequest" message="tns:ServiceActionStart"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStartResponse" message="tns:ServiceActionStartResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="ApplicationActionWithdraw">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdrawRequest" message="tns:ApplicationActionWithdraw"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdrawResponse" message="tns:ApplicationActionWithdrawResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAValidationFault"/>
+    <operation name="attachPowerOfAttorneyToTransaction">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransactionRequest" message="tns:attachPowerOfAttorneyToTransaction"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransactionResponse" message="tns:attachPowerOfAttorneyToTransactionResponse"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAValidationFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAAccessFault"/>
     </operation>
     <operation name="ApplicationActionCancel">
       <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionCancelRequest" message="tns:ApplicationActionCancel"/>
@@ -1446,6 +1395,47 @@
       <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionCancel/Fault/OptimisticLockingFault"/>
       <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionCancel/Fault/SOLAValidationFault"/>
     </operation>
+    <operation name="ApplicationActionLapse">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapseRequest" message="tns:ApplicationActionLapse"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapseResponse" message="tns:ApplicationActionLapseResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="GetApplication">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplicationRequest" message="tns:GetApplication"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplicationResponse" message="tns:GetApplicationResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetApplication/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="SaveInformationService">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationServiceRequest" message="tns:SaveInformationService"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationServiceResponse" message="tns:SaveInformationServiceResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="DettachSourceFromTransaction">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransactionRequest" message="tns:DettachSourceFromTransaction"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransactionResponse" message="tns:DettachSourceFromTransactionResponse"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAValidationFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/DettachSourceFromTransaction/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="GetUserActions">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActionsRequest" message="tns:GetUserActions"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActionsResponse" message="tns:GetUserActionsResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetUserActions/Fault/SOLAAccessFault"/>
+    </operation>
     <operation name="ApplicationActionRequisition">
       <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionRequisitionRequest" message="tns:ApplicationActionRequisition"/>
       <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionRequisitionResponse" message="tns:ApplicationActionRequisitionResponse"/>
@@ -1454,6 +1444,140 @@
       <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionRequisition/Fault/SOLAAccessFault"/>
       <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionRequisition/Fault/OptimisticLockingFault"/>
       <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionRequisition/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="GetLodgementTiming">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTimingRequest" message="tns:GetLodgementTiming"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTimingResponse" message="tns:GetLodgementTimingResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementTiming/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="ApplicationActionAssign">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssignRequest" message="tns:ApplicationActionAssign"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssignResponse" message="tns:ApplicationActionAssignResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="ServiceActionComplete">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCompleteRequest" message="tns:ServiceActionComplete"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCompleteResponse" message="tns:ServiceActionCompleteResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionComplete/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="GetLodgementView">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementViewRequest" message="tns:GetLodgementView"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementViewResponse" message="tns:GetLodgementViewResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetLodgementView/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="AttachSourceToTransaction">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransactionRequest" message="tns:AttachSourceToTransaction"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransactionResponse" message="tns:AttachSourceToTransactionResponse"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAValidationFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/AttachSourceToTransaction/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="GetSourcesByServiceId">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceIdRequest" message="tns:GetSourcesByServiceId"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceIdResponse" message="tns:GetSourcesByServiceIdResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByServiceId/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="ServiceActionRevert">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevertRequest" message="tns:ServiceActionRevert"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevertResponse" message="tns:ServiceActionRevertResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionRevert/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="GetSourcesByIds">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIdsRequest" message="tns:GetSourcesByIds"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIdsResponse" message="tns:GetSourcesByIdsResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetSourcesByIds/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="ApplicationActionArchive">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchiveRequest" message="tns:ApplicationActionArchive"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchiveResponse" message="tns:ApplicationActionArchiveResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="ApplicationActionUnassign">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassignRequest" message="tns:ApplicationActionUnassign"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassignResponse" message="tns:ApplicationActionUnassignResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="SaveApplication">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplicationRequest" message="tns:SaveApplication"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplicationResponse" message="tns:SaveApplicationResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/UnhandledFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAValidationFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveApplication/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="ApplicationActionResubmit">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmitRequest" message="tns:ApplicationActionResubmit"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmitResponse" message="tns:ApplicationActionResubmitResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="ServiceActionCancel">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancelRequest" message="tns:ServiceActionCancel"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancelResponse" message="tns:ServiceActionCancelResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionCancel/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="ApplicationActionDespatch">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatchRequest" message="tns:ApplicationActionDespatch"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatchResponse" message="tns:ApplicationActionDespatchResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAValidationFault"/>
+    </operation>
+    <operation name="getPowerOfAttorneyById">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByIdRequest" message="tns:getPowerOfAttorneyById"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByIdResponse" message="tns:getPowerOfAttorneyByIdResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyById/Fault/SOLAAccessFault"/>
+    </operation>
+    <operation name="ApplicationActionWithdraw">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdrawRequest" message="tns:ApplicationActionWithdraw"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdrawResponse" message="tns:ApplicationActionWithdrawResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionWithdraw/Fault/SOLAValidationFault"/>
     </operation>
     <operation name="ApplicationActionValidate">
       <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionValidateRequest" message="tns:ApplicationActionValidate"/>
@@ -1473,91 +1597,53 @@
       <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionApprove/Fault/OptimisticLockingFault"/>
       <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionApprove/Fault/SOLAValidationFault"/>
     </operation>
-    <operation name="ApplicationActionArchive">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchiveRequest" message="tns:ApplicationActionArchive"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchiveResponse" message="tns:ApplicationActionArchiveResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionArchive/Fault/SOLAValidationFault"/>
+    <operation name="CreateApplication">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplicationRequest" message="tns:CreateApplication"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplicationResponse" message="tns:CreateApplicationResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CreateApplication/Fault/SOLAValidationFault"/>
     </operation>
-    <operation name="ApplicationActionDespatch">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatchRequest" message="tns:ApplicationActionDespatch"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatchResponse" message="tns:ApplicationActionDespatchResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionDespatch/Fault/SOLAValidationFault"/>
+    <operation name="ServiceActionStart">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStartRequest" message="tns:ServiceActionStart"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStartResponse" message="tns:ServiceActionStartResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ServiceActionStart/Fault/SOLAValidationFault"/>
     </operation>
-    <operation name="ApplicationActionLapse">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapseRequest" message="tns:ApplicationActionLapse"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapseResponse" message="tns:ApplicationActionLapseResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionLapse/Fault/SOLAValidationFault"/>
+    <operation name="getSourceById">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceByIdRequest" message="tns:getSourceById"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceByIdResponse" message="tns:getSourceByIdResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getSourceById/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="ApplicationActionUnassign">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassignRequest" message="tns:ApplicationActionUnassign"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassignResponse" message="tns:ApplicationActionUnassignResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionUnassign/Fault/SOLAValidationFault"/>
+    <operation name="GetAgents">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgentsRequest" message="tns:GetAgents"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgentsResponse" message="tns:GetAgentsResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="ApplicationActionAssign">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssignRequest" message="tns:ApplicationActionAssign"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssignResponse" message="tns:ApplicationActionAssignResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionAssign/Fault/SOLAValidationFault"/>
+    <operation name="GetAddress">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddressRequest" message="tns:GetAddress"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddressResponse" message="tns:GetAddressResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="ApplicationActionResubmit">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmitRequest" message="tns:ApplicationActionResubmit"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmitResponse" message="tns:ApplicationActionResubmitResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/ApplicationActionResubmit/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="SaveInformationService">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationServiceRequest" message="tns:SaveInformationService"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationServiceResponse" message="tns:SaveInformationServiceResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveInformationService/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="attachPowerOfAttorneyToTransaction">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransactionRequest" message="tns:attachPowerOfAttorneyToTransaction"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransactionResponse" message="tns:attachPowerOfAttorneyToTransactionResponse"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAValidationFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/attachPowerOfAttorneyToTransaction/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="getPowerOfAttorneyByServiceId">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceIdRequest" message="tns:getPowerOfAttorneyByServiceId"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceIdResponse" message="tns:getPowerOfAttorneyByServiceIdResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/getPowerOfAttorneyByServiceId/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="CalculateFee">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFeeRequest" message="tns:CalculateFee"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFeeResponse" message="tns:CalculateFeeResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/SOLAAccessFault"/>
+    <operation name="SaveParty">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SavePartyRequest" message="tns:SaveParty"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SavePartyResponse" message="tns:SavePartyResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAAccessFault"/>
+      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/OptimisticLockingFault"/>
+      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAValidationFault"/>
     </operation>
     <operation name="saveSource">
       <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/saveSourceRequest" message="tns:saveSource"/>
@@ -1582,32 +1668,43 @@
       <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAllBrs/Fault/UnhandledFault"/>
       <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAllBrs/Fault/SOLAAccessFault"/>
     </operation>
-    <operation name="SaveParty">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SavePartyRequest" message="tns:SaveParty"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SavePartyResponse" message="tns:SavePartyResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAAccessFault"/>
-      <fault message="tns:OptimisticLockingFault" name="OptimisticLockingFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/OptimisticLockingFault"/>
-      <fault message="tns:SOLAValidationFault" name="SOLAValidationFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/SaveParty/Fault/SOLAValidationFault"/>
-    </operation>
-    <operation name="GetAgents">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgentsRequest" message="tns:GetAgents"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgentsResponse" message="tns:GetAgentsResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAgents/Fault/SOLAAccessFault"/>
-    </operation>
-    <operation name="GetAddress">
-      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddressRequest" message="tns:GetAddress"/>
-      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddressResponse" message="tns:GetAddressResponse"/>
-      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/SOLAFault"/>
-      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/UnhandledFault"/>
-      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/GetAddress/Fault/SOLAAccessFault"/>
+    <operation name="CalculateFee">
+      <input wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFeeRequest" message="tns:CalculateFee"/>
+      <output wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFeeResponse" message="tns:CalculateFeeResponse"/>
+      <fault message="tns:SOLAFault" name="SOLAFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/SOLAFault"/>
+      <fault message="tns:UnhandledFault" name="UnhandledFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/UnhandledFault"/>
+      <fault message="tns:SOLAAccessFault" name="SOLAAccessFault" wsam:Action="http://webservices.sola.org/casemanagement/CaseManagement/CalculateFee/Fault/SOLAAccessFault"/>
     </operation>
   </portType>
   <binding name="CaseManagementPortBinding" type="tns:CaseManagement">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="CheckConnection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetSysRegCertificatesByApplication">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
     <operation name="getApplicationByTransactionId">
       <soap:operation soapAction=""/>
       <input>
@@ -1626,16 +1723,7 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="CheckConnection">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-    </operation>
-    <operation name="GetLodgementView">
+    <operation name="GetSysRegCertificatesByLocation">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1653,7 +1741,7 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="SaveApplication">
+    <operation name="getPowerOfAttorneyByServiceId">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1666,6 +1754,51 @@
       </fault>
       <fault name="UnhandledFault">
         <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="attachPowerOfAttorneyToTransaction">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ApplicationActionCancel">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
       <fault name="OptimisticLockingFault">
         <soap:fault name="OptimisticLockingFault" use="literal"/>
@@ -1673,8 +1806,29 @@
       <fault name="SOLAValidationFault">
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
+    </operation>
+    <operation name="ApplicationActionLapse">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
       <fault name="SOLAAccessFault">
         <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
     <operation name="GetApplication">
@@ -1695,7 +1849,7 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="CreateApplication">
+    <operation name="SaveInformationService">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1719,6 +1873,30 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
+    <operation name="DettachSourceFromTransaction">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
     <operation name="GetUserActions">
       <soap:operation soapAction=""/>
       <input>
@@ -1737,7 +1915,97 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
+    <operation name="ApplicationActionRequisition">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+    </operation>
     <operation name="GetLodgementTiming">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ApplicationActionAssign">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ServiceActionComplete">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetLodgementView">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1779,30 +2047,6 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="DettachSourceFromTransaction">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-    </operation>
     <operation name="GetSourcesByServiceId">
       <soap:operation soapAction=""/>
       <input>
@@ -1819,6 +2063,30 @@
       </fault>
       <fault name="SOLAAccessFault">
         <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ServiceActionRevert">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
     <operation name="GetSourcesByIds">
@@ -1839,7 +2107,7 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="getSourceById">
+    <operation name="ApplicationActionArchive">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1856,8 +2124,14 @@
       <fault name="SOLAAccessFault">
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
     </operation>
-    <operation name="getPowerOfAttorneyById">
+    <operation name="ApplicationActionUnassign">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1874,8 +2148,38 @@
       <fault name="SOLAAccessFault">
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
     </operation>
-    <operation name="ServiceActionComplete">
+    <operation name="SaveApplication">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="OptimisticLockingFault">
+        <soap:fault name="OptimisticLockingFault" use="literal"/>
+      </fault>
+      <fault name="SOLAValidationFault">
+        <soap:fault name="SOLAValidationFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="ApplicationActionResubmit">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1923,7 +2227,7 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="ServiceActionRevert">
+    <operation name="ApplicationActionDespatch">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1947,7 +2251,7 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="ServiceActionStart">
+    <operation name="getPowerOfAttorneyById">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -1963,63 +2267,9 @@
       </fault>
       <fault name="SOLAAccessFault">
         <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
     <operation name="ApplicationActionWithdraw">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="ApplicationActionCancel">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="ApplicationActionRequisition">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -2091,7 +2341,7 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="ApplicationActionArchive">
+    <operation name="CreateApplication">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -2115,7 +2365,7 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="ApplicationActionDespatch">
+    <operation name="ServiceActionStart">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -2139,7 +2389,61 @@
         <soap:fault name="SOLAValidationFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="ApplicationActionLapse">
+    <operation name="getSourceById">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetAgents">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="GetAddress">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOLAFault">
+        <soap:fault name="SOLAFault" use="literal"/>
+      </fault>
+      <fault name="UnhandledFault">
+        <soap:fault name="UnhandledFault" use="literal"/>
+      </fault>
+      <fault name="SOLAAccessFault">
+        <soap:fault name="SOLAAccessFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="SaveParty">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>
@@ -2161,162 +2465,6 @@
       </fault>
       <fault name="SOLAValidationFault">
         <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="ApplicationActionUnassign">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="ApplicationActionAssign">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="ApplicationActionResubmit">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="SaveInformationService">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="attachPowerOfAttorneyToTransaction">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="getPowerOfAttorneyByServiceId">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="CalculateFee">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
     <operation name="saveSource">
@@ -2379,49 +2527,7 @@
         <soap:fault name="SOLAAccessFault" use="literal"/>
       </fault>
     </operation>
-    <operation name="SaveParty">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-      <fault name="OptimisticLockingFault">
-        <soap:fault name="OptimisticLockingFault" use="literal"/>
-      </fault>
-      <fault name="SOLAValidationFault">
-        <soap:fault name="SOLAValidationFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="GetAgents">
-      <soap:operation soapAction=""/>
-      <input>
-        <soap:body use="literal"/>
-      </input>
-      <output>
-        <soap:body use="literal"/>
-      </output>
-      <fault name="SOLAFault">
-        <soap:fault name="SOLAFault" use="literal"/>
-      </fault>
-      <fault name="UnhandledFault">
-        <soap:fault name="UnhandledFault" use="literal"/>
-      </fault>
-      <fault name="SOLAAccessFault">
-        <soap:fault name="SOLAAccessFault" use="literal"/>
-      </fault>
-    </operation>
-    <operation name="GetAddress">
+    <operation name="CalculateFee">
       <soap:operation soapAction=""/>
       <input>
         <soap:body use="literal"/>

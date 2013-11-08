@@ -26,5 +26,6 @@ namespace LRB.Lib.Repositories
         public DbSet<ApplicationType> ApplicationTypes { get; set; }
         public DbSet<Citizen> Citizens { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<DocumentManager> DocumentManagers { get; set; }
     }
 }

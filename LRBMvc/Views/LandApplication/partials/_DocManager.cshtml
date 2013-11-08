@@ -1,0 +1,138 @@
+﻿@model LRB.Lib.Domain.DocumentManager
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm("RequiredDocuments", "LandApplication", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Survey Plan</legend>
+
+        <div class="form-group col-md-4">
+            <label>Scanned survey plan</label>
+            <input type="file" name="surveyplan" class="form-control" />
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Survey plan number</label>
+            @Html.TextBoxFor(model => model.SurveyPlan_Number, new { @class = "form-control" })
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_Number)</span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Survey plan approval number</label>
+            @Html.TextBoxFor(model => model.SurveyPlan_ApprovalDate, new { @class = "form-control", @type = "date" })
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_ApprovalDate)</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Development Levy</legend>
+        <div class="form-group col-md-4">
+            <label>Scanned development levy</label>
+            <input type="file" name="developmentlevy" class="form-control" />
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Reciept number</label>
+            @Html.TextBoxFor(model => model.DevelopmentLevy_RecieptNumber, new { @class = "form-control" })
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.DevelopmentLevy_RecieptNumber)</span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Reciept Date</label>
+            <input type="date" name="reciept_date" class="form-control" />
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.DevelopmentLevy_RecieptNumber)</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Form of identification</legend>
+
+        <div class="form-group col-md-4">
+            <label>Passport Photograph</label>
+            <input type="file" name="passport" class="form-control" />
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend>Evidence of ownership</legend>
+
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.EvidenceOfOwnership)
+            <input type="file" name="evidence" class="form-control" />
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.EvidenceOfOwnership)</span>
+        </div>
+
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.EvidenceType)
+            @Html.DropDownListFor(model => model.EvidenceType, 
+            new SelectList(new String[] { "Sales Receipt", "Sworn Affidavit", "Deed of Conveyance","Deed of Agreement", "Inheritance papers", "Official Document" }), new { @class = "form-control" })
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.EvidenceType)</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Additional Documents</legend>
+        
+        @if (ViewBag.Requirement.landUse == "Filling Station")
+        {
+            <div class="form-group col-md-4">
+                <label>Fire service report</label>
+                <input type="file" name="fireservice" class="form-control" />
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Police report</label>
+                <input type="file" name="policereport" class="form-control" />
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+            </div>
+        }
+
+        @if (ViewBag.Requirement.applicationType == "Organization")
+        {
+            <div class="form-group col-md-4">
+                <label>Certificate of incorporation</label>
+                <input type="file" name="certificate" class="form-control" />
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Date of incorporation</label>
+                @Html.TextBoxFor(model => model.DateofIncorporation, new { @class="form-control", @type="date"})
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+            </div>
+        }
+        @if (ViewBag.Requirement.landSize > 5000)
+        {
+            <div class="form-group col-md-4">
+                <label>Feasibility report</label>
+                <input type="file" name="feasibilityreport" class="form-control" />
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+            </div>
+        }
+
+        <div class="form-group col-md-4">
+            <label>Powers of Attorney</label>
+            <input type="file" disabled name="powers" class="form-control" />
+            <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
+        </div>
+        <div class="form-group col-md-4">
+            <input type="submit" value="Click to Upload" class="form-control btn btn-default btn-md btn-info" />
+        </div>
+        <div class="form-group col-md-4">
+            @if (ViewBag.IsComplete == "disabled")
+            {
+                @Html.RouteLink("Complete Application", "Default", new { action = "Summary", controller = "LandApplication" }, new { @class = "form-control btn btn-default btn-md btn-danger", disabled = "disabled" })
+            }
+            else
+            {
+                @Html.RouteLink("Complete Application", "Default", new { action = "Summary", controller = "LandApplication" }, new { @class = "form-control btn btn-default btn-md btn-success"})
+            }
+        </div>
+    </fieldset>
+}
+

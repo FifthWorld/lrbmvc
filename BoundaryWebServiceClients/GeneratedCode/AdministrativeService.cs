@@ -192,21 +192,30 @@ namespace org.sola.webservices.administrative.extra
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegManagementParamsTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitBasicTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractReadWriteTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractVersionedTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractIdTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegProgressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisOwnerNameTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegManagementTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisStateLandTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionForRrrTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitNotationTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisParcelNameTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(documentTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partySummaryTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitBasicTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(addressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -228,19 +237,251 @@ namespace org.sola.webservices.administrative.extra
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegManagementParamsTO : abstractTO
+    {
+        
+        private System.DateTime fromDateField;
+        
+        private bool fromDateFieldSpecified;
+        
+        private string nameLastpartField;
+        
+        private System.DateTime toDateField;
+        
+        private bool toDateFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fromDate
+        {
+            get
+            {
+                return this.fromDateField;
+            }
+            set
+            {
+                this.fromDateField = value;
+                this.RaisePropertyChanged("fromDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fromDateSpecified
+        {
+            get
+            {
+                return this.fromDateFieldSpecified;
+            }
+            set
+            {
+                this.fromDateFieldSpecified = value;
+                this.RaisePropertyChanged("fromDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nameLastpart
+        {
+            get
+            {
+                return this.nameLastpartField;
+            }
+            set
+            {
+                this.nameLastpartField = value;
+                this.RaisePropertyChanged("nameLastpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime toDate
+        {
+            get
+            {
+                return this.toDateField;
+            }
+            set
+            {
+                this.toDateField = value;
+                this.RaisePropertyChanged("toDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool toDateSpecified
+        {
+            get
+            {
+                return this.toDateFieldSpecified;
+            }
+            set
+            {
+                this.toDateFieldSpecified = value;
+                this.RaisePropertyChanged("toDateSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class baUnitBasicTO : abstractTO
+    {
+        
+        private string idField;
+        
+        private string nameField;
+        
+        private string nameFirstpartField;
+        
+        private string nameLastpartField;
+        
+        private string statusCodeField;
+        
+        private string transactionIdField;
+        
+        private string typeCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string id
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nameFirstpart
+        {
+            get
+            {
+                return this.nameFirstpartField;
+            }
+            set
+            {
+                this.nameFirstpartField = value;
+                this.RaisePropertyChanged("nameFirstpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nameLastpart
+        {
+            get
+            {
+                return this.nameLastpartField;
+            }
+            set
+            {
+                this.nameLastpartField = value;
+                this.RaisePropertyChanged("nameLastpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string statusCode
+        {
+            get
+            {
+                return this.statusCodeField;
+            }
+            set
+            {
+                this.statusCodeField = value;
+                this.RaisePropertyChanged("statusCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string transactionId
+        {
+            get
+            {
+                return this.transactionIdField;
+            }
+            set
+            {
+                this.transactionIdField = value;
+                this.RaisePropertyChanged("transactionId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string typeCode
+        {
+            get
+            {
+                return this.typeCodeField;
+            }
+            set
+            {
+                this.typeCodeField = value;
+                this.RaisePropertyChanged("typeCode");
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractVersionedTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractIdTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegProgressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisOwnerNameTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegManagementTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisStateLandTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionForRrrTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitNotationTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisParcelNameTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(documentTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partySummaryTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(addressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -305,18 +546,26 @@ namespace org.sola.webservices.administrative.extra
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractIdTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegProgressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisOwnerNameTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegManagementTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisStateLandTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionForRrrTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitNotationTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisParcelNameTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(documentTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partySummaryTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrShareTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(relatedBaUnitInfoTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(addressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(spatialValueAreaTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -365,65 +614,177 @@ namespace org.sola.webservices.administrative.extra
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/cadastre/")]
-    public partial class spatialValueAreaTO : abstractVersionedTO
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class rrrShareTO : abstractVersionedTO
     {
         
-        private decimal sizeField;
+        private short denominatorField;
         
-        private bool sizeFieldSpecified;
+        private bool denominatorFieldSpecified;
         
-        private string spatialUnitIdField;
+        private short nominatorField;
         
-        private string typeCodeField;
+        private bool nominatorFieldSpecified;
+        
+        private partySummaryTO[] rightHolderListField;
+        
+        private string rrrIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public decimal size
+        public short denominator
         {
             get
             {
-                return this.sizeField;
+                return this.denominatorField;
             }
             set
             {
-                this.sizeField = value;
-                this.RaisePropertyChanged("size");
+                this.denominatorField = value;
+                this.RaisePropertyChanged("denominator");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool sizeSpecified
+        public bool denominatorSpecified
         {
             get
             {
-                return this.sizeFieldSpecified;
+                return this.denominatorFieldSpecified;
             }
             set
             {
-                this.sizeFieldSpecified = value;
-                this.RaisePropertyChanged("sizeSpecified");
+                this.denominatorFieldSpecified = value;
+                this.RaisePropertyChanged("denominatorSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string spatialUnitId
+        public short nominator
         {
             get
             {
-                return this.spatialUnitIdField;
+                return this.nominatorField;
             }
             set
             {
-                this.spatialUnitIdField = value;
-                this.RaisePropertyChanged("spatialUnitId");
+                this.nominatorField = value;
+                this.RaisePropertyChanged("nominator");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nominatorSpecified
+        {
+            get
+            {
+                return this.nominatorFieldSpecified;
+            }
+            set
+            {
+                this.nominatorFieldSpecified = value;
+                this.RaisePropertyChanged("nominatorSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("rightHolderList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public partySummaryTO[] rightHolderList
+        {
+            get
+            {
+                return this.rightHolderListField;
+            }
+            set
+            {
+                this.rightHolderListField = value;
+                this.RaisePropertyChanged("rightHolderList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string rrrId
+        {
+            get
+            {
+                return this.rrrIdField;
+            }
+            set
+            {
+                this.rrrIdField = value;
+                this.RaisePropertyChanged("rrrId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/casemanagement/")]
+    public partial class partySummaryTO : abstractIdTO
+    {
+        
+        private string extIdField;
+        
+        private string lastNameField;
+        
+        private string nameField;
+        
+        private string typeCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string extId
+        {
+            get
+            {
+                return this.extIdField;
+            }
+            set
+            {
+                this.extIdField = value;
+                this.RaisePropertyChanged("extId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string lastName
+        {
+            get
+            {
+                return this.lastNameField;
+            }
+            set
+            {
+                this.lastNameField = value;
+                this.RaisePropertyChanged("lastName");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string typeCode
         {
             get
@@ -439,14 +800,22 @@ namespace org.sola.webservices.administrative.extra
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegProgressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegStatusTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisOwnerNameTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegManagementTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisStateLandTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(leaseConditionForRrrTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(rrrTO))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitNotationTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(baUnitAreaTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sysRegPubDisParcelNameTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(documentTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(sourceTO))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(partySummaryTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(addressTO))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(cadastreObjectTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -479,23 +848,760 @@ namespace org.sola.webservices.administrative.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
-    public partial class baUnitAreaTO : abstractIdTO
+    public partial class sysRegProgressTO : abstractIdTO
     {
+        
+        private string blockField;
+        
+        private decimal totAppLodField;
+        
+        private bool totAppLodFieldSpecified;
+        
+        private decimal totAppPDispField;
+        
+        private bool totAppPDispFieldSpecified;
+        
+        private decimal totIssuedCertificateField;
+        
+        private bool totIssuedCertificateFieldSpecified;
+        
+        private string totParcLoadedField;
+        
+        private decimal totPrepCertificateField;
+        
+        private bool totPrepCertificateFieldSpecified;
+        
+        private decimal totRecObjField;
+        
+        private bool totRecObjFieldSpecified;
+        
+        private decimal totSolvedObjField;
+        
+        private bool totSolvedObjFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string block
+        {
+            get
+            {
+                return this.blockField;
+            }
+            set
+            {
+                this.blockField = value;
+                this.RaisePropertyChanged("block");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal totAppLod
+        {
+            get
+            {
+                return this.totAppLodField;
+            }
+            set
+            {
+                this.totAppLodField = value;
+                this.RaisePropertyChanged("totAppLod");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totAppLodSpecified
+        {
+            get
+            {
+                return this.totAppLodFieldSpecified;
+            }
+            set
+            {
+                this.totAppLodFieldSpecified = value;
+                this.RaisePropertyChanged("totAppLodSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public decimal totAppPDisp
+        {
+            get
+            {
+                return this.totAppPDispField;
+            }
+            set
+            {
+                this.totAppPDispField = value;
+                this.RaisePropertyChanged("totAppPDisp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totAppPDispSpecified
+        {
+            get
+            {
+                return this.totAppPDispFieldSpecified;
+            }
+            set
+            {
+                this.totAppPDispFieldSpecified = value;
+                this.RaisePropertyChanged("totAppPDispSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public decimal totIssuedCertificate
+        {
+            get
+            {
+                return this.totIssuedCertificateField;
+            }
+            set
+            {
+                this.totIssuedCertificateField = value;
+                this.RaisePropertyChanged("totIssuedCertificate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totIssuedCertificateSpecified
+        {
+            get
+            {
+                return this.totIssuedCertificateFieldSpecified;
+            }
+            set
+            {
+                this.totIssuedCertificateFieldSpecified = value;
+                this.RaisePropertyChanged("totIssuedCertificateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string totParcLoaded
+        {
+            get
+            {
+                return this.totParcLoadedField;
+            }
+            set
+            {
+                this.totParcLoadedField = value;
+                this.RaisePropertyChanged("totParcLoaded");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public decimal totPrepCertificate
+        {
+            get
+            {
+                return this.totPrepCertificateField;
+            }
+            set
+            {
+                this.totPrepCertificateField = value;
+                this.RaisePropertyChanged("totPrepCertificate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totPrepCertificateSpecified
+        {
+            get
+            {
+                return this.totPrepCertificateFieldSpecified;
+            }
+            set
+            {
+                this.totPrepCertificateFieldSpecified = value;
+                this.RaisePropertyChanged("totPrepCertificateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public decimal totRecObj
+        {
+            get
+            {
+                return this.totRecObjField;
+            }
+            set
+            {
+                this.totRecObjField = value;
+                this.RaisePropertyChanged("totRecObj");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totRecObjSpecified
+        {
+            get
+            {
+                return this.totRecObjFieldSpecified;
+            }
+            set
+            {
+                this.totRecObjFieldSpecified = value;
+                this.RaisePropertyChanged("totRecObjSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public decimal totSolvedObj
+        {
+            get
+            {
+                return this.totSolvedObjField;
+            }
+            set
+            {
+                this.totSolvedObjField = value;
+                this.RaisePropertyChanged("totSolvedObj");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totSolvedObjSpecified
+        {
+            get
+            {
+                return this.totSolvedObjFieldSpecified;
+            }
+            set
+            {
+                this.totSolvedObjFieldSpecified = value;
+                this.RaisePropertyChanged("totSolvedObjSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegStatusTO : abstractIdTO
+    {
+        
+        private decimal appCertificateField;
+        
+        private bool appCertificateFieldSpecified;
+        
+        private decimal appCompPDispNoCertField;
+        
+        private bool appCompPDispNoCertFieldSpecified;
+        
+        private decimal appIncDocField;
+        
+        private bool appIncDocFieldSpecified;
+        
+        private decimal appLodgedNoSPField;
+        
+        private bool appLodgedNoSPFieldSpecified;
+        
+        private decimal appLodgedSPField;
+        
+        private bool appLodgedSPFieldSpecified;
+        
+        private decimal appPDispField;
+        
+        private bool appPDispFieldSpecified;
+        
+        private decimal appPendObjField;
+        
+        private bool appPendObjFieldSpecified;
+        
+        private decimal appPrLandField;
+        
+        private bool appPrLandFieldSpecified;
+        
+        private decimal appPubLandField;
+        
+        private bool appPubLandFieldSpecified;
+        
+        private string blockField;
+        
+        private decimal sPnoAppField;
+        
+        private bool sPnoAppFieldSpecified;
+        
+        private decimal totAppField;
+        
+        private bool totAppFieldSpecified;
+        
+        private decimal totSurvParField;
+        
+        private bool totSurvParFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public decimal appCertificate
+        {
+            get
+            {
+                return this.appCertificateField;
+            }
+            set
+            {
+                this.appCertificateField = value;
+                this.RaisePropertyChanged("appCertificate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appCertificateSpecified
+        {
+            get
+            {
+                return this.appCertificateFieldSpecified;
+            }
+            set
+            {
+                this.appCertificateFieldSpecified = value;
+                this.RaisePropertyChanged("appCertificateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal appCompPDispNoCert
+        {
+            get
+            {
+                return this.appCompPDispNoCertField;
+            }
+            set
+            {
+                this.appCompPDispNoCertField = value;
+                this.RaisePropertyChanged("appCompPDispNoCert");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appCompPDispNoCertSpecified
+        {
+            get
+            {
+                return this.appCompPDispNoCertFieldSpecified;
+            }
+            set
+            {
+                this.appCompPDispNoCertFieldSpecified = value;
+                this.RaisePropertyChanged("appCompPDispNoCertSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public decimal appIncDoc
+        {
+            get
+            {
+                return this.appIncDocField;
+            }
+            set
+            {
+                this.appIncDocField = value;
+                this.RaisePropertyChanged("appIncDoc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appIncDocSpecified
+        {
+            get
+            {
+                return this.appIncDocFieldSpecified;
+            }
+            set
+            {
+                this.appIncDocFieldSpecified = value;
+                this.RaisePropertyChanged("appIncDocSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public decimal appLodgedNoSP
+        {
+            get
+            {
+                return this.appLodgedNoSPField;
+            }
+            set
+            {
+                this.appLodgedNoSPField = value;
+                this.RaisePropertyChanged("appLodgedNoSP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appLodgedNoSPSpecified
+        {
+            get
+            {
+                return this.appLodgedNoSPFieldSpecified;
+            }
+            set
+            {
+                this.appLodgedNoSPFieldSpecified = value;
+                this.RaisePropertyChanged("appLodgedNoSPSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public decimal appLodgedSP
+        {
+            get
+            {
+                return this.appLodgedSPField;
+            }
+            set
+            {
+                this.appLodgedSPField = value;
+                this.RaisePropertyChanged("appLodgedSP");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appLodgedSPSpecified
+        {
+            get
+            {
+                return this.appLodgedSPFieldSpecified;
+            }
+            set
+            {
+                this.appLodgedSPFieldSpecified = value;
+                this.RaisePropertyChanged("appLodgedSPSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public decimal appPDisp
+        {
+            get
+            {
+                return this.appPDispField;
+            }
+            set
+            {
+                this.appPDispField = value;
+                this.RaisePropertyChanged("appPDisp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appPDispSpecified
+        {
+            get
+            {
+                return this.appPDispFieldSpecified;
+            }
+            set
+            {
+                this.appPDispFieldSpecified = value;
+                this.RaisePropertyChanged("appPDispSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public decimal appPendObj
+        {
+            get
+            {
+                return this.appPendObjField;
+            }
+            set
+            {
+                this.appPendObjField = value;
+                this.RaisePropertyChanged("appPendObj");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appPendObjSpecified
+        {
+            get
+            {
+                return this.appPendObjFieldSpecified;
+            }
+            set
+            {
+                this.appPendObjFieldSpecified = value;
+                this.RaisePropertyChanged("appPendObjSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public decimal appPrLand
+        {
+            get
+            {
+                return this.appPrLandField;
+            }
+            set
+            {
+                this.appPrLandField = value;
+                this.RaisePropertyChanged("appPrLand");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appPrLandSpecified
+        {
+            get
+            {
+                return this.appPrLandFieldSpecified;
+            }
+            set
+            {
+                this.appPrLandFieldSpecified = value;
+                this.RaisePropertyChanged("appPrLandSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public decimal appPubLand
+        {
+            get
+            {
+                return this.appPubLandField;
+            }
+            set
+            {
+                this.appPubLandField = value;
+                this.RaisePropertyChanged("appPubLand");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool appPubLandSpecified
+        {
+            get
+            {
+                return this.appPubLandFieldSpecified;
+            }
+            set
+            {
+                this.appPubLandFieldSpecified = value;
+                this.RaisePropertyChanged("appPubLandSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string block
+        {
+            get
+            {
+                return this.blockField;
+            }
+            set
+            {
+                this.blockField = value;
+                this.RaisePropertyChanged("block");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public decimal SPnoApp
+        {
+            get
+            {
+                return this.sPnoAppField;
+            }
+            set
+            {
+                this.sPnoAppField = value;
+                this.RaisePropertyChanged("SPnoApp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SPnoAppSpecified
+        {
+            get
+            {
+                return this.sPnoAppFieldSpecified;
+            }
+            set
+            {
+                this.sPnoAppFieldSpecified = value;
+                this.RaisePropertyChanged("SPnoAppSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public decimal totApp
+        {
+            get
+            {
+                return this.totAppField;
+            }
+            set
+            {
+                this.totAppField = value;
+                this.RaisePropertyChanged("totApp");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totAppSpecified
+        {
+            get
+            {
+                return this.totAppFieldSpecified;
+            }
+            set
+            {
+                this.totAppFieldSpecified = value;
+                this.RaisePropertyChanged("totAppSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public decimal totSurvPar
+        {
+            get
+            {
+                return this.totSurvParField;
+            }
+            set
+            {
+                this.totSurvParField = value;
+                this.RaisePropertyChanged("totSurvPar");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totSurvParSpecified
+        {
+            get
+            {
+                return this.totSurvParFieldSpecified;
+            }
+            set
+            {
+                this.totSurvParFieldSpecified = value;
+                this.RaisePropertyChanged("totSurvParSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegPubDisOwnerNameTO : abstractIdTO
+    {
+        
+        private decimal agriculturalField;
+        
+        private bool agriculturalFieldSpecified;
         
         private string baUnitIdField;
         
-        private decimal calculatedAreaSizeField;
+        private decimal commercialField;
         
-        private bool calculatedAreaSizeFieldSpecified;
+        private bool commercialFieldSpecified;
+        
+        private decimal industrialField;
+        
+        private bool industrialFieldSpecified;
+        
+        private string landUsecodeField;
+        
+        private string nameField;
+        
+        private string nameFirstpartField;
+        
+        private string nameLastpartField;
+        
+        private string objectionsField;
+        
+        private string publicNotificationDurationField;
+        
+        private decimal residentialField;
+        
+        private bool residentialFieldSpecified;
         
         private decimal sizeField;
         
         private bool sizeFieldSpecified;
         
-        private string typeCodeField;
+        private string valueField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public decimal agricultural
+        {
+            get
+            {
+                return this.agriculturalField;
+            }
+            set
+            {
+                this.agriculturalField = value;
+                this.RaisePropertyChanged("agricultural");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool agriculturalSpecified
+        {
+            get
+            {
+                return this.agriculturalFieldSpecified;
+            }
+            set
+            {
+                this.agriculturalFieldSpecified = value;
+                this.RaisePropertyChanged("agriculturalSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string baUnitId
         {
             get
@@ -510,37 +1616,187 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public decimal calculatedAreaSize
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public decimal commercial
         {
             get
             {
-                return this.calculatedAreaSizeField;
+                return this.commercialField;
             }
             set
             {
-                this.calculatedAreaSizeField = value;
-                this.RaisePropertyChanged("calculatedAreaSize");
+                this.commercialField = value;
+                this.RaisePropertyChanged("commercial");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool calculatedAreaSizeSpecified
+        public bool commercialSpecified
         {
             get
             {
-                return this.calculatedAreaSizeFieldSpecified;
+                return this.commercialFieldSpecified;
             }
             set
             {
-                this.calculatedAreaSizeFieldSpecified = value;
-                this.RaisePropertyChanged("calculatedAreaSizeSpecified");
+                this.commercialFieldSpecified = value;
+                this.RaisePropertyChanged("commercialSpecified");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public decimal industrial
+        {
+            get
+            {
+                return this.industrialField;
+            }
+            set
+            {
+                this.industrialField = value;
+                this.RaisePropertyChanged("industrial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool industrialSpecified
+        {
+            get
+            {
+                return this.industrialFieldSpecified;
+            }
+            set
+            {
+                this.industrialFieldSpecified = value;
+                this.RaisePropertyChanged("industrialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string landUsecode
+        {
+            get
+            {
+                return this.landUsecodeField;
+            }
+            set
+            {
+                this.landUsecodeField = value;
+                this.RaisePropertyChanged("landUsecode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nameFirstpart
+        {
+            get
+            {
+                return this.nameFirstpartField;
+            }
+            set
+            {
+                this.nameFirstpartField = value;
+                this.RaisePropertyChanged("nameFirstpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nameLastpart
+        {
+            get
+            {
+                return this.nameLastpartField;
+            }
+            set
+            {
+                this.nameLastpartField = value;
+                this.RaisePropertyChanged("nameLastpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string objections
+        {
+            get
+            {
+                return this.objectionsField;
+            }
+            set
+            {
+                this.objectionsField = value;
+                this.RaisePropertyChanged("objections");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string publicNotificationDuration
+        {
+            get
+            {
+                return this.publicNotificationDurationField;
+            }
+            set
+            {
+                this.publicNotificationDurationField = value;
+                this.RaisePropertyChanged("publicNotificationDuration");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public decimal residential
+        {
+            get
+            {
+                return this.residentialField;
+            }
+            set
+            {
+                this.residentialField = value;
+                this.RaisePropertyChanged("residential");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool residentialSpecified
+        {
+            get
+            {
+                return this.residentialFieldSpecified;
+            }
+            set
+            {
+                this.residentialFieldSpecified = value;
+                this.RaisePropertyChanged("residentialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public decimal size
         {
             get
@@ -570,17 +1826,472 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string typeCode
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string value
         {
             get
             {
-                return this.typeCodeField;
+                return this.valueField;
             }
             set
             {
-                this.typeCodeField = value;
-                this.RaisePropertyChanged("typeCode");
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegManagementTO : abstractIdTO
+    {
+        
+        private string areaField;
+        
+        private decimal counterField;
+        
+        private bool counterFieldSpecified;
+        
+        private string descrField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string area
+        {
+            get
+            {
+                return this.areaField;
+            }
+            set
+            {
+                this.areaField = value;
+                this.RaisePropertyChanged("area");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal counter
+        {
+            get
+            {
+                return this.counterField;
+            }
+            set
+            {
+                this.counterField = value;
+                this.RaisePropertyChanged("counter");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool counterSpecified
+        {
+            get
+            {
+                return this.counterFieldSpecified;
+            }
+            set
+            {
+                this.counterFieldSpecified = value;
+                this.RaisePropertyChanged("counterSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string descr
+        {
+            get
+            {
+                return this.descrField;
+            }
+            set
+            {
+                this.descrField = value;
+                this.RaisePropertyChanged("descr");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegPubDisStateLandTO : abstractIdTO
+    {
+        
+        private decimal agriculturalField;
+        
+        private bool agriculturalFieldSpecified;
+        
+        private string baUnitIdField;
+        
+        private decimal commercialField;
+        
+        private bool commercialFieldSpecified;
+        
+        private decimal industrialField;
+        
+        private bool industrialFieldSpecified;
+        
+        private string landUsecodeField;
+        
+        private string nameField;
+        
+        private string nameFirstpartField;
+        
+        private string nameLastpartField;
+        
+        private string objectionsField;
+        
+        private string publicNotificationDurationField;
+        
+        private decimal residentialField;
+        
+        private bool residentialFieldSpecified;
+        
+        private decimal sizeField;
+        
+        private bool sizeFieldSpecified;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public decimal agricultural
+        {
+            get
+            {
+                return this.agriculturalField;
+            }
+            set
+            {
+                this.agriculturalField = value;
+                this.RaisePropertyChanged("agricultural");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool agriculturalSpecified
+        {
+            get
+            {
+                return this.agriculturalFieldSpecified;
+            }
+            set
+            {
+                this.agriculturalFieldSpecified = value;
+                this.RaisePropertyChanged("agriculturalSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string baUnitId
+        {
+            get
+            {
+                return this.baUnitIdField;
+            }
+            set
+            {
+                this.baUnitIdField = value;
+                this.RaisePropertyChanged("baUnitId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public decimal commercial
+        {
+            get
+            {
+                return this.commercialField;
+            }
+            set
+            {
+                this.commercialField = value;
+                this.RaisePropertyChanged("commercial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool commercialSpecified
+        {
+            get
+            {
+                return this.commercialFieldSpecified;
+            }
+            set
+            {
+                this.commercialFieldSpecified = value;
+                this.RaisePropertyChanged("commercialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public decimal industrial
+        {
+            get
+            {
+                return this.industrialField;
+            }
+            set
+            {
+                this.industrialField = value;
+                this.RaisePropertyChanged("industrial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool industrialSpecified
+        {
+            get
+            {
+                return this.industrialFieldSpecified;
+            }
+            set
+            {
+                this.industrialFieldSpecified = value;
+                this.RaisePropertyChanged("industrialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string landUsecode
+        {
+            get
+            {
+                return this.landUsecodeField;
+            }
+            set
+            {
+                this.landUsecodeField = value;
+                this.RaisePropertyChanged("landUsecode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+                this.RaisePropertyChanged("name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nameFirstpart
+        {
+            get
+            {
+                return this.nameFirstpartField;
+            }
+            set
+            {
+                this.nameFirstpartField = value;
+                this.RaisePropertyChanged("nameFirstpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string nameLastpart
+        {
+            get
+            {
+                return this.nameLastpartField;
+            }
+            set
+            {
+                this.nameLastpartField = value;
+                this.RaisePropertyChanged("nameLastpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string objections
+        {
+            get
+            {
+                return this.objectionsField;
+            }
+            set
+            {
+                this.objectionsField = value;
+                this.RaisePropertyChanged("objections");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string publicNotificationDuration
+        {
+            get
+            {
+                return this.publicNotificationDurationField;
+            }
+            set
+            {
+                this.publicNotificationDurationField = value;
+                this.RaisePropertyChanged("publicNotificationDuration");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public decimal residential
+        {
+            get
+            {
+                return this.residentialField;
+            }
+            set
+            {
+                this.residentialField = value;
+                this.RaisePropertyChanged("residential");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool residentialSpecified
+        {
+            get
+            {
+                return this.residentialFieldSpecified;
+            }
+            set
+            {
+                this.residentialFieldSpecified = value;
+                this.RaisePropertyChanged("residentialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public decimal size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+                this.RaisePropertyChanged("size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sizeSpecified
+        {
+            get
+            {
+                return this.sizeFieldSpecified;
+            }
+            set
+            {
+                this.sizeFieldSpecified = value;
+                this.RaisePropertyChanged("sizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class leaseConditionForRrrTO : abstractIdTO
+    {
+        
+        private string customConditionTextField;
+        
+        private string leaseConditionCodeField;
+        
+        private string rrrIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string customConditionText
+        {
+            get
+            {
+                return this.customConditionTextField;
+            }
+            set
+            {
+                this.customConditionTextField = value;
+                this.RaisePropertyChanged("customConditionText");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string leaseConditionCode
+        {
+            get
+            {
+                return this.leaseConditionCodeField;
+            }
+            set
+            {
+                this.leaseConditionCodeField = value;
+                this.RaisePropertyChanged("leaseConditionCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string rrrId
+        {
+            get
+            {
+                return this.rrrIdField;
+            }
+            set
+            {
+                this.rrrIdField = value;
+                this.RaisePropertyChanged("rrrId");
             }
         }
     }
@@ -594,17 +2305,23 @@ namespace org.sola.webservices.administrative.extra
     public partial class rrrTO : abstractIdTO
     {
         
+        private decimal amountField;
+        
+        private bool amountFieldSpecified;
+        
         private string concatenatedNameField;
+        
+        private System.DateTime dueDateField;
+        
+        private bool dueDateFieldSpecified;
         
         private System.DateTime expirationDateField;
         
         private bool expirationDateFieldSpecified;
         
+        private leaseConditionForRrrTO[] leaseConditionListField;
+        
         private bool lockedField;
-        
-        private decimal mortgageAmountField;
-        
-        private bool mortgageAmountFieldSpecified;
         
         private decimal mortgageInterestRateField;
         
@@ -644,6 +2361,36 @@ namespace org.sola.webservices.administrative.extra
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public decimal amount
+        {
+            get
+            {
+                return this.amountField;
+            }
+            set
+            {
+                this.amountField = value;
+                this.RaisePropertyChanged("amount");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool amountSpecified
+        {
+            get
+            {
+                return this.amountFieldSpecified;
+            }
+            set
+            {
+                this.amountFieldSpecified = value;
+                this.RaisePropertyChanged("amountSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string concatenatedName
         {
             get
@@ -658,7 +2405,37 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime dueDate
+        {
+            get
+            {
+                return this.dueDateField;
+            }
+            set
+            {
+                this.dueDateField = value;
+                this.RaisePropertyChanged("dueDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dueDateSpecified
+        {
+            get
+            {
+                return this.dueDateFieldSpecified;
+            }
+            set
+            {
+                this.dueDateFieldSpecified = value;
+                this.RaisePropertyChanged("dueDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime expirationDate
         {
             get
@@ -688,7 +2465,22 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute("leaseConditionList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public leaseConditionForRrrTO[] leaseConditionList
+        {
+            get
+            {
+                return this.leaseConditionListField;
+            }
+            set
+            {
+                this.leaseConditionListField = value;
+                this.RaisePropertyChanged("leaseConditionList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public bool locked
         {
             get
@@ -703,37 +2495,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public decimal mortgageAmount
-        {
-            get
-            {
-                return this.mortgageAmountField;
-            }
-            set
-            {
-                this.mortgageAmountField = value;
-                this.RaisePropertyChanged("mortgageAmount");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool mortgageAmountSpecified
-        {
-            get
-            {
-                return this.mortgageAmountFieldSpecified;
-            }
-            set
-            {
-                this.mortgageAmountFieldSpecified = value;
-                this.RaisePropertyChanged("mortgageAmountSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public decimal mortgageInterestRate
         {
             get
@@ -763,7 +2525,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int mortgageRanking
         {
             get
@@ -793,7 +2555,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string mortgageTypeCode
         {
             get
@@ -808,7 +2570,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public baUnitNotationTO notation
         {
             get
@@ -823,7 +2585,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string nr
         {
             get
@@ -838,7 +2600,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public bool primary
         {
             get
@@ -853,7 +2615,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public System.DateTime registrationDate
         {
             get
@@ -883,7 +2645,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("rightHolderList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute("rightHolderList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
         public partySummaryTO[] rightHolderList
         {
             get
@@ -898,7 +2660,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("rrrShareList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute("rrrShareList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=14)]
         public rrrShareTO[] rrrShareList
         {
             get
@@ -913,7 +2675,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public double share
         {
             get
@@ -943,7 +2705,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("sourceList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute("sourceList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
         public sourceTO[] sourceList
         {
             get
@@ -958,7 +2720,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
         public string statusCode
         {
             get
@@ -973,7 +2735,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
         public string transactionId
         {
             get
@@ -988,7 +2750,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
         public string typeCode
         {
             get
@@ -1155,196 +2917,6 @@ namespace org.sola.webservices.administrative.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/casemanagement/")]
-    public partial class partySummaryTO : abstractIdTO
-    {
-        
-        private string extIdField;
-        
-        private string lastNameField;
-        
-        private string nameField;
-        
-        private string typeCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string extId
-        {
-            get
-            {
-                return this.extIdField;
-            }
-            set
-            {
-                this.extIdField = value;
-                this.RaisePropertyChanged("extId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string lastName
-        {
-            get
-            {
-                return this.lastNameField;
-            }
-            set
-            {
-                this.lastNameField = value;
-                this.RaisePropertyChanged("lastName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string name
-        {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-                this.RaisePropertyChanged("name");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string typeCode
-        {
-            get
-            {
-                return this.typeCodeField;
-            }
-            set
-            {
-                this.typeCodeField = value;
-                this.RaisePropertyChanged("typeCode");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
-    public partial class rrrShareTO : abstractVersionedTO
-    {
-        
-        private short denominatorField;
-        
-        private bool denominatorFieldSpecified;
-        
-        private short nominatorField;
-        
-        private bool nominatorFieldSpecified;
-        
-        private partySummaryTO[] rightHolderListField;
-        
-        private string rrrIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public short denominator
-        {
-            get
-            {
-                return this.denominatorField;
-            }
-            set
-            {
-                this.denominatorField = value;
-                this.RaisePropertyChanged("denominator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool denominatorSpecified
-        {
-            get
-            {
-                return this.denominatorFieldSpecified;
-            }
-            set
-            {
-                this.denominatorFieldSpecified = value;
-                this.RaisePropertyChanged("denominatorSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public short nominator
-        {
-            get
-            {
-                return this.nominatorField;
-            }
-            set
-            {
-                this.nominatorField = value;
-                this.RaisePropertyChanged("nominator");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool nominatorSpecified
-        {
-            get
-            {
-                return this.nominatorFieldSpecified;
-            }
-            set
-            {
-                this.nominatorFieldSpecified = value;
-                this.RaisePropertyChanged("nominatorSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("rightHolderList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public partySummaryTO[] rightHolderList
-        {
-            get
-            {
-                return this.rightHolderListField;
-            }
-            set
-            {
-                this.rightHolderListField = value;
-                this.RaisePropertyChanged("rightHolderList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string rrrId
-        {
-            get
-            {
-                return this.rrrIdField;
-            }
-            set
-            {
-                this.rrrIdField = value;
-                this.RaisePropertyChanged("rrrId");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/casemanagement/")]
     public partial class sourceTO : abstractIdTO
     {
         
@@ -1364,6 +2936,10 @@ namespace org.sola.webservices.administrative.extra
         
         private string descriptionField;
         
+        private System.DateTime expirationDateField;
+        
+        private bool expirationDateFieldSpecified;
+        
         private string laNrField;
         
         private bool lockedField;
@@ -1377,6 +2953,10 @@ namespace org.sola.webservices.administrative.extra
         private bool recordationFieldSpecified;
         
         private string referenceNrField;
+        
+        private System.DateTime signingDateField;
+        
+        private bool signingDateFieldSpecified;
         
         private string statusCodeField;
         
@@ -1512,6 +3092,36 @@ namespace org.sola.webservices.administrative.extra
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public System.DateTime expirationDate
+        {
+            get
+            {
+                return this.expirationDateField;
+            }
+            set
+            {
+                this.expirationDateField = value;
+                this.RaisePropertyChanged("expirationDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool expirationDateSpecified
+        {
+            get
+            {
+                return this.expirationDateFieldSpecified;
+            }
+            set
+            {
+                this.expirationDateFieldSpecified = value;
+                this.RaisePropertyChanged("expirationDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string laNr
         {
             get
@@ -1526,7 +3136,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public bool locked
         {
             get
@@ -1541,7 +3151,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string mainType
         {
             get
@@ -1556,7 +3166,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string ownerName
         {
             get
@@ -1571,7 +3181,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public System.DateTime recordation
         {
             get
@@ -1601,7 +3211,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string referenceNr
         {
             get
@@ -1616,7 +3226,37 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public System.DateTime signingDate
+        {
+            get
+            {
+                return this.signingDateField;
+            }
+            set
+            {
+                this.signingDateField = value;
+                this.RaisePropertyChanged("signingDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool signingDateSpecified
+        {
+            get
+            {
+                return this.signingDateFieldSpecified;
+            }
+            set
+            {
+                this.signingDateFieldSpecified = value;
+                this.RaisePropertyChanged("signingDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
         public string statusCode
         {
             get
@@ -1631,7 +3271,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
         public System.DateTime submission
         {
             get
@@ -1661,7 +3301,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
         public string transactionId
         {
             get
@@ -1676,7 +3316,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
         public string typeCode
         {
             get
@@ -1691,7 +3331,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
         public string version
         {
             get
@@ -1763,220 +3403,6 @@ namespace org.sola.webservices.administrative.extra
             {
                 this.nrField = value;
                 this.RaisePropertyChanged("nr");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/cadastre/")]
-    public partial class cadastreObjectTO : abstractIdTO
-    {
-        
-        private System.DateTime approvalDatetimeField;
-        
-        private bool approvalDatetimeFieldSpecified;
-        
-        private byte[] geomPolygonField;
-        
-        private System.DateTime historicDatetimeField;
-        
-        private bool historicDatetimeFieldSpecified;
-        
-        private string nameFirstpartField;
-        
-        private string nameLastpartField;
-        
-        private string sourceReferenceField;
-        
-        private spatialValueAreaTO[] spatialValueAreaListField;
-        
-        private string statusCodeField;
-        
-        private string transactionIdField;
-        
-        private string typeCodeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime approvalDatetime
-        {
-            get
-            {
-                return this.approvalDatetimeField;
-            }
-            set
-            {
-                this.approvalDatetimeField = value;
-                this.RaisePropertyChanged("approvalDatetime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool approvalDatetimeSpecified
-        {
-            get
-            {
-                return this.approvalDatetimeFieldSpecified;
-            }
-            set
-            {
-                this.approvalDatetimeFieldSpecified = value;
-                this.RaisePropertyChanged("approvalDatetimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] geomPolygon
-        {
-            get
-            {
-                return this.geomPolygonField;
-            }
-            set
-            {
-                this.geomPolygonField = value;
-                this.RaisePropertyChanged("geomPolygon");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime historicDatetime
-        {
-            get
-            {
-                return this.historicDatetimeField;
-            }
-            set
-            {
-                this.historicDatetimeField = value;
-                this.RaisePropertyChanged("historicDatetime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool historicDatetimeSpecified
-        {
-            get
-            {
-                return this.historicDatetimeFieldSpecified;
-            }
-            set
-            {
-                this.historicDatetimeFieldSpecified = value;
-                this.RaisePropertyChanged("historicDatetimeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nameFirstpart
-        {
-            get
-            {
-                return this.nameFirstpartField;
-            }
-            set
-            {
-                this.nameFirstpartField = value;
-                this.RaisePropertyChanged("nameFirstpart");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nameLastpart
-        {
-            get
-            {
-                return this.nameLastpartField;
-            }
-            set
-            {
-                this.nameLastpartField = value;
-                this.RaisePropertyChanged("nameLastpart");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string sourceReference
-        {
-            get
-            {
-                return this.sourceReferenceField;
-            }
-            set
-            {
-                this.sourceReferenceField = value;
-                this.RaisePropertyChanged("sourceReference");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("spatialValueAreaList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public spatialValueAreaTO[] spatialValueAreaList
-        {
-            get
-            {
-                return this.spatialValueAreaListField;
-            }
-            set
-            {
-                this.spatialValueAreaListField = value;
-                this.RaisePropertyChanged("spatialValueAreaList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string statusCode
-        {
-            get
-            {
-                return this.statusCodeField;
-            }
-            set
-            {
-                this.statusCodeField = value;
-                this.RaisePropertyChanged("statusCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string transactionId
-        {
-            get
-            {
-                return this.transactionIdField;
-            }
-            set
-            {
-                this.transactionIdField = value;
-                this.RaisePropertyChanged("transactionId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string typeCode
-        {
-            get
-            {
-                return this.typeCodeField;
-            }
-            set
-            {
-                this.typeCodeField = value;
-                this.RaisePropertyChanged("typeCode");
             }
         }
     }
@@ -2251,6 +3677,410 @@ namespace org.sola.webservices.administrative.extra
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/cadastre/")]
+    public partial class cadastreObjectTO : abstractIdTO
+    {
+        
+        private addressTO[] addressListField;
+        
+        private System.DateTime approvalDatetimeField;
+        
+        private bool approvalDatetimeFieldSpecified;
+        
+        private byte[] geomPolygonField;
+        
+        private System.DateTime historicDatetimeField;
+        
+        private bool historicDatetimeFieldSpecified;
+        
+        private string landUseCodeField;
+        
+        private string nameFirstpartField;
+        
+        private string nameLastpartField;
+        
+        private string sourceReferenceField;
+        
+        private spatialValueAreaTO[] spatialValueAreaListField;
+        
+        private string statusCodeField;
+        
+        private string transactionIdField;
+        
+        private string typeCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("addressList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public addressTO[] addressList
+        {
+            get
+            {
+                return this.addressListField;
+            }
+            set
+            {
+                this.addressListField = value;
+                this.RaisePropertyChanged("addressList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime approvalDatetime
+        {
+            get
+            {
+                return this.approvalDatetimeField;
+            }
+            set
+            {
+                this.approvalDatetimeField = value;
+                this.RaisePropertyChanged("approvalDatetime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool approvalDatetimeSpecified
+        {
+            get
+            {
+                return this.approvalDatetimeFieldSpecified;
+            }
+            set
+            {
+                this.approvalDatetimeFieldSpecified = value;
+                this.RaisePropertyChanged("approvalDatetimeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
+        public byte[] geomPolygon
+        {
+            get
+            {
+                return this.geomPolygonField;
+            }
+            set
+            {
+                this.geomPolygonField = value;
+                this.RaisePropertyChanged("geomPolygon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime historicDatetime
+        {
+            get
+            {
+                return this.historicDatetimeField;
+            }
+            set
+            {
+                this.historicDatetimeField = value;
+                this.RaisePropertyChanged("historicDatetime");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool historicDatetimeSpecified
+        {
+            get
+            {
+                return this.historicDatetimeFieldSpecified;
+            }
+            set
+            {
+                this.historicDatetimeFieldSpecified = value;
+                this.RaisePropertyChanged("historicDatetimeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string landUseCode
+        {
+            get
+            {
+                return this.landUseCodeField;
+            }
+            set
+            {
+                this.landUseCodeField = value;
+                this.RaisePropertyChanged("landUseCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nameFirstpart
+        {
+            get
+            {
+                return this.nameFirstpartField;
+            }
+            set
+            {
+                this.nameFirstpartField = value;
+                this.RaisePropertyChanged("nameFirstpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nameLastpart
+        {
+            get
+            {
+                return this.nameLastpartField;
+            }
+            set
+            {
+                this.nameLastpartField = value;
+                this.RaisePropertyChanged("nameLastpart");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string sourceReference
+        {
+            get
+            {
+                return this.sourceReferenceField;
+            }
+            set
+            {
+                this.sourceReferenceField = value;
+                this.RaisePropertyChanged("sourceReference");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("spatialValueAreaList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+        public spatialValueAreaTO[] spatialValueAreaList
+        {
+            get
+            {
+                return this.spatialValueAreaListField;
+            }
+            set
+            {
+                this.spatialValueAreaListField = value;
+                this.RaisePropertyChanged("spatialValueAreaList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string statusCode
+        {
+            get
+            {
+                return this.statusCodeField;
+            }
+            set
+            {
+                this.statusCodeField = value;
+                this.RaisePropertyChanged("statusCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string transactionId
+        {
+            get
+            {
+                return this.transactionIdField;
+            }
+            set
+            {
+                this.transactionIdField = value;
+                this.RaisePropertyChanged("transactionId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string typeCode
+        {
+            get
+            {
+                return this.typeCodeField;
+            }
+            set
+            {
+                this.typeCodeField = value;
+                this.RaisePropertyChanged("typeCode");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/casemanagement/")]
+    public partial class addressTO : abstractIdTO
+    {
+        
+        private string descriptionField;
+        
+        private string extAddressIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+                this.RaisePropertyChanged("description");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string extAddressId
+        {
+            get
+            {
+                return this.extAddressIdField;
+            }
+            set
+            {
+                this.extAddressIdField = value;
+                this.RaisePropertyChanged("extAddressId");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/cadastre/")]
+    public partial class spatialValueAreaTO : abstractVersionedTO
+    {
+        
+        private decimal calculatedAreaSizeField;
+        
+        private bool calculatedAreaSizeFieldSpecified;
+        
+        private decimal sizeField;
+        
+        private bool sizeFieldSpecified;
+        
+        private string spatialUnitIdField;
+        
+        private string typeCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public decimal calculatedAreaSize
+        {
+            get
+            {
+                return this.calculatedAreaSizeField;
+            }
+            set
+            {
+                this.calculatedAreaSizeField = value;
+                this.RaisePropertyChanged("calculatedAreaSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool calculatedAreaSizeSpecified
+        {
+            get
+            {
+                return this.calculatedAreaSizeFieldSpecified;
+            }
+            set
+            {
+                this.calculatedAreaSizeFieldSpecified = value;
+                this.RaisePropertyChanged("calculatedAreaSizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+                this.RaisePropertyChanged("size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sizeSpecified
+        {
+            get
+            {
+                return this.sizeFieldSpecified;
+            }
+            set
+            {
+                this.sizeFieldSpecified = value;
+                this.RaisePropertyChanged("sizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string spatialUnitId
+        {
+            get
+            {
+                return this.spatialUnitIdField;
+            }
+            set
+            {
+                this.spatialUnitIdField = value;
+                this.RaisePropertyChanged("spatialUnitId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string typeCode
+        {
+            get
+            {
+                return this.typeCodeField;
+            }
+            set
+            {
+                this.typeCodeField = value;
+                this.RaisePropertyChanged("typeCode");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
     public partial class relatedBaUnitInfoTO : abstractVersionedTO
     {
@@ -2330,10 +4160,126 @@ namespace org.sola.webservices.administrative.extra
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
-    public partial class baUnitBasicTO : abstractTO
+    public partial class baUnitAreaTO : abstractIdTO
     {
         
-        private string idField;
+        private string baUnitIdField;
+        
+        private decimal calculatedAreaSizeField;
+        
+        private bool calculatedAreaSizeFieldSpecified;
+        
+        private decimal sizeField;
+        
+        private bool sizeFieldSpecified;
+        
+        private string typeCodeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string baUnitId
+        {
+            get
+            {
+                return this.baUnitIdField;
+            }
+            set
+            {
+                this.baUnitIdField = value;
+                this.RaisePropertyChanged("baUnitId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public decimal calculatedAreaSize
+        {
+            get
+            {
+                return this.calculatedAreaSizeField;
+            }
+            set
+            {
+                this.calculatedAreaSizeField = value;
+                this.RaisePropertyChanged("calculatedAreaSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool calculatedAreaSizeSpecified
+        {
+            get
+            {
+                return this.calculatedAreaSizeFieldSpecified;
+            }
+            set
+            {
+                this.calculatedAreaSizeFieldSpecified = value;
+                this.RaisePropertyChanged("calculatedAreaSizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public decimal size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+                this.RaisePropertyChanged("size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sizeSpecified
+        {
+            get
+            {
+                return this.sizeFieldSpecified;
+            }
+            set
+            {
+                this.sizeFieldSpecified = value;
+                this.RaisePropertyChanged("sizeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string typeCode
+        {
+            get
+            {
+                return this.typeCodeField;
+            }
+            set
+            {
+                this.typeCodeField = value;
+                this.RaisePropertyChanged("typeCode");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("svcutil", "3.0.4506.2152")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webservices.sola.org/transferobjects/administrative/")]
+    public partial class sysRegPubDisParcelNameTO : abstractIdTO
+    {
+        
+        private string baUnitIdField;
+        
+        private string concatenatedNameField;
+        
+        private string landUsecodeField;
         
         private string nameField;
         
@@ -2341,29 +4287,61 @@ namespace org.sola.webservices.administrative.extra
         
         private string nameLastpartField;
         
-        private string statusCodeField;
+        private string objectionsField;
         
-        private string transactionIdField;
+        private string publicNotificationDurationField;
         
-        private string typeCodeField;
+        private decimal sizeField;
+        
+        private bool sizeFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string id
+        public string baUnitId
         {
             get
             {
-                return this.idField;
+                return this.baUnitIdField;
             }
             set
             {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
+                this.baUnitIdField = value;
+                this.RaisePropertyChanged("baUnitId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string concatenatedName
+        {
+            get
+            {
+                return this.concatenatedNameField;
+            }
+            set
+            {
+                this.concatenatedNameField = value;
+                this.RaisePropertyChanged("concatenatedName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string landUsecode
+        {
+            get
+            {
+                return this.landUsecodeField;
+            }
+            set
+            {
+                this.landUsecodeField = value;
+                this.RaisePropertyChanged("landUsecode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string name
         {
             get
@@ -2378,7 +4356,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nameFirstpart
         {
             get
@@ -2393,7 +4371,7 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nameLastpart
         {
             get
@@ -2408,47 +4386,62 @@ namespace org.sola.webservices.administrative.extra
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string statusCode
-        {
-            get
-            {
-                return this.statusCodeField;
-            }
-            set
-            {
-                this.statusCodeField = value;
-                this.RaisePropertyChanged("statusCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string transactionId
-        {
-            get
-            {
-                return this.transactionIdField;
-            }
-            set
-            {
-                this.transactionIdField = value;
-                this.RaisePropertyChanged("transactionId");
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string typeCode
+        public string objections
         {
             get
             {
-                return this.typeCodeField;
+                return this.objectionsField;
             }
             set
             {
-                this.typeCodeField = value;
-                this.RaisePropertyChanged("typeCode");
+                this.objectionsField = value;
+                this.RaisePropertyChanged("objections");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string publicNotificationDuration
+        {
+            get
+            {
+                return this.publicNotificationDurationField;
+            }
+            set
+            {
+                this.publicNotificationDurationField = value;
+                this.RaisePropertyChanged("publicNotificationDuration");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public decimal size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+                this.RaisePropertyChanged("size");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sizeSpecified
+        {
+            get
+            {
+                return this.sizeFieldSpecified;
+            }
+            set
+            {
+                this.sizeFieldSpecified = value;
+                this.RaisePropertyChanged("sizeSpecified");
             }
         }
     }
@@ -2461,6 +4454,157 @@ namespace org.sola.webservices.administrative
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://webservices.sola.org/administrative", ConfigurationName="org.sola.webservices.administrative.Administrative")]
     public interface Administrative
     {
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/CheckConnectionResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.CheckConnectionResponse CheckConnection(org.sola.webservices.administrative.CheckConnectionRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocationRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocation/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocation/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocation/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocation/Fault/SOLAValidationFault", Name="SOLAValidationFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisParcelNa" +
+            "meByLocation/Fault/OptimisticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationResponse GetSysRegPubDisParcelNameByLocation(org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocationRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocation/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocation/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocation/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocation/Fault/SOLAValidationFault", Name="SOLAValidationFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisOwnerNam" +
+            "eByLocation/Fault/OptimisticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationResponse GetSysRegPubDisOwnerNameByLocation(org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocationRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocation/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocation/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocation/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocation/Fault/SOLAValidationFault", Name="SOLAValidationFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegPubDisStateLan" +
+            "dByLocation/Fault/OptimisticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationResponse GetSysRegPubDisStateLandByLocation(org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnitRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/SaveBaUnitResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/SOLAFa" +
+            "ult", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/Unhand" +
+            "ledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/SOLAAc" +
+            "cessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/Optimi" +
+            "sticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.SaveBaUnitResponse SaveBaUnit(org.sola.webservices.administrative.SaveBaUnitRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnitRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/CreateBaUnitResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/SOLA" +
+            "Fault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/Unha" +
+            "ndledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/SOLA" +
+            "AccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/Opti" +
+            "misticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.CreateBaUnitResponse CreateBaUnit(org.sola.webservices.administrative.CreateBaUnitRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegProgressReques" +
+            "t", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegProgressRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegProgress/Fault" +
+            "/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegProgress/Fault" +
+            "/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegProgress/Fault" +
+            "/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetSysRegProgressResponse GetSysRegProgress(org.sola.webservices.administrative.GetSysRegProgressRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitByIdRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitById/Fault/SOL" +
+            "AFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitById/Fault/Unh" +
+            "andledFault", Name="UnhandledFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetBaUnitByIdResponse GetBaUnitById(org.sola.webservices.administrative.GetBaUnitByIdRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObjectR" +
+            "equest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObjectR" +
+            "esponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObject/" +
+            "Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObject/" +
+            "Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse GetBaUnitWithCadObject(org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/PublicDisplayRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/PublicDisplayResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/PublicDisplay/Fault/SOL" +
+            "AFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/PublicDisplay/Fault/Unh" +
+            "andledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/PublicDisplay/Fault/SOL" +
+            "AAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/PublicDisplay/Fault/Opt" +
+            "imisticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/PublicDisplay/Fault/SOL" +
+            "AValidationFault", Name="SOLAValidationFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.administrative.PublicDisplayResponse PublicDisplay(org.sola.webservices.administrative.PublicDisplayRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/TerminateBaUnitRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/TerminateBaUnitResponse" +
@@ -2481,34 +4625,15 @@ namespace org.sola.webservices.administrative
         org.sola.webservices.administrative.TerminateBaUnitResponse TerminateBaUnit(org.sola.webservices.administrative.TerminateBaUnitRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "Request", ReplyAction="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "Response")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "/Fault/UnhandledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "/Fault/OptimisticLockingFault", Name="OptimisticLockingFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
-            "/Fault/SOLAValidationFault", Name="SOLAValidationFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreasRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreas/Fault/SO" +
+            "LAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreas/Fault/Un" +
+            "handledFault", Name="UnhandledFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.CancelBaUnitTerminationResponse CancelBaUnitTermination(org.sola.webservices.administrative.CancelBaUnitTerminationRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitByIdRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitByIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitById/Fault/SOL" +
-            "AFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitById/Fault/Unh" +
-            "andledFault", Name="UnhandledFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.GetBaUnitByIdResponse GetBaUnitById(org.sola.webservices.administrative.GetBaUnitByIdRequest request);
+        org.sola.webservices.administrative.GetBaUnitAreasResponse GetBaUnitAreas(org.sola.webservices.administrative.GetBaUnitAreasRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitsByServiceIdRe" +
@@ -2538,17 +4663,6 @@ namespace org.sola.webservices.administrative
         org.sola.webservices.administrative.GetBaUnitByCodeResponse GetBaUnitByCode(org.sola.webservices.administrative.GetBaUnitByCodeRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreasRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreas/Fault/SO" +
-            "LAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitAreas/Fault/Un" +
-            "handledFault", Name="UnhandledFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.GetBaUnitAreasResponse GetBaUnitAreas(org.sola.webservices.administrative.GetBaUnitAreasRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnitAreaRequest" +
             "", ReplyAction="http://webservices.sola.org/administrative/Administrative/CreateBaUnitAreaRespons" +
             "e")]
@@ -2566,55 +4680,488 @@ namespace org.sola.webservices.administrative
         org.sola.webservices.administrative.CreateBaUnitAreaResponse CreateBaUnitArea(org.sola.webservices.administrative.CreateBaUnitAreaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObjectR" +
-            "equest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObjectR" +
-            "esponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObject/" +
-            "Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetBaUnitWithCadObject/" +
-            "Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegManagementRequ" +
+            "est", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegManagementResp" +
+            "onse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegManagement/Fau" +
+            "lt/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegManagement/Fau" +
+            "lt/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegManagement/Fau" +
+            "lt/SOLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse GetBaUnitWithCadObject(org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest request);
+        org.sola.webservices.administrative.GetSysRegManagementResponse GetSysRegManagement(org.sola.webservices.administrative.GetSysRegManagementRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CheckConnectionRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/CheckConnectionResponse" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/GetSysRegStatusRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/GetSysRegStatusResponse" +
             "")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegStatus/Fault/S" +
+            "OLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegStatus/Fault/U" +
+            "nhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/GetSysRegStatus/Fault/S" +
+            "OLAAccessFault", Name="SOLAAccessFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.CheckConnectionResponse CheckConnection(org.sola.webservices.administrative.CheckConnectionRequest request);
+        org.sola.webservices.administrative.GetSysRegStatusResponse GetSysRegStatus(org.sola.webservices.administrative.GetSysRegStatusRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnitRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/CreateBaUnitResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/SOLA" +
-            "Fault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/Unha" +
-            "ndledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/SOLA" +
-            "AccessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CreateBaUnit/Fault/Opti" +
-            "misticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "Request", ReplyAction="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "/Fault/UnhandledFault", Name="UnhandledFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "/Fault/SOLAAccessFault", Name="SOLAAccessFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "/Fault/OptimisticLockingFault", Name="OptimisticLockingFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/CancelBaUnitTermination" +
+            "/Fault/SOLAValidationFault", Name="SOLAValidationFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.CreateBaUnitResponse CreateBaUnit(org.sola.webservices.administrative.CreateBaUnitRequest request);
+        org.sola.webservices.administrative.CancelBaUnitTerminationResponse CancelBaUnitTermination(org.sola.webservices.administrative.CancelBaUnitTerminationRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnection", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CheckConnectionRequest
+    {
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnitRequest", ReplyAction="http://webservices.sola.org/administrative/Administrative/SaveBaUnitResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/SOLAFa" +
-            "ult", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/Unhand" +
-            "ledFault", Name="UnhandledFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/SOLAAc" +
-            "cessFault", Name="SOLAAccessFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.administrative.extra.faultInfoBean), Action="http://webservices.sola.org/administrative/Administrative/SaveBaUnit/Fault/Optimi" +
-            "sticLockingFault", Name="OptimisticLockingFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractTO))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.administrative.SaveBaUnitResponse SaveBaUnit(org.sola.webservices.administrative.SaveBaUnitRequest request);
+        public CheckConnectionRequest()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnectionResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CheckConnectionResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public CheckConnectionResponse()
+        {
+        }
+        
+        public CheckConnectionResponse(bool @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisParcelNameByLocation", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisParcelNameByLocationRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string searchString;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetSysRegPubDisParcelNameByLocationRequest()
+        {
+        }
+        
+        public GetSysRegPubDisParcelNameByLocationRequest(string searchString, string languageCode)
+        {
+            this.searchString = searchString;
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisParcelNameByLocationResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisParcelNameByLocationResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegPubDisParcelNameTO[] @return;
+        
+        public GetSysRegPubDisParcelNameByLocationResponse()
+        {
+        }
+        
+        public GetSysRegPubDisParcelNameByLocationResponse(sysRegPubDisParcelNameTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisOwnerNameByLocation", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisOwnerNameByLocationRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string searchString;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetSysRegPubDisOwnerNameByLocationRequest()
+        {
+        }
+        
+        public GetSysRegPubDisOwnerNameByLocationRequest(string searchString, string languageCode)
+        {
+            this.searchString = searchString;
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisOwnerNameByLocationResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisOwnerNameByLocationResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegPubDisOwnerNameTO[] @return;
+        
+        public GetSysRegPubDisOwnerNameByLocationResponse()
+        {
+        }
+        
+        public GetSysRegPubDisOwnerNameByLocationResponse(sysRegPubDisOwnerNameTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisStateLandByLocation", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisStateLandByLocationRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string searchString;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetSysRegPubDisStateLandByLocationRequest()
+        {
+        }
+        
+        public GetSysRegPubDisStateLandByLocationRequest(string searchString, string languageCode)
+        {
+            this.searchString = searchString;
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegPubDisStateLandByLocationResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegPubDisStateLandByLocationResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegPubDisStateLandTO[] @return;
+        
+        public GetSysRegPubDisStateLandByLocationResponse()
+        {
+        }
+        
+        public GetSysRegPubDisStateLandByLocationResponse(sysRegPubDisStateLandTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveBaUnit", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class SaveBaUnitRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string serviceId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO baUnitTO;
+        
+        public SaveBaUnitRequest()
+        {
+        }
+        
+        public SaveBaUnitRequest(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        {
+            this.serviceId = serviceId;
+            this.baUnitTO = baUnitTO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveBaUnitResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class SaveBaUnitResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        
+        public SaveBaUnitResponse()
+        {
+        }
+        
+        public SaveBaUnitResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBaUnit", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CreateBaUnitRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string serviceId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO baUnitTO;
+        
+        public CreateBaUnitRequest()
+        {
+        }
+        
+        public CreateBaUnitRequest(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        {
+            this.serviceId = serviceId;
+            this.baUnitTO = baUnitTO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBaUnitResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CreateBaUnitResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        
+        public CreateBaUnitResponse()
+        {
+        }
+        
+        public CreateBaUnitResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegProgress", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegProgressRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetSysRegProgressRequest()
+        {
+        }
+        
+        public GetSysRegProgressRequest(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
+        {
+            this.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegProgressResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegProgressResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegProgressTO[] @return;
+        
+        public GetSysRegProgressResponse()
+        {
+        }
+        
+        public GetSysRegProgressResponse(sysRegProgressTO[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitById", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitByIdRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string id;
+        
+        public GetBaUnitByIdRequest()
+        {
+        }
+        
+        public GetBaUnitByIdRequest(string id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitByIdResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitByIdResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        
+        public GetBaUnitByIdResponse()
+        {
+        }
+        
+        public GetBaUnitByIdResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitWithCadObject", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitWithCadObjectRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nameFirstpart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nameLastpart;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string colist;
+        
+        public GetBaUnitWithCadObjectRequest()
+        {
+        }
+        
+        public GetBaUnitWithCadObjectRequest(string nameFirstpart, string nameLastpart, string colist)
+        {
+            this.nameFirstpart = nameFirstpart;
+            this.nameLastpart = nameLastpart;
+            this.colist = colist;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitWithCadObjectResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitWithCadObjectResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        
+        public GetBaUnitWithCadObjectResponse()
+        {
+        }
+        
+        public GetBaUnitWithCadObjectResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PublicDisplay", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class PublicDisplayRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @params;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public PublicDisplayRequest()
+        {
+        }
+        
+        public PublicDisplayRequest(string @params, string languageCode)
+        {
+            this.@params = @params;
+            this.languageCode = languageCode;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="PublicDisplayResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class PublicDisplayResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public validationResult[] @return;
+        
+        public PublicDisplayResponse()
+        {
+        }
+        
+        public PublicDisplayResponse(validationResult[] @return)
+        {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2664,19 +5211,19 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBaUnitTermination", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CancelBaUnitTerminationRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitAreas", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitAreasRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string baUnitId;
         
-        public CancelBaUnitTerminationRequest()
+        public GetBaUnitAreasRequest()
         {
         }
         
-        public CancelBaUnitTerminationRequest(string baUnitId)
+        public GetBaUnitAreasRequest(string baUnitId)
         {
             this.baUnitId = baUnitId;
         }
@@ -2684,59 +5231,19 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBaUnitTerminationResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CancelBaUnitTerminationResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitAreasResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetBaUnitAreasResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        public org.sola.webservices.administrative.extra.baUnitAreaTO @return;
         
-        public CancelBaUnitTerminationResponse()
+        public GetBaUnitAreasResponse()
         {
         }
         
-        public CancelBaUnitTerminationResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitById", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitByIdRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string id;
-        
-        public GetBaUnitByIdRequest()
-        {
-        }
-        
-        public GetBaUnitByIdRequest(string id)
-        {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitByIdResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitByIdResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO @return;
-        
-        public GetBaUnitByIdResponse()
-        {
-        }
-        
-        public GetBaUnitByIdResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        public GetBaUnitAreasResponse(org.sola.webservices.administrative.extra.baUnitAreaTO @return)
         {
             this.@return = @return;
         }
@@ -2829,46 +5336,6 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitAreas", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitAreasRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string baUnitId;
-        
-        public GetBaUnitAreasRequest()
-        {
-        }
-        
-        public GetBaUnitAreasRequest(string baUnitId)
-        {
-            this.baUnitId = baUnitId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitAreasResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitAreasResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitAreaTO @return;
-        
-        public GetBaUnitAreasResponse()
-        {
-        }
-        
-        public GetBaUnitAreasResponse(org.sola.webservices.administrative.extra.baUnitAreaTO @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBaUnitArea", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
     public partial class CreateBaUnitAreaRequest
     {
@@ -2914,49 +5381,44 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitWithCadObject", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitWithCadObjectRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegManagement", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegManagementRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nameFirstpart;
+        public org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nameLastpart;
+        public string languageCode;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string colist;
-        
-        public GetBaUnitWithCadObjectRequest()
+        public GetSysRegManagementRequest()
         {
         }
         
-        public GetBaUnitWithCadObjectRequest(string nameFirstpart, string nameLastpart, string colist)
+        public GetSysRegManagementRequest(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
         {
-            this.nameFirstpart = nameFirstpart;
-            this.nameLastpart = nameLastpart;
-            this.colist = colist;
+            this.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            this.languageCode = languageCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBaUnitWithCadObjectResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class GetBaUnitWithCadObjectResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegManagementResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegManagementResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegManagementTO[] @return;
         
-        public GetBaUnitWithCadObjectResponse()
+        public GetSysRegManagementResponse()
         {
         }
         
-        public GetBaUnitWithCadObjectResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        public GetSysRegManagementResponse(sysRegManagementTO[] @return)
         {
             this.@return = @return;
         }
@@ -2964,30 +5426,44 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnection", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CheckConnectionRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegStatus", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegStatusRequest
     {
         
-        public CheckConnectionRequest()
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string languageCode;
+        
+        public GetSysRegStatusRequest()
         {
+        }
+        
+        public GetSysRegStatusRequest(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
+        {
+            this.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            this.languageCode = languageCode;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CheckConnectionResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CheckConnectionResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetSysRegStatusResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class GetSysRegStatusResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public sysRegStatusTO[] @return;
         
-        public CheckConnectionResponse()
+        public GetSysRegStatusResponse()
         {
         }
         
-        public CheckConnectionResponse(bool @return)
+        public GetSysRegStatusResponse(sysRegStatusTO[] @return)
         {
             this.@return = @return;
         }
@@ -2995,89 +5471,39 @@ namespace org.sola.webservices.administrative
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBaUnit", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CreateBaUnitRequest
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBaUnitTermination", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CancelBaUnitTerminationRequest
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serviceId;
+        public string baUnitId;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO baUnitTO;
-        
-        public CreateBaUnitRequest()
+        public CancelBaUnitTerminationRequest()
         {
         }
         
-        public CreateBaUnitRequest(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        public CancelBaUnitTerminationRequest(string baUnitId)
         {
-            this.serviceId = serviceId;
-            this.baUnitTO = baUnitTO;
+            this.baUnitId = baUnitId;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateBaUnitResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class CreateBaUnitResponse
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CancelBaUnitTerminationResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
+    public partial class CancelBaUnitTerminationResponse
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public org.sola.webservices.administrative.extra.baUnitTO @return;
         
-        public CreateBaUnitResponse()
+        public CancelBaUnitTerminationResponse()
         {
         }
         
-        public CreateBaUnitResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveBaUnit", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class SaveBaUnitRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string serviceId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO baUnitTO;
-        
-        public SaveBaUnitRequest()
-        {
-        }
-        
-        public SaveBaUnitRequest(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
-        {
-            this.serviceId = serviceId;
-            this.baUnitTO = baUnitTO;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveBaUnitResponse", WrapperNamespace="http://webservices.sola.org/administrative", IsWrapped=true)]
-    public partial class SaveBaUnitResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/administrative", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public org.sola.webservices.administrative.extra.baUnitTO @return;
-        
-        public SaveBaUnitResponse()
-        {
-        }
-        
-        public SaveBaUnitResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
+        public CancelBaUnitTerminationResponse(org.sola.webservices.administrative.extra.baUnitTO @return)
         {
             this.@return = @return;
         }
@@ -3118,6 +5544,154 @@ namespace org.sola.webservices.administrative
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.CheckConnectionResponse org.sola.webservices.administrative.Administrative.CheckConnection(org.sola.webservices.administrative.CheckConnectionRequest request)
+        {
+            return base.Channel.CheckConnection(request);
+        }
+        
+        public bool CheckConnection()
+        {
+            org.sola.webservices.administrative.CheckConnectionRequest inValue = new org.sola.webservices.administrative.CheckConnectionRequest();
+            org.sola.webservices.administrative.CheckConnectionResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CheckConnection(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationResponse org.sola.webservices.administrative.Administrative.GetSysRegPubDisParcelNameByLocation(org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationRequest request)
+        {
+            return base.Channel.GetSysRegPubDisParcelNameByLocation(request);
+        }
+        
+        public sysRegPubDisParcelNameTO[] GetSysRegPubDisParcelNameByLocation(string searchString, string languageCode)
+        {
+            org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationRequest inValue = new org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationRequest();
+            inValue.searchString = searchString;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegPubDisParcelNameByLocationResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegPubDisParcelNameByLocation(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationResponse org.sola.webservices.administrative.Administrative.GetSysRegPubDisOwnerNameByLocation(org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationRequest request)
+        {
+            return base.Channel.GetSysRegPubDisOwnerNameByLocation(request);
+        }
+        
+        public sysRegPubDisOwnerNameTO[] GetSysRegPubDisOwnerNameByLocation(string searchString, string languageCode)
+        {
+            org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationRequest inValue = new org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationRequest();
+            inValue.searchString = searchString;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegPubDisOwnerNameByLocationResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegPubDisOwnerNameByLocation(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationResponse org.sola.webservices.administrative.Administrative.GetSysRegPubDisStateLandByLocation(org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationRequest request)
+        {
+            return base.Channel.GetSysRegPubDisStateLandByLocation(request);
+        }
+        
+        public sysRegPubDisStateLandTO[] GetSysRegPubDisStateLandByLocation(string searchString, string languageCode)
+        {
+            org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationRequest inValue = new org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationRequest();
+            inValue.searchString = searchString;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegPubDisStateLandByLocationResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegPubDisStateLandByLocation(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.SaveBaUnitResponse org.sola.webservices.administrative.Administrative.SaveBaUnit(org.sola.webservices.administrative.SaveBaUnitRequest request)
+        {
+            return base.Channel.SaveBaUnit(request);
+        }
+        
+        public org.sola.webservices.administrative.extra.baUnitTO SaveBaUnit(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        {
+            org.sola.webservices.administrative.SaveBaUnitRequest inValue = new org.sola.webservices.administrative.SaveBaUnitRequest();
+            inValue.serviceId = serviceId;
+            inValue.baUnitTO = baUnitTO;
+            org.sola.webservices.administrative.SaveBaUnitResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).SaveBaUnit(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.CreateBaUnitResponse org.sola.webservices.administrative.Administrative.CreateBaUnit(org.sola.webservices.administrative.CreateBaUnitRequest request)
+        {
+            return base.Channel.CreateBaUnit(request);
+        }
+        
+        public org.sola.webservices.administrative.extra.baUnitTO CreateBaUnit(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        {
+            org.sola.webservices.administrative.CreateBaUnitRequest inValue = new org.sola.webservices.administrative.CreateBaUnitRequest();
+            inValue.serviceId = serviceId;
+            inValue.baUnitTO = baUnitTO;
+            org.sola.webservices.administrative.CreateBaUnitResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CreateBaUnit(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetSysRegProgressResponse org.sola.webservices.administrative.Administrative.GetSysRegProgress(org.sola.webservices.administrative.GetSysRegProgressRequest request)
+        {
+            return base.Channel.GetSysRegProgress(request);
+        }
+        
+        public sysRegProgressTO[] GetSysRegProgress(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
+        {
+            org.sola.webservices.administrative.GetSysRegProgressRequest inValue = new org.sola.webservices.administrative.GetSysRegProgressRequest();
+            inValue.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegProgressResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegProgress(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetBaUnitByIdResponse org.sola.webservices.administrative.Administrative.GetBaUnitById(org.sola.webservices.administrative.GetBaUnitByIdRequest request)
+        {
+            return base.Channel.GetBaUnitById(request);
+        }
+        
+        public org.sola.webservices.administrative.extra.baUnitTO GetBaUnitById(string id)
+        {
+            org.sola.webservices.administrative.GetBaUnitByIdRequest inValue = new org.sola.webservices.administrative.GetBaUnitByIdRequest();
+            inValue.id = id;
+            org.sola.webservices.administrative.GetBaUnitByIdResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitById(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse org.sola.webservices.administrative.Administrative.GetBaUnitWithCadObject(org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest request)
+        {
+            return base.Channel.GetBaUnitWithCadObject(request);
+        }
+        
+        public org.sola.webservices.administrative.extra.baUnitTO GetBaUnitWithCadObject(string nameFirstpart, string nameLastpart, string colist)
+        {
+            org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest inValue = new org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest();
+            inValue.nameFirstpart = nameFirstpart;
+            inValue.nameLastpart = nameLastpart;
+            inValue.colist = colist;
+            org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitWithCadObject(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.administrative.PublicDisplayResponse org.sola.webservices.administrative.Administrative.PublicDisplay(org.sola.webservices.administrative.PublicDisplayRequest request)
+        {
+            return base.Channel.PublicDisplay(request);
+        }
+        
+        public validationResult[] PublicDisplay(string @params, string languageCode)
+        {
+            org.sola.webservices.administrative.PublicDisplayRequest inValue = new org.sola.webservices.administrative.PublicDisplayRequest();
+            inValue.@params = @params;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.PublicDisplayResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).PublicDisplay(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         org.sola.webservices.administrative.TerminateBaUnitResponse org.sola.webservices.administrative.Administrative.TerminateBaUnit(org.sola.webservices.administrative.TerminateBaUnitRequest request)
         {
             return base.Channel.TerminateBaUnit(request);
@@ -3133,30 +5707,16 @@ namespace org.sola.webservices.administrative
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.CancelBaUnitTerminationResponse org.sola.webservices.administrative.Administrative.CancelBaUnitTermination(org.sola.webservices.administrative.CancelBaUnitTerminationRequest request)
+        org.sola.webservices.administrative.GetBaUnitAreasResponse org.sola.webservices.administrative.Administrative.GetBaUnitAreas(org.sola.webservices.administrative.GetBaUnitAreasRequest request)
         {
-            return base.Channel.CancelBaUnitTermination(request);
+            return base.Channel.GetBaUnitAreas(request);
         }
         
-        public org.sola.webservices.administrative.extra.baUnitTO CancelBaUnitTermination(string baUnitId)
+        public org.sola.webservices.administrative.extra.baUnitAreaTO GetBaUnitAreas(string baUnitId)
         {
-            org.sola.webservices.administrative.CancelBaUnitTerminationRequest inValue = new org.sola.webservices.administrative.CancelBaUnitTerminationRequest();
+            org.sola.webservices.administrative.GetBaUnitAreasRequest inValue = new org.sola.webservices.administrative.GetBaUnitAreasRequest();
             inValue.baUnitId = baUnitId;
-            org.sola.webservices.administrative.CancelBaUnitTerminationResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CancelBaUnitTermination(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.GetBaUnitByIdResponse org.sola.webservices.administrative.Administrative.GetBaUnitById(org.sola.webservices.administrative.GetBaUnitByIdRequest request)
-        {
-            return base.Channel.GetBaUnitById(request);
-        }
-        
-        public org.sola.webservices.administrative.extra.baUnitTO GetBaUnitById(string id)
-        {
-            org.sola.webservices.administrative.GetBaUnitByIdRequest inValue = new org.sola.webservices.administrative.GetBaUnitByIdRequest();
-            inValue.id = id;
-            org.sola.webservices.administrative.GetBaUnitByIdResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitById(inValue);
+            org.sola.webservices.administrative.GetBaUnitAreasResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitAreas(inValue);
             return retVal.@return;
         }
         
@@ -3190,20 +5750,6 @@ namespace org.sola.webservices.administrative
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.GetBaUnitAreasResponse org.sola.webservices.administrative.Administrative.GetBaUnitAreas(org.sola.webservices.administrative.GetBaUnitAreasRequest request)
-        {
-            return base.Channel.GetBaUnitAreas(request);
-        }
-        
-        public org.sola.webservices.administrative.extra.baUnitAreaTO GetBaUnitAreas(string baUnitId)
-        {
-            org.sola.webservices.administrative.GetBaUnitAreasRequest inValue = new org.sola.webservices.administrative.GetBaUnitAreasRequest();
-            inValue.baUnitId = baUnitId;
-            org.sola.webservices.administrative.GetBaUnitAreasResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitAreas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         org.sola.webservices.administrative.CreateBaUnitAreaResponse org.sola.webservices.administrative.Administrative.CreateBaUnitArea(org.sola.webservices.administrative.CreateBaUnitAreaRequest request)
         {
             return base.Channel.CreateBaUnitArea(request);
@@ -3219,61 +5765,46 @@ namespace org.sola.webservices.administrative
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse org.sola.webservices.administrative.Administrative.GetBaUnitWithCadObject(org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest request)
+        org.sola.webservices.administrative.GetSysRegManagementResponse org.sola.webservices.administrative.Administrative.GetSysRegManagement(org.sola.webservices.administrative.GetSysRegManagementRequest request)
         {
-            return base.Channel.GetBaUnitWithCadObject(request);
+            return base.Channel.GetSysRegManagement(request);
         }
         
-        public org.sola.webservices.administrative.extra.baUnitTO GetBaUnitWithCadObject(string nameFirstpart, string nameLastpart, string colist)
+        public sysRegManagementTO[] GetSysRegManagement(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
         {
-            org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest inValue = new org.sola.webservices.administrative.GetBaUnitWithCadObjectRequest();
-            inValue.nameFirstpart = nameFirstpart;
-            inValue.nameLastpart = nameLastpart;
-            inValue.colist = colist;
-            org.sola.webservices.administrative.GetBaUnitWithCadObjectResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetBaUnitWithCadObject(inValue);
+            org.sola.webservices.administrative.GetSysRegManagementRequest inValue = new org.sola.webservices.administrative.GetSysRegManagementRequest();
+            inValue.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegManagementResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegManagement(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.CheckConnectionResponse org.sola.webservices.administrative.Administrative.CheckConnection(org.sola.webservices.administrative.CheckConnectionRequest request)
+        org.sola.webservices.administrative.GetSysRegStatusResponse org.sola.webservices.administrative.Administrative.GetSysRegStatus(org.sola.webservices.administrative.GetSysRegStatusRequest request)
         {
-            return base.Channel.CheckConnection(request);
+            return base.Channel.GetSysRegStatus(request);
         }
         
-        public bool CheckConnection()
+        public sysRegStatusTO[] GetSysRegStatus(org.sola.webservices.administrative.extra.sysRegManagementParamsTO SysRegManagementParamsTO, string languageCode)
         {
-            org.sola.webservices.administrative.CheckConnectionRequest inValue = new org.sola.webservices.administrative.CheckConnectionRequest();
-            org.sola.webservices.administrative.CheckConnectionResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CheckConnection(inValue);
+            org.sola.webservices.administrative.GetSysRegStatusRequest inValue = new org.sola.webservices.administrative.GetSysRegStatusRequest();
+            inValue.SysRegManagementParamsTO = SysRegManagementParamsTO;
+            inValue.languageCode = languageCode;
+            org.sola.webservices.administrative.GetSysRegStatusResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).GetSysRegStatus(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.CreateBaUnitResponse org.sola.webservices.administrative.Administrative.CreateBaUnit(org.sola.webservices.administrative.CreateBaUnitRequest request)
+        org.sola.webservices.administrative.CancelBaUnitTerminationResponse org.sola.webservices.administrative.Administrative.CancelBaUnitTermination(org.sola.webservices.administrative.CancelBaUnitTerminationRequest request)
         {
-            return base.Channel.CreateBaUnit(request);
+            return base.Channel.CancelBaUnitTermination(request);
         }
         
-        public org.sola.webservices.administrative.extra.baUnitTO CreateBaUnit(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
+        public org.sola.webservices.administrative.extra.baUnitTO CancelBaUnitTermination(string baUnitId)
         {
-            org.sola.webservices.administrative.CreateBaUnitRequest inValue = new org.sola.webservices.administrative.CreateBaUnitRequest();
-            inValue.serviceId = serviceId;
-            inValue.baUnitTO = baUnitTO;
-            org.sola.webservices.administrative.CreateBaUnitResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CreateBaUnit(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.administrative.SaveBaUnitResponse org.sola.webservices.administrative.Administrative.SaveBaUnit(org.sola.webservices.administrative.SaveBaUnitRequest request)
-        {
-            return base.Channel.SaveBaUnit(request);
-        }
-        
-        public org.sola.webservices.administrative.extra.baUnitTO SaveBaUnit(string serviceId, org.sola.webservices.administrative.extra.baUnitTO baUnitTO)
-        {
-            org.sola.webservices.administrative.SaveBaUnitRequest inValue = new org.sola.webservices.administrative.SaveBaUnitRequest();
-            inValue.serviceId = serviceId;
-            inValue.baUnitTO = baUnitTO;
-            org.sola.webservices.administrative.SaveBaUnitResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).SaveBaUnit(inValue);
+            org.sola.webservices.administrative.CancelBaUnitTerminationRequest inValue = new org.sola.webservices.administrative.CancelBaUnitTerminationRequest();
+            inValue.baUnitId = baUnitId;
+            org.sola.webservices.administrative.CancelBaUnitTerminationResponse retVal = ((org.sola.webservices.administrative.Administrative)(this)).CancelBaUnitTermination(inValue);
             return retVal.@return;
         }
     }

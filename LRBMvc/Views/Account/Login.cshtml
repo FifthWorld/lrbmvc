@@ -5,20 +5,24 @@
 }
 
 <section id="loginForm">
+    
     @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+   
     {
         @Html.AntiForgeryToken()
+        <div  style="border:1px solid #ffd800; height:40px; background-color:#ffc; color:#c00; padding-left:10px; margin-top:10px;line-height:40px;">
         @Html.ValidationSummary(true)
-        <div class="form_box pull-left">
-            <p>
-                @Html.LabelFor(m => m.UserName)
+        </div>
+        <div class="form_box pull-left" style="border-right:1px dashed #808080; margin-top:40px">
+            
+                <label>Username</label>
                 @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @style= "width: 350px;" })
-                @Html.ValidationMessageFor(m => m.UserName)
-            </p>
+                <div style="color:#c00; font-weight:bold">@Html.ValidationMessageFor(m => m.UserName)</div>
+            
           <p>
                 @Html.LabelFor(m => m.Password)
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style= "width: 350px;" })
-                @Html.ValidationMessageFor(m => m.Password)
+                <div style="color:#c00; font-weight:bold">@Html.ValidationMessageFor(m => m.Password)</div>
           </p>
             <div class="checkbox">
                 @Html.CheckBoxFor(m => m.RememberMe)
@@ -29,12 +33,12 @@
                 
             </p>
         </div>
-        <div class ="form_box_right">
+        <div style="margin-top:80px; border:solid 1px #333; width:350px; float:right; padding:30px; font-size:20px; background-color:#ffC">
             @Html.ActionLink(" If you don't have an account, please Click here to register.", "Register", new { @class = "link_button" } )
         </div>
     }
 </section>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }

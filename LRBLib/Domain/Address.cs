@@ -36,6 +36,16 @@ namespace LRB.Lib.Domain
         public virtual Citizen Citizen { get; set; }
         public virtual Property Property { get; set; }
         public virtual Party Party { get; set; }
+
+        public override string ToString()
+        {
+            string result = "";
+            result += Street == null ? "" : Street + " ";
+            result += Town == null ? "" : Town + " ";
+            result += LGA == null ? "" : LGA + " ";
+            result += State == null ? "" : State + " ";
+            return result;
+        }
     }
 
     public partial class PhoneNumber

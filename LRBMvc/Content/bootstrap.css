@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Ubuntu");
+/*@import url("//fonts.googleapis.com/css?family=Ubuntu");*/
 
 /*!
  * Bootstrap v3.0.0
@@ -302,7 +302,7 @@ html {
 }
 
 body {
-  font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;

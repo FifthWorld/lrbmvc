@@ -13,6 +13,7 @@ namespace LRB.Lib.Domain
     using System.Linq;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.ComponentModel;
     
     public partial class Citizen
     {
@@ -22,12 +23,17 @@ namespace LRB.Lib.Domain
         }
     
         public int Id { get; set; }
+        [DisplayName("Relationship to applicant")]
         public string RelationshiptoApplicant { get; set; }
+        [DisplayName("First name")]
         public string Firstname { get; set; }
+        [DisplayName("Last name")]
         public string Lastname { get; set; }
+        [DisplayName("Middle name")]
         public string Middlename { get; set; }
+        [DisplayName("Position held")]
         public string PostHeld { get; set; }
-
+        [DisplayName("Contact address")]
         public String ContactAddress { get; set; }
         public virtual List<Address> Addresses { get; set; }
 

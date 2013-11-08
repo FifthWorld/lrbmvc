@@ -157,5 +157,26 @@ namespace org.sola.services.boundary.wsclients
             return result;
         }
 
+        public applicationTO GetApplicationViaTransactionId(string id)
+        {
+            applicationTO result = null;
+            using (CaseManagementClient client = new CaseManagementClient())
+            {
+                ConfigureClient(client);
+                try
+                {
+                    client.Open();
+                    result = client.getApplicationByTransactionId(id);
+                    client.Close();
+                }
+                catch (Exception ex)
+                {
+                    client.Abort();
+                    throw;
+                }
+            }
+            return result;
+        }
+
     }
 }

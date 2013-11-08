@@ -206,15 +206,6 @@ namespace org.sola.webservices.filestreaming
         org.sola.webservices.filestreaming.CheckConnectionResponse CheckConnection(org.sola.webservices.filestreaming.CheckConnectionRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/filestreaming/FileStreaming/UploadRequest", ReplyAction="http://webservices.sola.org/filestreaming/FileStreaming/UploadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Upload/Fault/SOLAFault", Name="SOLAFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Upload/Fault/UnhandledFau" +
-            "lt", Name="UnhandledFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        org.sola.webservices.filestreaming.UploadResponse Upload(org.sola.webservices.filestreaming.UploadRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/filestreaming/FileStreaming/DownloadRequest", ReplyAction="http://webservices.sola.org/filestreaming/FileStreaming/DownloadResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Download/Fault/SOLAFault", Name="SOLAFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Download/Fault/UnhandledF" +
@@ -222,6 +213,15 @@ namespace org.sola.webservices.filestreaming
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         org.sola.webservices.filestreaming.DownloadResponse Download(org.sola.webservices.filestreaming.DownloadRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservices.sola.org/filestreaming/FileStreaming/UploadRequest", ReplyAction="http://webservices.sola.org/filestreaming/FileStreaming/UploadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Upload/Fault/SOLAFault", Name="SOLAFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(org.sola.webservices.filestreaming.extra.faultInfoBean), Action="http://webservices.sola.org/filestreaming/FileStreaming/Upload/Fault/UnhandledFau" +
+            "lt", Name="UnhandledFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        org.sola.webservices.filestreaming.UploadResponse Upload(org.sola.webservices.filestreaming.UploadRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -250,46 +250,6 @@ namespace org.sola.webservices.filestreaming
         }
         
         public CheckConnectionResponse(bool @return)
-        {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="Upload", WrapperNamespace="http://webservices.sola.org/filestreaming", IsWrapped=true)]
-    public partial class UploadRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/filestreaming", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
-        public byte[] fileContent;
-        
-        public UploadRequest()
-        {
-        }
-        
-        public UploadRequest(byte[] fileContent)
-        {
-            this.fileContent = fileContent;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="UploadResponse", WrapperNamespace="http://webservices.sola.org/filestreaming", IsWrapped=true)]
-    public partial class UploadResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/filestreaming", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public UploadResponse()
-        {
-        }
-        
-        public UploadResponse(string @return)
         {
             this.@return = @return;
         }
@@ -330,6 +290,46 @@ namespace org.sola.webservices.filestreaming
         }
         
         public DownloadResponse(byte[] @return)
+        {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Upload", WrapperNamespace="http://webservices.sola.org/filestreaming", IsWrapped=true)]
+    public partial class UploadRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/filestreaming", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary")]
+        public byte[] fileContent;
+        
+        public UploadRequest()
+        {
+        }
+        
+        public UploadRequest(byte[] fileContent)
+        {
+            this.fileContent = fileContent;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="UploadResponse", WrapperNamespace="http://webservices.sola.org/filestreaming", IsWrapped=true)]
+    public partial class UploadResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webservices.sola.org/filestreaming", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public UploadResponse()
+        {
+        }
+        
+        public UploadResponse(string @return)
         {
             this.@return = @return;
         }
@@ -383,20 +383,6 @@ namespace org.sola.webservices.filestreaming
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        org.sola.webservices.filestreaming.UploadResponse org.sola.webservices.filestreaming.FileStreaming.Upload(org.sola.webservices.filestreaming.UploadRequest request)
-        {
-            return base.Channel.Upload(request);
-        }
-        
-        public string Upload(byte[] fileContent)
-        {
-            org.sola.webservices.filestreaming.UploadRequest inValue = new org.sola.webservices.filestreaming.UploadRequest();
-            inValue.fileContent = fileContent;
-            org.sola.webservices.filestreaming.UploadResponse retVal = ((org.sola.webservices.filestreaming.FileStreaming)(this)).Upload(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         org.sola.webservices.filestreaming.DownloadResponse org.sola.webservices.filestreaming.FileStreaming.Download(org.sola.webservices.filestreaming.DownloadRequest request)
         {
             return base.Channel.Download(request);
@@ -407,6 +393,20 @@ namespace org.sola.webservices.filestreaming
             org.sola.webservices.filestreaming.DownloadRequest inValue = new org.sola.webservices.filestreaming.DownloadRequest();
             inValue.pathFileName = pathFileName;
             org.sola.webservices.filestreaming.DownloadResponse retVal = ((org.sola.webservices.filestreaming.FileStreaming)(this)).Download(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        org.sola.webservices.filestreaming.UploadResponse org.sola.webservices.filestreaming.FileStreaming.Upload(org.sola.webservices.filestreaming.UploadRequest request)
+        {
+            return base.Channel.Upload(request);
+        }
+        
+        public string Upload(byte[] fileContent)
+        {
+            org.sola.webservices.filestreaming.UploadRequest inValue = new org.sola.webservices.filestreaming.UploadRequest();
+            inValue.fileContent = fileContent;
+            org.sola.webservices.filestreaming.UploadResponse retVal = ((org.sola.webservices.filestreaming.FileStreaming)(this)).Upload(inValue);
             return retVal.@return;
         }
     }

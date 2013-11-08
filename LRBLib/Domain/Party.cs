@@ -49,8 +49,7 @@ namespace LRB.Lib.Domain
         [DataType(DataType.Date)]
         public Nullable<System.DateTime> DOB { get; set; }
 
-        [DisplayName("State of Origin")]
-        public string StateofOrigin { get; set; }
+        
 
         [DisplayName("Home town")]
         public string HomeTown { get; set; }

@@ -1,10 +1,11 @@
 ﻿@model LRB.Lib.Domain.Property
 <div class="col-md-3 col-sm-4 sidebar">
-    <ul class="nav nav-stacked nav-pills">
-        <li><a href="#" class="active">Personal Details</a></li>
-        <li><a href="about.html">Property Information</a></li>
-        <li><a href="services.html">Documents</a></li>
-        <li><a href="contact.php">Confirmation Page</a></li>
+    <ul class="nav nav-stacked nav-pills list-group">
+        <li class="list-group-item">@Html.RouteLink("Applicant's Information", "Default", new { action = "ContactInformation", controller = "LandApplication" })</li>
+        <li class="list-group-item active">@Html.RouteLink("Property Information", "Default", new { action = "PropertyInformation", controller = "LandApplication" }, new { @disabled = "disabled" })</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Optional Information", "Default", new { action = "OptionalInformation", controller = "LandApplication" }, new { @disabled = "disabled" })</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Document Uploads", "Default", new { action = "RequiredDocuments", controller = "LandApplication" }, new { @disabled = "disabled" })</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Confirmation Page", "Default", new { action = "Summary", controller = "LandApplication" }, new { @disabled = "disabled" })</li>
     </ul>
 </div>
 
@@ -45,7 +46,7 @@
             <div class="form-group col-lg-4">
                 @Html.LabelFor(model => model.LandSizeUnit)
                 @Html.DropDownListFor(model => model.LandSizeUnit,
-            new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control" })
+            new SelectList(new String[] { "hectares", "square meters", " square feet", "acres" }), new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.LandSizeUnit)</span>
             </div>
         </fieldset>
@@ -67,16 +68,32 @@
             </div>
 
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.LandUse)
+                <label></label>
                 @Html.DropDownListFor(model => model.LandUse,
-            new SelectList(new String[] { "Residential", "Commercial", "Agricultural", "Industrial" }), new { @class = "form-control" })
+                new SelectList(new String[] { "Residential", "Commercial", "Industrial", "Recreational", "Religious", "Educational", "Other" }), new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.LandUse)</span>
             </div>
 
             <div class="form-group col-lg-8">
-                @Html.LabelFor(model => model.PeriodofPossession)
-                @Html.TextBoxFor(model => model.PeriodofPossession, new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.PeriodofPossession)</span>
+                @Html.LabelFor(model => model.PeriodofPossession_years, new { @class = "form-label" })
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(model => model.PeriodofPossession_years,
+                        new SelectList(ViewBag.Years), new { @class = "form-control" })
+                        </div>
+                        <span class="col-md-4">years</span>
+                        <span class="help-inline">@Html.ValidationMessageFor(model => model.PeriodofPossession_years)</span>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-8">
+                            @Html.DropDownListFor(model => model.PeriodofPossession_months,
+                        new SelectList(ViewBag.Months), new { @class = "form-control" })
+                        </div>
+                        <span class="col-md-4">months</span>
+                        <span class="help-inline">@Html.ValidationMessageFor(model => model.PeriodofPossession_months)</span>
+                    </div>
+                </div>
             </div>
 
 

@@ -10,7 +10,7 @@ namespace org.sola.services.boundary.wsclients
     {
         void SetCredentials(string userName, string password);
         bool CheckConnection();
-        applicationActionTypeTO[] GetApplicationStatusTypes();
+        applicationStatusTypeTO[] GetApplicationStatusTypes();
         communicationTypeTO[] GetCommunicationTypes();
         genderTypeTO[] GetGenderTypes();
         partyRoleTypeTO[] GetPartyRoleTypes();
@@ -18,14 +18,14 @@ namespace org.sola.services.boundary.wsclients
         registrationStatusTypeTO[] GetRegistrationTypes();
         requestTypeTO[] GetRequestTypes();
         sourceTypeTO[] GetSourceTypes();
-        capacityTypeTO[] GetCapacityTypes();
-        homeTownTypeTO[] GetHomeTownTypes();
-        lgaTypeTO[] GetLgaTypes();
-        occupationTypeTO[] GetOccupationTypes();
-        propertyTypeTO[] GetPropertyTypes();
-        stateTypeTO[] GetStateTypes();
-        titleTypeTO[] GetTitleTypes();
-        useTypeTO[] GetUseTypes();
+        //capacityTypeTO[] GetCapacityTypes();
+        //homeTownTypeTO[] GetHomeTownTypes();
+        //lgaTypeTO[] GetLgaTypes();
+        //occupationTypeTO[] GetOccupationTypes();
+        //propertyTypeTO[] GetPropertyTypes();
+        //stateTypeTO[] GetStateTypes();
+        //titleTypeTO[] GetTitleTypes();
+        //useTypeTO[] GetUseTypes();
 
     }
 }

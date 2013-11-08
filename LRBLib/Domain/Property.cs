@@ -40,8 +40,12 @@ namespace LRB.Lib.Domain
         public string LandUse { get; set; }
 
         [DisplayName("How long has this property been in your possession")]
-        [Required(ErrorMessage = "Please State how long this property has been in your possession")]
-        public string PeriodofPossession { get; set; }
+        [Required(ErrorMessage = "State Years")]
+        public string PeriodofPossession_years { get; set; }
+
+        [DisplayName("How long has this property been in your possession")]
+        [Required(ErrorMessage = "State Months")]
+        public string PeriodofPossession_months { get; set; }
 
         [DisplayName("Approximate size of property")]
         [Required(ErrorMessage = "Please State the approximate area of the property in question")]

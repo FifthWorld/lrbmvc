@@ -1,10 +1,11 @@
 ﻿@model LRB.Lib.Domain.Party
 <div class="col-md-3 col-sm-4 sidebar">
-    <ul class="nav nav-stacked nav-pills">
-        <li><a href="#" class="active">Personal Details</a></li>
-        <li><a href="about.html">Property Information</a></li>
-        <li><a href="services.html">Documents</a></li>
-        <li><a href="contact.php">Confirmation Page</a></li>
+    <ul class="nav nav-stacked nav-pills list-group">
+        <li class="list-group-item active">@Html.RouteLink("Applicant's Information", "Default", new { action = "ContactInformation", controller = "LandApplication" })</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Property Information", "Default", new { action = "PropertyInformation", controller = "LandApplication" }, new {@disabled="disabled"})</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Additional Information", "Default", new { action = "OptionalInformation", controller = "LandApplication" }, new {@disabled="disabled"} )</li>
+        <li class="list-group-item disabled" >@Html.RouteLink("Document Uploads", "Default", new { action = "RequiredDocuments", controller = "LandApplication" }, new {@disabled="disabled"} )</li>
+        <li class="list-group-item disabled">@Html.RouteLink("Confirmation Page", "Default", new { action = "Summary", controller = "LandApplication" }, new {@disabled="disabled"})</li>
     </ul>
 </div>
 
@@ -15,19 +16,55 @@
         @Html.ValidationSummary(true)
         <fieldset>
             <h1 class="page-header">Corporate application for C of O <small>Personal Details</small></h1>
-            <p class="alert alert-info">Please fill in your personal details in the form below</p>
+            <p class="alert alert-info">Please fill in your Organization Information in the form below</p>
+            <div class="form-group col-lg-8">
+                @Html.LabelFor(model => model.OrganizationName)
+                @Html.TextBoxFor(model => model.OrganizationName, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.OrganizationName)</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Address Information
+            </legend>
+            <div class="form-group col-lg-8">
+                @Html.LabelFor(model => model.Street)
+                @Html.TextBoxFor(model => model.Street, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Street)</span>
+            </div>
+
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Surname)
+                @Html.LabelFor(model => model.Town)
+                @Html.TextBoxFor(model => model.Town, new { @class = "form-control", @type = "text" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.Town)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.IState)
+                @Html.DropDownListFor(model => model.IState, new SelectList(new String[] { "Ondo", "Ogun", "Other" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.IState)</span>
+            </div>
+            <div class="form-group col-lg-4">
+                @Html.LabelFor(model => model.ILGA)
+                @Html.DropDownListFor(model => model.ILGA, new SelectList(new String[] { "Akure South", "Akure North", "Ore" }), new { @class = "form-control" })
+                <span class="help-inline">@Html.ValidationMessageFor(model => model.ILGA)</span>
+            </div>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Contact Person information</legend>
+            <div class="form-group col-lg-4">
+                <label>Surname</label>
                 @Html.TextBoxFor(model => model.Surname, new { @class = "form-control", @placeholder = Model.Surname })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.Surname)</span>
             </div>
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Firstname)
+                <label>First Name</label>
                 @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control", @placeholder = Model.Firstname })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.Firstname)</span>
             </div>
             <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Middlename)
+                <label>Middle Name</label>
                 @Html.TextBoxFor(model => model.Middlename, new { @class = "form-control", @placeholder = Model.Middlename })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.Middlename)</span>
             </div>
@@ -38,11 +75,11 @@
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.DOB)</span>
             </div>
 
-            <div class="form-group col-lg-4">
+            @*<div class="form-group col-lg-4">
                 @Html.LabelFor(model => model.Occupation)
                 @Html.TextBoxFor(model => model.Occupation, new { @class = "form-control", @type = "text" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.Occupation)</span>
-            </div>
+            </div>*@
 
             <div class="form-group col-lg-4">
                 @Html.LabelFor(model => model.Gender)
@@ -67,59 +104,7 @@
                 @Html.TextBoxFor(model => model.Phone2, new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.Phone2)</span>
             </div>
-        </fieldset>
-        
-        <fieldset>
-            <legend>Contact Address</legend>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Street)
-                @Html.TextBoxFor(model => model.Street, new { @class = "form-control", @type = "text" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Street)</span>
-            </div>
-
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Town)
-                @Html.TextBoxFor(model => model.Town, new { @class = "form-control", @type = "text" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Town)</span>
-            </div>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.IState)
-                @Html.DropDownListFor(model => model.IState, new SelectList(new String[] { "Ondo", "Ogun", "Other" }), new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.IState)</span>
-            </div>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.ILGA)
-                @Html.DropDownListFor(model => model.ILGA, new SelectList(new String[] { "Akure South", "Akure North", "Ore" }), new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.ILGA)</span>
-            </div>
-        </fieldset>
-        <fieldset class="well">
-            <p class="warning">Please fill in this information i registering on behalf of someone else</p>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Application.InterimApplicant.Lastname)
-                @Html.TextBoxFor(model => model.Application.InterimApplicant.Lastname, new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)</span>
-            </div>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Application.InterimApplicant.Firstname)
-                @Html.TextBoxFor(model => model.Application.InterimApplicant.Firstname, new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Lastname)</span>
-            </div>
-            <div class="form-group col-lg-4">
-                @Html.LabelFor(model => model.Application.InterimApplicant.Middlename)
-                @Html.TextBoxFor(model => model.Application.InterimApplicant.Middlename, new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.Middlename)</span>
-            </div>
-
-            <div class="form-group col-lg-8">
-                @Html.LabelFor(model => model.Application.InterimApplicant.ContactAddress)
-                @Html.TextBoxFor(model => model.Application.InterimApplicant.ContactAddress, new { @class = "form-control" })
-                <span class="help-inline">@Html.ValidationMessageFor(model => model.Application.InterimApplicant.ContactAddress)</span>
-            </div>
-
-
-        </fieldset>
-            
+        </fieldset>                
         <div class="row">
             <div class="form-group pull-right col-lg-4">
                 @*<button class="btn btn-primary col-lg-offset-1">Previous</button>*@

@@ -7,19 +7,19 @@
 <div class="">
     <table class="table table-bordered">
         <caption>
-            <h2>Property Information</h2>
+            <div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:10px; line-height:40px; font-size:17px">PROPERTY INFORMATION</div>
         </caption>
         <tbody>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.fileno)</td>
+                <td>File Number</td>
                 <td>@Html.DisplayFor(model => model.fileno)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.doe)</td>
+                <td>Date of Archival</td>
                 <td>@Html.DisplayFor(model => model.doe)</td>
             </tr>
             <tr>
-                <td>@Html.DisplayNameFor(model => model.owner_type)</td>
+                <td>Type of Ownership</td>
                 <td>@Html.DisplayFor(model => model.owner_type)</td>
             </tr>
             <tr>
@@ -30,13 +30,14 @@
                 <td>@Html.DisplayNameFor(model => model.status)</td>
                 @if (Model.status == "FREE AND CLEAR")
                 {
-                    <td style="background: green; color: white">@Html.DisplayFor(model => model.status)</td>                    
+                    <td style="background: green; color: white; border-radius:10px;" title="This Property is not mortgage">@Html.DisplayFor(model => model.status)</td>                    
                 }
                 else
                 {
-                    <td style="background: red; color: white">@Html.DisplayFor(model => model.status)</td> 
+                    <td style="background: red; color: white;border-radius:10px;" title="This Property is mortgage">@Html.DisplayFor(model => model.status)</td> 
                 }
             </tr>
         </tbody>
     </table>
+    <a href="#titlesearch" data-toggle="modal" class="btn btn-default btn-info pull-right" data-target="#titlesearch">New Search</a>
 </div>

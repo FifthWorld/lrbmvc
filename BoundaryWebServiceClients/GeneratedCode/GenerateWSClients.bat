@@ -20,7 +20,7 @@
 @rem    e.g using org.sola.webservices.search.extra;
 @rem
 
-set HOST=192.168.43.184:8080
+set HOST=localhost:8080
 set SVC_BASE=sola/webservices
 
 "C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\svcutil" /language:cs /config:Ignore.config /n:http://webservices.sola.org/search,org.sola.webservices.search /n:*,org.sola.webservices.search.extra /edb /serializer:XmlSerializer /fault /ct:System.Collections.ArrayList /out:SearchService ./wsdl/SearchService.wsdl

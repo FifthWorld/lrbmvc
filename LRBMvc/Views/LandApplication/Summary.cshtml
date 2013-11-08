@@ -7,33 +7,32 @@
 <h2>Summary of Application</h2>
 
 <fieldset>
-    <legend>Applicant Information</legend>
-
+    <p class="alert alert-info">
+        Please print a copy of this summary page before completing your application.<br /> You can click the <strong>Back to Beginning</strong> button 
+        located at the end of this page to make corrections to your application.<br />
+        To complete your application, click on the <strong>Complete Application</strong> button.
+    </p>
     <div class="form-group">
-        <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.UserId)</span>
+        <span class="col-lg-2 control-label">Reference Number</span>
         <div class="col-lg-10">
-            <span class="form-control">@Html.DisplayFor(model => model.UserId)</span>
+            @{
+                string refId = "ODSG/LRB/" + DateTime.UtcNow.Year.ToString() + Model.Id.ToString();
+            }
+            <span class="form-control">@refId</span>
         </div>        
     </div>
 </fieldset>
 
 <fieldset>
-    <legend>Personal Information Segment</legend>
     @Html.Partial("partials/_ViewPartyPartial", Model.ContactPerson)
 </fieldset>
 
 <fieldset>
-    <legend>Personal Information Segment</legend>
     @Html.Partial("partials/_ViewPropertyPartial", Model.PrimaryProperty)
 </fieldset>
 
-<div class="form-group">
-    <span class="col-lg-2 control-label">@Html.DisplayNameFor(model => model.OtherRelevantInfo)</span>
-    <div class="col-lg-10">
-        <span class="form-control">@Html.DisplayFor(model => model.OtherRelevantInfo)</span>
-    </div>        
-</div>
 <p>
-    @Html.ActionLink("Complete Application", "Complete") |
-    @Html.ActionLink("Back to Beginning", "Create")
+     <a href="javascript:window.print()" class="btn btn-default btn-info">Print</a> |
+    @Html.ActionLink("Back to Beginning", "Create", "", new { @class="btn btn-default btn-warning"}) |
+    @Html.ActionLink("Complete Application", "Complete", "", new { @class="btn btn-default btn-success"})
 </p>

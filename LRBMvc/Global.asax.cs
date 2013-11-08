@@ -1,4 +1,5 @@
-﻿using SimpleSecurity;
+﻿using LRB.Lib.Domain;
+using SimpleSecurity;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -24,4 +25,6 @@ namespace LRBMvc
             WebSecurity.Register();
         }
     }
+
+    
 }
