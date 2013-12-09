@@ -60,6 +60,7 @@
     <Compile Include="Domain\Party.cs" />
     <Compile Include="Domain\Property.cs" />
     <Compile Include="Domain\RequiredDocument.cs" />
+    <Compile Include="Enums\LandUses.cs" />
     <Compile Include="LandFees.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
