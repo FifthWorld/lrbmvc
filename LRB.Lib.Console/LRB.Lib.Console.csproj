@@ -34,10 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\SimpleSecurity\bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="CsvReader">
+      <HintPath>..\packages\CsvTools.1.0.9\lib\CsvReader.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LandFeesTests.cs" />
     <Compile Include="LandRecordsTest.cs" />
+    <Compile Include="LandTitlesTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchTest.cs" />
@@ -54,17 +64,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="AdministrativeService.config" />
     <None Include="appconfig\CasemanagementService.config" />
     <None Include="appconfig\DigitalArchiveService.config" />
     <None Include="appconfig\FilestreamingService.config" />
     <None Include="appconfig\ReferencedataService.config" />
     <None Include="appconfig\SearchService.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BoundaryWebServiceClients\BoundaryWebServiceClients.csproj">
       <Project>{b9c8ea28-9c83-40d5-b2d7-601cc2e6e9c9}</Project>
       <Name>BoundaryWebServiceClients</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRB.Legacy\LRB.Legacy.csproj">
+      <Project>{348181b5-d4bf-48bc-9361-49b78512ab3e}</Project>
+      <Name>LRB.Legacy</Name>
     </ProjectReference>
     <ProjectReference Include="..\LRB.Sola\LRB.Sola.csproj">
       <Project>{f25d4dbe-f434-428c-9763-89e238a4116f}</Project>

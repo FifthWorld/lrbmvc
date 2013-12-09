@@ -168,6 +168,15 @@ namespace LRB.Lib
             uow.Save();
         }
 
+        public static void UpdateStatus(int appId, string solaStatus)
+        {
+            UnitOfWork uow = new UnitOfWork();
+            var app = uow.LandApplicationRepository.GetByID(appId);
+            app.Status = solaStatus;
+            uow.LandApplicationRepository.Update(app);
+            uow.Save();
+        }
+
         public static Application NewApplication()
         {
             var user = SimpleSecurity.WebSecurity.GetCurrentUser();

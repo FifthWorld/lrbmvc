@@ -43,6 +43,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -50,20 +51,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LandTitles.cs" />
+    <Compile Include="Entities\SearchItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\LandOwner.cs">
+      <DependentUpon>TitlesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\Property.cs">
+      <DependentUpon>TitlesModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LandTitles.cs" />
+    <Compile Include="Repository\TitlesExtensions.cs" />
+    <Compile Include="Repository\TitlesModel.Context.cs">
+      <DependentUpon>TitlesModel.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Repository\TitlesModel.cs">
+      <DependentUpon>TitlesModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Repository\TitlesModel.Designer.cs">
+      <DependentUpon>TitlesModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Repository\Transaction.cs">
+      <DependentUpon>TitlesModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="Repository\TitlesModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TitlesModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Repository\TitlesModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TitlesModel.edmx</DependentUpon>
+      <LastGenOutput>TitlesModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Repository\TitlesModel.edmx.diagram">
+      <DependentUpon>TitlesModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Repository\TitlesModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TitlesModel.edmx</DependentUpon>
+      <LastGenOutput>TitlesModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

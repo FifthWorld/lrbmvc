@@ -1,5 +1,6 @@
 ﻿using LRB.Lib;
 using LRB.Lib.Domain;
+using org.sola.services.boundary.wsclients;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -109,6 +110,47 @@ namespace LRBMvc
             return docs as IEnumerable<string>;
         }
 
+        public bool isSolaOnline()
+        {
+            ICaseManagementService caseMgmtSvc = CasemanagementProxy.Instance;
+            caseMgmtSvc.SetCredentials("test", "test");
+            return caseMgmtSvc.CheckConnection();
+        }
+
+        public void UpdateApplicationStatus(int Id)
+        {
+            var app = LandRecords.GetApplication(Id);
+            ICaseManagementService caseMgmtSvc = CasemanagementProxy.Instance;
+            caseMgmtSvc.SetCredentials("test", "test");
+            var appTO = caseMgmtSvc.GetApplication(app.SolaId);
+            LandRecords.UpdateStatus(app.Id, appTO.statusCode);
+        }
+
+        public string getExtension(string contentType)
+        {
+            switch (contentType)
+            {
+                case "text/plain":
+                    return "txt";
+                case "application/pdf":
+                    return "pdf";
+                case "image/jpeg":
+                    return "jpeg";
+                case "image/png":
+                    return "png";
+                case "application/msword":
+                    return "doc";
+                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                    return "docx";
+                case "application/vnd.ms-excel":
+                    return "xls";
+                case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+                    return "xlsx";
+                default:
+                    return "txt";
+            }
+        }
+
         public string EVIDENCE = "Evidence of Ownership";
         public string FIRE_SERVICE = "Fire Service Report";
         public string FEASIBILITY = "Feasibility Report";
@@ -119,4 +161,6 @@ namespace LRBMvc
         public string POLICE_REPORT = "Police Report";
         public string PASSPORT = "Scanned photographic passport";
     }
+
+
 }

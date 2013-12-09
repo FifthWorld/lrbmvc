@@ -1,4 +1,5 @@
-﻿using LRB.Lib.Domain;
+﻿using LRB.Legacy;
+using LRB.Lib.Domain;
 using SimpleSecurity;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -23,6 +24,7 @@ namespace LRBMvc
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
             WebSecurity.Register();
+            LandTitles.initialize();
         }
     }
 

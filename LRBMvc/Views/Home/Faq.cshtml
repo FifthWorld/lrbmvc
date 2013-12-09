@@ -2,12 +2,12 @@
     ViewBag.Title = "FAQ";
 }
 <div class="top_box">
+    <h2 class="heading" style="margin-left: 10px;">Frequently Asked Questions (FAQ)</h2>
 </div>
 <!--top_box-->
-<div class="bottom_box">
-    <h2 class="heading" style="margin-left: 10px;">Frequently Asked Questions (FAQ)</h2>
-   <div class="side_box">
-        <ul class="nav nav-pills nav-stacked">
+<div class="bottom_box">    
+    @*<div class="side_box">
+        <ul class="nav nav-pills nav-stacked" id ="faq-titles">
             <li><a href="#namechange">I have changed my name. What should I do to change it on my title?</a></li>
             <li><a href="#partners_name">How do I add my partner's name to my property title?</a></li>
             <li><a href="#ownership_title">How do I change ownership of a title?</a></li>
@@ -19,47 +19,415 @@
             <li><a href="#power_of_attorney">What is Power of Attorney?</a></li>
             <li><a href="#subdivision">How do I go about subdividing my land?</a></li>
         </ul>
-    </div> 
+    </div>*@
     <!--side_box-->
-    <div class="main_box faq">
-        <h2 id="namechange">I have changed my name. What should I do to change it on my title?</h2>
-        <p>
-            If you are a holder of a C of O you will need to obtain and submit an application form for surrender of your title which will be accompanied with the proof of change of name. When the application is accepted you will be required to pro-duce a new Survey Plan reflecting the new name.
-        </p>
-        <h2 id="partners_name">How do I add my partners name to my property title?</h2>
-        <p>
-            If you already hold a C of O you will need to obtain an application form for sur-render of your title. Then you and your partner will apply for the re-issuance of a new C. of O. Please note that your partner will be required to submit the neces-sary document for application of C of O.
-        </p>
-        <h2 id="ownership_title">How do I change ownership of title?</h2>
-        <p>Apply for governor’s consent to assign.</p>
-        <h2 id="spouse_consent">Do I require my spouse’s consent in order to dispose of an interest in my property?</h2>
-        <p>Your spouse’s consent is only required if you are joint owners of the title.</p>
-        <h2 id="owner_will">If the holder of a C. of O. dies without a will, what can be done?</h2>
-        <p>
-            The heir(s) to or the successor(s) in title should apply to the Administrator Gen-eral of  the State for a Letter of Administration
+    <div class="@*main_box*@ @*faq*@">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Can I conduct land search by phone or on the Internet?</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Land search cannot be conducted by phone. However, you may either come to any of the Land Records Bureau Offices located in Governor’s office, Alagbaka or along Oyemekun road to conduct a land search in person. You may also conduct land search by using Title Search Online Services through LRB webpage.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Can I search a land by using the owners’ name?</a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Yes. Provided the property is registered. 
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Can I access registration information by address?</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Yes.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">What kind of documents should I bring for conducting a Title search?</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+						<p>The Bureau requires that you to search for land titles by providing either the owners name, the property location or the Public Reference Key(PRK).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">What kind of information is available on the digitized land records?</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        A digitized land records comprises 3 sections. You can obtain different information from each section.<br />
+                        <strong>(a) Property Particulars</strong>
+                        <ul>
+                            <li>- Land address</li>
+                            <li>- share of land for multiple owners </li>
+                            <li>- lease term (commencement date, right of renewal ) </li>
+                            <li>- Rent per annum</li>
+                        </ul>
+                        <strong>(b) Owner Particulars</strong>
+                        <ul>
+                            <li>- Name of Owners</li>
+                            <li>- historical owner (chain of title)</li>
+                            <li>- current owner </li>
+                            <li>- Capacity (if not Sole Owner)</li>
+                            <li>- Joint tenants</li>
+                            <li>- Tenants in common </li>
+                            <li>- Date of instrument (transaction) </li>
+                            <li>- Date of Registration </li>
+                        </ul>
+                        <strong>(c) Encumbrances</strong><br />
+                        The encumbrances section contains the land documents which affect the property but may not change the ownership, examples are : 
+                        <ul>
+                            <li>Court order e.g. charging order, etc. </li>
+                            <li>Mortgage </li>
+                            <li>Occupation Permit, Deed of Mutual Covenant (for age and use of building) </li>
+                            <li>Agreements for Sale & Purchase </li>
+                            <li>Sub-sale Agreement, Nomination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">What are the service hours of LRB Online Services?</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        For title search and online application services:		24hrs
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">What are the services provided by LRB Online Services?</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>- Online Title Search</li>
+                            <li>- Online application for C of O</li>
+                            <li>- Application Status Check</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">How do I conduct Internet search of land register?</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>-->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">I have changed my name. What should I do to change it on my title?</a>
+                    </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        If you are a holder of a C of O you will need to obtain and submit an application form for surrender of your title which will be accompanied with the proof of change of name. When the application is accepted you will be required to produce a new Survey Plan reflecting the new name.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">How do I add my partners name to my property title?</a>
+                    </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        If you already hold a C of O you will need to obtain an application form for surrender of your title. Then you and your partner will apply for the re-issuance of a new C of O. Please note that your partner will be required to submit the necessary document for application of C of O.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">How do I change ownership of title?</a>
+                    </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Apply for governor’s consent to assign
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Do I require my spouse’s consent in order to dispose of an interest in my property?</a>
+                    </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Your spouse’s consent is only required if you are joint owners of the title.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">What do I do when a property owner dies?</a>
+                    </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        When a person dies and their property or land will be inherited by someone else, it is normally necessary to register the change of ownership with us.
+						How you do this will depend on what the person who died owned. There are three options.
+                        <ul>
+                            <li>    •	The person who died owned registered land. </li>
+                            <li>    •	The person who died owned unregistered land. </li>
+                            <li>    •	I'm not sure whether the person who died owned any land.</li>
+                        </ul>
+                        <strong>The person who died owned registered land </strong>
                         <br />
-            The devolution of title could be done by the family using the customary laws and customs of the deceased's origin.
-        </p>
-        <h2 id="certified_copy">What is Certified True Copy?</h2>
-        <p>
-            It is the exact copy or duplicate of a document which bears the seal or stamp of the government office issued in place of the original copy when it is applied for.
-        </p>
-        <h2 id="certified_copy_c_of_o">Do I obtain a certified true copy of a C. of O.?</h2>
-        <p>Apply to the Chief Register of Deeds Ondo State Land Records Bureau.</p>
-        <h2 id="caveat">What is a caveat?</h2>
-        <p>
-            It is something said or written as a warning, caution or qualification. It can also be an official request to a court not to proceed with a case without notice to the person making the request.
-        </p>
-        <h2 id="power_of_attorney">What is Power of Attorney?</h2>
-        <p>This is the legal authority to act for another person in legal and business matters.</p>
-        <h2 id="subdivision">How do I go about subdividing my land?</h2>
-        <p>
-            Apply for consent to subdivide.
-                        <br />
+                        If they were the sole owner, or sole surviving owner and you have either probate or letters of administration, you can: 
+                        <ul>
+                            <li>    •	transfer the property to the person(s) who inherits it</li>
+                            <li>    •	transfer the property to someone else</li>
+                            <li>    •	register the personal representatives of the person who died </li>
+                        </ul>
+                        In all cases your completed forms must be accompanied by:
+                        <ul>
+                            <li>    •	an official copy of the probate or letters of administration (we will return these to you) </li>
+                            <li>    •	Stamp duty land tax certificate where necessary,  </li>
+                            <li>    •	the appropriate fee.</li>
+                        </ul>
+                        If the person who died was a joint owner with someone who is still living, you should register the death with us<br>
+                        <strong>The person who died owned unregistered land</strong><br>
+                        The land must be registered for the first time once the transfer has taken place. 
+                        If the person who has died is a joint owner and at least one other joint owner is still living, you do not need to involve the Land Records Bureau. But you can register the property voluntarily if you wish.<br>
+                        <strong>I'm not sure whether the person who died owned any land</strong><br>
+                        In most cases the person who died will have title deeds for any land or property they owned. These deeds might be:
+                        <ul>
+                            <li>    •	at home </li>
+                            <li>    •	held for safe keeping by a solicitor or bank </li>
+                            <li>    •	held by the lender as security (if the land is mortgaged). </li>
+                        </ul>
+                        If you think the land might be registered then you can request ownership documents from us. If you are the personal representatives, you can also contact us to search by the property owner's name.
 
-        </p>
-    </div><!--main_box-->
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">If the holder of a C of O dies without a Will. What can be done?</a>
+                    </h4>
+                </div>
+                <div id="collapse14" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        The heir(s) to or the successor(s) in title should apply to the Administrator General of the State for a Letter of Administration<br />
+    •	 The devolution of title should be done through the family using the customary laws operating in the area where the deceased comes from.
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">What is Certified True Copy?</a>
+                    </h4>
+                </div>
+                <div id="collapse15" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        It is the exact copy or duplicate of a document which bears the seal or stamp of the government office issued in place of the original copy when it is applied for.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">How do I obtain a certified true copy of a C of O?</a>
+                    </h4>
+                </div>
+                <div id="collapse16" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Apply to the Chief Register of Deeds Ondo State Land Records Bureau.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">What is a caveat?</a>
+                    </h4>
+                </div>
+                <div id="collapse17" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        It is something said or written as a warning or caution. It can also be an official request to a court not to proceed with a case without notice to the person making the request.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse18">What is Power of Attorney?</a>
+                    </h4>
+                </div>
+                <div id="collapse18" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        It is the legal authority to act for another person in legal and business matters.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse19">How do I go about subdividing my land?</a>
+                    </h4>
+                </div>
+                <div id="collapse19" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Apply for consent to subdivide.
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse20">How do I make an Online Application for a C of O?</a>
+                    </h4>
+                </div>
+                <div id="collapse20" class="panel-collapse collapse">
+                    <div class="panel-body">
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse21">Do I have to register to start an application?</a>
+                    </h4>
+                </div>
+                <div id="collapse21" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Yes, you have to.
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">What do I need to start a registration?</a>
+                    </h4>
+                </div>
+                <div id="collapse22" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        A active email address and phone number. An active email is one where you recieve emails immediately.
+                    </div>
+                </div>
+            </div>
+			<div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">What documents do I need to make an application?</a>
+                    </h4>
+                </div>
+                <div id="collapse22" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>The documents needed varies depending on the type of application.</p>
+						<br>
+						<p><strong>For an individual/joint application</strong><br />
+						<ul>
+							<li>  - A scanned passport photograph of applicant</li>
+							<li>  - Scanned original copy of the property survey plan</li>
+							<li>  - Scanned Evidence of ownership (either any of family receipt/ sworn affidavit/sales agreement)</li>
+							<li>  - Scanned evidence of payment of three years development levy</li>
+						</ul>
+						<p><strong>For corporate application</strong><br />
+						<ul>
+							<li>  - Scanned copy of certificate of incorporation</li>
+							<li>  - Scanned copy of feasibility report (for property above 5000 hecter)</li>
+							<li>  - Scanned copy of security report/ fire service report (for petrol station)</li>
+						</ul>
+						</p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse23">What type of application can I make on the LRB website?</a>
+                    </h4>
+                </div>
+                <div id="collapse23" class="panel-collapse collapse">
+                    <div class="panel-body">
+						<ul>
+							<li> (1.) Application for Certificate of Occupancy(applicant is an Individual) </li>
+							<li> (2.) Application for Certificate of Occupancy(applicant is an Organization) </li>
+							<li> (3.) Online search for Certificate of Occupancy </li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse24">How can I protect my property from fraud? </a>
+                    </h4>
+                </div>
+                <div id="collapse24" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Your land/property is probably the most valuable asset you own. That's why it's important you do whatever you can to protect it from the risk of fraud. Fraudsters can and do target land/properties for fraud; “stealing” your land by taking the legal title to it. This is most commonly done by pretending to be you and either selling or mortgaging your home.
+You can help to make sure that you do not become a victim of land/property fraud by:
+                        <ul>
+                            <li>    •	Registering your land/property </li>
+                            <li>    •	Keeping your contact details up to date</li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--main_box-->
 
 </div>
 <!--bottom_box-->
-
+@section Scripts{
+    <script>
+        //$(".panel-title").each(function (key, val) {
+        //    $("#faq-titles").append("<li><a>" + val.children[0].text + "</a></li>");
+        //})
+    </script>
+}

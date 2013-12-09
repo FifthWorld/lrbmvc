@@ -82,6 +82,8 @@ namespace ApplicationLibrary
                     return "pdf";
                 case "image/jpeg":
                     return "jpeg";
+                case "image/png":
+                    return "png";
                 case "application/msword":
                     return "doc";
                 case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":

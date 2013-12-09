@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Calculate";
+}
+@model LRBMvc.Models.ConsentParams
+
+
+@if (ViewBag.HighValue != null)
+{
+    <table class="table table-bordered">
+
+        <caption>
+            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">CONSENT FEE ASSESSMENT</div>
+        </caption>
+        <thead>
+            <tr>
+                <th><strong>High Value Property</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Consent Fees</td>
+                <td>@ViewBag.HighValue["ConsentFee"]</td>
+            </tr>
+            <tr>
+                <td>Capital Gains Tax</td>
+                <td>@ViewBag.HighValue["CapitalGainsTax"]</td>
+            </tr>
+            <tr class="warning">
+                <td>Total</td>
+                <td>@ViewBag.HighValue["Total"]</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+else if (ViewBag.MediumValue != null)
+{
+    <table class="table table-bordered">
+
+        <caption>
+            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">CONSENT FEE ASSESSMENT</div>
+        </caption>
+        <thead>
+            <tr>
+                <th><strong>Medium Value Property</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Consent Fees</td>
+                <td>@ViewBag.MediumValue["ConsentFee"]</td>
+            </tr>
+            <tr>
+                <td>Capital Gains Tax</td>
+                <td>@ViewBag.MediumValue["CapitalGainsTax"]</td>
+            </tr>
+            <tr class="warning">
+                <td>Total</td>
+                <td>@ViewBag.MediumValue["Total"]</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+else if (ViewBag.BaseValue != null)
+{
+    <table class="table table-bordered">
+
+        <caption>
+            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">CONSENT FEE ASSESSMENT</div>
+        </caption>
+        <thead>
+            <tr>
+                <th><strong>Base Value Property</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Consent Fees</td>
+                <td>@ViewBag.BaseValue["ConsentFee"]</td>
+            </tr>
+            <tr>
+                <td>Capital Gains Tax</td>
+                <td>@ViewBag.BaseValue["CapitalGainsTax"]</td>
+            </tr>
+            <tr class="warning">
+                <td>Total</td>
+                <td>@ViewBag.BaseValue["Total"]</td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+                                             
+    <div class="form-group">
+        <label for="LandValue">What is the size of the Land in SQ. Meters</label>
+        @Html.TextBoxFor(model => model.LandSize, new { @type = "number", @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="LandValue">Please state the estimated value of the property</label>
+        @Html.DropDownListFor(model => model.LandValue, new SelectList(ViewBag.BandValues, "key", "value"), new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="LandValue">What Year was the Property Surveyed?</label>
+        @Html.DropDownListFor(model => model.Year, new SelectList(ViewBag.Years), new { @class = "form-control" })
+    </div>
+           
+    <input type="submit" class="btn btn-default btn-lg pull-right" value="Calculate Estimate" />
+    }
+}
+

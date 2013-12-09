@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Consent Fees";
+}
+
+<h2>Calculating Consent Fees</h2>
+<p>This portal allows you calculate the Consent Fees. To calculate, you are required to enter the size of Land, the Year it was aquired and information about the Value of the land</p>
+<a href="#Calculate" data-toggle="modal" data-target="" class="btn btn-default btn-lg">Apply Now</a>
+
+<!-- Modal -->
+<div class="modal fade" id="Calculate" tabindex="-1" role="dialog" aria-labelledby="Calculate" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            @using (Html.BeginForm("Calculate", "ConsentFees", FormMethod.Post))
+            {
+                @Html.ValidationSummary(true)
+
+                <div class="form-group">
+                    <label for="LandValue">What is the size of the Land in SQ. Meters</label>
+                    <input class="form-control" id="LandSize" />
+                </div>
+                <div class="form-group">
+                    <label for="LandValue">Email address</label>
+                    <select class="form-control" id="LandValue">
+                        <option value="BaseValue">Base Value</option>
+                        <option value="MediumValue">Medium Value</option>
+                        <option value="HighValue">High Value</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="LandValue">Email address</label>
+                    <select class="form-control" id="LandValue">
+                        @for (int i = 1978; i < 2014; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            }
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

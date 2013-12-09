@@ -24,13 +24,14 @@ namespace LRBMvc.Controllers
             : base()
         {
             Bureau = new LandBureau(this);
+
         }
         //
         // GET: /LandApplication
         public ActionResult Index()
         {
             var username = User.Identity.Name;
-            
+
             return View(LandRecords.GetApplications(WebSecurity.CurrentUserName));
         }
 
@@ -166,7 +167,7 @@ namespace LRBMvc.Controllers
             }
 
             Optional model = app.OptionalRequirement;
-            if (model ==null)
+            if (model == null)
             {
                 model = new Optional();
             }
@@ -279,9 +280,9 @@ namespace LRBMvc.Controllers
                 //Flash.Instance.Error("Application with that Id does not exist");
                 return RedirectToAction("Index");
             }
-            SolaService solaService =  new SolaService(int.Parse(appId.ToString()));
+            SolaService solaService = new SolaService(int.Parse(appId.ToString()));
             var solaApp = solaService.SubmitToSola();
-            LandRecords.UpdateStatus(Bureau.GetAppId().Value, solaApp.statusCode, solaApp.id, solaApp.nr);            
+            LandRecords.UpdateStatus(Bureau.GetAppId().Value, solaApp.statusCode, solaApp.id, solaApp.nr);
             int Id = Convert.ToInt32(appId);
             LandRecords.SubmitApplication(Id);
             Session["appId"] = null;
@@ -290,10 +291,16 @@ namespace LRBMvc.Controllers
 
         public ActionResult View(int id)
         {
+
+            //if (Bureau.isSolaOnline() == true)
+            //{
+            //    Bureau.UpdateApplicationStatus(id);
+            //}
             var app = LandRecords.GetApplication(id);
-            //SolaService svc = new SolaService(id);
+            //var fees = LandFees.Calculate_Consent_Fees(2013, LandFees.getLandSize(app), LandFees.getLandValue(app), LandFees.getLandDevelopment(app), LandFees.getLandUse(app));
             return View(app);
         }
+
 
         //
         // GET: /LandApplications/Delete/5

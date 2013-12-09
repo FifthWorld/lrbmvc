@@ -49,10 +49,9 @@ namespace LRB.Lib.Console
             p.DOB = DateTime.Now;
             p.Firstname = "Tomiwa";
             p.PartyType = "ContactPerson";
-            p.ContactAddress.Street = "no 1. Fatai Kadiri Street";
-            p.ContactAddress.Town = "Alagbaka";
-            p.ContactAddress.LGA = "AKURE SOUTH";
-            p.ContactAddress.Street = "ONDO State";
+            p.Street = "no 1. Fatai Kadiri Street";
+            p.Town = "Alagbaka";
+            p.ILGA = "AKURE SOUTH";
 
             System.Console.WriteLine("Contact Information Added");
             LandRecords.SaveApplication(app.Id, p);

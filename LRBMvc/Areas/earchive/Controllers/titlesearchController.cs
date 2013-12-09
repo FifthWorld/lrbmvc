@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using LRB.Legacy.Entities;
+using LRB.Legacy;
+using LRB;
 
 namespace LRBMvc.Areas.earchive.Controllers
 {
@@ -18,19 +21,18 @@ namespace LRBMvc.Areas.earchive.Controllers
             string name = "", string industry = "",
             string prkNo = "")
         {
-            TitleSearch ts = new TitleSearch();
             IEnumerable<SearchItem> result;
             if (location == "true")
             {
-                result = ts.search_for_property(town, lga, street);
+                result = LandTitles.search_for_property(town, lga, street);
             }
             else if (owner == "true")
             {
-                result = ts.search_for_individual_owners(surname, firstname, middlename);
+                result = LandTitles.search_for_individual_owners(surname, firstname, middlename);
             }
             else if (industry == "true")
             {
-                result = ts.search_for_corparate_properties(name);
+                result = LandTitles.search_for_corparate_properties(name);
             }
             else if (prkNo != "")
             {
@@ -38,7 +40,7 @@ namespace LRBMvc.Areas.earchive.Controllers
             }
                 else
             {
-                result = ts.search_for_property();
+                result = LandTitles.search_for_property();
             }
             int pageSize = 20;
             int pageNumber = (page ?? 1);
@@ -50,8 +52,18 @@ namespace LRBMvc.Areas.earchive.Controllers
 
         public ActionResult Details(string prkNo)
         {
-            TitleSearch ts = new TitleSearch();
-            var prop = ts.search_by_prk(prkNo);
+            var prop = LandTitles.search_by_prk(prkNo);
+            var title_date = Convert.ToDateTime(prop.effdate);
+            var base_dir = AppDomain.CurrentDomain.BaseDirectory + @"App_Data\data.csv";
+            LandFees.init(base_dir);
+            var HighValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "HighValue");
+            var MediumValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "MediumValue");
+            var BaseValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "BaseValue");
+
+            ViewBag.HighValue = HighValue;
+            ViewBag.MediumValue = MediumValue;
+            ViewBag.BaseValue = BaseValue;
+            
             return View(prop);
         }
 
@@ -137,8 +149,7 @@ namespace LRBMvc.Areas.earchive.Controllers
 
         public ActionResult searchbyLocation(int? page, String town = "", String lga = "", String street = "")
         {
-            TitleSearch ts = new TitleSearch();
-            var result = ts.search_for_property(town, lga, street);
+            var result = LandTitles.search_for_property(town, lga, street);
             int pageSize = 3;
             int pageNumber = (page ?? 1);
             return View(result.ToPagedList(pageNumber, pageSize));

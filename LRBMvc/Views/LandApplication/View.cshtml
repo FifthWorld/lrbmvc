@@ -28,8 +28,33 @@
             <td>@Html.DisplayFor(model => model.SolaNR)</td>            
         </tr>
     </tbody>
-    
 </table>
+<br />
+<table class="table table-bordered">
+
+        <caption>
+            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">CONSENT FEE ASSESSMENT</div>
+        </caption>
+        <thead>
+            <tr>
+                <th><strong>High Value Property</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Consent Fees</td>
+                <td>@ViewBag.PropertyValue["ConsentFee"]</td>
+            </tr>
+            <tr>
+                <td>Capital Gains Tax</td>
+                <td>@ViewBag.PropertyValue["CapitalGainsTax"]</td>
+            </tr>
+            <tr class="warning">
+                <td>Total</td>
+                <td>@ViewBag.PropertyValue["Total"]</td>
+            </tr>
+        </tbody>
+    </table>
 <a href="/LandApplication" class="btn btn-default btn-warning ">Go Back</a>
 <a href="javascript:window.print()" class="btn btn-default btn-info">Print</a>
 

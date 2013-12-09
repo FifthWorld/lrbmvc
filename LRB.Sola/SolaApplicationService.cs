@@ -114,17 +114,18 @@ namespace ApplicationLibrary
                 person.dateOfBirth = party.DOB.GetValueOrDefault();
 
                 person.typeCode = party.OrganizationName != null ? "nonNaturalPerson" : "naturalPerson";
-
-                person.mobile = app.ContactPerson.MobileNo;
+                
+                person.phone = app.ContactPerson.MobileNo;
                 person.preferredCommunicationCode = "phone";
 
-                if (app.ContactPerson.ContactAddress != null)
-                {
-                    person.address = new addressTO()
-                    {
-                        description = party.ContactAddress.ToString()
-                    };
-                }
+                addressTO address = new addressTO();
+                address.description = "";
+                address.description += party.Street == null ? "" : party.Street + " ";
+                address.description += party.Town == null ? "" : party.Town + " ";
+                address.description += party.ILGA == null ? "" : party.ILGA + " ";
+                address.description += party.IState == null ? "" : party.IState + " ";
+
+                person.address = address;
 
                 //homeTownTypeCode = app.Party.homeTownTypeCode,
                 //lgaTypeCode = app.Party.lgaTypeCode,

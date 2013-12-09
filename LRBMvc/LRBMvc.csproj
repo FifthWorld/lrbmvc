@@ -70,9 +70,17 @@
     <Reference Include="Backload.Contracts">
       <HintPath>..\packages\Backload.1.9.3.1\lib\net45\Backload.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="CsvReader, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\CsvTools.1.0.9\lib\CsvReader.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -93,7 +101,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -232,33 +239,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\earchive\Controllers\titlesearchController.cs" />
     <Compile Include="Areas\earchive\earchiveAreaRegistration.cs" />
-    <Compile Include="Areas\earchive\LandOwner.cs">
-      <DependentUpon>TitlesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\earchive\Property.cs">
-      <DependentUpon>TitlesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\earchive\TitleSearch.cs" />
-    <Compile Include="Areas\earchive\TitlesExtensions.cs" />
-    <Compile Include="Areas\earchive\TitlesModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TitlesModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\earchive\TitlesModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TitlesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\earchive\TitlesModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TitlesModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Areas\earchive\Transaction.cs">
-      <DependentUpon>TitlesModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConsentFeesController.cs" />
     <Compile Include="Controllers\DocumentsController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -270,6 +252,7 @@
     <Compile Include="LandBureau.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ApplicationModels.cs" />
+    <Compile Include="Models\ConsentModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -360,24 +343,8 @@
     <Content Include="Areas\earchive\Views\titlesearch\searchbyLocation.cshtml" />
     <Content Include="Areas\earchive\Views\titlesearch\Index.cshtml" />
     <Content Include="Areas\earchive\Views\titlesearch\Details.cshtml" />
-    <EntityDeploy Include="Areas\earchive\TitlesModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TitlesModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Areas\earchive\TitlesModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TitlesModel.edmx</DependentUpon>
-      <LastGenOutput>TitlesModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Areas\earchive\TitlesModel.edmx.diagram">
-      <DependentUpon>TitlesModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Areas\earchive\TitlesModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TitlesModel.edmx</DependentUpon>
-      <LastGenOutput>TitlesModel.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\Candara.ttf" />
+    <Content Include="Images\lrb-banner.jpg" />
     <Content Include="img\.DS_Store" />
     <Content Include="img\Thumbs.db" />
     <None Include="Properties\PublishProfiles\LRBMvc.pubxml" />
@@ -443,6 +410,8 @@
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\_ViewStart.cshtml" />
+    <Content Include="Views\ConsentFees\Index.cshtml" />
+    <Content Include="Views\ConsentFees\Calculate.cshtml" />
     <None Include="Views\Home\Faq.cshtml" />
     <Content Include="Views\Home\JQueryUI.cshtml" />
     <None Include="Views\Home\Services.cshtml" />
@@ -491,7 +460,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Account\ConfirmationFailure.cshtml" />
     <Content Include="Views\Account\ConfirmationSuccess.cshtml" />
     <Content Include="Views\Account\RegisterStepTwo.cshtml" />
@@ -530,6 +501,10 @@
     <ProjectReference Include="..\BoundaryWebServiceClients\BoundaryWebServiceClients.csproj">
       <Project>{b9c8ea28-9c83-40d5-b2d7-601cc2e6e9c9}</Project>
       <Name>BoundaryWebServiceClients</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LRB.Legacy\LRB.Legacy.csproj">
+      <Project>{348181b5-d4bf-48bc-9361-49b78512ab3e}</Project>
+      <Name>LRB.Legacy</Name>
     </ProjectReference>
     <ProjectReference Include="..\LRB.Sola\LRB.Sola.csproj">
       <Project>{f25d4dbe-f434-428c-9763-89e238a4116f}</Project>

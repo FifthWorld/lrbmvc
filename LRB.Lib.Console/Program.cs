@@ -12,8 +12,14 @@ namespace LRB.Lib.Console
     {
         static void Main(string[] args)
         {
-            LandRecordsTest lTests = new LandRecordsTest();
-            lTests.CreateApplication_WithRequirement_And_SubmitToSola();
+            LandFeesTests LF_Tests = new LandFeesTests();
+            //LF_Tests.StartTests();
+            LF_Tests.calculate_consent_fee_from_title_search();
+            //LandTitlesTest LT_Tests = new LandTitlesTest();
+            //LT_Tests.search_for_mimiko();
+            //LT_Tests.search_for_orim();
+            //LandRecordsTest lTests = new LandRecordsTest();
+            //lTests.CreateApplication_WithRequirement_And_SubmitToSola();
 
             //SearchTest searchTest = new SearchTest();
             //searchTest.init();
