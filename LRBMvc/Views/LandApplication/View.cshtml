@@ -24,10 +24,6 @@
             <td class="success">@Html.DisplayFor(model => model.Status)</td>            
         </tr>
         <tr>
-            <td>Land use</td>
-            <td>@ViewBag.LandUse</td>            
-        </tr>
-        <tr>
             <td>Application Number</td>
             <td>@Html.DisplayFor(model => model.SolaNR)</td>            
         </tr>
@@ -37,32 +33,32 @@
 <table class="table table-bordered">
 
         <caption>
-            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">FEES ASSESSMENT</div>
+            <div style="border: 1px solid #ebccd1; background-color: #f2dede; height: 40px; margin-top: 20px; line-height: 40px; font-size: 17px">CONSENT FEE ASSESSMENT</div>
         </caption>
         <thead>
+<<<<<<< HEAD
             <th></th>
             <th>Fees in Naira</th>
         </thead>
         <tbody>
+=======
+>>>>>>> parent of cb1359b... Include processing Fees at the End of an Application
             <tr>
-                <td>Premium</td>
-                <td>@ViewBag.PropertyValue["Premium"]</td>
+                <th><strong>High Value Property</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Consent Fees</td>
+                <td>@ViewBag.PropertyValue["ConsentFee"]</td>
             </tr>
             <tr>
-                <td>Processing Fees</td>
-                <td>@ViewBag.PropertyValue["ProcessingFee"]</td>
+                <td>Capital Gains Tax</td>
+                <td>@ViewBag.PropertyValue["CapitalGainsTax"]</td>
             </tr>
-            <tr>
-                <td>Land Management Fee(Site Inspection and News paper ad)</td>
-                <td>@ViewBag.PropertyValue["LandManagementFee"]</td>
-            </tr>
-            <tr>
-                <td>Land Use Charge[Ground Rent, Tenement Rate, etc]</td>
-                <td>@ViewBag.PropertyValue["LandUseCharge"]</td>
-            </tr>
-            <tr>
-                <td>StateWide Digitization of C of O</td>
-                <td>@ViewBag.PropertyValue["StateWideDigitization"]</td>
+            <tr class="warning">
+                <td>Total</td>
+                <td>@ViewBag.PropertyValue["Total"]</td>
             </tr>
         </tbody>
     </table>

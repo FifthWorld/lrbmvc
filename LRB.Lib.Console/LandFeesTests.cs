@@ -1,5 +1,4 @@
-﻿using LRB.Enums;
-using LRB.Legacy;
+﻿using LRB.Legacy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +29,7 @@ namespace LRB.Lib.Console
 
 
             //var results = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(title.areasize), "HighValue");
-            var results = LandFees.Calculate_Consent_Fees(1978, 650, "HighValue", false,LandUse.Commercial);
+            var results = LandFees.Calculate_Consent_Fees(1978, 650, "HighValue", false);
 
             System.Console.WriteLine("Valuation fee for 650 sqkm bought in 1991: " + results["ValuationFee"]);
             System.Console.WriteLine("Open Market Value for 650 sqkm bought in 1991: " + results["OMV"]);

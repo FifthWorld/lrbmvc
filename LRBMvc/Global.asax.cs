@@ -1,8 +1,6 @@
-﻿using LRB;
-using LRB.Legacy;
+﻿using LRB.Legacy;
 using LRB.Lib.Domain;
 using SimpleSecurity;
-using System;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -27,8 +25,6 @@ namespace LRBMvc
             AuthConfig.RegisterAuth();
             WebSecurity.Register();
             LandTitles.initialize();
-            var base_dir = AppDomain.CurrentDomain.BaseDirectory + @"App_Data\data.csv";
-            LandFees.init(base_dir);
         }
     }
 
