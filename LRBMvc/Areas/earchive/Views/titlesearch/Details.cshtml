@@ -4,7 +4,7 @@
     ViewBag.Title = "Property Details";
 }
 
-<div class="">
+<div class="" ng-app="titles">
     <table class="table table-bordered">
         <caption>
             <div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:10px; line-height:40px; font-size:17px">PROPERTY INFORMATION</div>
@@ -31,8 +31,17 @@
                 <td>@Html.DisplayFor(model => model.areasize)  @Html.DisplayFor(model => model.areaunit)</td>
             </tr>
             <tr>
-                <td>Address</td>
+                <td>Property Address</td>
                 <td>@Html.DisplayFor(model => model.location)</td>
+            </tr>
+            <tr>
+                <td>Owner</td>
+                <td>
+                    @foreach (var item in Model.LandOwners)
+                    {
+                        <span>@item</span>
+                    }
+                </td>
             </tr>
             <tr>
                 <td>@Html.DisplayNameFor(model => model.status)</td>
@@ -48,7 +57,10 @@
         </tbody>
     </table>
     <a href="#titlesearch" data-toggle="modal" class="btn btn-default btn-info pull-right" data-target="#titlesearch">New Search</a>
-    <table class="table table-bordered">
+	
+	<div ng-controller="detailsCtrl">
+	<a class="btn btn-default btn-success" ng-click="toggle()">{{access}}</a>
+    <table class="table table-bordered" ng-show="shown">
         
         <caption><div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:20px; line-height:40px; font-size:17px">CONSENT FEE ASSESSMENT</div></caption>
         <thead>
@@ -103,4 +115,18 @@
             </tr>
         </tbody>
     </table>
+	</div>
 </div>
+<script type="text/javascript" src="/scripts/angular.min.js"></script>
+<script>
+	var details = angular.module('titles', [])
+	.controller('detailsCtrl', function($scope){
+		$scope.shown = false;
+		$scope.access = "Show Consent Fees";
+		$scope.toggle =function(){
+			$scope.shown = $scope.shown ? false : true;
+			$scope.access= $scope.shown ? "Hide Consent Fees": "Show Consent Fees";
+			console.log($scope.shown);
+		}
+	})
+</script>

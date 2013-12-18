@@ -51,7 +51,7 @@
                     <label for="inputEmail3" class="control-label">State the Unit of the Area</label>
                     <div class="input-group">
                         @Html.DropDownListFor(model => model.landSizeUnit,
-            new SelectList(new String[] { "hectares", "square meters", " square feet", "acres" }), new { @class = "form-control" })
+            new SelectList(new String[] { "hectares", "square meters" }), new { @class = "form-control",  ng_Model="Unit"})
                     </div>
                 </div>
             </div>
@@ -94,6 +94,7 @@
                 ];
 
                 // selected fruits
+				$scope.Unit = "square meters";
                 $scope.selection = [];
                 $scope.canSubmit = false;
                 $scope.canSubmitClass = "danger";
@@ -112,7 +113,7 @@
                             $scope.selection.push(doc);
                         });
                     }
-                    if ($scope.landSize > 5000) {
+                    if (($scope.landSize >= 5000 && $scope.Unit=="square meters") || ($scope.landSize >= 0.5 && $scope.Unit== "hectares")) {
                         angular.forEach(filterFilter($scope.docs, { special: "largeland" }), function (doc) {
                             $scope.selection.push(doc);
                         });
@@ -123,7 +124,38 @@
                     return filterFilter($scope.fruits, { selected: true });
                 };
                 $scope.$watch("landSize", function (newValue, oldValue) {
-                    if (newValue > 5000) {
+                    if ((newValue >= 5000 && $scope.Unit=="square meters") || (newValue >= 0.5 && $scope.Unit== "hectares")) {
+                        $scope.selection = filterFilter($scope.docs, { type: "general" });
+                        if ($scope.type == "Individual") {
+                            angular.forEach(filterFilter($scope.docs, { special: "individual" }), function (doc) {
+                                $scope.selection.push(doc);
+                            });
+                        }
+                        if ($scope.type == "Organization") {
+                            angular.forEach(filterFilter($scope.docs, { special: "organization" }), function (doc) {
+                                $scope.selection.push(doc);
+                            });
+                        }
+                        angular.forEach(filterFilter($scope.docs, { special: "largeland" }), function (doc) {
+                            $scope.selection.push(doc);
+                        });
+                    }
+                    else {
+                        $scope.selection = filterFilter($scope.docs, { type: "general" });
+                        if ($scope.type == "Individual") {
+                            angular.forEach(filterFilter($scope.docs, { special: "individual" }), function (doc) {
+                                $scope.selection.push(doc);
+                            });
+                        }
+                        if ($scope.type == "Organization") {
+                            angular.forEach(filterFilter($scope.docs, { special: "organization" }), function (doc) {
+                                $scope.selection.push(doc);
+                            });
+                        }
+                    }
+                });
+				$scope.$watch("Unit", function (newValue, oldValue) {
+                    if (($scope.landSize >= 5000 && newValue=="square meters") || ($scope.landSize >= 0.5 && newValue== "hectares")) {
                         $scope.selection = filterFilter($scope.docs, { type: "general" });
                         if ($scope.type == "Individual") {
                             angular.forEach(filterFilter($scope.docs, { special: "individual" }), function (doc) {

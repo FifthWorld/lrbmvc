@@ -63,7 +63,7 @@
 
             <div class="form-group col-lg-8">
                 @Html.LabelFor(model => model.CapacityofOwnership)
-                @Html.DropDownListFor(model => model.CapacityofOwnership, new SelectList(new String[] { "By inheritance", "By purchase", "As a gift" }), new { @class = "form-control" })
+                @Html.DropDownListFor(model => model.CapacityofOwnership, new SelectList(new String[] { "By inheritance", "By purchase", "As a gift", "As a grant" }), new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.CapacityofOwnership)</span>
             </div>
 
