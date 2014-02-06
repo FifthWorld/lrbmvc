@@ -151,6 +151,7 @@ namespace LRBMvc
             }
         }
 
+
         public string EVIDENCE = "Evidence of Ownership";
         public string FIRE_SERVICE = "Fire Service Report";
         public string FEASIBILITY = "Feasibility Report";
@@ -162,5 +163,9 @@ namespace LRBMvc
         public string PASSPORT = "Scanned photographic passport";
     }
 
+    public static class LandMessaging
+    {
+        public static string Message { get; set; }
+    }
 
 }

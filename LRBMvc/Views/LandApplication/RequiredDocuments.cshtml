@@ -37,13 +37,13 @@
             </div>
 
             <div class="form-group col-md-4">
-                <label>Survey plan number</label>
+                <label>Survey Plan Number</label>
                 @Html.TextBoxFor(model => model.SurveyPlan_Number, new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_Number)</span>
             </div>
 
             <div class="form-group col-md-4">
-                <label>Survey plan approval date</label>
+                <label>Survey Plan Approval Date</label>
                 @Html.TextBoxFor(model => model.SurveyPlan_ApprovalDate, new { @class = "form-control", @type = "date" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_ApprovalDate)</span>
             </div>
@@ -51,13 +51,13 @@
         <fieldset>
             <legend>Development Levy</legend>
             <div class="form-group col-md-4">
-                <label>Scanned development levy</label>
+                <label>Scanned Development Levy</label>
                 <input type="file" name="developmentlevy" class="form-control" />
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
             </div>
 
             <div class="form-group col-md-4">
-                <label>Reciept number</label>
+                <label>Reciept Number</label>
                 @Html.TextBoxFor(model => model.DevelopmentLevy_RecieptNumber, new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.DevelopmentLevy_RecieptNumber)</span>
             </div>
@@ -78,7 +78,7 @@
 
         </fieldset>
         <fieldset>
-            <legend>Evidence of ownership</legend>
+            <legend>Evidence of Ownership</legend>
 
             <div class="form-group col-md-4">
                 @*@Html.LabelFor(model => model.EvidenceOfOwnership)*@
@@ -88,9 +88,9 @@
             </div>
 
             <div class="form-group col-md-4">
-                @Html.LabelFor(model => model.EvidenceType)
+                <label>Evidence Type</label>
                 @Html.DropDownListFor(model => model.EvidenceType,
-            new SelectList(new String[] { "Sales Receipt", "Sworn Affidavit", "Deed of Conveyance", "Deed of Agreement", "Inheritance papers", "Power of Attorney", "Other Document" }), new { @class = "form-control" })
+            new SelectList(new String[] { "Sales Receipt", "Sworn Affidavit", "Deed of Conveyance", "Deed of Agreement", "Inheritance papers", "Power of Attorney", "Other Documents" }), new { @class = "form-control" })
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.EvidenceType)</span>
             </div>
         </fieldset>
@@ -114,12 +114,12 @@
             @if (ViewBag.Requirement.applicationType == "Organization")
             {
                 <div class="form-group col-md-4">
-                    <label>Certificate of incorporation</label>
+                    <label>Certificate of Incorporation</label>
                     <input type="file" name="certificate" class="form-control" />
                     <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
                 </div>
                 <div class="form-group col-md-4">
-                    <label>Date of incorporation</label>
+                    <label>Date of Incorporation</label>
                     @Html.TextBoxFor(model => model.DateofIncorporation, new { @class = "form-control", @type = "date" })
                     <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
                 </div>
@@ -127,7 +127,7 @@
             @if (ViewBag.Requirement.landSize > 5000)
             {
                 <div class="form-group col-md-4">
-                    <label>Feasibility report</label>
+                    <label>Feasibility Report</label>
                     <input type="file" name="feasibilityreport" class="form-control" />
                     <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
                 </div>
@@ -148,7 +148,7 @@
     <div class="col-md-4" style="background-color: #ff6600">
         @if (ViewBag.IsComplete == "disabled")
         {
-            <h4 style="color: white">The following need to be uploaded</h4>
+            <h4 style="color: white">Upload the following Documents</h4>
             <ul class="list-group">
                 @foreach (var item in ViewBag.MissingDocuments)
                 {

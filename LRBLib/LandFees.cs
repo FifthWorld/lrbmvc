@@ -109,7 +109,7 @@ namespace LRB
 
             return results;
         }
-        
+
         public static Dictionary<String, float> Calculate_Consent_Fees(int year, float landSize, string LandValue, bool developed, LandUse use)
         {
             return calculator(year, landSize, LandValue, developed, use);
@@ -120,14 +120,65 @@ namespace LRB
             return calculator(year, landSize, LandValue, true, LandUse.Commercial);
         }
 
+        public static Dictionary<String, String> Calculate_C_of_O_Charges(int year, float LandSize, string landValue, bool developed, LandUse use)
+        {
+            var formatter = new System.Globalization.CultureInfo("HA-LATN-NG");
+            formatter.NumberFormat.CurrencySymbol = "₦";
+            float application_form = getApplicationForm(use);
+            float processing_fee = getProcessingFee(use, LandSize);
+            float landManagement_fee = getLandManagementFee(LandSize);
+            float landUse_Charge = getLandUseCharge(LandSize, developed);
+            float digitization = getStateWideDigitization(use);
+            float sltr = getSLTR(use);
+            float total = application_form + processing_fee + landManagement_fee + landUse_Charge;
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            result["Application_Form"] = String.Format(formatter, "{0:C}", application_form);
+            result["Processing_Fee"] = String.Format(formatter, "{0:C}", processing_fee);
+            result["LandManagement_Fee"] = String.Format(formatter, "{0:C}", landManagement_fee);
+            result["LandUse_Charge"] = String.Format(formatter, "{0:C}", landUse_Charge);
+            result["StateWideDigitization_Charge"] = "NA"; //String.Format(formatter, "{0:C}", digitization);
+            result["SLTR"] = "NA";
+            result["Total"] = String.Format(formatter, "{0:C}", total); ;
+            return result;
+        }
+
+        public static Dictionary<string, string> as_currency(Dictionary<string, float> incoming)
+        {
+            var formatter = new System.Globalization.CultureInfo("HA-LATN-NG");
+            formatter.NumberFormat.CurrencySymbol = "₦";
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            foreach (var item in incoming.Keys)
+            {
+                result[item] = String.Format(formatter, "{0:C}", incoming[item]);
+            }
+            return result;
+        }
         #endregion
 
         #region Land Charges
 
+        private static float getForm(LandUse use)
+        {
+            float result;
+            if (use == LandUse.Commercial || use == LandUse.Industrial || use == LandUse.Educational)
+            {
+                result = 10000;
+            }
+            else if (use == LandUse.Residential)
+            {
+                result = 5000;
+            }
+            else
+            {
+                result = 2500;
+            }
+            return result;
+        }
+
         private static float getPremium(LandUse use, float landSize)
         {
             float premium;
-            if (use==LandUse.Commercial || use==LandUse.Industrial || use==LandUse.Educational)
+            if (use == LandUse.Commercial || use == LandUse.Industrial || use == LandUse.Educational)
             {
                 premium = 400 * landSize;
             }
@@ -140,6 +191,65 @@ namespace LRB
                 premium = 200 * landSize;
             }
             return premium;
+        }
+
+        private static float getProcessingFee(LandUse use, float landSize)
+        {
+            float result = 0f;
+            if (use == LandUse.Commercial || use == LandUse.Industrial || use == LandUse.Educational)
+            {
+                result += 50000;
+                if (landSize > 1000 && landSize <= 4000)
+                {
+                    if (landSize > 4000)
+                    {
+                        result += 3000 * 20;
+                        result += (landSize - 4000) * 40;
+                    }
+                    else
+                    {
+                        result += (landSize - 1000) * 20;
+                    }
+                }
+            }
+            else if (use == LandUse.Residential)
+            {
+                result += 20000;
+                if (landSize > 1000 && landSize <= 4000)
+                {
+                    if (landSize > 4000)
+                    {
+                        result += 3000 * 15;
+                        result += (landSize - 4000) * 30;
+                    }
+                    else
+                    {
+                        result += (landSize - 1000) * 15;
+                    }
+                }
+            }
+            else
+            {
+                result += (5000 * landSize) / 10000;
+            }
+            return result;
+        }
+
+        private static float getDevelopmentCharge(string use)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static float getLandManagementFee(float landSize)
+        {
+            return landSize > 1000 ? 7500 + (landSize - 1000) * 1 : 7500;
+        }
+
+        private static float getLandUseCharge(float landSize, bool developed)
+        {
+            float baseValue = developed ? 7500 : 5000;
+            float multiplier = developed ? 5 : 1;
+            return landSize > 1000 ? baseValue + (landSize - 1000) * multiplier : baseValue;
         }
 
         private static float getStateWideDigitization(LandUse use)
@@ -160,20 +270,33 @@ namespace LRB
             return digitizationFees;
         }
 
-        private static float getDevelopmentCharge(string use)
+        private static float getSLTR(LandUse use)
         {
-            throw new NotImplementedException();
-        }       
+            float result = 0f;
+            if (use == LandUse.Commercial || use == LandUse.Industrial || use == LandUse.Educational)
+            {
+                result = 50000;
+            }
+            else if (use == LandUse.Residential)
+            {
+                result = 30000;
+            }
+            else
+            {
+                result = 20000;
+            }
+            return result;
+        }
 
         private static float getStampDuty(float landSize, string use)
         {
-            if (use == "Commercial" || use == "Endustrial" || use == "Educational")
+            if (use == "Commercial" || use == "Industrial" || use == "Educational")
             {
-                
+
             }
             else if (use == "Residential")
             {
-                
+
             }
             else
             {
@@ -182,60 +305,26 @@ namespace LRB
             throw new NotFiniteNumberException();
         }
 
-        private static float getLandUseCharge(float landSize, bool developed)
+        private static float getApplicationForm(LandUse use)
         {
-            float baseValue = developed ? 7500: 5000;
-            float multiplier = developed ? 5 : 1;
-            return landSize > 1000 ? baseValue + (landSize - 1000) * multiplier : 1000;
-        }
-
-        private static float getLandManagementFee(float landSize)
-        {
-            return landSize > 1000 ? 7500 + (landSize - 1000) * 1 : 1000;
-        }
-
-        private static float getProcessingFee(LandUse use, float landSize)
-        {
-            float procFee = 0f, temp = 0f;
             if (use == LandUse.Commercial || use == LandUse.Industrial || use == LandUse.Educational)
             {
-                procFee += landSize > 1000 ? 50000 : 50000;
-                temp = landSize - 1000;
-                procFee += temp > 4000 ? 4000 * 20 + (temp - 4000) * 40 : temp * 20;                
+                return 10000;
             }
             else if (use == LandUse.Residential)
             {
-                procFee += landSize > 1000 ? 20000 : 20000;
-                temp = landSize - 1000;
-                procFee += temp > 4000 ? 4000 * 15 + (temp - 4000) * 30 : temp * 15; 
+                return 5000;
             }
             else
             {
-                procFee += 5000 * landSize;
-            }
-            return procFee;            
-        }
-
-        private static float getApplicationForm(string use)
-        {
-            if (use == "Commercial" || use == "Endustrial" || use == "Educational")
-            {
-                
-            }
-            else if (use == "Residential")
-            {
-
-            }
-            else
-            {
-
+                return 2500;
             }
             throw new NotImplementedException();
         }
 
 
         #endregion
-        
+
         #region Front End Land Charges
         public static string getLandValue(Lib.Domain.Application app)
         {
@@ -244,7 +333,7 @@ namespace LRB
 
         public static LandUse getLandUse(Lib.Domain.Application app)
         {
-            return (LandUse)Enum.Parse(typeof(LandUse), "Commercial");
+            return (LandUse)Enum.Parse(typeof(LandUse), app.PrimaryProperty.LandUse);
         }
 
         public static bool getLandDevelopment(Lib.Domain.Application app)

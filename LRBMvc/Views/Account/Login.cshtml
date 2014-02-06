@@ -11,6 +11,13 @@
     {
         @Html.AntiForgeryToken()
         <div  style="border:1px solid #ffd800; height:40px; background-color:#ffc; color:#c00; padding-left:10px; margin-top:10px;line-height:40px;">
+            @if (LRBMvc.LandMessaging.Message != "")
+            {
+                <p>@LRBMvc.LandMessaging.Message</p>
+                {
+                LRBMvc.LandMessaging.Message = "";
+                 }
+            }
         @Html.ValidationSummary(true)
         </div>
         <div class="form_box pull-left" style="border-right:1px dashed #808080; margin-top:40px">

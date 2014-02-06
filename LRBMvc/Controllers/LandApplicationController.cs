@@ -297,15 +297,17 @@ namespace LRBMvc.Controllers
             //    Bureau.UpdateApplicationStatus(id);
             //}
             var app = LandRecords.GetApplication(id);            
-            var fees = LandFees.Calculate_Consent_Fees(
-                2013, 
+            var fees = LandFees.Calculate_C_of_O_Charges(
+                2014, 
                 (float)app.PrimaryProperty.LandSize, 
                 LandFees.getLandValue(app),
                 LandFees.getLandDevelopment(app), 
                 LandFees.getLandUse(app)
                 );
-            ViewBag.PropertyValue = fees;
-            ViewBag.LandUse = LandFees.getLandUse(app).ToString();
+            ViewBag.Fee = fees;
+            ViewBag.LandSize = app.PrimaryProperty.LandSize;
+            ViewBag.LandUnit = app.PrimaryProperty.LandSizeUnit;
+            ViewBag.Use = LandFees.getLandUse(app);
             return View(app);
         }
 

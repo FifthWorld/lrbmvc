@@ -12,24 +12,33 @@
             <td>@Html.DisplayFor(model => model.UserId)</td>
         </tr>
         <tr>
-            <td>Full name</td>
+            <td>Full Name</td>
             <td>@Html.DisplayFor(model => model.ContactPerson.FullName)</td>
         </tr>
         <tr>
             <td>Date Submitted</td>
-            <td>@Html.DisplayFor(model => model.SubmissionDate)</td>
+            <td>
+                @if (Model.SubmissionDate.HasValue)
+                { 
+                    <span>@Model.SubmissionDate.Value.ToString("D") </span>
+                }
+            </td>
         </tr>
         <tr>
             <td>Application Status</td>
             <td class="success">@Html.DisplayFor(model => model.Status)</td>            
         </tr>
         <tr>
-            <td>Land use</td>
-            <td>@ViewBag.LandUse</td>            
+            <td>Land Use</td>
+            <td>@ViewBag.Use</td>            
+        </tr>
+        <tr>
+            <td>Land Size</td>
+            <td><span>@ViewBag.LandSize</span><span> @ViewBag.LandUnit</span></td>            
         </tr>
         <tr>
             <td>Application Number</td>
-            <td>@Html.DisplayFor(model => model.SolaNR)</td>            
+            <td><strong>ODSG/LRB/@Html.DisplayFor(model => model.SolaNR)</strong></td>            
         </tr>
     </tbody>
 </table>
@@ -45,24 +54,32 @@
         </thead>
         <tbody>
             <tr>
-                <td>Premium</td>
-                <td>@ViewBag.PropertyValue["Premium"]</td>
+                <td>Application Form</td>
+                <td>@ViewBag.Fee["Application_Form"]</td>
             </tr>
             <tr>
-                <td>Processing Fees</td>
-                <td>@ViewBag.PropertyValue["ProcessingFee"]</td>
+                <td>Preparation [Processing] Fees</td>
+                <td>@ViewBag.Fee["Processing_Fee"]</td>
             </tr>
             <tr>
-                <td>Land Management Fee(Site Inspection and News paper ad)</td>
-                <td>@ViewBag.PropertyValue["LandManagementFee"]</td>
+                <td>Land Management Fee (Site Inspection and News paper ad)</td>
+                <td>@ViewBag.Fee["LandManagement_Fee"]</td>
             </tr>
             <tr>
-                <td>Land Use Charge[Ground Rent, Tenement Rate, etc]</td>
-                <td>@ViewBag.PropertyValue["LandUseCharge"]</td>
+                <td>Ground Rent</td>
+                <td>@ViewBag.Fee["LandUse_Charge"]</td>
             </tr>
             <tr>
-                <td>StateWide Digitization of C of O</td>
-                <td>@ViewBag.PropertyValue["StateWideDigitization"]</td>
+                <td>Statewide Digitization of C of O</td>
+                <td>@ViewBag.Fee["StateWideDigitization_Charge"]</td>
+            </tr>
+            <tr>
+                <td>Systematic Land Title Registration [SLTR]</td>
+                <td>@ViewBag.Fee["SLTR"]</td>
+            </tr>
+            <tr class="success">
+                <td>Total Payments</td>
+                <td>@ViewBag.Fee["Total"]</td>
             </tr>
         </tbody>
     </table>

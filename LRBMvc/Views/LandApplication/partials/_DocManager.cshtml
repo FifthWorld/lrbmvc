@@ -14,19 +14,19 @@
         <legend>Survey Plan</legend>
 
         <div class="form-group col-md-4">
-            <label>Scanned survey plan</label>
+            <label>Scanned Survey Plan</label>
             <input type="file" name="surveyplan" class="form-control" />
             <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
         </div>
 
         <div class="form-group col-md-4">
-            <label>Survey plan number</label>
+            <label>Survey Plan Number</label>
             @Html.TextBoxFor(model => model.SurveyPlan_Number, new { @class = "form-control" })
             <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_Number)</span>
         </div>
 
         <div class="form-group col-md-4">
-            <label>Survey plan approval number</label>
+            <label>Survey Plan Approval Number</label>
             @Html.TextBoxFor(model => model.SurveyPlan_ApprovalDate, new { @class = "form-control", @type = "date" })
             <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan_ApprovalDate)</span>
         </div>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group col-md-4">
-            <label>Reciept number</label>
+            <label>Reciept Number</label>
             @Html.TextBoxFor(model => model.DevelopmentLevy_RecieptNumber, new { @class = "form-control" })
             <span class="help-inline">@Html.ValidationMessageFor(model => model.DevelopmentLevy_RecieptNumber)</span>
         </div>
@@ -52,7 +52,7 @@
         </div>
     </fieldset>
     <fieldset>
-        <legend>Form of identification</legend>
+        <legend>Form of Identification</legend>
 
         <div class="form-group col-md-4">
             <label>Passport Photograph</label>
@@ -61,7 +61,7 @@
 
     </fieldset>
     <fieldset>
-        <legend>Evidence of ownership</legend>
+        <legend>Evidence of Ownership</legend>
 
         <div class="form-group col-md-4">
             @Html.LabelFor(model => model.EvidenceOfOwnership)
@@ -70,9 +70,9 @@
         </div>
 
         <div class="form-group col-md-4">
-            @Html.LabelFor(model => model.EvidenceType)
+            <label>Evidence of Ownership</label>
             @Html.DropDownListFor(model => model.EvidenceType, 
-            new SelectList(new String[] { "Sales Receipt", "Sworn Affidavit", "Deed of Conveyance","Deed of Agreement", "Inheritance papers", "Official Document" }), new { @class = "form-control" })
+            new SelectList(new String[] { "Sales Receipt", "Sworn Affidavit", "Deed of Conveyance","Deed of Agreement", "Inheritance Papers", "Official Document" }), new { @class = "form-control" })
             <span class="help-inline">@Html.ValidationMessageFor(model => model.EvidenceType)</span>
         </div>
     </fieldset>
@@ -96,12 +96,12 @@
         @if (ViewBag.Requirement.applicationType == "Organization")
         {
             <div class="form-group col-md-4">
-                <label>Certificate of incorporation</label>
+                <label>Certificate of Incorporation</label>
                 <input type="file" name="certificate" class="form-control" />
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
             </div>
             <div class="form-group col-md-4">
-                <label>Date of incorporation</label>
+                <label>Date of Incorporation</label>
                 @Html.TextBoxFor(model => model.DateofIncorporation, new { @class="form-control", @type="date"})
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
             </div>
@@ -109,7 +109,7 @@
         @if (ViewBag.Requirement.landSize > 5000)
         {
             <div class="form-group col-md-4">
-                <label>Feasibility report</label>
+                <label>Feasibility Report</label>
                 <input type="file" name="feasibilityreport" class="form-control" />
                 <span class="help-inline">@Html.ValidationMessageFor(model => model.SurveyPlan)</span>
             </div>

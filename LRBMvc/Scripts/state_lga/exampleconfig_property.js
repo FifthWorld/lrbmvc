@@ -13,7 +13,7 @@ addList("Ondo", "Select LGA", "", "dummy-state");
 
 addList("Ondo", "Akoko North East");
 addList("Ondo", "Akoko North West");
-addList("Ondo", "Akoko South Akure East");
+addList("Ondo", "Akoko South East");
 addList("Ondo", "Akoko South West");
 addList("Ondo", "Akure North");
 addList("Ondo", "Akure South");
@@ -21,8 +21,7 @@ addList("Ondo", "Ese-Odo");
 addList("Ondo", "Idanre");
 addList("Ondo", "Ifedore");
 addList("Ondo", "Ilaje");
-addList("Ondo", "Ile-Oluji");
-addList("Ondo", "Okeigbo");
+addList("Ondo", "Ile-Oluji/Okeigbo");
 addList("Ondo", "Irele");
 addList("Ondo", "Odigbo");
 addList("Ondo", "Okitipupa");

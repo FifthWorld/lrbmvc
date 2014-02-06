@@ -346,6 +346,7 @@
     <Content Include="fonts\Candara.ttf" />
     <Content Include="Images\lrb-banner.jpg" />
     <Content Include="img\.DS_Store" />
+    <Content Include="img\nigerian.jpg" />
     <Content Include="img\Thumbs.db" />
     <None Include="Properties\PublishProfiles\LRBMvc.pubxml" />
     <Content Include="Images\custom\akurebg.PNG" />

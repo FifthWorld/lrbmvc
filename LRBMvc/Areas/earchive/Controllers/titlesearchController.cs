@@ -56,9 +56,9 @@ namespace LRBMvc.Areas.earchive.Controllers
             var title_date = Convert.ToDateTime(prop.effdate);
             var base_dir = AppDomain.CurrentDomain.BaseDirectory + @"App_Data\data.csv";
             LandFees.init(base_dir);
-            var HighValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "HighValue");
-            var MediumValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "MediumValue");
-            var BaseValue = LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "BaseValue");
+            var HighValue = LandFees.as_currency(LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "HighValue"));
+            var MediumValue = LandFees.as_currency(LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "MediumValue"));
+            var BaseValue = LandFees.as_currency(LandFees.Calculate_Consent_Fees(title_date.Year, float.Parse(prop.areasize), "BaseValue"));
 
             ViewBag.HighValue = HighValue;
             ViewBag.MediumValue = MediumValue;

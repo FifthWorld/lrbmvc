@@ -9,10 +9,28 @@
         <caption>
             <div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:10px; line-height:40px; font-size:17px">PROPERTY INFORMATION</div>
         </caption>
+        <thead>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
         <tbody>
+            <tr>
+                <td>Owner</td>
+                <td>
+                    @foreach (var item in Model.LandOwners)
+                    {
+                        <strong><span>@item</span></strong>
+                    }
+                </td>
+                <th colspan="3">
+                    
+                </th>
+            </tr>
             <tr>
                 <td>File Number</td>
                 <td>@Html.DisplayFor(model => model.fileno)</td>
+                <img src="~/img/nigerian.jpg" style="height:150px;" alt="gumption" />
             </tr>
             <tr>
                 <td>Public Reference Key</td>
@@ -35,13 +53,8 @@
                 <td>@Html.DisplayFor(model => model.location)</td>
             </tr>
             <tr>
-                <td>Owner</td>
-                <td>
-                    @foreach (var item in Model.LandOwners)
-                    {
-                        <span>@item</span>
-                    }
-                </td>
+                <td>Town Where the Property is located</td>
+                <td>@Html.DisplayFor(model => model.town)</td>
             </tr>
             <tr>
                 <td>@Html.DisplayNameFor(model => model.status)</td>
@@ -62,14 +75,14 @@
 	<a class="btn btn-default btn-success" ng-click="toggle()">{{access}}</a>
     <table class="table table-bordered" ng-show="shown">
         
-        <caption><div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:20px; line-height:40px; font-size:17px">CONSENT FEE ASSESSMENT</div></caption>
+        <caption><div style="border:1px solid #ebccd1; background-color:#f2dede; height:40px; margin-top:20px; line-height:40px; font-size:17px">CONSENT FEE ASSESSMENT(NAIRA)</div></caption>
         <thead>
-            <tr><th><strong>High Value Property</strong></th></tr>
+            <tr><th><strong>High Value Property Zone</strong></th></tr>
         </thead>
         <tbody>
             <tr>
                 <td>Consent Fees</td>
-                <td>@ViewBag.HighValue["ConsentFee"]</td>
+                <td>@ViewBag.HighValue["ConsentFee"]</td>                
             </tr>
             <tr>
                 <td>Capital Gains Tax</td>
@@ -81,7 +94,7 @@
             </tr>
         </tbody>
         <thead>
-            <tr><th><strong>Medium Value Property</strong></th></tr>
+            <tr><th><strong>Medium Value Property Zone</strong></th></tr>
         </thead>
         <tbody>
             <tr>
@@ -98,7 +111,7 @@
             </tr>
         </tbody>
         <thead>
-            <tr><th><strong>Base Value Property</strong></th></tr>
+            <tr><th><strong>Base Value Property Zone</strong></th></tr>
         </thead>
         <tbody>
             <tr>

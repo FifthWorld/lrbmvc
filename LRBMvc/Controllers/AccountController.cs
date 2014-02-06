@@ -101,7 +101,8 @@ namespace LRBMvc.Controllers
         [AllowAnonymous]
         public ActionResult RegisterStepTwo()
         {
-            return View();
+            LandMessaging.Message = "A Confirmatory Email has been sent to your account, please click on the link sent to you and return here to login";
+            return RedirectToAction("Login");
         }
 
         [AllowAnonymous]

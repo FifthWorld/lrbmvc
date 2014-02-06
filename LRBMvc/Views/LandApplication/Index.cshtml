@@ -27,10 +27,12 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
+                @item.StartDate.ToString("D")
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SubmissionDate)
+                @if (item.SubmissionDate.HasValue) { 
+                    <span>@item.SubmissionDate.Value.ToString("D") </span>
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ApplicationType)
