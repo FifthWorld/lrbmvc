@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="LRBMvc_Bleeding" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=.\SQLEXPRESS2;Initial Catalog=aspnet-LRBMvc;Integrated Security=True" />
+  <setParameter name="LandsDBContext-Web.config Connection String" value="Data Source=.\SQLEXPRESS2;Initial Catalog=LandsDB;Integrated Security=True" />
+  <setParameter name="LandTitles-Web.config Connection String" value="metadata=res://*/Repository.TitlesModel.csdl|res://*/Repository.TitlesModel.ssdl|res://*/Repository.TitlesModel.msl;provider=System.Data.SqlClient;provider connection string='metadata=res://*/Repository.TitlesModel.csdl|res://*/Repository.TitlesModel.ssdl|res://*/Repository.TitlesModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\sqlexpress2;initial catalog=LandTitles;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;'" />
+  <setParameter name="LandsDBContext_DatabasePublish-Web.config Connection String" value="Data Source=.\SQLEXPRESS2;Initial Catalog=LandsDB;Integrated Security=True" />
+</parameters>
